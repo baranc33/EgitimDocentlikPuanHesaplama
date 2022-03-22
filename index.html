@@ -1,12 +1,847 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--my css-->
+    <link rel="stylesheet" href="style.css">
+    <!---Bootstrap--->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
 <body>
+    <form action="">
+
+        <h1><b>Eğitim Bilimleri Temel Alanı</b> Doçentlik Puan Hesaplama</h1>
+
+        <div class="container">
+            <h2>Başvuru Şartları</h2>
+            <p>
+                Eğitim bilimleri temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki
+                çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan (90) puanının
+                doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde edilmiş
+                olması kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş olması
+                gerekir. Her çalışma Tablo 1' de sadece bir bölümde yazılarak puanlandırılır.
+                Tek yazarlı yayınlarda yazar tam puan alır. Çok yazarlı yayınlarda puan yazarlar arasında
+                eşit olarak bölünür.
+
+            </p>
+        </div>
+<br>
+        <div class="container" id="birDiv">
+            <h2>1. Uluslararası Makale </h2>
+            <p> Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak
+                kaydıyla</p>
+            <hr>
+          
+               <div class="row" name="birbir">
+                    <div class="fw-bold col-md-8">
+                        a) SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
+                        mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale <b>-<i> 20 puan</i></b>
+                    </div>
+                    <div class="col-md-4 row">
+                        <button type="button" class="btn btn-primary col-md-5" onclick="birbirEkle()">Yeni Stun Aç</button>
+                        <div class="col-md-1"></div>
+                        <button type="button" class="btn btn-danger col-md-5" onclick="birbirSil()">Son Stunu sil</button>
+
+                    </div>
+                    <ul class="list-group" id="birbirul">
+      
+
+                    </ul>
+               </div>
+
+
+               <div class="row" name="biriki"><hr>
+                <div class="fw-bold col-md-8">
+                    b) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet
+                    veya kitap kritiği hariç olmak üzere yayımlanmış makale <b>-<i> 15 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="birikiEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="birikiSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="birikiul">
+            
+
+                </ul>
+              </div>
+
+              <div class="row" name="biruc"><hr>
+                <div class="fw-bold col-md-8">
+                    c) Bu maddenin a veya b bentleri kapsamındaki yayınlarda alanında bilime
+                    katkı sağlayan kitap kritiği yapılmış makale <b>-<i> 5 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="birucEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="birucSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="birucul">
+              
+                </ul>
+              </div>
+
+<hr>
+                <div class="text-center">
+                    <p>Bu maddenin a veya b bentleri kapsamında en az 20 puan almak zorunludur.</p>
+                </div>
+
+
+         </div> 
+
+<br>
+
+       <div class="container" id="ikiDiv">
+            <h2>2. Ulusal Makale  </h2>
+            <p> Başvurulan doçentlik bilim alanı ile ilgili ve adayın yaptığı lisansüstü tezlerden
+                üretilmemiş olmak kaydıyla
+                </p>
+            <hr>
+          
+               <div class="row" name="ikibirDiv">
+                    <div class="fw-bold col-md-8">
+                        a) ULAKBİM tarafından taranan ulusal hakemli dergilerde yayımlanmış
+                        makale <b>-<i> 8 puan</i></b>
+                    </div>
+                    <div class="col-md-4 row">
+                        <button type="button" class="btn btn-primary col-md-5" onclick="ikibirEkle()">Yeni Stun Aç</button>
+                        <div class="col-md-1"></div>
+                        <button type="button" class="btn btn-danger col-md-5" onclick="ikibirSil()">Son Stunu sil</button>
+
+                    </div>
+                    <ul class="list-group" id="ikibirul">
+                      
+                    </ul>
+               </div>
+
+
+               <div class="row" name="ikiikiDiv"><hr>
+                <div class="fw-bold col-md-8">
+                    b) a bendi dışındaki ulusal hakemli dergilerde yayımlanmış makale <b>-<i> 4 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="ikiikiEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="ikiikiSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="ikiikiul">
+            
+                </ul>
+              </div>
+ 
+
+                <div class="text-center">
+                    <hr>
+                    <p>
+                        İkisi bu maddenin a bendi kapsamında olmak üzere en az üç yayın yapmak
+                        zorunludur.Yabancı uyruklu adaylar ile yurtdışı doçentlik denkliği başvurusu yapan
+                        adaylar , ULAKBİM tarafından taranan ulusal hakemli dergilerde yayımlanmış makale
+                        şartını sağlayamamaları durumunda, bunun yerine aynı sayıdaki yayını 1.maddenin a
+                        ve/veya b bentleri kapsamında sağlayacaklardır.
+                        
+                    </p>
+                </div>
+
+
+         </div>  
+
+<br>
+
+ 
+         <div class="container" id="ucDiv">
+            <h2>3. Lisansüstü Tezlerden Üretilmiş Yayın </h2>
+            <p> Adayın hazırladığı lisansüstü tezleriyle ilgili olmak kaydıyla</p>
+            <hr>
+          
+               <div class="row" name="ucbir">
+                    <div class="fw-bold col-md-8">
+                        a) Uluslararası yayınevleri tarafından yayımlanmış kitap  <b>-<i> 10 puan</i></b>
+                    </div>
+                    <div class="col-md-4 row">
+                        <button type="button" class="btn btn-primary col-md-5" onclick="ucbirEkle()">Yeni Stun Aç</button>
+                        <div class="col-md-1"></div>
+                        <button type="button" class="btn btn-danger col-md-5" onclick="ucbirSil()">Son Stunu sil</button>
+
+                    </div>
+                    <ul class="list-group" id="ucbirul">
+                    
+                    </ul>
+               </div>
+
+
+               <div class="row" name="uciki">
+                <hr>
+                <div class="fw-bold col-md-8">
+                    b) Uluslararası yayınevleri tarafından yayımlanmış kitapta bölüm <b>-<i> 8 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="ucikiEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="ucikiSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="ucikiul">
+        
+                </ul>
+              </div>
+
+              <div class="row" name="ucuc">
+                <hr>
+
+                <div class="fw-bold col-md-8">
+                    c) Ulusal yayınevleri tarafından yayımlanmış kitap  <b>-<i> 5 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="ucucEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="ucucSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="ucucul">
+          
+                </ul>
+              </div>
     
+              
+              <div class="row" name="ucdort"><hr>
+                <div class="fw-bold col-md-8">
+                    d) Ulusal yayınevleri tarafından yayımlanmış kitapta bölüm <b>-<i> 4 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="ucdortEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="ucdortSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="ucdortul">
+       
+                </ul>
+              </div>
+
+              <div class="row" name="ucbes"><hr>
+                <div class="fw-bold col-md-8">
+                    e) SSCI, SCI, SCI-Expanded ve AHCI kapsamındaki dergilerde yayımlanmış
+                    makale   <b>-<i> 8 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="ucbesEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="ucbesSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="ucbesul">
+
+                </ul>
+              </div>
+
+
+              <div class="row" name="ucalti"><hr>
+                <div class="fw-bold col-md-8">
+                    f) Uluslararası alan endekslerinde taranan dergilerde yayımlanmış makale  <b>-<i> 6 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="ucaltiEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="ucaltiSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="ucaltiul">
+                
+                </ul>
+              </div>
+
+
+
+              <div class="row" name="ucyedi"><hr>
+                <div class="fw-bold col-md-8">
+                    g) ULAKBİM tarafından taranan dergilerde yayımlanmış makale  <b>-<i> 4 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="ucyediEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="ucyediSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="ucyediul">
+
+                </ul>
+              </div>
+
+
+
+
+
+                <div class="text-center">
+                    <hr>
+                    <p>Bu madde kapsamında en az 1 yayın zorunludur. Bu maddeden en fazla 10 puan
+                        alınabilir.</p>
+                </div>
+
+
+         </div>  
+
+
+        <br>
+
+
+        <div class="container" id="dortDiv">
+            <h2>4. Kitap </h2>
+            <p> Adayın hazırladığı lisansüstü tezlerinden üretilmemiş ve başvurulan doçentlik bilim alanı
+                ile ilgili olmak kaydıyla
+                </p>
+            <hr>
+          
+               <div class="row" name="dortbirDiv">
+                    <div class="fw-bold col-md-8">
+                        a) Uluslararası yayınevleri tarafından yayımlanmış kitap<b>-<i> 20 puan</i></b>
+                    </div>
+                    <div class="col-md-4 row">
+                        <button type="button" class="btn btn-primary col-md-5" onclick="dortbirEkle()">Yeni Stun Aç</button>
+                        <div class="col-md-1"></div>
+                        <button type="button" class="btn btn-danger col-md-5" onclick="dortbirSil()">Son Stunu sil</button>
+
+                    </div>
+                    <ul class="list-group" id="dortbirul">
+           
+
+                    </ul>
+               </div>
+
+
+               <div class="row" name="dortikiDiv"><hr>
+                <div class="fw-bold col-md-8">
+                    b) Uluslararası yayınevleri tarafından yayımlanmış kitap editörlüğü veya
+                    bölüm yazarlığı  <b>-<i> 10 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="dortikiEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="dortikiSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="dortikiul">
+                  
+
+                </ul>
+              </div>
+     
+     
+              <div class="row" name="dortucDiv"><hr>
+                <div class="fw-bold col-md-8">
+                    c) Ulusal yayınevleri tarafından yayımlanmış kitap  <b>-<i> 15 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="dortucEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="dortucSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="dortucul">
+              
+                </ul>
+              </div>
+
+
+              <div class="row" name="dortdortDiv"><hr>
+                <div class="fw-bold col-md-8">
+                    d) Ulusal yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm
+                    yazarlığı <b>-<i> 8 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="dortdortEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="dortdortSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="dortdortul">
+                 
+                </ul>
+              </div>
+
+                <div class="text-center">
+                    <hr>
+                    <p>
+                        Bu madde kapsamında sadece ders kitabı niteliği dışındaki özgün bilimsel kitaplar
+                        puanlanabilir, aynı kitaptaki bölümlerden en fazla ikisi dikkate alınır. Alana özgü
+                        ansiklopedi maddelerinin üç veya daha çok maddesi bir kitap bölümü kabul edilir.
+                        
+                    </p>
+                </div>
+
+
+         </div>   
+
+        <br>        
+
+         <div class="container" id="besDiv">
+            <h2>5. Atıflar </h2>
+          
+            <hr>
+          
+               <div class="row" name="besbir">
+                    <div class="fw-bold col-md-8">
+                        a) SCI, SCI-Expanded, SSCI ve AHCI tarafından taranan dergilerde;
+                        Uluslararası yayınevleri tarafından yayımlanmış kitaplarda yayımlanan ve
+                        adayın yazar olarak yer almadığı yayınlardan her birinde, metin içindeki
+                        atıf sayısına bakılmaksızın adayın atıf yapılan her eseri için <b>-<i> 3 puan</i></b>
+                    </div>
+                    <div class="col-md-4 row">
+                        <button type="button" class="btn btn-primary col-md-5" onclick="besbirEkle()">Yeni Stun Aç</button>
+                        <div class="col-md-1"></div>
+                        <button type="button" class="btn btn-danger col-md-5" onclick="besbirSil()">Son Stunu sil</button>
+
+                    </div>
+                    <ul class="list-group" id="besbirul">
+                     
+                    </ul>
+               </div>
+
+
+               <div class="row" name="besiki"><hr>
+                <div class="fw-bold col-md-8">
+                    b) SCI, SCI-Expanded, SSCI ve AHCI dışındaki endeksler tarafından taranan
+                    dergilerde; Uluslararası yayınevleri tarafından yayımlanmış kitaplarda
+                    bölüm yazarı olarak yayımlanan ve adayın yazar olarak yer almadığı
+                    yayınlardan her birinde, metin içindeki atıf sayısına bakılmaksızın adayın
+                    atıf yapılan her eseri için <b>-<i> 2 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="besikiEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="besikiSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="besikiul">
+            
+
+                </ul>
+              </div>
+
+              <div class="row" name="besuc"><hr>
+                <div class="fw-bold col-md-8">
+                    c) Ulusal hakemli dergilerde; Ulusal yayınevleri tarafından yayımlanmış
+                    kitaplarda yayımlanan ve adayın yazar olarak yer almadığı yayınlardan her
+                    birinde, metin içindeki atıf sayısına bakılmaksızın adayın atıf yapılan her
+                    eseri için <b>-<i> 1 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="besucEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="besucSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="besucul">
+                  
+
+                </ul>
+              </div>
+
+        
+              
+
+<hr>
+                <div class="text-center">
+                    <p>Bu madde kapsamında en az 4 puan alınması zorunludur.Bu madde kapsamında en
+                        fazla 20 puan alınabilir.</p>
+                </div>
+
+
+         </div>  
+
+
+         <br>
+
+         <div class="container" id="altiDiv">
+            <h2>6. Lisansüstü Tez Danışmanlığı </h2>
+          <p>Adayın danışmanlığını yürüttüğü tamamlanan lisansüstü tezlerden</p>
+            <hr>
+          
+               <div class="row" name="altibir">
+                    <div class="fw-bold col-md-8">
+                        a) Doktora tez danışmanlığı <b>-<i> 4 puan</i></b>
+                    </div>
+                    <div class="col-md-4 row">
+                        <button type="button" class="btn btn-primary col-md-5" onclick="altibirEkle()">Yeni Stun Aç</button>
+                        <div class="col-md-1"></div>
+                        <button type="button" class="btn btn-danger col-md-5" onclick="altibirSil()">Son Stunu sil</button>
+
+                    </div>
+                    <ul class="list-group" id="altibirul">
+                     
+
+                    </ul>
+               </div>
+
+
+               <div class="row" name="altiiki"><hr>
+                <div class="fw-bold col-md-8">
+                    b) Yüksek lisans tez danışmanlığı  <b>-<i> 2 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="altiikiEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="altiikiSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="altiikiul">
+         
+
+                </ul>
+              </div>
+
+      
+              
+
+<hr>
+                <div class="text-center">
+                    <p>Bu madde kapsamında en fazla 10 puan alınabilir. İkinci/eş danışman olması
+                        durumunda asıl danışman a ve b bentleri için öngörülen puanların tamamını, ikinci
+                        danışman ise yarısını alır..</p>
+                </div>
+
+
+         </div>  
+
+         <br>
+
+       <div class="container" id="yediDiv">
+            <h2>7. Bilimsel Araştırma Projesi</h2>
+          
+            <hr>
+          
+               <div class="row" name="yedibir">
+                    <div class="fw-bold col-md-8">
+                        a) Devam eden veya başarı ile tamamlanmış AB Çerçeve Programı Bilimsel
+                        Araştırma Projesinde koordinatör / baş araştırmacı olmak  <b>-<i> 15 puan</i></b>
+                    </div>
+                    <div class="col-md-4 row">
+                        <button type="button" class="btn btn-primary col-md-5" onclick="yedibirEkle()">Yeni Stun Aç</button>
+                        <div class="col-md-1"></div>
+                        <button type="button" class="btn btn-danger col-md-5" onclick="yedibirSil()">Son Stunu sil</button>
+
+                    </div>
+                    <ul class="list-group" id="yedibirul">
+                        
+
+                    </ul>
+               </div>
+
+
+               <div class="row" name="yediiki"><hr>
+                <div class="fw-bold col-md-8">
+                    b) Devam eden veya başarı ile tamamlanmış AB Çerçeve programı bilimsel
+                    araştırma projesinde ortak araştırmacı olmak  <b>-<i> 10 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="yediikiEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="yediikiSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="yediikiul">
+                   
+
+                </ul>
+              </div>
+
+              <div class="row" name="yediuc"><hr>
+                <div class="fw-bold col-md-8">
+                    c) Devam eden veya başarı ile tamamlanmış a ve b bentleri dışındaki
+                    uluslararası destekli bilimsel araştırma projelerinde (derleme ve rapor
+                    hazırlama çalışmaları hariç) görev almak
+                     <b>-<i> 6 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="yediucEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="yediucSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="yediucul">
+           
+
+                </ul>
+              </div>
+
+        
+              <div class="row" name="yedidort"><hr>
+                <div class="fw-bold col-md-8">
+                    d) Üniversiteler dışındaki kamu kurumlarıyla yapılan başarıyla tamamlanan
+                    veya yürütülen bilimsel araştırma projelerinde görev almak <b>-<i> 4 puan</i></b>
+                </div>
+                <div class="col-md-4 row">
+                    <button type="button" class="btn btn-primary col-md-5" onclick="yedidortEkle()">Yeni Stun Aç</button>
+                   <div class="col-md-1"></div>
+                    <button type="button" class="btn btn-danger col-md-5"  onclick="yedidortSil()">Son Stunu sil</button>
+
+                </div>
+                <ul class="list-group" id="yedidortul">
+                   
+
+                </ul>
+              </div>
+
+<hr>
+                <div class="text-center">
+                    <p>Bu maddeden en fazla 20 puan alınabilir.</p>
+                </div>
+
+
+         </div>  
+
+        <br>
+
+            <div class="container" id="sekizDiv">
+                <h2>8. Bilimsel Toplantı Faaliyeti   </h2>
+                <p> Başvurulan bilim alanı ile ilgili ve adayın hazırladığı
+                    lisansüstü tezlerden üretilmemiş olmak kaydıyla</p>
+                <hr>
+            
+                <div class="row" name="sekizbir">
+                        <div class="fw-bold col-md-8">
+                            a) Uluslararası bilimsel toplantılarda sunulan (poster hariç), tam metni
+                            veya özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış
+                            çalışmalar.
+                              <b>-<i> 3 puan</i></b>
+                        </div>
+                        <div class="col-md-4 row">
+                            <button type="button" class="btn btn-primary col-md-5" onclick="sekizbirEkle()">Yeni Stun Aç</button>
+                            <div class="col-md-1"></div>
+                            <button type="button" class="btn btn-danger col-md-5" onclick="sekizbirSil()">Son Stunu sil</button>
+
+                        </div>
+                        <ul class="list-group" id="sekizbirul">
+                          
+
+                        </ul>
+                </div>
+
+
+                <div class="row" name="sekiziki">
+                    <hr>
+                    <div class="fw-bold col-md-8">
+                        b) Ulusal bilimsel toplantılarda sunulan (poster hariç), tam metni veya
+                        özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış
+                        çalışmalar.<b>-<i> 2 puan</i></b>
+                    </div>
+                    <div class="col-md-4 row">
+                        <button type="button" class="btn btn-primary col-md-5" onclick="sekizikiEkle()">Yeni Stun Aç</button>
+                    <div class="col-md-1"></div>
+                        <button type="button" class="btn btn-danger col-md-5"  onclick="sekizikiSil()">Son Stunu sil</button>
+
+                    </div>
+                    <ul class="list-group" id="sekizikiul">
+                 
+                    </ul>
+                </div>
+
+
+                    <div class="text-center">
+                        <hr>
+                        <p>Bu madde kapsamında en az 5 puan almak zorunludur, en fazla 10 puan alınabilir. Aynı
+                            toplantıda sunulan en fazla bir bildiri puanlanır.</p>
+                    </div>
+
+
+            </div>
+
+         <br>
+
+               <div class="container" id="dokuzDiv">
+                   <h2>9. Eğitim-Öğretim Faaliyeti</h2>
+                 <p>Doktora eğitimini tamamladıktan sonra açık, uzaktan veya yüz yüze ortamlarda verilmiş
+                    ders</p>
+                   <hr>
+                 
+                      <div class="row" name="dokuzbir">
+                           <div class="fw-bold col-md-8">
+                            a) Bir dönem yüksek lisans veya doktora ders <b>-<i> 3 puan</i></b>
+                           </div>
+                           <div class="col-md-4 row">
+                               <button type="button" class="btn btn-primary col-md-5" onclick="dokuzbirEkle()">Yeni Stun Aç</button>
+                               <div class="col-md-1"></div>
+                               <button type="button" class="btn btn-danger col-md-5" onclick="dokuzbirSil()">Son Stunu sil</button>
+       
+                           </div>
+                           <ul class="list-group" id="dokuzbirul">
+                               <li class="row">
+                  
+                               </li>
+       
+                           </ul>
+                      </div>
+       
+       
+                      <div class="row" name="dokuziki"><hr>
+                       <div class="fw-bold col-md-8">
+                        b) Bir dönem önlisans veya lisans dersi  <b>-<i> 2 puan</i></b>
+                       </div>
+                       <div class="col-md-4 row">
+                           <button type="button" class="btn btn-primary col-md-5" onclick="dokuzikiEkle()">Yeni Stun Aç</button>
+                          <div class="col-md-1"></div>
+                           <button type="button" class="btn btn-danger col-md-5"  onclick="dokuzikiSil()">Son Stunu sil</button>
+       
+                       </div>
+                       <ul class="list-group" id="dokuzikiul">
+                          
+       
+                       </ul>
+                     </div>
+        
+                     <div class="form-check m-4">
+                        <input class="form-check-input" type="checkbox" value="" >
+                        <p > Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en
+                            az 2 yıl öğretim elemanı olarak görev Yaptıysanız işaretleyin</p>
+                      </div>
+       
+       <hr>
+                       <div class="text-center container">
+                           <p>Bu madde kapsamında en az 2 puan almak zorunludur, ancak en fazla 4 puan
+                            alınabilir. Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en
+                            az 2 yıl öğretim elemanı olarak görev yapanlar 2 puan almış sayılır.</p>
+                       </div>
+       
+       
+                </div> 
+       
+                <div class="container row">
+                    <div class="col-md-4"></div>
+                    <button type="button" class="btn btn-danger col-md-4" id="SubmitButton" > Temizle</button>
+                    <button type="submit" class="btn btn-primary col-md-4" id="SubmitButton" > Hesapla</button>
+
+                </div>
+       
+
+    </form>
+
+
+
+
+    <script src="myjs.js"></script>
+<script>
+
+
+
+
+
+
+
+function dokuzbirEkle() {let ul=document.querySelector('#dokuzbirul');
+     let liDom=document.createElement('li'); liDom.innerHTML=`
+     <div class="col-md-2 ms-4">
+                                       <label for=""></label>
+                                       <select class="form-select form-select-lg mb-3" name="dokuzbirdoktora[]" aria-label=".form-select-sm example">
+                                           <option value="1">Doktora Öncesi</option>
+                                           <option value="2">Doktora Sonrası</option>
+                                       </select>
+                                   
+                                   </div>
+                                   <div class="ms-2 col-md-2">
+                                   <label for="">Ders Sayısı</label>
+                                   <input type="number" name="dokuzbirders[]" value="0" class="form-control w-100">
+                                   </div>
+     `;
+     liDom.classList.add('row'); ul.append(liDom);
+}
+function dokuzikiEkle() {let ul=document.querySelector('#dokuzikiul');
+     let liDom=document.createElement('li'); liDom.innerHTML=`
+     <li class="row">
+                               <div class="col-md-2 ms-4">
+                                   <label for=""></label>
+                                   <select class="form-select form-select-lg mb-3" name="dokuzikidoktora[]" aria-label=".form-select-sm example">
+                                       <option value="1">Doktora Öncesi</option>
+                                       <option value="2">Doktora Sonrası</option>
+                                   </select>
+                               
+                               </div>
+                               <div class="ms-2 col-md-2">
+                               <label for="">Ders Sayısı</label>
+                               <input type="number" name="dokuzikiders[]" value="0" class="form-control w-100">
+                               </div>
+                   
+                           
+                           </li>
+     `;
+     liDom.classList.add('row'); ul.append(liDom);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const birbirSil =()=>{let ul=document.querySelector('#birbirul');  ul.removeChild(ul.lastElementChild);}
+const birikiSil =()=>{let ul=document.querySelector('#birikiul');  ul.removeChild(ul.lastElementChild);}
+const birucSil = ()=>{let ul=document.querySelector('#birucul');   ul.removeChild(ul.lastElementChild);}
+
+
+const ikibirSil =()=>{let ul=document.querySelector('#ikibirul');  ul.removeChild(ul.lastElementChild);}
+const ikiikiSil =()=>{let ul=document.querySelector('#ikiikiul');  ul.removeChild(ul.lastElementChild);}
+
+const ucbirSil =()=>{let ul=document.querySelector('#ucbirul');  ul.removeChild(ul.lastElementChild);}
+const ucikiSil =()=>{let ul=document.querySelector('#ucikiul');  ul.removeChild(ul.lastElementChild);}
+const ucucSil = ()=>{let ul=document.querySelector('#ucucul');   ul.removeChild(ul.lastElementChild);}
+const ucdortSil=()=>{let ul=document.querySelector('#ucdortul');  ul.removeChild(ul.lastElementChild);}
+const ucbesSil=()=>{let ul=document.querySelector('#ucbesul');  ul.removeChild(ul.lastElementChild);}
+const ucaltiSil=()=>{let ul=document.querySelector('#ucaltiul');  ul.removeChild(ul.lastElementChild);}
+const ucyediSil=()=>{let ul=document.querySelector('#ucyediul');  ul.removeChild(ul.lastElementChild);}
+
+const dortbirSil =()=>{let ul=document.querySelector('#dortbirul');  ul.removeChild(ul.lastElementChild);}
+const dortikiSil =()=>{let ul=document.querySelector('#dortikiul');  ul.removeChild(ul.lastElementChild);}
+const dortucSil = ()=>{let ul=document.querySelector('#dortucul');   ul.removeChild(ul.lastElementChild);}
+const dortdortSil=()=>{let ul=document.querySelector('#dortdortul');  ul.removeChild(ul.lastElementChild);}
+
+const besbirSil =()=>{let ul=document.querySelector('#besbirul');  ul.removeChild(ul.lastElementChild);}
+const besikiSil =()=>{let ul=document.querySelector('#besikiul');  ul.removeChild(ul.lastElementChild);}
+const besucSil = ()=>{let ul=document.querySelector('#besucul');   ul.removeChild(ul.lastElementChild);}
+
+const altibirSil=()=>{let ul=document.querySelector('#altibirul');  ul.removeChild(ul.lastElementChild);}
+const altiikiSil=()=>{let ul=document.querySelector('#altiikiul'); ul.removeChild(ul.lastElementChild);}
+
+const yedibirSil =()=>{let ul=document.querySelector('#yedibirul');  ul.removeChild(ul.lastElementChild);}
+const yediikiSil =()=>{let ul=document.querySelector('#yediikiul');  ul.removeChild(ul.lastElementChild);}
+const yediucSil = ()=>{let ul=document.querySelector('#yediucul');   ul.removeChild(ul.lastElementChild);}
+const yedidortSil=()=>{let ul=document.querySelector('#yedidortul');  ul.removeChild(ul.lastElementChild);}
+
+const sekizbirSil=()=>{let ul=document.querySelector('#sekizbirul');  ul.removeChild(ul.lastElementChild);}
+const sekizikiSil=()=>{let ul=document.querySelector('#sekizikiul'); ul.removeChild(ul.lastElementChild);}
+
+const dokuzbirSil=()=>{let ul=document.querySelector('#dokuzbirul');  ul.removeChild(ul.lastElementChild);}
+const dokuzikiSil=()=>{let ul=document.querySelector('#dokuzikiul'); ul.removeChild(ul.lastElementChild);}
+
+
+  
+</script>
+
+  
 </body>
+
 </html>
