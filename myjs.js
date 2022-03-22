@@ -17,7 +17,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="birbiryazar[]" value="0" class="form-control w-100">
+    <input type="number" name="birbiryazar[]" value="1" class="form-control w-100">
 </div>
 </li>`;
 liDom.classList.add('row'); ul.append(liDom);
@@ -39,7 +39,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="birikiyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="birikiyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>`;
@@ -63,7 +63,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="birucyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="birucyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -94,7 +94,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="ikibiryazar[]" value="0" class="form-control w-100">
+    <input type="number" name="ikibiryazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -119,7 +119,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="ikiikiyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="ikiikiyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -151,7 +151,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="ucbiryazar[]" value="0" class="form-control w-100">
+    <input type="number" name="ucbiryazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -176,7 +176,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="ucikiyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="ucikiyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -201,7 +201,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="ucucyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="ucucyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -226,7 +226,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="ucdortyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="ucdortyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -251,7 +251,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="ucbesyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="ucbesyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -275,7 +275,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="ucaltiyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="ucaltiyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -300,7 +300,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="ucyediyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="ucyediyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -332,7 +332,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="dortbiryazar[]" value="0" class="form-control w-100">
+    <input type="number" name="dortbiryazar[]" value="1" class="form-control w-100">
 </div>
 </li>
 `;
@@ -355,7 +355,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="dortikiyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="dortikiyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -379,7 +379,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="dortucyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="dortucyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -404,7 +404,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="dortdortyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="dortdortyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -638,7 +638,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="sekizbiryazar[]" value="0" class="form-control w-100">
+    <input type="number" name="sekizbiryazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
@@ -662,7 +662,7 @@ let liDom=document.createElement('li'); liDom.innerHTML=`
 </div>
 <div class="col-md-2">
     <label for="">Yazar Sayısı</label>
-    <input type="number" name="sekizikiyazar[]" value="0" class="form-control w-100">
+    <input type="number" name="sekizikiyazar[]" value="1" class="form-control w-100">
 </div>
 
 </li>
