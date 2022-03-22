@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hukuk Doçentlik Hesaplama</title>
+
+    <!--Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="form" asp-controller="home" asp-action="hesaplama" method="post">
+
+
+        <div class="text-center mt-5">
+            <h1>Hukuk Temel Alanı Başvuru Şartları</h1>
+            <p id="aciklama">
+                Hukuk temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki
+çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan (90) puanının
+doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde edilmiş olması
+kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş olması gerekir. Her
+çalışma Tablo 5' de sadece bir bölümde yazılarak puanlandırılır.
+Tek yazarlı yayınlarda yazar tam puan alır. Çok yazarlı yayınlarda puan yazarlar arasında
+eşit olarak bölünür.
+            </p>
+
+        </div>
+
+
+        <div class="bg-secondary text-white row" id="bir">
+            <h3>1. Uluslararası Makale</h3>
+            <p>Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden
+                üretilmemiş olmak kaydıyla </p>
+                <br>
+            <div class="row">
+                <label class="col-md-8">a) SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
+                    mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale / 20 puan </label>
+             
+                <button  class="btn btn-primary col-md-1 ">+</button>
+                <button  class="btn btn-danger col-md-1 ms-4">-</button>
+                <ul class="uluslararasiul">
+                    <li class="row">
+                            
+                        <div class="mb-3 col-md-4">
+                            <label >Makale Sayısı</label>
+                            <input type="number" class="form-control" name="uluslararasiAmakalesayisi">
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label >Yazar Sayısı</label>
+                            <input type="number" class="form-control" name="uluslararasiAyazarsayisi">
+                        </div>
+                        <div class="mb-3 col-md-4" name="uluslararasiAdoktora">
+                            <select class="form-select mt-4" >
+                                <option selected>Doktora Zamanını Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                
+
+                    </li>
+                </ul>
+            </div>
+<br>
+        <div class="row">
+            <label class="col-md-8">b) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet
+                veya kitap kritiği hariç olmak üzere yayımlanmış makale / 10 puan </label>
+        
+            <button  class="btn btn-primary col-md-1 ">+</button>
+            <button  class="btn btn-danger col-md-1 ms-4">-</button>
+            <ul class="uluslararasiBul">
+                <li class="row">
+                        
+                    <div class="mb-3 col-md-4">
+                        <label >Makale Sayısı</label>
+                        <input type="number" class="form-control" name="uluslararasiBmakalesayisi">
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label >Yazar Sayısı</label>
+                        <input type="number" class="form-control" name="uluslararasiByazarsayisi">
+                    </div>
+                    <div class="mb-3 col-md-4" name="uluslararasiBdoktorazamani">
+                        <select class="form-select mt-4" >
+                            <option selected>Doktora Zamanını Seçiniz</option>
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+            
+
+                </li>
+            </ul>
+        </div>
+<br>
+        <div class="row">
+            <label class="col-md-8">c) Bu maddenin a veya b bentleri kapsamındaki yayınlarda alanında bilime
+                katkı sağlayan kitap kritiği yapılmış makale  / 5 puan </label>
+
+            <button  class="btn btn-primary col-md-1 ">+</button>
+            <button  class="btn btn-danger col-md-1 ms-4">-</button>
+            <ul class="uluslararasiCul">
+                <li class="row">
+                    <div class="mb-3 col-md-4">
+                        <label >Makale Sayısı</label>
+                        <input type="number" class="form-control" name="uluslararasiCmakalesayisi">
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label >Yazar Sayısı</label>
+                        <input type="number" class="form-control" name="uluslararasiCyazarsayisi">
+                    </div>
+                    <div class="mb-3 col-md-4" name="uluslararasiCdoktorazamani">
+                        <select class="form-select mt-4" >
+                            <option selected>Doktora Zamanını Seçiniz</option>
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+            
+
+                </li>
+            </ul>
+        </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="mt-5 mb-5">   
+            <button type="reset" class="btn btn-secondary col-md-4 offset-md-2">Sıfırla</button>
+            <button type="submit" class="btn btn-primary col-md-4 ">Hesapla</button>
+        </div>
+    </form>
+</body>
+</html>
