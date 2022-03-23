@@ -25,7 +25,7 @@
 
         <div class="text-center mt-5 container">
             <h1>Hukuk Temel Alanı Başvuru Şartları</h1>
-            <p id="aciklama">
+            <h4 id="aciklama">
                 Hukuk temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki
 çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan (90) puanının
 doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde edilmiş olması
@@ -33,46 +33,103 @@ kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş o
 çalışma Tablo 5' de sadece bir bölümde yazılarak puanlandırılır.
 Tek yazarlı yayınlarda yazar tam puan alır. Çok yazarlı yayınlarda puan yazarlar arasında
 eşit olarak bölünür.
-            </p>
+            </h3>
 
         </div>
 
 
-        <div class="container " id="bir">
+        <div class="container bg-info text-white" id="bir">
             <h3>1. Uluslararası Makale</h3>
             <p>Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden
                 üretilmemiş olmak kaydıyla </p>
                 <br>
-            <div class="row">
-                <label class="col-md-8">a) SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
-                    mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale / 20 puan </label>
-             
-                <button  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
-                <button  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
-                <ul class="uluslararasiAul">
-                    <li class="row">
-                            
-                        <div class="mb-3 col-md-4">
-                            <label >Makale Sayısı</label>
-                            <input type="number" class="form-control" name="uluslararasiAmakalesayisi">
-                        </div>
-                        <div class="mb-3 col-md-4">
-                            <label >Yazar Sayısı</label>
-                            <input type="number" class="form-control" name="uluslararasiAyazarsayisi">
-                        </div>
-                        <div class="mb-3 col-md-4" name="uluslararasiAdoktora">
-                            <select class=" form-select form-select-lg mt-5" >
-                                <option selected>Doktora Zamanını Seçiniz</option>
-                                <option value="0">Doktora Öncesi</option>
-                                <option value="1">Doktora Sonrası</option>
-                            </select>
-                        </div>
+                <div class="row ">
+                    <label class="col-md-8">a) SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
+                        mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale   </label>
                 
-
-                    </li>
-                </ul>
-            </div>
+                    <button onclick="uluslararasiAekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                    <button onclick="uluslararasiAsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
+                    <ul class="uluslararasiAul">
+                            <li class="row">
+                                <div class="mb-3 col-md-4">
+                                    <label >Makale Sayısı</label>
+                                    <input type="number" class="form-control" name="uluslararasiAmakalesayisi" required>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label >Yazar Sayısı</label>
+                                    <input type="number" class="form-control" name="uluslararasiAyazarsayisi" required>
+                                </div>
+                                <div class="mb-3 col-md-4" name="uluslararasiAdoktora">
+                                    <br>
+                                    <select class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                                        <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                        <option value="0">Doktora Öncesi</option>
+                                        <option value="1">Doktora Sonrası</option>
+                                    </select>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
           <hr>
+                <div class="row ">
+                    <label class="col-md-8">b) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet
+                        veya kitap kritiği hariç olmak üzere yayımlanmış makale   </label>
+                
+                    <button onclick="uluslararasiBekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                    <button onclick="uluslararasiBsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
+                    <ul class="uluslararasiBul">
+                            <li class="row">
+                                <div class="mb-3 col-md-4">
+                                    <label >Makale Sayısı</label>
+                                    <input type="number" class="form-control" name="uluslararasiBmakalesayisi" required>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label >Yazar Sayısı</label>
+                                    <input type="number" class="form-control" name="uluslararasiByazarsayisi" required>
+                                </div>
+                                <div class="mb-3 col-md-4" name="uluslararasiBdoktora">
+                                    <br>
+                                    <select class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                                        <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                        <option value="0">Doktora Öncesi</option>
+                                        <option value="1">Doktora Sonrası</option>
+                                    </select>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+           <hr>
+                <div class="row ">
+                    <label class="col-md-8">c) Bu maddenin a veya b bentleri kapsamındaki yayınlarda alanında bilime
+                        katkı sağlayan kitap kritiği yapılmış makale</label>
+                
+                    <button onclick="uluslararasiCekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                    <button onclick="uluslararasiCsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
+                    <ul class="uluslararasiCul">
+                            <li class="row">
+                                <div class="mb-3 col-md-4">
+                                    <label >Makale Sayısı</label>
+                                    <input type="number" class="form-control" name="uluslararasiCmakalesayisi" required>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label >Yazar Sayısı</label>
+                                    <input type="number" class="form-control" name="uluslararasiCyazarsayisi" required>
+                                </div>
+                                <div class="mb-3 col-md-4" name="uluslararasiCdoktora">
+                                    <br>
+                                    <select class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                                        <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                        <option value="0">Doktora Öncesi</option>
+                                        <option value="1">Doktora Sonrası</option>
+                                    </select>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+           <hr>
+
+        </div>
+
 
 
 
