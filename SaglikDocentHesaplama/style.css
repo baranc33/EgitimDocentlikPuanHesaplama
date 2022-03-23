@@ -1,36 +1,92 @@
-body{
+body {
     background-image: url('image/kalpatis.png');
-    background-size: cover; 
+    background-size: cover;
     background-repeat: round;
     background-attachment: fixed;
 }
 
-#baslik>h1{
+#baslik>h1 {
     text-align: center;
-    
 }
 
-#baslik>h2{
+#baslik>h2 {
     margin-left: 1em;
     color: #0f0f8e;
 }
-#baslik>h3{
+
+#baslik>h3 {
     margin-left: 2em;
     margin-right: 10em;
     color: #02027b;
 }
 
-#UluslararasiMakale{
+#UluslararasiMakale {
     margin-left: 15em;
     margin-right: 15em;
 }
 
-#icerik{
+.icerik {
     display: inline;
-
 }
 
-#icerik>p{
+.icerik>p {
     display: inline;
+}
 
+.icerik input {
+    width: 5%;
+    border: 2px solid rgb(184, 171, 171);
+    border-radius: 4px;
+}
+
+.icerik input:focus {
+    background-color: lightblue;
+}
+
+.icerik label {
+    margin-left: 5%;
+}
+
+select {
+    /* width: 100%; */
+    padding: 4px 5px;
+    border: none;
+    border-radius: 2px;
+    background-color: #f1f1f1;
+}
+
+
+/*ekleme silme butonları*/
+
+.icerik>div button:nth-child(2) {
+    width: 50px;
+    height: 20px;
+    background-color: #1414ff;
+    color: white;
+    border-radius: 5px;
+    border-width: 0;
+}
+
+.icerik>div button:nth-child(3) {
+    width: 50px;
+    height: 20px;
+    background-color: #f00303;
+    color: white;
+    border-radius: 5px;
+    border-width: 0;
+    opacity: 1;
+}
+
+.icerik>div button:hover {
+    opacity: 70%;
+}
+
+.icerik>div button:nth-child(3):focus {
+    background-color: #ff1f1f;
+    opacity: 1;
+}
+
+.icerik>div button:nth-child(2):focus {
+    background-color: #02027b;
+    opacity: 1;
 }
