@@ -557,7 +557,103 @@
 
 
 
-    
+        <br>
+        <div class="container " id="bes">
+   
+                    <h3>5. Atıflar </h3>
+                    <label for="">Bu madde kapsamında en az 4 puan alınması zorunludur.Bu madde kapsamında en fazla 20 puan alınabilir.</label>
+                    <hr>
+                    <div class="row mt-5">
+                        <label class="col-md-8">a) SCI, SCI-Expanded, SSCI ve AHCI tarafından taranan dergilerde;
+                            Uluslararası yayınevleri tarafından yayımlanmış kitaplarda yayımlanan ve
+                            adayın yazar olarak yer almadığı yayınlardan her birinde, metin içindeki
+                            atıf sayısına bakılmaksızın adayın atıf yapılan her eseri için  </label>
+        
+                        <button onclick="ekle('atiflarAul')" type="button"
+                            class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                        <button onclick="sil('atiflarAul')" type="button"
+                            class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                        <ul id="atiflarAul"  type="none">
+                         <li class="row">
+                            <div class="mb-3 col-md-4 offset-md-4">
+                                <label>Atıf Sayısı</label>
+                                <input type="number" class="form-control" value="1" name="atiflarAatif" required>
+                            </div>
+                            <div class="mb-3 col-md-4">
+                                <br>
+                                <select name="atiflarAdoktora" class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                                </select>
+                            </div>
+                         </li>
+                        </ul>
+                    </div>
+            <hr>
+ 
+            <div class="row mt-5">
+                <label class="col-md-8">b) SCI, SCI-Expanded, SSCI ve AHCI dışındaki endeksler tarafından taranan
+                    dergilerde; Uluslararası yayınevleri tarafından yayımlanmış kitaplarda
+                    bölüm yazarı olarak yayımlanan ve adayın yazar olarak yer almadığı
+                    yayınlardan her birinde, metin içindeki atıf sayısına bakılmaksızın adayın
+                    atıf yapılan her eseri için </label>
+
+                <button onclick="ekle('atiflarBul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('atiflarBul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="atiflarBul"  type="none">
+                 <li class="row">
+                    <div class="mb-3 col-md-4 offset-md-4">
+                        <label>Atıf Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="atiflarBatif" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="atiflarBdoktora" class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                 </li>
+                </ul>
+            </div>
+    <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">c) Ulusal hakemli dergilerde; Ulusal yayınevleri tarafından yayımlanmış
+                    kitaplarda yayımlanan ve adayın yazar olarak yer almadığı yayınlardan her
+                    birinde, metin içindeki atıf sayısına bakılmaksızın adayın atıf yapılan her
+                    eseri için </label>
+
+                <button onclick="ekle('atiflarCul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('atiflarCul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="atiflarCul"  type="none">
+                <li class="row">
+                    <div class="mb-3 col-md-4 offset-md-4">
+                        <label>Atıf Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="atiflarCatif" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="atiflarCdoktora" class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                </li>
+                </ul>
+            </div>
+
+
+
+
+
+ 
+        </div>
+ 
 
 
 
