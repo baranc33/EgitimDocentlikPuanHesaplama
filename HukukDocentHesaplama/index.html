@@ -406,6 +406,160 @@
         </div>
 
            
+        <br>
+
+        <div class="container " id="dort">
+                <h3>4. Kitap </h3>
+                <p>Adayın hazırladığı lisansüstü tezlerinden üretilmemiş ve başvurulan doçentlik bilim alanı ile ilgili olmak kaydıyla</p>
+                <label for="">
+                    Bu madde kapsamında en az bir yayın zorunludur. Bu madde kapsamında sadece ders
+                    kitabı dışındaki uluslararası literatürün de kullanıldığı özgün bilimsel kitaplar
+                    (monografiler) puanlanabilir. Ancak bu maddenin a veya c bentleri kapsamında en az bir
+                    yayın zorunludur.
+                </label>
+                <hr>
+                <div class="row mt-5">
+
+                <label class="col-md-8">a) Uluslararası yayınevleri tarafından yayımlanmış tek yazarlı kitap
+                </label>
+
+                <button onclick="ekle('kitapAul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('kitapAul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="kitapAul"  type="none">
+                 <li class="row">
+                    <div class="mb-3 col-md-4">
+                        <label>Kitap Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="kitapAkitapsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label>Yazar Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="kitapAyazarsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="kitapAdoktora" class="form-select form-select-lg mb-3 mt-2"
+                            aria-label=".form-select-lg example">
+                            <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                 </li>
+                </ul>
+               </div>
+
+            <hr>
+            <div class="row mt-5">
+
+                <label class="col-md-8">b) Ulusal veya uluslararası yayınevleri tarafından yayımlanmış kitap
+                    editörlüğü veya bölüm yazarlığı 
+                </label>
+
+                <button onclick="ekle('kitapBul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('kitapBul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="kitapBul"  type="none">
+                 <li class="row">
+                    <div class="mb-3 col-md-4">
+                        <label>Kitap Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="kitapBkitapsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label>Yazar Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="kitapByazarsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="kitapBdoktora" class="form-select form-select-lg mb-3 mt-2"
+                            aria-label=".form-select-lg example">
+                            <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                 </li>
+                </ul>
+             </div>
+
+            <hr>
+
+
+            <div class="row mt-5">
+
+                <label class="col-md-8">c) Ulusal yayınevleri tarafından yayımlanmış tek yazarlı kitap
+                </label>
+
+                <button onclick="ekle('kitapCul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('kitapCul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="kitapCul"  type="none">
+                 <li class="row">
+                    <div class="mb-3 col-md-4">
+                        <label>Kitap Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="kitapCkitapsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label>Yazar Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="kitapCyazarsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="kitapCdoktora" class="form-select form-select-lg mb-3 mt-2"
+                            aria-label=".form-select-lg example">
+                            <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                 </li>
+                </ul>
+             </div>
+
+            <hr>
+
+
+            <div class="row mt-5">
+
+                <label class="col-md-8">d) Ulusal veya uluslararası yayınevleri tarafından yayımlanmış çok yazarlı kitap </label>
+
+                <button onclick="ekle('kitapDul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('kitapDul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="kitapDul"  type="none">
+                 <li class="row">
+                    <div class="mb-3 col-md-4">
+                        <label>Kitap Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="kitapDkitapsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label>Yazar Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="kitapDyazarsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="kitapDdoktora" class="form-select form-select-lg mb-3 mt-2"
+                            aria-label=".form-select-lg example">
+                            <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                 </li>
+                </ul>
+               </div>
+
+        </div>
+
+
+
+    
+
+
 
 
 
