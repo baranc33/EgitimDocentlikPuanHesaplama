@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body ></body>
+<body>
 
     <div id="baslik">
         <h1> Sağlık Bilimleri Temel Alanı Doçentlik puan hesaplama</h1>
@@ -32,6 +32,38 @@
     </div>
     
 
+    <form action="">
+
+
+        <div id="UluslararasiMakale">
+            <h2>1. Uluslararası Makale</h2>
+            <p>Adayın başvurulan doçentlik bilim alanı ile ilgili lisansüstü tez(ler)den üretilmemiş
+                olmak kaydıyla (editöre mektup, özet, derleme ve kitap kritiği hariç) tam araştırma
+                makaleleri</p>
+
+                <div id="icerik">
+                    <div>
+                        <label >Makale  Sayısı</label>
+                        <label style="margin-left: 5%;"> Yazar Sayısı</label>
+                        <label style="margin-left: 5%;"> Doktora Zamanı</label>
+                    </div>
+
+                    <div>
+                        <input id="sayi" type="text" value="1" required>
+                        <input type="text" value="1" required>
+                    </div>
+
+
+
+                </div>
+
+                <p>
+                    Bu maddenin a bendi kapsamında en az bir makalede başlıca yazar olmak kaydıyla en az 40 puan alınmalıdır.
+                </p>
+        </div>
+
+
+    </form>
 
 
 
@@ -149,6 +181,14 @@
 
     </pre>
 
+
+
+    <!-- <script>
+        const  add = (id) =>{
+            let ul = document.querySelector(id);
+            let content=ul.firstElementChild.innerHTML;
+        }
+    </script> -->
 
 </body>
 </html>

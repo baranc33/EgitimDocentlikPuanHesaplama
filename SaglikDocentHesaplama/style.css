@@ -19,3 +19,18 @@ body{
     margin-right: 10em;
     color: #02027b;
 }
+
+#UluslararasiMakale{
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+#icerik{
+    display: inline;
+
+}
+
+#icerik>p{
+    display: inline;
+
+}
