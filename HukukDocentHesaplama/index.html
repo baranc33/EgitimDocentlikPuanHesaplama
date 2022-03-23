@@ -919,6 +919,68 @@
         </div>
 
 
+        <br>
+        <div class="container " id="dokuz">
+   
+                    <h3>9. Eğitim-Öğretim Faaliyeti </h3>
+                    <p>Doktora eğitimini tamamladıktan sonra açık, uzaktan veya yüzyüze ortamlarda verilmiş ders </p>
+                    <label for="">
+                        Bu madde kapsamında en az 2 puan almak zorunludur, ancak en fazla 4 puan alınabilir.
+                        Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en az 2 yıl
+                        öğretim elemanı olarak görev yapanlar 2 puan almış sayılır
+                    </label>
+                    <hr>
+            <div class="row mt-5">
+            <label class="col-md-8">a) Doktora tez danışmanlığı </label>
+
+            <button onclick="ekle('dersAul')" type="button"
+                class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+            <button onclick="sil('dersAul')" type="button"
+                class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+            <ul id="dersAul"  type="none">
+                <li class="row">
+                <div class="mb-3 col-md-4 offset-md-4">
+                    <label>Ders Sayısı</label>
+                    <input type="number" class="form-control" value="1" name="dersAsayisi" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <br>
+                    <select name="dersAdoktora" class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                        <option value="1">Doktora Sonrası</option>
+                    </select>
+                </div>
+                </li>
+            </ul>
+            </div>
+
+            <hr>
+            <div class="row mt-5">
+                <label class="col-md-8">b) Bir dönem önlisans veya lisans dersi </label>
+    
+                <button onclick="ekle('dersBul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('dersBul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="dersBul"  type="none">
+                    <li class="row">
+                    <div class="mb-3 col-md-4 offset-md-4">
+                        <label>Ders Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="dersBsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="dersBdoktora" class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                    </li>
+                </ul>
+                </div>
+    
+        </div>
+
+
+
 
        
 
