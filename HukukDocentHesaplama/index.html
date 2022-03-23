@@ -659,6 +659,71 @@
 
 
 
+        <br>
+        <div class="container " id="alti">
+   
+                    <h3>6. Lisansüstü Tez Danışmanlığı  </h3>
+                    <p>Adayın danışmanlığını yürüttüğü tamamlanan lisansüstü tezlerden </p>
+                    <label for="">
+                        Bu madde kapsamında en fazla 10 puan alınabilir. İkinci/eş danışman olması durumunda
+                        asıl danışman a ve b bentleri için öngörülen puanların tamamını, ikinci danışman ise
+                        yarısını alır
+                    </label>
+                    <hr>
+            <div class="row mt-5">
+            <label class="col-md-8">a) Doktora tez danışmanlığı </label>
+
+            <button onclick="ekle('danismanlikAul')" type="button"
+                class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+            <button onclick="sil('danismanlikAul')" type="button"
+                class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+            <ul id="danismanlikAul"  type="none">
+                <li class="row">
+                <div class="mb-3 col-md-4 offset-md-4">
+                    <label>Danışmanlık Sayısı</label>
+                    <input type="number" class="form-control" value="1" name="danismanlikAsayisi" required>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <br>
+                    <select name="danismanlikAdoktora" class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                        <option value="1">Doktora Sonrası</option>
+                    </select>
+                </div>
+                </li>
+            </ul>
+            </div>
+
+            <hr>
+      
+            <div class="row mt-5">
+                <label class="col-md-8">b) Yüksek lisans tez danışmanlığı </label>
+    
+                <button onclick="ekle('danismanlikBul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('danismanlikBul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="danismanlikBul"  type="none">
+                    <li class="row">
+                    <div class="mb-3 col-md-4 offset-md-4">
+                        <label>Danışmanlık Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="danismanlikBsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="danismanlikBdoktora" class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                    </li>
+                </ul>
+                </div>
+        </div>
+
+
+
+
+
+
 
        
 
