@@ -38,20 +38,165 @@ eşit olarak bölünür.
         </div>
 
 
-        <div class="container bg-info text-white" id="bir">
-            <h3>1. Uluslararası Makale</h3>
-            <p>Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden
-                üretilmemiş olmak kaydıyla </p>
-                <br>
-                <div class="row ">
-                    <label class="col-md-8">a) SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
-                        mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale   </label>
+           <div class="container bg-info text-white" id="bir">
+                   <div class="row mt-5">
+                            <h3>1. Uluslararası Makale</h3>
+                            <p>Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla </p>
+                    <br>
                 
-                    <button onclick="uluslararasiAekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
-                    <button onclick="uluslararasiAsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
-                    <ul class="uluslararasiAul">
-                            <li class="row">
-                                <div class="mb-3 col-md-4">
+                        <label class="col-md-8">a) SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
+                            mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale   </label>
+                        
+                        <button onclick="uluslararasiAekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                        <button onclick="uluslararasiAsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
+                        <ul id="uluslararasiAul">
+                            
+                        </ul>
+                   </div>
+      
+          <hr>
+                <div class="row ">
+                    <label class="col-md-8">b) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet
+                        veya kitap kritiği hariç olmak üzere yayımlanmış makale   </label>
+                
+                    <button onclick="uluslararasiBekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                    <button onclick="uluslararasiBsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
+                    <ul id="uluslararasiBul">
+                            
+                    </ul>
+                </div>
+           <hr>
+                <div class="row ">
+                    <label class="col-md-8">c) Bu maddenin a veya b bentleri kapsamındaki yayınlarda alanında bilime
+                        katkı sağlayan kitap kritiği yapılmış makale</label>
+                
+                    <button onclick="uluslararasiCekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                    <button onclick="uluslararasiCsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
+                    <ul id="uluslararasiCul">
+                           
+                    </ul>
+                </div>
+           <hr>
+
+           </div>
+
+
+
+<br>
+           
+           <div class="container bg-info text-white" id="bir">
+            <div class="row mt-5">
+             <h3>1. Uluslararası Makale</h3>
+             <p>Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden
+                 üretilmemiş olmak kaydıyla </p>
+                 <br>
+             
+                     <label class="col-md-8">a) SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
+                         mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale   </label>
+                 
+                 <button onclick="UlusalAekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                 <button onclick="UlusalAsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
+                 <ul id="UlusalAul">
+                      <li class="row">
+                        <div class="mb-3 col-md-4">
+                            <label >Makale Sayısı</label>
+                            <input type="number" class="form-control" name="UlusalAmakalesayisi" required>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label >Yazar Sayısı</label>
+                            <input type="number" class="form-control" name="UlusalAyazarsayisi" required>
+                        </div>
+                        <div class="mb-3 col-md-4" name="UlusalAdoktora">
+                            <br>
+                            <select class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                      </li>
+                 </ul>
+                </div>
+   
+       <hr>
+             <div class="row ">
+                 <label class="col-md-8">b) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet
+                     veya kitap kritiği hariç olmak üzere yayımlanmış makale   </label>
+             
+                 <button onclick="UlusalBekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                 <button onclick="UlusalBsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
+                 <ul id="UlusalBul">
+                         <li class="row">
+                            <div class="mb-3 col-md-4">
+                                <label >Makale Sayısı</label>
+                                <input type="number" class="form-control" name="UlusalBmakalesayisi" required>
+                            </div>
+                            <div class="mb-3 col-md-4">
+                                <label >Yazar Sayısı</label>
+                                <input type="number" class="form-control" name="UlusalByazarsayisi" required>
+                            </div>
+                            <div class="mb-3 col-md-4" name="UlusalBdoktora">
+                                <br>
+                                <select class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                                </select>
+                            </div>
+                         </li>
+                 </ul>
+             </div>
+ 
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="mt-5 mb-5">   
+            <button type="reset" class="btn btn-secondary col-md-4 offset-md-2">Sıfırla</button>
+            <button type="submit" class="btn btn-primary col-md-4 ">Hesapla</button>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+    <script>// örnek
+        
+function ekle() {
+    let ul = document.getElementById('birbirul');
+    let li = document.createElement('li'); li.innerHTML = `
+
+`;
+    li.classList.add('row'); ul.append(li);
+}
+
+function sil ()  { let ul = document.getElementById('dokuzikiul'); ul.removeChild(ul.lastElementChild); }
+
+    </script>
+
+
+
+<script>
+        
+    function uluslararasiAekle() {
+        let ul = document.getElementById('uluslararasiAul');
+        let li = document.createElement('li'); li.innerHTML = `
+        <div class="mb-3 col-md-4">
                                     <label >Makale Sayısı</label>
                                     <input type="number" class="form-control" name="uluslararasiAmakalesayisi" required>
                                 </div>
@@ -67,19 +212,16 @@ eşit olarak bölünür.
                                         <option value="1">Doktora Sonrası</option>
                                     </select>
                                 </div>
-                            </li>
-                    </ul>
-                </div>
-          <hr>
-                <div class="row ">
-                    <label class="col-md-8">b) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet
-                        veya kitap kritiği hariç olmak üzere yayımlanmış makale   </label>
-                
-                    <button onclick="uluslararasiBekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
-                    <button onclick="uluslararasiBsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
-                    <ul class="uluslararasiBul">
-                            <li class="row">
-                                <div class="mb-3 col-md-4">
+    `;
+        li.classList.add('row'); ul.append(li);
+    }
+    function uluslararasiAsil ()  { let ul = document.getElementById('uluslararasiAul'); ul.removeChild(ul.lastElementChild); }
+    
+
+    function uluslararasiBekle() {
+        let ul = document.getElementById('uluslararasiBul');
+        let li = document.createElement('li'); li.innerHTML = `
+        <div class="mb-3 col-md-4">
                                     <label >Makale Sayısı</label>
                                     <input type="number" class="form-control" name="uluslararasiBmakalesayisi" required>
                                 </div>
@@ -95,53 +237,39 @@ eşit olarak bölünür.
                                         <option value="1">Doktora Sonrası</option>
                                     </select>
                                 </div>
-                            </li>
-                    </ul>
-                </div>
-           <hr>
-                <div class="row ">
-                    <label class="col-md-8">c) Bu maddenin a veya b bentleri kapsamındaki yayınlarda alanında bilime
-                        katkı sağlayan kitap kritiği yapılmış makale</label>
-                
-                    <button onclick="uluslararasiCekle()" type="button"  class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
-                    <button onclick="uluslararasiCsil()"  type="button"  class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus">-</button>
-                    <ul class="uluslararasiCul">
-                            <li class="row">
-                                <div class="mb-3 col-md-4">
-                                    <label >Makale Sayısı</label>
-                                    <input type="number" class="form-control" name="uluslararasiCmakalesayisi" required>
-                                </div>
-                                <div class="mb-3 col-md-4">
-                                    <label >Yazar Sayısı</label>
-                                    <input type="number" class="form-control" name="uluslararasiCyazarsayisi" required>
-                                </div>
-                                <div class="mb-3 col-md-4" name="uluslararasiCdoktora">
-                                    <br>
-                                    <select class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
-                                        <option value="0" selected>Doktora Zamanı Seçiniz</option>
-                                        <option value="0">Doktora Öncesi</option>
-                                        <option value="1">Doktora Sonrası</option>
-                                    </select>
-                                </div>
-                            </li>
-                    </ul>
-                </div>
-           <hr>
+    `;
+        li.classList.add('row'); ul.append(li);
+    }
+    function uluslararasiBsil ()  { let ul = document.getElementById('uluslararasiBul'); ul.removeChild(ul.lastElementChild); }
+    
 
+    
+    function uluslararasiCekle() {
+        let ul = document.getElementById('uluslararasiCul');
+        let li = document.createElement('li'); li.innerHTML = `
+        <div class="mb-3 col-md-4">
+            <label >Makale Sayısı</label>
+            <input type="number" class="form-control" name="uluslararasiCmakalesayisi" required>
         </div>
-
-
-
-
-
-
-
-
-
-        <div class="mt-5 mb-5">   
-            <button type="reset" class="btn btn-secondary col-md-4 offset-md-2">Sıfırla</button>
-            <button type="submit" class="btn btn-primary col-md-4 ">Hesapla</button>
+        <div class="mb-3 col-md-4">
+            <label >Yazar Sayısı</label>
+            <input type="number" class="form-control" name="uluslararasiCyazarsayisi" required>
         </div>
-    </form>
+        <div class="mb-3 col-md-4" name="uluslararasiCdoktora">
+            <br>
+            <select class="form-select form-select-lg mb-3 mt-2" aria-label=".form-select-lg example">
+                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                <option value="0">Doktora Öncesi</option>
+                <option value="1">Doktora Sonrası</option>
+            </select>
+        </div>
+    `;
+        li.classList.add('row'); ul.append(li);
+    }
+    function uluslararasiCsil ()  { let ul = document.getElementById('uluslararasiCul'); ul.removeChild(ul.lastElementChild); }
+    
+
+        </script>
+    </body>
 </body>
 </html>
