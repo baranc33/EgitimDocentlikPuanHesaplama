@@ -13,6 +13,16 @@ form{
  */
 
 
- #bir{
-     border-radius: 30px;
+ #bir,#uc,#bes{
+     border-radius: 10px;
+     padding: 30px 30px 30px 30px;
+     background-color: blue;
+     color: white;
  }
+
+ #iki,#dort,#alti{
+    border-radius: 10px;
+    padding: 30px 30px 30px 30px;
+    background-color: rgb(231, 27, 0);
+    color: white;
+}
