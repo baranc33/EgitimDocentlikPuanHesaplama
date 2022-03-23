@@ -836,6 +836,88 @@
 
 
 
+        <br>
+
+        <div class="container " id="sekiz">
+                <h3>8. Bilimsel Toplantı Faaliyeti</h3>
+                <label for="">
+                    Bu madde kapsamında en az 5 puan almak zorunludur, en fazla 10 puan alınabilir. Aynı
+                    toplantıda sunulan en fazla bir bildiri puanlanır.
+                </label>
+                <hr>
+                <div class="row mt-5">
+
+                <label class="col-md-8">a) Uluslararası bilimsel toplantılarda sunulan (poster hariç), tam metni
+                    veya özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış
+                    çalışmalar
+                </label>
+
+                <button onclick="ekle('toplantiAul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('toplantiAul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="toplantiAul"  type="none">
+                 <li class="row">
+                    <div class="mb-3 col-md-4">
+                        <label>Yayın Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="toplantiAyayinsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label>Yazar Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="toplantiAyazarsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="toplantiAdoktora" class="form-select form-select-lg mb-3 mt-2"
+                            aria-label=".form-select-lg example">
+                            <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                 </li>
+                </ul>
+            </div>
+
+            <hr>
+            <div class="row mt-5">
+
+                <label class="col-md-8">b) Ulusal bilimsel toplantılarda sunulan (poster hariç), tam metni veya
+                    özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış
+                    çalışmalar. 
+                </label>
+
+                <button onclick="ekle('toplantiBul')" type="button"
+                    class="btn btn-primary col-md-1  glyphicon glyphicon-plus"></button>
+                <button onclick="sil('toplantiBul')" type="button"
+                    class="btn btn-danger col-md-1 ms-4 glyphicon glyphicon-minus"></button>
+                <ul id="toplantiBul"  type="none">
+                 <li class="row">
+                    <div class="mb-3 col-md-4">
+                        <label>Yayın Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="toplantiByayinsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label>Yazar Sayısı</label>
+                        <input type="number" class="form-control" value="1" name="toplantiByazarsayisi" required>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <br>
+                        <select name="toplantiBdoktora" class="form-select form-select-lg mb-3 mt-2"
+                            aria-label=".form-select-lg example">
+                            <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                        </select>
+                    </div>
+                 </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
 
 
        
