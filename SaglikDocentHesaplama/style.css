@@ -1,0 +1,21 @@
+body{
+    background-image: url('image/kalpatis.png');
+    background-size: cover; 
+    background-repeat: round;
+    background-attachment: fixed;
+}
+
+#baslik>h1{
+    text-align: center;
+    
+}
+
+#baslik>h2{
+    margin-left: 1em;
+    color: #0f0f8e;
+}
+#baslik>h3{
+    margin-left: 2em;
+    margin-right: 10em;
+    color: #02027b;
+}
