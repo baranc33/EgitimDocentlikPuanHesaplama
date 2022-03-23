@@ -33,7 +33,7 @@
     <form action="bla bla" method="post">
 
 
-        <div id="UluslararasiMakale">
+        <!-- <div id="UluslararasiMakale">
             <h2>1. Uluslararası Makale</h2>
             <p>Adayın başvurulan doçentlik bilim alanı ile ilgili lisansüstü tezlerden üretilmemiş olmak kaydıyla (editöre mektup, özet, derleme ve kitap kritiği hariç) tam araştırma makaleleri
             </p>
@@ -364,8 +364,118 @@
                 Bu madde kapsamında en az 1 yayın zorunludur. Bu maddeden en fazla 10 puan alınabilir
             </p>
             <hr>
-        </div>
+        </div> -->
 
+        <div id="kitap">
+            <h2>4. Kitap </h2>
+            <p>
+                Adayın hazırladığı lisansüstü tezlerinden üretilmemiş ve başvurulan doçentlik bilim alanı ile ilgili olmak kaydıyla
+            </p>
+            <div class="icerik" id="kitapA">
+                <p>A) Uluslararası yayınevleri tarafından yayımlanmış kitap</p>
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#kitapA')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#kitapA')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="kitapAdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Kitap  Sayısı</label>
+                    <input name="kitapAkitap" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="kitapAyazar" type="number" min="1" value="1" required>
+
+                </div>
+            </div>
+            <hr width="80%">
+
+            <div class="icerik" id="kitapB">
+                <p>B) Uluslararası yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm yazarlığı</p>
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#kitapB')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#kitapB')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="kitapBdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Kitap  Sayısı</label>
+                    <input name="kitapBkitap" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="kitapByazar" type="number" min="1" value="1" required>
+                </div>
+            </div>
+
+            <hr width="80%">
+            <div class="icerik" id="kitapC">
+                <p>C) Ulusal yayınevleri tarafından yayımlanmış kitap</p>
+
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#kitapC')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#kitapC')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="kitapCdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Kitap  Sayısı</label>
+                    <input name="kitapCkitap" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="kitapCyazar" type="number" min="1" value="1" required>
+                </div>
+            </div>
+            <hr width="80%">
+
+            <div class="icerik" id="kitapA">
+                <p>D) Ulusal yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm yazarlığı
+                </p>
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#kitapD')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#kitapD')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="kitapDdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Kitap  Sayısı</label>
+                    <input name="kitapDkitap" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="kitapDyazar" type="number" min="1" value="1" required>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <p>
+                Bu madde kapsamında sadece ders kitabı niteliği dışındaki özgün bilimsel kitaplar puanlanabilir, aynı kitaptaki bölümlerden en fazla ikisi dikkate alınır. Alana özgü ansiklopedi maddelerinin üç veya daha çok maddesi bir kitap bölümü kabul edilir
+            </p>
+            <hr>
+        </div>
 
 
         <div class="SubmitDiv" style="margin-bottom:100px">
