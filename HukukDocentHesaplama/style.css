@@ -13,14 +13,14 @@ form{
  */
 
 
- #bir,#uc,#bes{
+ #bir,#uc,#bes,#yedi,#dokuz{
      border-radius: 10px;
      padding: 30px 30px 30px 30px;
      background-color: blue;
      color: white;
  }
 
- #iki,#dort,#alti{
+ #iki,#dort,#alti,#sekiz{
     border-radius: 10px;
     padding: 30px 30px 30px 30px;
     background-color: rgb(231, 27, 0);
