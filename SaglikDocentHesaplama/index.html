@@ -18,14 +18,12 @@
 <body>
 
     <div id="baslik">
-        <h1> Sağlık Bilimleri Temel Alanı Doçentlik puan hesaplama</h1>
+        <h1> Eğitim Bilimleri Temel Alanı Doçentlik puan hesaplama</h1>
         <h2>Başvuru Şartları : </h2>
         <h3>
-            Sağlık Bilimleri temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan (90) puanının doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde
-            edilmiş olması kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş olması gerekir. Her çalışma, Tablo 10’da sadece bir bölümde yazılarak puanlandırılır.
-            <br> Tek yazarlı makalelerde yazar tam puan alır. İki yazarlı makalelerde başlıca yazar tam puanın 0.8'ini, ikinci yazar 0.5'ini alır. Üç ve daha fazla yazarlı makalelerde ise, başlıca yazar toplam puanın yarısını alır, diğer yazarlar ise
-            diğer yarısını eşit paylaşır. Başlıca yazarın belirtilmediği iki veya daha fazla yazarlı makalelerde toplam puan yazarlar arasında eşit olarak bölünür. Diğer yayınlarda (bildiri,kitap) ise toplam puan yazarlar arasında eşit olarak bölünür.
-
+            Eğitim bilimleri temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan (90) puanının doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde
+            edilmiş olması kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş olması gerekir. Her çalışma Tablo 1' de sadece bir bölümde yazılarak puanlandırılır.
+            <br> Tek yazarlı yayınlarda yazar tam puan alır. Çok yazarlı yayınlarda puan yazarlar arasında eşit olarak bölünür.
         </h3>
 
 
@@ -37,10 +35,11 @@
 
         <div id="UluslararasiMakale">
             <h2>1. Uluslararası Makale</h2>
-            <p>Adayın başvurulan doçentlik bilim alanı ile ilgili lisansüstü tez(ler)den üretilmemiş olmak kaydıyla (editöre mektup, özet, derleme ve kitap kritiği hariç) tam araştırma makaleleri
+            <p>Adayın başvurulan doçentlik bilim alanı ile ilgili lisansüstü tezlerden üretilmemiş olmak kaydıyla (editöre mektup, özet, derleme ve kitap kritiği hariç) tam araştırma makaleleri
             </p>
-
             <div class="icerik" id="UluslararasiMakaleA">
+                <p>A) SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale </p>
+
                 <div>
                     <label style="color:red">Ekstra Seçenek için :  </label>
                     <button onclick="added('#UluslararasiMakaleA')" type="button">
@@ -50,25 +49,149 @@
                 </div>
                 <div style="margin-top: 10px;">
                     <label> Doktora Zamanı</label>
-                    <select>
+                    <select name="UluslararasiMakaleAdoktora">
                             <option value="0">Doktora Öncesi</option>
                             <option value="1">Doktora Sonrası</option>
                           </select>
                     <label>Makale  Sayısı</label>
-                    <input type="number" min="1" value="1" required>
+                    <input name="UluslararasiMakaleAmakale" type="number" min="1" value="1" required>
                     <label> Yazar Sayısı</label>
-                    <input type="number" min="1" value="1" required>
+                    <input name="UluslararasiMakaleAyazar" type="number" min="1" value="1" required>
 
                 </div>
             </div>
+            <hr width="80%">
+
+            <div class="icerik" id="UluslararasiMakaleB">
+                <p>B) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale</p>
+
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#UluslararasiMakaleB')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#UluslararasiMakaleB')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="UluslararasiMakaleBdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Makale  Sayısı</label>
+                    <input name="UluslararasiMakaleBmakale" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="UluslararasiMakaleByazar" type="number" min="1" value="1" required>
+                </div>
+            </div>
+
+            <hr width="80%">
+            <div class="icerik" id="UluslararasiMakaleC">
+                <p>C) Bu maddenin a veya b bentleri kapsamındaki yayınlarda alanında bilime katkı sağlayan kitap kritiği yapılmış makale</p>
+
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#UluslararasiMakaleC')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#UluslararasiMakaleC')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="UluslararasiMakaleCdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Makale  Sayısı</label>
+                    <input name="UluslararasiMakaleCmakale" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="UluslararasiMakaleCyazar" type="number" min="1" value="1" required>
+                </div>
+            </div>
+            <hr width="80%">
+
+
+
+
+
+
+
+
+
             <p>
                 Bu maddenin a bendi kapsamında en az bir makalede başlıca yazar olmak kaydıyla en az 40 puan alınmalıdır.
             </p>
             <hr>
         </div>
 
-        <div>
-            <button type="submit"> Gönder</button>
+
+
+        <div id="UlusalMakale">
+            <h2>2. Ulusal Makale </h2>
+            <p>Başvurulan doçentlik bilim alanı ile ilgili ve adayın yaptığı lisansüstü tezlerden üretilmemiş olmak kaydıyla
+            </p>
+
+            <div class="icerik" id="UlusalMakaleA">
+                <p>a) ULAKBİM tarafından taranan ulusal hakemli dergilerde yayımlanmış makale
+                </p>
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#UlusalMakaleA')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#UlusalMakaleA')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="UlusalMakaleAdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Makale  Sayısı</label>
+                    <input name="UlusalMakaleAmakale" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="UlusalMakaleAyazar" type="number" min="1" value="1" required>
+
+                </div>
+            </div>
+            <hr width="80%">
+            <div class="icerik" id="UlusalMakaleB">
+                <p>b) a bendi dışındaki ulusal hakemli dergilerde yayımlanmış makale
+                </p>
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#UlusalMakaleB')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#UlusalMakaleB')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="UlusalMakaleBdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Makale  Sayısı</label>
+                    <input name="UlusalMakaleBmakale" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="UlusalMakaleByazar" type="number" min="1" value="1" required>
+
+                </div>
+            </div>
+
+
+            <p>
+                İkisi bu maddenin a bendi kapsamında olmak üzere en az üç yayın yapmak zorunludur.Yabancı uyruklu adaylar ile yurtdışı doçentlik denkliği başvurusu yapan adaylar , ULAKBİM tarafından taranan ulusal hakemli dergilerde yayımlanmış makale şartını sağlayamamaları
+                durumunda, bunun yerine aynı sayıdaki yayını 1.maddenin a ve/veya b bentleri kapsamında sağlayacaklardır </p>
+            <hr>
+        </div>
+
+
+
+
+        <div class="SubmitDiv">
+            <button type="reset"> Bilgileri Sıfırla</button>
+            <button type="submit"> Hesapla</button>
         </div>
 
     </form>
@@ -87,7 +210,7 @@
         const remove = (id) => {
             let div = document.querySelector(id);
             let child = div.childElementCount;
-            if (child > 2) {
+            if (child > 3) {
                 div.removeChild(div.lastElementChild);
             }
         }
