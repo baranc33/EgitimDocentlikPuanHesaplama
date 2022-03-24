@@ -730,7 +730,7 @@
 
 
 
-        <div id="toplanti">
+        <!-- <div id="toplanti">
             <h2>8. Bilimsel Toplantı Faaliyeti</h2>
             <p>Başvurulan bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla
             </p>
@@ -790,6 +790,62 @@
 
 
             <p>Bu madde kapsamında en az 5 puan almak zorunludur, en fazla 10 puan alınabilir. Aynı toplantıda sunulan en fazla bir bildiri puanlanır.
+            </p>
+            <hr>
+        </div> -->
+
+
+
+        <div id="faliyet">
+            <h2>9. Eğitim-Öğretim Faaliyeti </h2>
+
+            <p> Doktora eğitimini tamamladıktan sonra açık, uzaktan veya yüz yüze ortamlarda verilmiş ders
+            </p>
+            <div class="icerik" id="faliyetA">
+                <p>A) Bir dönem yüksek lisans veya doktora dersi </p>
+
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#faliyetA')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#faliyetA')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="faliyetAdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Faliyet  Sayısı</label>
+                    <input name="faliyetAsayisi" type="number" min="1" value="1" required>
+
+                </div>
+            </div>
+            <hr width="80%">
+            <div class="icerik" id="faliyetB">
+                <p>A) Bir dönem yüksek lisans veya doktora dersi </p>
+
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#faliyetB')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#faliyetB')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="faliyetBdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Faliyet  Sayısı</label>
+                    <input name="faliyetBsayisi" type="number" min="1" value="1" required>
+
+                </div>
+            </div>
+
+            <p>Bu madde kapsamında en az 2 puan almak zorunludur, ancak en fazla 4 puan alınabilir. Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en az 2 yıl öğretim elemanı olarak görev yapanlar 2 puan almış sayılır.
             </p>
             <hr>
         </div>
