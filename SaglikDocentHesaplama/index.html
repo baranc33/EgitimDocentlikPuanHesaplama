@@ -477,7 +477,7 @@
             <hr>
         </div> -->
 
-        <div id="Atif">
+        <!-- <div id="Atif">
             <h2>5. Atıflar </h2>
 
             <div class="icerik" id="AtifA">
@@ -557,7 +557,76 @@
                 Bu madde kapsamında en az 4 puan alınması zorunludur.Bu madde kapsamında en fazla 20 puan alınabilir.
             </p>
             <hr>
+        </div> -->
+
+        <div id="Danismanlik">
+            <h2>6. Lisansüstü Tez Danışmanlığı </h2>
+            <p>Adayın danışmanlığını yürüttüğü tamamlanan lisansüstü tezlerden</p>
+
+            <div class="icerik" id="DanismanlikA">
+                <p>A) Doktora tez danışmanlığı</p>
+
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#DanismanlikA')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#DanismanlikA')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="DanismanlikAdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                     </select>
+                    <label> Danışmanlık Seviyesi</label>
+                    <select name="DanismanlikAdanismanlik">
+                             <option value="0">Asıl Danışman</option>
+                             <option value="1">Eş Danışman</option>
+                      </select>
+                    <label>Danışmanlık  Sayısı</label>
+                    <input name="DanismanlikAsayisi" type="number" min="1" value="1" required>
+
+                </div>
+            </div>
+            <hr width="80%">
+
+            <div class="icerik" id="DanismanlikB">
+                <p>B) Yüksek lisans tez danışmanlığı</p>
+
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#DanismanlikB')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#DanismanlikB')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="DanismanlikBdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                     </select>
+                    <label> Danışmanlık Seviyesi</label>
+                    <select name="DanismanlikBdanismanlik">
+                             <option value="0">Asıl Danışman</option>
+                             <option value="1">Eş Danışman</option>
+                      </select>
+                    <label>Danışmanlık  Sayısı</label>
+                    <input name="DanismanlikBsayisi" type="number" min="1" value="1" required>
+
+                </div>
+            </div>
+
+            <p>
+                Bu madde kapsamında en fazla 10 puan alınabilir. İkinci/eş danışman olması durumunda asıl danışman a ve b bentleri için öngörülen puanların tamamını, ikinci danışman ise yarısını alır.
+            </p>
+            <hr>
         </div>
+
+
+
+
         <div class="SubmitDiv" style="margin-bottom:100px">
             <button type="reset"> Bilgileri Sıfırla</button>
             <button type="submit"> Hesapla</button>
