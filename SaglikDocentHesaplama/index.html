@@ -624,7 +624,7 @@
             <hr>
         </div> -->
 
-        <div id="Arastirma">
+        <!-- <div id="Arastirma">
             <h2>7. Bilimsel Araştırma Projesi</h2>
 
             <div class="icerik" id="ArastirmaA">
@@ -726,9 +726,73 @@
                 Bu maddeden en fazla 20 puan alınabilir
             </p>
             <hr>
+        </div> -->
+
+
+
+        <div id="toplanti">
+            <h2>8. Bilimsel Toplantı Faaliyeti</h2>
+            <p>Başvurulan bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla
+            </p>
+            <div class="icerik" id="toplantiA">
+                <p>A) Uluslararası bilimsel toplantılarda sunulan (poster hariç), tam metni veya özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış çalışmalar
+                </p>
+
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#toplantiA')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#toplantiA')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="toplantiAdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Toplantı  Sayısı</label>
+                    <input name="toplantiAtoplanti" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="toplantiAyazar" type="number" min="1" value="1" required>
+
+                </div>
+            </div>
+            <hr width="80%">
+
+            <div class="icerik" id="toplantiB">
+                <p>B) Ulusal bilimsel toplantılarda sunulan (poster hariç), tam metni veya özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış çalışmalar.
+                </p>
+
+                <div>
+                    <label style="color:red">Ekstra Seçenek için :  </label>
+                    <button onclick="added('#toplantiB')" type="button">
+                            <i class="fa-duotone fa-plus"></i>
+                        </button>
+                    <button onclick="remove('#toplantiB')" type="button">-</button>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label> Doktora Zamanı</label>
+                    <select name="toplantiBdoktora">
+                            <option value="0">Doktora Öncesi</option>
+                            <option value="1">Doktora Sonrası</option>
+                          </select>
+                    <label>Toplantı  Sayısı</label>
+                    <input name="toplantiBtoplanti" type="number" min="1" value="1" required>
+                    <label> Yazar Sayısı</label>
+                    <input name="toplantiByazar" type="number" min="1" value="1" required>
+                </div>
+            </div>
+
+
+            <hr width="80%">
+
+
+
+            <p>Bu madde kapsamında en az 5 puan almak zorunludur, en fazla 10 puan alınabilir. Aynı toplantıda sunulan en fazla bir bildiri puanlanır.
+            </p>
+            <hr>
         </div>
-
-
 
         <div class="SubmitDiv" style="margin-bottom:100px">
             <button type="reset"> Bilgileri Sıfırla</button>
