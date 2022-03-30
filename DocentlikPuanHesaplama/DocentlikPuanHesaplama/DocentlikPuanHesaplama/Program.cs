@@ -25,8 +25,16 @@ builder.Services.ConfigureApplicationCookie(opts =>
 
 
 builder.Services.AddMvc();
+string con = "";
+if (builder.Environment.IsDevelopment())
+{
+    con = builder.Configuration["ConnectionStrings:DefaultConnectionString"];
+}
+else
+{
+    con = builder.Configuration["ConnectionStrings:ProductionConnectionString"];
+}
 
-string con = builder.Configuration["ConnectionStrings:DefaultConnectionString"];
 builder.Services.AddDbContext<MyIdentityDbContext>(opts =>
 {
     opts.UseSqlServer(con);

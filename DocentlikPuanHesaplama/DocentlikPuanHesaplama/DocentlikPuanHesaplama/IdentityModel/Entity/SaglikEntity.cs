@@ -11,22 +11,22 @@
         public string? UluslarArasiAdoktora { get; set; }
         public string? UluslarArasiAmakale { get; set; }
         public string? UluslarArasiAyazar { get; set; }
-        public string? UluslarArasiASirasi { get; set; }
+        public string? UluslarArasiAsirasi { get; set; }
 
         public string? UluslarArasiBdoktora { get; set; }
         public string? UluslarArasiBmakale { get; set; }
         public string? UluslarArasiByazar { get; set; }
-        public string? UluslarArasiBSirasi { get; set; }
+        public string? UluslarArasiBsirasi { get; set; }
 
         public string? UluslarArasiCdoktora { get; set; }
         public string? UluslarArasiCmakale { get; set; }
         public string? UluslarArasiCyazar { get; set; }
-        public string? UluslarArasiCSirasi { get; set; }
+        public string? UluslarArasiCsirasi { get; set; }
 
         public string? UluslarArasiDdoktora { get; set; }
         public string? UluslarArasiDmakale { get; set; }
         public string? UluslarArasiDyazar { get; set; }
-        public string? UluslarArasiDSirasi { get; set; }
+        public string? UluslarArasiDsirasi { get; set; }
 
 
         #endregion
@@ -36,11 +36,14 @@
         public string? UlusalAdoktora { get; set; }
         public string? UlusalAmakale { get; set; }
         public string? UlusalAyazar { get; set; }
+        public string? UlusalAsirasi { get; set; }
 
 
         public string? UlusalBdoktora { get; set; }
         public string? UlusalBmakale { get; set; }
         public string? UlusalByazar { get; set; }
+        public string? UlusalBsirasi { get; set; }
+
         #endregion
 
 
@@ -48,30 +51,38 @@
         public string? YayinAdoktora { get; set; }
         public string? YayinAyayin { get; set; }
         public string? YayinAyazar { get; set; }
+        public string? YayinAsirasi { get; set; }
 
         public string? YayinBdoktora { get; set; }
         public string? YayinByayin { get; set; }
         public string? YayinByazar { get; set; }
+        public string? YayinBsirasi { get; set; }
 
         public string? YayinCdoktora { get; set; }
         public string? YayinCyayin { get; set; }
         public string? YayinCyazar { get; set; }
+        public string? YayinCsirasi { get; set; }
 
         public string? YayinDdoktora { get; set; }
         public string? YayinDyayin { get; set; }
         public string? YayinDyazar { get; set; }
+        public string? YayinDsirasi { get; set; }
 
         public string? YayinEdoktora { get; set; }
         public string? YayinEyayin { get; set; }
         public string? YayinEyazar { get; set; }
+        public string? YayinEsirasi { get; set; }
 
         public string? YayinFdoktora { get; set; }
         public string? YayinFyayin { get; set; }
         public string? YayinFyazar { get; set; }
+        public string? YayinFsirasi { get; set; }
 
         public string? YayinGdoktora { get; set; }
         public string? YayinGyayin { get; set; }
         public string? YayinGyazar { get; set; }
+        public string? YayinGsirasi { get; set; }
+
         #endregion
 
 
@@ -80,20 +91,34 @@
         public string? KitapAdoktora { get; set; }
         public string? KitapAkitap { get; set; }
         public string? KitapAyazar { get; set; }
+        public string? KitapAsirasi { get; set; }
 
         public string? KitapBdoktora { get; set; }
         public string? KitapBkitap { get; set; }
         public string? KitapByazar { get; set; }
+        public string? KitapBsirasi { get; set; }
 
         public string? KitapCdoktora { get; set; }
         public string? KitapCkitap { get; set; }
         public string? KitapCyazar { get; set; }
+        public string? KitapCsirasi { get; set; }
 
         public string? KitapDdoktora { get; set; }
         public string? KitapDkitap { get; set; }
         public string? KitapDyazar { get; set; }
+        public string? KitapDsirasi { get; set; }
+
         #endregion
 
+
+        #region Patent
+        public string? PatentAdoktora { get; set; }
+        public string? PatentAatif { get; set; }
+
+        public string? PatentBdoktora { get; set; }
+        public string? PatentBatif { get; set; }
+
+        #endregion
 
 
         #region Atiflar
