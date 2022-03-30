@@ -1,0 +1,9 @@
+ASP.NET CORE MVC projesi olcak
+Identity ile üyelik sistemi Kurulacak
+
+isteyen kişi üye olup girdiği bilgiler kaydedilcek veri tabanından bu bilgiler çekilcek
+isteyen üye olmadan bakabilcek
+
+takım bölümü olacak -içersinde keiplerin kısa blokları olcak
+Admin Bölümü olacak bu sayede admin bloğunu düzenliyebilcek
+
