@@ -206,18 +206,24 @@
 		.social-login__icon:hover {
 			transform: scale(1.5);	
 		}
+		.navLinks a{
+			background-color:#66629F 
+		}
+		.navLinks a:hover{
+			background-color:#BFBCF0;
+		}
 </style>
 
 </head>
 <body>
 
  
-<div class="offset-md-5">
+<div class="offset-md-5 navLinks">
     <a asp-action="Index" asp-controller="home"
-	style="background-color:#66629F ;"
+	 
 	class="btn  text-light rounded-pill mt-5 py-2 px-4 ms-3"  >Ana Sayfa</a>
 	  <a asp-action="SignUp" asp-controller="home"
-	style="background-color:#66629F ;"
+	 
 	class="btn  text-light rounded-pill mt-5 py-2 px-4 ms-3"  >Kayıt Ol</a>
 </div>
  
@@ -225,14 +231,16 @@
 	<div class="screen">
 		<div class="screen__content">
 			<form class="login" asp-action="Login">
+					<div asp-validation-summary="ModelOnly" class="text-danger"
+					style="margin-top:-30px"></div>
 				<div class="login__field">
-					   <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="Kullanıcı Adı  / Email">
+					<input type="text" class="login__input" placeholder="Kullanıcı Adı  / Email" asp-for="UserName">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Şifreniz">
+					<input type="password" class="login__input" placeholder="Şifreniz"asp-for="Password">
 				</div>
 				<button class="button login__submit">
 					<span class="button__text">Giriş Yap</span>

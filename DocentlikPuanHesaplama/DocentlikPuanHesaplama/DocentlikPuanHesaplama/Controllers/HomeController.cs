@@ -65,7 +65,7 @@ namespace DocentlikPuanHesaplama.Controllers
         }
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
-        {
+            {
             if (ModelState.IsValid)
             {
                 MyUser user = await userManager.FindByNameAsync(model.UserName);
@@ -90,16 +90,12 @@ namespace DocentlikPuanHesaplama.Controllers
 
 
                 }
-                else
-                {
-                    // kullanıcı yoksa Email inputu hedefli bir mesaj yolliyalım
-                    ModelState.AddModelError("", "Geçersiz kullanıcı adı veya  şifresi");
-                }
+            
             }
 
 
 
-
+            ModelState.AddModelError("", "Geçersiz kullanıcı adı veya  şifresi");
 
 
             return View(model);
