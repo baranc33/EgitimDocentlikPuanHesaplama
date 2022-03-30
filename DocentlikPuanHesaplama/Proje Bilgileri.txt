@@ -7,3 +7,6 @@ isteyen üye olmadan bakabilcek
 takım bölümü olacak -içersinde keiplerin kısa blokları olcak
 Admin Bölümü olacak bu sayede admin bloğunu düzenliyebilcek
 
+
+
+

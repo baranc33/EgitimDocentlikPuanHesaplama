@@ -2,7 +2,6 @@
 
 namespace DocentlikPuanHesaplama.ViewModel
 {
-
     public class UserViewModel
     {
         [Required(ErrorMessage = "İsim Alanı Zorunludur")]
