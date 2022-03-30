@@ -3,20 +3,33 @@
 @{
     Layout=null;
 }
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mersin Üniverstesi</title>
+    <script src="~/jquery/jquery.js"></script>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
 
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
  
-<div>
-    <a asp-action="Index" asp-controller="home" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Ana Sayfa</a>
-    <input type="submit" asp-action="Index" asp-controller="home" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Ana Sayfa</input>
-</div>
-
-@*@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}*@
-
 <style>
-import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
-
+	.social-icons>a{
+		text-decoration:none;
+		font-size:3em;
+		margin-right:15px;
+		color:white;
+		margin-top:17px;
+	}
+		.social-icons>a:hover{
+		color:black;
+	}
 		* {
 			box-sizing: border-box;
 			margin: 0;
@@ -195,6 +208,19 @@ import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 		}
 </style>
 
+</head>
+<body>
+
+ 
+<div class="offset-md-5">
+    <a asp-action="Index" asp-controller="home"
+	style="background-color:#66629F ;"
+	class="btn  text-light rounded-pill mt-5 py-2 px-4 ms-3"  >Ana Sayfa</a>
+	  <a asp-action="SignUp" asp-controller="home"
+	style="background-color:#66629F ;"
+	class="btn  text-light rounded-pill mt-5 py-2 px-4 ms-3"  >Kayıt Ol</a>
+</div>
+ 
 <div class="container">
 	<div class="screen">
 		<div class="screen__content">
@@ -202,24 +228,22 @@ import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 				<div class="login__field">
 					   <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="User name / Email">
+					<input type="text" class="login__input" placeholder="Kullanıcı Adı  / Email">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Password">
+					<input type="password" class="login__input" placeholder="Şifreniz">
 				</div>
 				<button class="button login__submit">
-					<span class="button__text">Log In Now</span>
+					<span class="button__text">Giriş Yap</span>
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>				
 			</form>
-			<div class="social-login">
-				<h3>log in via</h3>
+				<h4 style="text-align:right;color:white"><span>Sosyal Medya Girişleri : </span></h4>
 				<div class="social-icons">
-					<a href="#" class="social-login__icon fab fa-instagram"></a>
-					<a href="#" class="social-login__icon fab fa-facebook"></a>
-					<a href="#" class="social-login__icon fab fa-twitter"></a>
-				</div>
+					<a href="#" ><i class="fa-brands fa-google-plus-g"></i>  </a>
+					<a href="#"><i class="fa-brands fa-facebook"></i>  </a>
+					<a href="#" ><i class="fa-brands fa-windows"></i>  </a>
 			</div>
 		</div>
 		<div class="screen__background">
@@ -230,3 +254,5 @@ import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 		</div>		
 	</div>
 </div>
+
+</body>

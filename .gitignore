@@ -9,3 +9,5 @@
 *.map
 *.scss
 *.css
+
+*.pdb
