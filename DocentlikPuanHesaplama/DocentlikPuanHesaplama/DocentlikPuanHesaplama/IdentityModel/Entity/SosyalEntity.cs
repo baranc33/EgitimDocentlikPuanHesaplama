@@ -5,8 +5,8 @@
 
 
         public int Id { get; set; }
-        public string MyUserId { get; set; }
-        public MyUser MyUser { get; set; }
+        public string MyUserId { get; set; } = "";
+        public MyUser MyUser { get; set; }=new MyUser();
 
         #region UluslarArasi
         public string? UluslarArasiAdoktora { get; set; }
@@ -160,7 +160,7 @@
         public string? EgitimBdoktora { get; set; }
         public string? EgitimBders { get; set; }
 
-        public bool gorev2yil { get; set; } = false;
+        public bool Gorev2yil { get; set; } = false;
         #endregion
 
 

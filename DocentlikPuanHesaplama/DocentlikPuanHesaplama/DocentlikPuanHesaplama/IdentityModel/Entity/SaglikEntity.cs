@@ -3,8 +3,8 @@
     public class SaglikEntity
     {
         public int Id { get; set; }
-        public string MyUserId { get; set; }
-        public MyUser MyUser { get; set; }
+        public string MyUserId { get; set; } = "";
+        public MyUser MyUser { get; set; }=new MyUser();
 
 
         #region UluslarArasi
@@ -170,11 +170,14 @@
         public string? ToplantiAdoktora { get; set; }
         public string? ToplantiAsayi { get; set; }
         public string? ToplantiAyazar { get; set; }
+        public string? ToplantiAsirasi { get; set; }
 
 
         public string? ToplantiBdoktora { get; set; }
         public string? ToplantiBsayi { get; set; }
         public string? ToplantiByazar { get; set; }
+        public string? ToplantiBsirasi { get; set; }
+
         #endregion
 
 
@@ -187,7 +190,7 @@
         public string? EgitimBdoktora { get; set; }
         public string? EgitimBders { get; set; }
 
-        public bool gorev2yil { get; set; } = false;
+        public bool Gorev2yil { get; set; } = false;
         #endregion
 
 

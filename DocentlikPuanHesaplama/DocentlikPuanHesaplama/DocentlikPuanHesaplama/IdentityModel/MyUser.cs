@@ -4,6 +4,6 @@ namespace DocentlikPuanHesaplama.IdentityModel
 {
     public class MyUser : IdentityUser
     {
-        public string İmage { get; set; }
+        public string İmage { get; set; } = "";
     }
 }

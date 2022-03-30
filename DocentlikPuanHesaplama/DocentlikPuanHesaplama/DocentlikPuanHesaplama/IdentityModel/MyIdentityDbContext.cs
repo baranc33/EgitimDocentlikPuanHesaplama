@@ -15,7 +15,7 @@ namespace DocentlikPuanHesaplama.IdentityModel
          Yanstırken ilgili fonksyon veri tabanındaki yapıları dizilere çevirerek dönecek
          hesaplama işlemi yine ve total bilgiler tekrardan hesaplanacaktır.
          */
-        public DbSet<FilolojiEntity> EgitimEntities { get; set; }
+        public DbSet<EgitimEntity> EgitimEntities { get; set; }= default!;
 
 
     }

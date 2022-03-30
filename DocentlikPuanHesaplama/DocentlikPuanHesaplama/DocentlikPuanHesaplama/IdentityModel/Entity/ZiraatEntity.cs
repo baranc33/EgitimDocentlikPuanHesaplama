@@ -1,92 +1,95 @@
 ﻿namespace DocentlikPuanHesaplama.IdentityModel.Entity
 {
-    public class IlahiyatEntity
+    public class ZiraatEntity
     {
         public int Id { get; set; }
         public string MyUserId { get; set; } = "";
         public MyUser MyUser { get; set; }=new MyUser();
 
-        #region UluslarArasi
-        public string? UluslarArasiAdoktora { get; set; }
-        public string? UluslarArasiAmakale { get; set; }
-        public string? UluslarArasiAyazar { get; set; }
 
-        public string? UluslarArasiBdoktora { get; set; }
-        public string? UluslarArasiBmakale { get; set; }
-        public string? UluslarArasiByazar { get; set; }
+        #region Makale
+        public string? MakaleAdoktora { get; set; }
+        public string? MakaleAmakale { get; set; }
+        public string? MakaleAyazar { get; set; }
+        public string? MakaleAsirasi { get; set; }
 
-        public string? UluslarArasiCdoktora { get; set; }
-        public string? UluslarArasiCmakale { get; set; }
-        public string? UluslarArasiCyazar { get; set; }
+        public string? MakaleBdoktora { get; set; }
+        public string? MakaleBmakale { get; set; }
+        public string? MakaleByazar { get; set; }
+        public string? MakaleBsirasi { get; set; }
 
+        public string? MakaleCdoktora { get; set; }
+        public string? MakaleCmakale { get; set; }
+        public string? MakaleCyazar { get; set; }
+        public string? MakaleCsirasi { get; set; }
 
+ 
 
 
         #endregion
 
-
-        #region Ulusal
-        public string? UlusalAdoktora { get; set; }
-        public string? UlusalAmakale { get; set; }
-        public string? UlusalAyazar { get; set; }
-
-
-        public string? UlusalBdoktora { get; set; }
-        public string? UlusalBmakale { get; set; }
-        public string? UlusalByazar { get; set; }
-        #endregion
 
 
         #region Yayin
         public string? YayinAdoktora { get; set; }
         public string? YayinAyayin { get; set; }
         public string? YayinAyazar { get; set; }
+        public string? YayinAsirasi { get; set; }
 
         public string? YayinBdoktora { get; set; }
         public string? YayinByayin { get; set; }
         public string? YayinByazar { get; set; }
+        public string? YayinBsirasi { get; set; }
 
         public string? YayinCdoktora { get; set; }
         public string? YayinCyayin { get; set; }
         public string? YayinCyazar { get; set; }
+        public string? YayinCsirasi { get; set; }
 
         public string? YayinDdoktora { get; set; }
         public string? YayinDyayin { get; set; }
         public string? YayinDyazar { get; set; }
+        public string? YayinDsirasi { get; set; }
 
-        public string? YayinEdoktora { get; set; }
-        public string? YayinEyayin { get; set; }
-        public string? YayinEyazar { get; set; }
+       
 
-        public string? YayinFdoktora { get; set; }
-        public string? YayinFyayin { get; set; }
-        public string? YayinFyazar { get; set; }
-
-        public string? YayinGdoktora { get; set; }
-        public string? YayinGyayin { get; set; }
-        public string? YayinGyazar { get; set; }
         #endregion
 
 
+ 
 
         #region Kitap
         public string? KitapAdoktora { get; set; }
         public string? KitapAkitap { get; set; }
         public string? KitapAyazar { get; set; }
+        public string? KitapAsirasi { get; set; }
 
         public string? KitapBdoktora { get; set; }
         public string? KitapBkitap { get; set; }
         public string? KitapByazar { get; set; }
+        public string? KitapBsirasi { get; set; }
 
         public string? KitapCdoktora { get; set; }
         public string? KitapCkitap { get; set; }
         public string? KitapCyazar { get; set; }
+        public string? KitapCsirasi { get; set; }
 
         public string? KitapDdoktora { get; set; }
         public string? KitapDkitap { get; set; }
         public string? KitapDyazar { get; set; }
+        public string? KitapDsirasi { get; set; }
+
         #endregion
 
+
+        #region Patent
+        public string? PatentAdoktora { get; set; }
+        public string? PatentAatif { get; set; }
+
+        public string? PatentBdoktora { get; set; }
+        public string? PatentBatif { get; set; }
+
+        #endregion
 
 
         #region Atiflar
@@ -138,11 +141,14 @@
         public string? ToplantiAdoktora { get; set; }
         public string? ToplantiAsayi { get; set; }
         public string? ToplantiAyazar { get; set; }
+        public string? ToplantiAsirasi { get; set; }
 
 
         public string? ToplantiBdoktora { get; set; }
         public string? ToplantiBsayi { get; set; }
         public string? ToplantiByazar { get; set; }
+        public string? ToplantiBsirasi { get; set; }
+
         #endregion
 
 
