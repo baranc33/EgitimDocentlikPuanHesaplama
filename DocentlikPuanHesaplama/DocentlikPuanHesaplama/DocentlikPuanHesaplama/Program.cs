@@ -1,6 +1,15 @@
+using DocentlikPuanHesaplama.IdentityModel;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+builder.Services.AddMvc();
 
-app.MapGet("/", () => "Hello World!");
+string con = builder.Configuration["ConnectionStrings:DefaultConnectionString"];
+builder.Services.AddDbContext<IdentityDbContext>(opts =>
+{
+    opts.UseSqlServer(con);
+});// entity framework db baðlantýsý
 
-app.Run();
+// ýdentity Baðlantýýsý
+builder.Services.AddIdentity<MyUser, MyRole>().AddEntityFrameworkStores<MyIdentityDbContext>();

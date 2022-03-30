@@ -1,1 +1,11 @@
 # 
+
+*.json
+*.cache
+
+*min.js
+*.js
+
+*.map
+*.scss
+*.css
