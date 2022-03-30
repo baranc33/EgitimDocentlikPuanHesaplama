@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mersin Üniverstesi</title>
+    <script src="~/jquery/jquery.js"></script>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+<body>
+        <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0"><i class="fa fa-search me-2"></i>Doçentlik<span class="fs-5">Hesaplama</span></h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0" style="margin-right: 200px;">
+                        <a asp-action="" class="nav-item nav-link active">Ana Sayfa</a>
+                        <a href="about.html" class="nav-item nav-link">Bilimler</a>
+                        <a href="service.html" class="nav-item nav-link">Hakkımızda</a>
+                        <a href="contact.html" class="nav-item nav-link ">İletişim</a>
+                    </div>
+
+                    <div class="nav-item dropdown  btn btn-secondary text-light rounded-pill py-2 px-4 ms-3 " data-bs-toggle="dropdown"> Giriş Yap
+                        <div class="dropdown-menu m-0  mt-2 mr-4">
+                            <a href="team.html" class="dropdown-item">Giriş</a>
+                            <a href="testimonial.html" class="dropdown-item">Kayıt Ol</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header mb-5">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated zoomIn">Doçentlik Puan Hesaplama </h1>
+                            <p class="text-white pb-3 animated zoomIn">Bu site www.uak.gov.tr sitesini baz alarak 2022 Mart Dönemi Güncel Değerlendirmelere göre hazırlanmıştır </p>
+                            <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla >></a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid" src="img/hero.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

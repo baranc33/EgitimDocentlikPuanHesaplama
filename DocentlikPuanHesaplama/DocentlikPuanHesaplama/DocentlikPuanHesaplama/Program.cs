@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 
-CookieBuilder cookieBuilder = new CookieBuilder();
+CookieBuilder cookieBuilder = new ();
 cookieBuilder.Name = "Docent";
 cookieBuilder.HttpOnly = false;
 cookieBuilder.SameSite = SameSiteMode.Lax;

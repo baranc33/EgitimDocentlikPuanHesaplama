@@ -113,10 +113,13 @@
 
         #region Patent
         public string? PatentAdoktora { get; set; }
-        public string? PatentAatif { get; set; }
+        public string? PatentAsayi { get; set; }
+        public string? PatentAyazar { get; set; }
 
         public string? PatentBdoktora { get; set; }
-        public string? PatentBatif { get; set; }
+        public string? PatentBsayi { get; set; }
+        public string? PatentByazar { get; set; }
+
 
         #endregion
 

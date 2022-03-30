@@ -1,10 +1,10 @@
 ﻿namespace DocentlikPuanHesaplama.IdentityModel.Entity
 {
-    public class MuhendisEntity
+    public class MimarlikEntity
     {
         public int Id { get; set; }
         public string MyUserId { get; set; } = "";
-        public MyUser MyUser { get; set; }=new MyUser();
+        public MyUser MyUser { get; set; } = new MyUser();
 
 
         #region Makale
@@ -90,7 +90,10 @@
         public string? PatentBdoktora { get; set; }
         public string? PatentBsayi { get; set; }
         public string? PatentByazar { get; set; }
-
+        
+        public string? PatentCdoktora { get; set; }
+        public string? PatentCsayi { get; set; }
+        public string? PatentCyazar { get; set; }
 
         #endregion
 

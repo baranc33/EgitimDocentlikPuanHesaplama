@@ -1,10 +1,10 @@
 ﻿namespace DocentlikPuanHesaplama.IdentityModel.Entity
 {
-    public class MuhendisEntity
+    public class FenEntity
     {
         public int Id { get; set; }
         public string MyUserId { get; set; } = "";
-        public MyUser MyUser { get; set; }=new MyUser();
+        public MyUser MyUser { get; set; } = new MyUser();
 
 
         #region Makale
@@ -166,6 +166,7 @@
 
         public bool Gorev2yil { get; set; } = false;
         #endregion
+
 
     }
 }

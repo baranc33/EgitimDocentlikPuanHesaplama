@@ -16,6 +16,16 @@ namespace DocentlikPuanHesaplama.IdentityModel
          hesaplama işlemi yine ve total bilgiler tekrardan hesaplanacaktır.
          */
         public DbSet<EgitimEntity> EgitimEntities { get; set; }= default!;
+        public DbSet<FenEntity> FenEntities { get; set; }= default!;
+        public DbSet<FilolojiEntity> FilolojiEntities { get; set; }= default!;
+        public DbSet<HukunEntity> HukukEntities { get; set; }= default!;
+        public DbSet<IlahiyatEntity> IlahiyatEntities { get; set; }= default!;
+        public DbSet<MimarlikEntity> MimarlikEntities { get; set; }= default!;
+        public DbSet<MuhendisEntity> MuhendisEntities { get; set; }= default!;
+        public DbSet<SaglikEntity> SaglikEntities { get; set; }= default!;
+        public DbSet<SosyalEntity> SosyalEntities { get; set; }= default!;
+        public DbSet<SporEntity> SporEntities { get; set; }= default!;
+        public DbSet<ZiraatEntity> ZiraatEntities { get; set; }= default!;
 
 
     }
