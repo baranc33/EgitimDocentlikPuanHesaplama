@@ -1,43 +1,52 @@
-﻿  
- <body onload="myFunction()">
+﻿
+<body onload="myFunction()">
 
- <div class="container my-5 py-5 px-lg-5">
-       <div class="row g-5 py-5">
-                
-           <div class="col-lg-6 text-center text-lg-start">
-               
-            <select style="color:black;"
-            onchange="hrefGo()" id="select_id" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-              <option value="Index">Bilim Alanı Seçiniz </option>
-              <option value="Egitim">    Eğitim Bilimleri</option>
-              <option value="Fen">    Fen Bilimleri ve Matematik Temel Alanı</option>
-              <option value="Filoloji">    Filoloji Temel Alanı </option>
-              <option value="GuzelSanatlar">    Güzel Sanatlar Temel Alanı </option>
-              <option value="Hukuk">    Hukuk Temel Alanı </option>
-              <option value="ilahiyat">    İlahiyat Temel Alanı </option>
-              <option value="Mimarlik">    Mimarlık, Planlama ve Tasarım Temel Alanı </option>
-              <option value="Mühendis">    Mühendislik Temel Alanı </option>
-              <option value="Saglik">    Sağlık Bilimleri Temel Alanı </option>
-              <option value="SosyalBeseri">    Sosyal, Beşeri ve İdari Bilimler Temel Alanı </option>
-              <option value="Ziraat">    Ziraat, Orman ve Su Ürünleri Temel Alanı </option>
-              <option value="Spor">    Spor Bilimleri Temel Alanı </option>
-            </select>
+    <div class="container my-5 py-5 px-lg-5">
+        <div class="row g-5 py-5">
+
+            <div class="col-lg-6 text-center text-lg-start">
+
+                <select style="color:black;"
+                        onchange="hrefGo()" id="select_id" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option value="Index">Bilim Alanı Seçiniz </option>
+                    <option value="Egitim">    Eğitim Bilimleri</option>
+                    <option value="Fen">    Fen Bilimleri ve Matematik Temel Alanı</option>
+                    <option value="Filoloji">    Filoloji Temel Alanı </option>
+                    <option value="GuzelSanatlar">    Güzel Sanatlar Temel Alanı </option>
+                    <option value="Hukuk">    Hukuk Temel Alanı </option>
+                    <option value="ilahiyat">    İlahiyat Temel Alanı </option>
+                    <option value="Mimarlik">    Mimarlık, Planlama ve Tasarım Temel Alanı </option>
+                    <option value="Mühendis">    Mühendislik Temel Alanı </option>
+                    <option value="Saglik">    Sağlık Bilimleri Temel Alanı </option>
+                    <option value="SosyalBeseri">    Sosyal, Beşeri ve İdari Bilimler Temel Alanı </option>
+                    <option value="Ziraat">    Ziraat, Orman ve Su Ürünleri Temel Alanı </option>
+                    <option value="Spor">    Spor Bilimleri Temel Alanı </option>
+                </select>
             </div>
         </div>
- </div>
+    </div>
 
 
 
- <script>
- function hrefGo(){
-    Rotation= document.getElementById("select_id").value;
-    location.href = `Science/${Rotation}`;
- }
+    <script>
+         function hrefGo(){
+            Rotation= document.getElementById("select_id").value;
+            location.href = `/Science/${Rotation}`;
+         }
+         //let link ="Index";
+           const myFunction = () => {
+                    let link = document.querySelector('#science');
+                     link.classList.add("active");
+                }
+        let currentLocation = window.location.pathname;
+        let linkArray=currentLocation.split("/");
+        //console.log(myArray[2]);// bu mevcut select
 
-   const myFunction = () => {
-            let link = document.querySelector('#science');
-             link.classList.add("active");
-        }
- </script>
+                function show(){
+                let e = document.getElementById("select_id");
+                    e.value = linkArray[2];
+                }
+                    show();
+    </script>
 
 </body>
