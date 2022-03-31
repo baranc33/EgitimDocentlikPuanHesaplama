@@ -8,16 +8,55 @@ namespace DocentlikPuanHesaplama.Controllers
         {
             return View();
         }
-
-        public PartialViewResult pResult()
+        public IActionResult Egitim()
         {
-            // yine .cshtml dosyasını render etmemizi sağlar 
-            // view resulttan temel farkı  client tabanlı yapılan 
-            //ajax isteklerinde kullanımı sağlanır bu sayede sayfayı komple değiştirmek yerine
-            // sayfanın bir kısmı değişir.
-            PartialViewResult result = PartialView();
-            return result;
+            return View();
         }
+        public IActionResult Fen()
+        {
+            return View();
+        }
+        public IActionResult Filoloji()
+        {
+            return View();
+        }
+        public IActionResult GuzelSanatlar()
+        {
+            return View();
+        }
+        public IActionResult Hukuk()
+        {
+            return View();
+        }
+        public IActionResult ilahiyat()
+        {
+            return View();
+        }
+        public IActionResult Mimarlik()
+        {
+            return View();
+        }
+        public IActionResult Mühendis()
+        {
+            return View();
+        }
+        public IActionResult Saglik()
+        {
+            return View();
+        }
+        public IActionResult SosyalBeseri()
+        {
+            return View();
+        }
+        public IActionResult Ziraat()
+        {
+            return View();
+        }
+        public IActionResult Spor()
+        {
+            return View();
+        }
+
 
     }
 }
