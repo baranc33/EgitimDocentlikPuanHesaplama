@@ -48,7 +48,7 @@ namespace DocentlikPuanHesaplama.Controllers
                     {
                         // eğer en başta key gönderirsek gönderdiğimiz key ilgili inputun altında görünür
                         // biz genel hata olarak gösterecez
-                        ModelState.AddModelError(string.Empty, item.Description);
+                        ModelState.AddModelError("", item.Description);
 
                     }
                 }

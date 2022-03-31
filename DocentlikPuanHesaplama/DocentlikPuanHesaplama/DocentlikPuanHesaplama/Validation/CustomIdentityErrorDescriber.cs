@@ -34,7 +34,7 @@ namespace DocentlikPuanHesaplama.Validation
             return new IdentityError()
             {
                 Code = "InvalidPasswordToShor",
-                Description = $"şifreniz en Az {length} Karakterli olmalıdır"// length i start uptan çekiyor
+                Description = $"şifreniz en az {length} Karakterli olmalıdır"// length i start uptan çekiyor
 
             };
         }
