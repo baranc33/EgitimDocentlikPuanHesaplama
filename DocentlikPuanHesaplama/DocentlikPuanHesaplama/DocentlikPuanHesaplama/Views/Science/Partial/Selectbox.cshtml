@@ -16,7 +16,7 @@
                     <option value="Hukuk">    Hukuk Temel Alanı </option>
                     <option value="ilahiyat">    İlahiyat Temel Alanı </option>
                     <option value="Mimarlik">    Mimarlık, Planlama ve Tasarım Temel Alanı </option>
-                    <option value="Mühendis">    Mühendislik Temel Alanı </option>
+                    <option value="Muhendis">    Mühendislik Temel Alanı </option>
                     <option value="Saglik">    Sağlık Bilimleri Temel Alanı </option>
                     <option value="SosyalBeseri">    Sosyal, Beşeri ve İdari Bilimler Temel Alanı </option>
                     <option value="Ziraat">    Ziraat, Orman ve Su Ürünleri Temel Alanı </option>
@@ -44,7 +44,10 @@
 
                 function show(){
                 let e = document.getElementById("select_id");
+                if(linkArray[2]!=null)
+                {
                     e.value = linkArray[2];
+                }
                 }
                     show();
     </script>

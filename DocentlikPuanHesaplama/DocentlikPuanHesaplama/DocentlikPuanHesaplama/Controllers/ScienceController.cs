@@ -36,7 +36,7 @@ namespace DocentlikPuanHesaplama.Controllers
         {
             return View();
         }
-        public IActionResult Mühendis()
+        public IActionResult Muhendis()
         {
             return View();
         }
