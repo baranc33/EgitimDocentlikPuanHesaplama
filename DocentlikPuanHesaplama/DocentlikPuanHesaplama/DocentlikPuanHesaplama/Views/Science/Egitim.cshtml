@@ -885,6 +885,145 @@
   
   </div>
 
+
+  <div class="Sekiz">
+    <h2>8. Bilimsel Toplantı Faaliyeti </h2>
+    <h5> Başvurulan bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla</h5>
+    <h6> Bu madde kapsamında en az 5 puan almak zorunludur, en fazla 10 puan alınabilir. Aynı toplantıda sunulan en fazla bir bildiri puanlanır</h6> 
+    <hr>
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">A)  Uluslararası bilimsel toplantılarda sunulan (poster hariç), tam metni veya özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış çalışmalar  ~ 3 Puan</label>
+                <button onclick="add('ToplantiAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ToplantiAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ToplantiAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="ToplantiAdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Toplantı Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ToplantiAsayi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ToplantiAyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ToplantiAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">B)  Ulusal bilimsel toplantılarda sunulan (poster hariç), tam metni veya
+                    özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış çalışmalar. ~ 2 Puan</label>
+                <button onclick="add('ToplantiBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ToplantiBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ToplantiBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="ToplantiBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Toplantı Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ToplantiBsayi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ToplantiByazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ToplantiBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+  
+  </div>
+
+  <div class="Dokuz">
+    <h2>9. Eğitim-Öğretim Faaliyeti </h2>
+    <h5>  Doktora eğitimini tamamladıktan sonra açık, uzaktan veya yüz yüze ortamlarda verilmiş  ders </h5>
+    <h6> Bu madde kapsamında en az 2 puan almak zorunludur, ancak en fazla 4 puan
+        alınabilir. Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en
+        az 2 yıl öğretim elemanı olarak görev yapanlar 2 puan almış sayılır </h6> 
+    <hr>
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">A ) Bir dönem yüksek lisans veya doktora dersi ~ 3 Puan</label>
+                <button onclick="add('EgitimAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('EgitimAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="EgitimAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="EgitimAdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Ders Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="EgitimAders[]" min="0" required>
+                        </div>
+               
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="EgitimAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">B)  Bir dönem önlisans veya lisans dersi ~ 2 Puan</label>
+                <button onclick="add('EgitimBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('EgitimBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="EgitimBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="EgitimBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Ders Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="EgitimBders[]" min="0" required>
+                        </div>
+                    
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="EgitimBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+          
+  </div>
+
 <br>
 <br>
 <br>
