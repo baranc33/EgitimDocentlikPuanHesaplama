@@ -71,25 +71,6 @@
 
 
 
-      <script>
-        function add(ulid) {
-            let ul = document.getElementById(ulid);
-            let Liicerik = ul.firstElementChild.innerHTML;
-            let li = document.createElement('li');
-            li.classList.add("row");
-            li.innerHTML = Liicerik;
-            ul.append(li);
-        }
-
-        function remove(id) {
-            let ul = document.getElementById(id);
-            let ulChildCount = ul.childElementCount;
-            if (ulChildCount > 1) {
-                ul.removeChild(ul.lastElementChild);
-            }
-        }
-    </script>
-
 
 
 
