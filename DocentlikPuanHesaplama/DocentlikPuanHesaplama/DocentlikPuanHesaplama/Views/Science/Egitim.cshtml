@@ -990,13 +990,14 @@
                     </li>
                        
                 </ul>
+                  
                 <hr/>
            </div> 
  
            <div class="row mt-5">
                 <label class="col-md-8">B)  Bir dönem önlisans veya lisans dersi ~ 2 Puan</label>
-                <button onclick="add('EgitimBul')" type="button" class="btn btn-primary col-md-1">+ </button>
-                <button onclick="remove('EgitimBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <button id="addButton"   onclick="add('EgitimBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button id="removeButton"  onclick="remove('EgitimBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="EgitimBul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
@@ -1021,8 +1022,16 @@
                 <hr/>
            </div> 
  
+           <div class="form-check m-4">
+                         <center>   <strong>Bu Maddeyi işaretlediğinizde 9. Madde B bendi bilgileriniz silinecektir. </strong></center>
+                       <input class="form-check-input" id="checkBox" onchange="cheked('#EgitimBul')" type="checkbox" name="Gorev2yil" value="true" >
+                        <p > Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en
+                            az 2 yıl öğretim elemanı olarak görev Yaptıysanız işaretleyin</p>
+           </div> 
           
   </div>
+
+
 
 <br>
 <br>

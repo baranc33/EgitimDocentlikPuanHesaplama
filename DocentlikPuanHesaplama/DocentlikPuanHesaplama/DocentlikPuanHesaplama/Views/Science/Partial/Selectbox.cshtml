@@ -66,5 +66,33 @@
             }
         }
     </script>
+  <script>
+      // chekbo işlemeri
+      function cheked(ulId){
+        let clearul = document.querySelector(ulId);
+            let ulChildCount = clearul.childElementCount;
 
+          let cb = document.querySelector('#checkBox');
+          if(cb.checked){
+             alert(" 2 yıl öğretim elemanı olarak görev Yapanlar 9. Maddenin B bendinden Yararlanamaz");
+              document.getElementById("addButton").disabled = true;
+              document.getElementById("removeButton").disabled = true;
+
+              console.log('chked')
+                for(let i=0;i<ulChildCount-1;i++)
+               {
+                   console.log(ulChildCount)
+                    if (ulChildCount > 1) {
+                     clearul.removeChild(clearul.lastElementChild);
+                    }
+                    else{}
+               
+               }  
+          }
+          else{
+               document.getElementById("addButton").disabled = false;
+              document.getElementById("removeButton").disabled = false;
+          }
+      }
+  </script>
 </body>
