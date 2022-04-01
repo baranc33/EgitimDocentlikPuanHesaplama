@@ -30,7 +30,7 @@
  
            <div class="row mt-5">
                 <label class="col-md-8">A) SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
-                    mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale </label>
+                    mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale ~ 20 Puan</label>
                 <button onclick="add('uluslararasiAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('uluslararasiAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul id="uluslararasiAul" type="none">
@@ -52,7 +52,7 @@
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
-                            <input type="text" class="form-control" name="uluslararasiAHatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                            <input type="text" class="form-control" name="uluslararasiAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                        
@@ -60,7 +60,70 @@
                 <hr/>
            </div> 
  
-
+           <div class="row mt-5">
+                <label class="col-md-8">B) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet
+                        veya kitap kritiği hariç olmak üzere yayımlanmış makale ~ 15 Puan</label>
+                <button onclick="add('uluslararasiBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('uluslararasiBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul id="uluslararasiBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="uluslararasiBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="uluslararasiBmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="uluslararasiByazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="uluslararasiBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+         <div class="row mt-5">
+                <label class="col-md-8">C)  Bu maddenin a veya b bentleri kapsamındaki yayınlarda alanında bilime
+                katkı sağlayan kitap kritiği yapılmış makale ~ 5 Puan</label>
+                <button onclick="add('uluslararasiCul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('uluslararasiCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul id="uluslararasiCul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="uluslararasiCdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="uluslararasiCmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="uluslararasiCyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="uluslararasiChatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
   </div>
 
 
@@ -79,24 +142,3 @@
 
 
 
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
