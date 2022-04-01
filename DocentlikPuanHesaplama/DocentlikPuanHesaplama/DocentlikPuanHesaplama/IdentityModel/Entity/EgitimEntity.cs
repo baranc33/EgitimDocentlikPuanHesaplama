@@ -90,7 +90,7 @@
         public string? KitapAhatirlatici{ get; set; }
 
         public string? KitapBdoktora { get; set; }
-        public string? KitapBkitap { get; set; }
+        public string? KitapBbolumSayisi { get; set; }
         public string? KitapByazarsayisi{ get; set; }
         public string? KitapBhatirlatici { get; set; }
 
@@ -100,7 +100,7 @@
         public string? KitapChatirlatici { get; set; }
 
         public string? KitapDdoktora { get; set; }
-        public string? KitapDkitap { get; set; }
+        public string? KitapDbolumSayisi { get; set; }
         public string? KitapDyazarsayisi{ get; set; }
         public string? KitapDhatirlatici { get; set; }
         #endregion

@@ -19,9 +19,24 @@
 
 <head>
    <link href="~/css/hesap.css" rel="stylesheet">
+
+<style>
+    .Egitim {
+    background-image: url(../img/ögretmen.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 95%;
+    background-position-y: 95%;
+    background-size: contain;
+
+
+}
+</style>
 </head>
 
-<section style="">
+<form action="">
+
+<section class="Egitim">
   <div class="Bir">
     <h2>1. Uluslararası Makale</h2>
     <h5>Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla </h5>
@@ -33,8 +48,8 @@
                     mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale ~ 20 Puan</label>
                 <button onclick="add('UluslararasiAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UluslararasiAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="UluslararasiAul" type="none">
-                    <li class="row d-none">
+                <ul class="mt-3" id="UluslararasiAul"  type="none">
+                    <li class="row d-none ">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="UluslararasiAdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                     <option value="0" selected>Doktora Zamanı Seçiniz</option>
@@ -65,7 +80,7 @@
                         veya kitap kritiği hariç olmak üzere yayımlanmış makale ~ 15 Puan</label>
                 <button onclick="add('UluslararasiBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UluslararasiBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="UluslararasiBul" type="none">
+                <ul class="mt-3" id="UluslararasiBul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="UluslararasiBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -97,7 +112,7 @@
                 katkı sağlayan kitap kritiği yapılmış makale ~ 5 Puan</label>
                 <button onclick="add('UluslararasiCul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UluslararasiCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="UluslararasiCul" type="none">
+                <ul class="mt-3" id="UluslararasiCul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="UluslararasiCdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -141,7 +156,7 @@
                 <label class="col-md-8">A)  ULAKBİM tarafından taranan ulusal hakemli dergilerde yayımlanmış makale ~ 8 Puan</label>
                 <button onclick="add('UlusalAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UlusalAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="UlusalAul" type="none">
+                <ul class="mt-3" id="UlusalAul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="UlusalAdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -172,7 +187,7 @@
                 <label class="col-md-8">B) a bendi dışındaki Ulusal hakemli dergilerde yayımlanmış makale ~ 4 Puan</label>
                 <button onclick="add('UlusalBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UlusalBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="UlusalBul" type="none">
+                <ul class="mt-3" id="UlusalBul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="UlusalBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -212,7 +227,7 @@
                 <label class="col-md-8">A) Uluslararası yayınevleri tarafından yayımlanmış kitap  ~ 10 Puan</label>
                 <button onclick="add('YayinAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="YayinAul" type="none">
+                <ul class="mt-3" id="YayinAul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="YayinAdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -243,7 +258,7 @@
                 <label class="col-md-8">B) Uluslararası yayınevleri tarafından yayımlanmış kitapta bölüm ~ 8 Puan</label>
                 <button onclick="add('YayinBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="YayinBul" type="none">
+                <ul class="mt-3" id="YayinBul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="YayinBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -275,7 +290,7 @@
                 <label class="col-md-8">C) Ulusal yayınevleri tarafından yayımlanmış kitap  ~ 5 Puan</label>
                 <button onclick="add('YayinCul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="YayinCul" type="none">
+                <ul class="mt-3" id="YayinCul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="YayinCdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -307,7 +322,7 @@
                 <label class="col-md-8">D)  Ulusal yayınevleri tarafından yayımlanmış kitapta bölüm ~ 4 Puan</label>
                 <button onclick="add('YayinDul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinDul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="YayinDul" type="none">
+                <ul class="mt-3" id="YayinDul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="YayinDdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -338,7 +353,7 @@
                 <label class="col-md-8">E) SSCI, SCI, SCI-Expanded ve AHCI kapsamındaki dergilerde yayımlanmış makale ~ 8 Puan</label>
                 <button onclick="add('YayinEul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinEul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="YayinEul" type="none">
+                <ul class="mt-3" id="YayinEul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="YayinEdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -370,7 +385,7 @@
                 <label class="col-md-8">F)  Uluslararası alan endekslerinde taranan dergilerde yayımlanmış makale ~ 6 Puan</label>
                 <button onclick="add('YayinFul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinFul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="YayinFul" type="none">
+                <ul class="mt-3" id="YayinFul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="YayinFdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -402,7 +417,7 @@
                 <label class="col-md-8">G) ULAKBİM tarafından taranan dergilerde yayımlanmış makale  ~ 4 Puan</label>
                 <button onclick="add('YayinGul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinGul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul id="YayinGul" type="none">
+                <ul class="mt-3" id="YayinGul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-3">
                             <select name="YayinGdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -431,13 +446,456 @@
   </div>
 
 
+  <div class="Dort">
+    <h2>4. Kitap </h2>
+    <h5>Adayın hazırladığı lisansüstü tezlerinden üretilmemiş ve başvurulan doçentlik bilim alanı ile ilgili olmak kaydıyla
+    </h5>
+    <h6>Bu madde kapsamında sadece ders kitabı niteliği dışındaki özgün bilimsel kitaplar
+        puanlanabilir, aynı kitaptaki bölümlerden en fazla ikisi dikkate alınır. Alana özgü
+        ansiklopedi maddelerinin üç veya daha çok maddesi bir kitap bölümü kabul edilir. </h6> 
+    <hr>
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">A) Uluslararası yayınevleri tarafından yayımlanmış kitap ~ 20 Puan</label>
+                <button onclick="add('KitapAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('KitapAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="KitapAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="KitapAdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Kitap Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapAkitap[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapAyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="KitapAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">B) Uluslararası yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm yazarlığı ~ 10 Puan</label>
+                <button onclick="add('KitapBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('KitapBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="KitapBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="KitapBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-3">
+                            <label>Editörlük Veya Bölüm Yazarlığı</label>
+                            <input type="number" class="form-control" value="1" name="KitapBbolumSayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapByazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="KitapBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+
+           <div class="row mt-5">
+                <label class="col-md-8">C) Ulusal yayınevleri tarafından yayımlanmış kitap   ~ 15 Puan</label>
+                <button onclick="add('KitapCul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('KitapCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="KitapCul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="KitapCdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Kitap Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapCkitap[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapCyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="KitapChatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div>         
 
 
+           <div class="row mt-5">
+                <label class="col-md-8">D)  Ulusal yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm yazarlığı ~ 8 Puan</label>
+                <button onclick="add('KitapDul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('KitapDul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="KitapDul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="KitapDdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-3">
+                            <label>Editörlük Veya Bölüm Yazarlığı</label>
+                            <input type="number" class="form-control" value="1" name="KitapDbolumSayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapDyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="KitapDhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+  
+  </div>
 
 
+  <div class="Bes">
+    <h2>5. Atıflar</h2>
+    <h5>  </h5>
+    <h6> Bu madde kapsamında en az 4 puan alınması zorunludur.Bu madde kapsamında en fazla 20 puan alınabilir. </h6> 
+    <hr>
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">A) SCI, SCI-Expanded, SSCI ve AHCI tarafından taranan dergilerde;
+                    Uluslararası yayınevleri tarafından yayımlanmış kitaplarda yayımlanan ve
+                    adayın yazar olarak yer almadığı yayınlardan her birinde, metin içindeki
+                    atıf sayısına bakılmaksızın adayın atıf yapılan her eseri için ~ 3 Puan</label>
+                <button onclick="add('AtiflarAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('AtiflarAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="AtiflarAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="AtiflarAdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Atıf Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="AtiflarAatif[]" min="0" required>
+                        </div>
+               
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="AtiflarAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">B) SCI, SCI-Expanded, SSCI ve AHCI dışındaki endeksler tarafından taranan
+                    dergilerde; Uluslararası yayınevleri tarafından yayımlanmış kitaplarda
+                    bölüm yazarı olarak yayımlanan ve adayın yazar olarak yer almadığı
+                    yayınlardan her birinde, metin içindeki atıf sayısına bakılmaksızın adayın
+                    atıf yapılan her eseri için ~ 2 Puan</label>
+                <button onclick="add('AtiflarBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('AtiflarBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="AtiflarBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="AtiflarBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Atıf Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="AtiflarBatif[]" min="0" required>
+                        </div>
+                    
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="AtiflarBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+         <div class="row mt-5">
+                <label class="col-md-8">C)  Ulusal hakemli dergilerde; Ulusal yayınevleri tarafından yayımlanmış
+                    kitaplarda yayımlanan ve adayın yazar olarak yer almadığı yayınlardan her
+                    birinde, metin içindeki atıf sayısına bakılmaksızın adayın atıf yapılan her eseri için ~ 1 Puan</label>
+                <button onclick="add('AtiflarCul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('AtiflarCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="AtiflarCul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="AtiflarCdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Atıf Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="AtiflarCatif[]" min="0" required>
+                        </div>
+                         <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="AtiflarChatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+  </div>
+
+  <div class="Alti">
+    <h2>6. Lisansüstü Tez Danışmanlığ</h2>
+    <h5>Adayın danışmanlığını yürüttüğü tamamlanan lisansüstü tezlerden</h5>
+    <h6> Bu madde kapsamında en fazla 10 puan alınabilir. İkinci/eş danışman olması
+            durumunda asıl danışman a ve b bentleri için öngörülen puanların tamamını, ikinci danışman ise yarısını alır. </h6> 
+    <hr>
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">A)  Doktora tez danışmanlığı  ~ 4 Puan</label>
+                <button onclick="add('DanismanlikAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('DanismanlikAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="DanismanlikAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="DanismanlikAdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="DanismanlikAseviye[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                      <option value="0" selected>Danışmanlık Seviyesi</option>
+                                    <option value="0">Asıl Danışman</option>
+                                    <option value="1">Eş Danışman</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Danışmanlık Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="DanismanlikAsayi[]" min="0" required>
+                        </div>
+               
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="DanismanlikAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">B) Yüksek lisans tez danışmanlığ ~ 2 Puan</label>
+                <button onclick="add('DanismanlikBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('DanismanlikBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="DanismanlikBul" type="none">
+                    <li class="row d-none">
+                          <div class="mb-3 col-md-3 mt-3">
+                            <select name="DanismanlikBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="DanismanlikBseviye[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Danışmanlık Seviyesi</option>
+                                    <option value="0">Asıl Danışman</option>
+                                    <option value="1">Eş Danışman</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Danışmanlık Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="DanismanlikBsayi[]" min="0" required>
+                        </div>
+                    
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="DanismanlikBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+      
+ 
+  </div>
 
 
+  <div class="Yedi">
+    <h2>7. Bilimsel Araştırma Projesi</h2>
+    <h5>  </h5>
+    <h6> Bu maddeden en fazla 20 puan alınabilir.  </h6> 
+    <hr>
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">A) Devam eden veya başarı ile tamamlanmış AB Çerçeve Programı Bilimsel
+                Araştırma Projesinde koordinatör / baş araştırmacı olmak ~ 15 Puan</label>
+                <button onclick="add('ArastirmaAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ArastirmaAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ArastirmaAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="ArastirmaAdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Proje Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ArastirmaAproje[]" min="0" required>
+                        </div>
+               
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ArastirmaAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">B) Devam eden veya başarı ile tamamlanmış AB Çerçeve programı bilimsel
+                araştırma projesinde ortak araştırmacı olmak  ~ 10 Puan</label>
+                <button onclick="add('ArastirmaBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ArastirmaBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ArastirmaBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="ArastirmaBdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Proje Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ArastirmaBproje[]" min="0" required>
+                        </div>
+                    
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ArastirmaBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+           <div class="row mt-5">
+                <label class="col-md-8">C)   Devam eden veya başarı ile tamamlanmış a ve b bentleri dışındaki
+                    uluslararası destekli bilimsel araştırma projelerinde (derleme ve rapor
+                    hazırlama çalışmaları hariç) görev almak ~ 6 Puan</label>
+                <button onclick="add('ArastirmaCul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ArastirmaCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ArastirmaCul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="ArastirmaCdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Proje Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ArastirmaCproje[]" min="0" required>
+                        </div>
+                         <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ArastirmaChatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+           <div class="row mt-5">
+                <label class="col-md-8">D)   Üniversiteler dışındaki kamu kurumlarıyla yapılan başarıyla tamamlanan
+                    veya yürütülen bilimsel araştırma projelerinde görev almak  ~ 4 Puan</label>
+                <button onclick="add('ArastirmaDul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ArastirmaDul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ArastirmaDul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-3">
+                            <select name="ArastirmaDdoktora[]" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                    <option value="0">Doktora Öncesi</option>
+                                    <option value="1">Doktora Sonrası</option>
+                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Proje Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ArastirmaDproje[]" min="0" required>
+                        </div>
+                         <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ArastirmaDhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                       
+                </ul>
+                <hr/>
+           </div> 
+ 
+  
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </section>
+</form>
 
 
 

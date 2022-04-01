@@ -7,12 +7,14 @@
         public MyUser MyUser { get; set; } = new MyUser();
 
 
+
         #region Makale
         public string? MakaleAdoktora { get; set; }
         public string? MakaleAmakale { get; set; }
         public string? MakaleAyazarsayisi{ get; set; }
         public string? MakaleAsirasi { get; set; }
         public string? MakaleAhatirlatici { get; set; }
+ 
 
         public string? MakaleBdoktora { get; set; }
         public string? MakaleBmakale { get; set; }

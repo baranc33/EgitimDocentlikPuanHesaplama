@@ -34,7 +34,7 @@
                     let link = document.querySelector('#science');
                      link.classList.add("active");
                 }
-        let currentLocation = window.location.pathname;
+        let currentLocation = window.location.pathname;//http://localhost:5125/Science/Muhendis
         let linkArray=currentLocation.split("/");
         //console.log(myArray[2]);// bu mevcut select
 
@@ -42,7 +42,7 @@
                 let e = document.getElementById("select_id");
                 if(linkArray[2]!=null)
                 {
-                    e.value = linkArray[2];
+                    linkArray[2];
                 }
                 }
                     show();

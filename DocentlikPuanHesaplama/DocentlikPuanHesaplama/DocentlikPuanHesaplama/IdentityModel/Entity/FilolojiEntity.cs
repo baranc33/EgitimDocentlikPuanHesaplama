@@ -15,7 +15,7 @@
             public string? UluslarArasiBdoktora { get; set; }
             public string? UluslarArasiBmakale { get; set; }
             public string? UluslarArasiByazarsayisi { get; set; }
-            public string? UluslarArasiBhatirlatici { get; set; }
+            public string? uluslararasiBhatirlatici { get; set; }
 
             public string? UluslarArasiCdoktora { get; set; }
             public string? UluslarArasiCmakale { get; set; }
