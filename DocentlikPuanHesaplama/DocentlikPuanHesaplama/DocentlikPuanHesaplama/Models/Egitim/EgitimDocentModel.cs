@@ -7,7 +7,7 @@
 
         public int UluslarArasiAdoktora { get; set; }
         public int UluslarArasiAmakale { get; set; }
-        public int UluslarArasiAyazar { get; set; }
+        public int UluslarArasiAyazarsayisi{ get; set; }
 
 
 
@@ -26,10 +26,7 @@
         public string? Message { get; set; } = "";
         public bool Sonuc { get; set; } = false;
 
-        public void Hesapla()
-        {
-
-        }
+ 
 
     }
 }

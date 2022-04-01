@@ -10,19 +10,19 @@
         #region Makale
         public string? MakaleAdoktora { get; set; }
         public string? MakaleAmakale { get; set; }
-        public string? MakaleAyazar { get; set; }
+        public string? MakaleAyazarsayisi{ get; set; }
         public string? MakaleAsirasi { get; set; }
         public string? MakaleAhatirlatici { get; set; }
 
         public string? MakaleBdoktora { get; set; }
         public string? MakaleBmakale { get; set; }
-        public string? MakaleByazar { get; set; }
+        public string? MakaleByazarsayisi{ get; set; }
         public string? MakaleBsirasi { get; set; }
         public string? MakaleBhatirlatici { get; set; }
 
         public string? MakaleCdoktora { get; set; }
         public string? MakaleCmakale { get; set; }
-        public string? MakaleCyazar { get; set; }
+        public string? MakaleCyazarsayisi{ get; set; }
         public string? MakaleCsirasi { get; set; }
         public string? MakaleChatirlatici { get; set; }
 
@@ -36,25 +36,25 @@
         #region Yayin
         public string? YayinAdoktora { get; set; }
         public string? YayinAyayin { get; set; }
-        public string? YayinAyazar { get; set; }
+        public string? YayinAyazarsayisi{ get; set; }
         public string? YayinAsirasi { get; set; }
         public string? YayinAhatirlatici { get; set; }
 
         public string? YayinBdoktora { get; set; }
         public string? YayinByayin { get; set; }
-        public string? YayinByazar { get; set; }
+        public string? YayinByazarsayisi{ get; set; }
         public string? YayinBsirasi { get; set; }
         public string? YayinBhatirlatici { get; set; }
 
         public string? YayinCdoktora { get; set; }
         public string? YayinCyayin { get; set; }
-        public string? YayinCyazar { get; set; }
+        public string? YayinCyazarsayisi{ get; set; }
         public string? YayinCsirasi { get; set; }
         public string? YayinChatirlatici { get; set; }
 
         public string? YayinDdoktora { get; set; }
         public string? YayinDyayin { get; set; }
-        public string? YayinDyazar { get; set; }
+        public string? YayinDyazarsayisi{ get; set; }
         public string? YayinDsirasi { get; set; }
         public string? YayinDhatirlatici { get; set; }
 
@@ -68,25 +68,25 @@
         #region Kitap
         public string? KitapAdoktora { get; set; }
         public string? KitapAkitap { get; set; }
-        public string? KitapAyazar { get; set; }
+        public string? KitapAyazarsayisi{ get; set; }
         public string? KitapAsirasi { get; set; }
         public string? KitapAhatirlatici { get; set; }
 
         public string? KitapBdoktora { get; set; }
         public string? KitapBkitap { get; set; }
-        public string? KitapByazar { get; set; }
+        public string? KitapByazarsayisi{ get; set; }
         public string? KitapBsirasi { get; set; }
         public string? KitapBhatirlatici { get; set; }
 
         public string? KitapCdoktora { get; set; }
         public string? KitapCkitap { get; set; }
-        public string? KitapCyazar { get; set; }
+        public string? KitapCyazarsayisi{ get; set; }
         public string? KitapCsirasi { get; set; }
         public string? KitapChatirlatici { get; set; }
 
         public string? KitapDdoktora { get; set; }
         public string? KitapDkitap { get; set; }
-        public string? KitapDyazar { get; set; }
+        public string? KitapDyazarsayisi{ get; set; }
         public string? KitapDsirasi { get; set; }
         public string? KitapDhatirlatici { get; set; }
 
@@ -96,12 +96,12 @@
         #region Patent
         public string? PatentAdoktora { get; set; }
         public string? PatentAsayi { get; set; }
-        public string? PatentAyazar { get; set; }
+        public string? PatentAyazarsayisi{ get; set; }
         public string? PatentAhatirlatici { get; set; }
 
         public string? PatentBdoktora { get; set; }
         public string? PatentBsayi { get; set; }
-        public string? PatentByazar { get; set; }
+        public string? PatentByazarsayisi{ get; set; }
         public string? PatentBhatirlatici { get; set; }
 
 
@@ -165,14 +165,14 @@
         #region Toplanti
         public string? ToplantiAdoktora { get; set; }
         public string? ToplantiAsayi { get; set; }
-        public string? ToplantiAyazar { get; set; }
+        public string? ToplantiAyazarsayisi{ get; set; }
         public string? ToplantiAsirasi { get; set; }
         public string? ToplantiAhatirlatici { get; set; }
 
 
         public string? ToplantiBdoktora { get; set; }
         public string? ToplantiBsayi { get; set; }
-        public string? ToplantiByazar { get; set; }
+        public string? ToplantiByazarsayisi{ get; set; }
         public string? ToplantiBsirasi { get; set; }
         public string? ToplantiBhatirlatici { get; set; }
 
