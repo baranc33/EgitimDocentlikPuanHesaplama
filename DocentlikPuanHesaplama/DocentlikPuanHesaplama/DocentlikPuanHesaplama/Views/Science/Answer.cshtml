@@ -1,39 +1,10 @@
 ﻿@model Messages
 
  
-<style>
-table{
-   margin-left: auto;
-  margin-right: auto;
-}
-
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){
-    background-color: #f2f2f2;
-
-}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}
-</style>
-
+ <head>
+      <link href="~/css/hesap.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+ </head>
 
     <table id="customers" class="container">
                 <tr>
@@ -64,13 +35,29 @@ table{
             </table>
 
 
-            <div style="text-align: center; color:red;">
+            <div style="text-align: left; color:black;" class="container" id="ErrorMessage">
             @{
+              if(Model.ErrorMessage.Count()>2)
+              {
+
+                <h1 style="text-align: center; margin-top:100px;color: rgb(230, 166, 47);">Sağlanmayan  Kriterler</h1>
+             <center>
+                  <hr style="width: 500px;"/>
+             </center>
+
                 foreach(var val in Model.ErrorMessage)
                 {
-                    <p>@val</p>
+
+                    <p><i style="color:  rgb(230, 166, 47);" class="fa-solid fa-star"></i> @val</p>
+                    <hr style="margin-left:20px;width:500px"/>
 
                 }
+              }
+              else
+              {
+                <h1>Tebrikler Doçentlik Başvuru Hakkı kazandınız</h1>
+
+              }
               }
 
 
