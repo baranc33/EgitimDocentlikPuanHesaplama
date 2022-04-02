@@ -1,4 +1,4 @@
-﻿using DocentlikPuanHesaplama.Models.Egitim.Bolumler;
+﻿using DocentlikPuanHesaplama.Models.Bolumler;
 
 namespace DocentlikPuanHesaplama.Models.Egitim
 {

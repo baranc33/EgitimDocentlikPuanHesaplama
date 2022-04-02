@@ -1,4 +1,5 @@
 ﻿using DocentlikPuanHesaplama.Models;
+using DocentlikPuanHesaplama.Models.Egitim;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -28,18 +29,18 @@ namespace DocentlikPuanHesaplama.Controllers
         }
     
         [HttpPost]
-        public IActionResult Egitim(string[] EgitimBhatirlatici)
-        {
-            Messages m = new Messages();
-            if (EgitimBhatirlatici.Length > 1)
-            {
-                m.message = "Bilgi Var";
-            }
-            else
-            {
-                m.message = "Bilgi Yok";
-            }
-            TempData["message"] = JsonSerializer.Serialize(m);
+        public IActionResult Egitim(EgitimDocentModel model)
+        {/*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
+            //Messages m = new Messages();
+            //if (EgitimBhatirlatici.Length > 1)
+            //{
+            //    m.message = "Bilgi Var";
+            //}
+            //else
+            //{
+            //    m.message = "Bilgi Yok";
+            //}
+            //TempData["message"] = JsonSerializer.Serialize(m);
             return RedirectToAction("Answer");
         }
         [HttpGet]
