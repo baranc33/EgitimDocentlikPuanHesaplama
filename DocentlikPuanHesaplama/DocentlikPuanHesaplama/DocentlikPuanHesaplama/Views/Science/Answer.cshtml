@@ -1,67 +1,75 @@
 ﻿@model Messages
 
- 
- <head>
-      <link href="~/css/hesap.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
- </head>
 
-    <table id="customers" class="container">
-                <tr>
-                    <th>Madde</th>
-                    <th>Doktora Öncesi Ham Puan</th>
-                    <th>Doktora Sonrası Ham Puan</th>
-                    <th>Toplam Puan  Net Puan</th>
-                </tr>
-     
-                @{ for(int i=0;i<Model.Colum;i++)  
-                   {                     
-                   <tr>
-                    <td>1. Uluslararası Makale </td>
-                    <td><?= $UluslararasiMakaledoktoraOncesi ?></td>
-                    <td><?=  $UluslararasiMakaledoktoraSonrasi?></td>
-                    <td><?= $UluslararasiMakaleToplam?></td>
-                     </tr>
-                    }
-                }
-           
-               
-                <tr>
-                    <td>Toplam =</td>
-                    <td><?= $totalOncesi ?></td>
-                    <td><?=  $totalSonrasi?></td>
-                    <td><?= $totaltoplam?></td>
-                </tr>         
-            </table>
+<head>
+  <link href="~/css/hesap.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<div style="text-align: left; color:black;" class="container" id="ErrorMessage">
+  @{
+    if (Model.ErrorMessage.Count() > 0)
+    {
 
+      <h1 style="text-align: center; margin-top:100px;color: rgb(230, 166, 47);">Sağlanmayan Kriterler</h1>
+      <center>
+        <hr style="width: 500px;" />
+      </center>
 
-            <div style="text-align: left; color:black;" class="container" id="ErrorMessage">
-            @{
-              if(Model.ErrorMessage.Count()>2)
-              {
+      foreach (var val in Model.ErrorMessage)
+      {
 
-                <h1 style="text-align: center; margin-top:100px;color: rgb(230, 166, 47);">Sağlanmayan  Kriterler</h1>
-             <center>
-                  <hr style="width: 500px;"/>
-             </center>
+        <p><i style="color:  rgb(230, 166, 47);" class="fa-solid fa-star"></i> @val</p>
+        <hr style="margin-left:20px;width:500px" />
 
-                foreach(var val in Model.ErrorMessage)
-                {
+      }
+    }
+    else
+    {
+      <h1 id="Tebrikler"><b>* TEBRİKLER * </b>Doçentlik Başvuru Hakkı Kazandınız . </h1>
 
-                    <p><i style="color:  rgb(230, 166, 47);" class="fa-solid fa-star"></i> @val</p>
-                    <hr style="margin-left:20px;width:500px"/>
+    }
+  }
 
-                }
-              }
-              else
-              {
-                <h1>Tebrikler Doçentlik Başvuru Hakkı kazandınız</h1>
+</div>
+<table id="customers" class="container">
+  <tr>
+    <th>Madde</th>
+    <th>Doktora Öncesi Ham Puan</th>
+    <th>Doktora Sonrası Ham Puan</th>
+    <th>Toplam Puan Net Puan</th>
+  </tr>
 
-              }
-              }
-
+  @{
+    for (int i = 0; i < Model.Colum; i++)
+    {
+      <tr>
+        <td>1. Uluslararası Makale </td>
+        <td>
+          <?= $UluslararasiMakaledoktoraOncesi ?>
+        </td>
+        <td>
+          <?=  $UluslararasiMakaledoktoraSonrasi?>
+        </td>
+        <td>
+          <?= $UluslararasiMakaleToplam?>
+        </td>
+      </tr>
+    }
+  }
 
 
-             
-
-            </div>
+  <tr>
+    <td>Toplam =</td>
+    <td>
+      <?= $totalOncesi ?>
+    </td>
+    <td>
+      <?=  $totalSonrasi?>
+    </td>
+    <td>
+      <?= $totaltoplam?>
+    </td>
+  </tr>
+</table>
