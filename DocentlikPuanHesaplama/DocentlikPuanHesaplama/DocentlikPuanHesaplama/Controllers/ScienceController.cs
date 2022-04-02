@@ -11,7 +11,8 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpGet]
         public IActionResult Answer()
         {
-            Messages m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
+            Messages m = new();
+            //Messages m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
             string[] a = new string[]{ "Hata1", "Hata2"};
             m.ErrorMessage = a;
             return View(m);
