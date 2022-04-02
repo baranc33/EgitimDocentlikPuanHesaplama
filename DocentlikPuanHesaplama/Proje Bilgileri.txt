@@ -10,3 +10,57 @@ Admin Bölümü olacak bu sayede admin bloğunu düzenliyebilcek
 
 
 
+
+Eğitim Bilimleri		+
+Filoloji Temel Alanı		-
+Hukuk Temel Alanı		-
+İlahiyat Temel Alanı		-
+- Sosyal, Beşeri ve 		-
+Spor Bilimleri Temel Alanı	-
+
+
+ 
+
+Fen Bilimleri ve Matematik Temel Alanı
+Mühendislik Temel Alanı
+Ziraat, Orman ve Su Ürünleri Temel Alanı
+
+
+
+
+
+
+
+- Sağlık Bilimleri Temel Alanı
+
+
+ Mimarlık, Planlama ve Tasarım Temel Alanı
+
+
+- Güzel Sanatlar Temel Alanı
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,19 +9,19 @@
 
         #region UluslarArasi
         public string? UluslarArasiAdoktora { get; set; }
-        public string? UluslarArasiAmakale { get; set; }
+        public string? UluslarArasiAmakalesayisi { get; set; }
         public string? UluslarArasiAyazarsayisi { get; set; }
         public string? UluslarArasiAsirasi { get; set; }
         public string? UluslarArasiAhatirlatici { get; set; }
 
         public string? UluslarArasiBdoktora { get; set; }
-        public string? UluslarArasiBmakale { get; set; }
+        public string? UluslarArasiBmakalesayisi { get; set; }
         public string? UluslarArasiByazarsayisi { get; set; }
         public string? UluslarArasiBsirasi { get; set; }
         public string? UluslarArasiBhatirlatici { get; set; }
 
         public string? UluslarArasiCdoktora { get; set; }
-        public string? UluslarArasiCmakale { get; set; }
+        public string? UluslarArasiCmakalesayisi { get; set; }
         public string? UluslarArasiCyazarsayisi { get; set; }
         public string? UluslarArasiCsirasi { get; set; }
         public string? UluslarArasiChatirlatici { get; set; }
@@ -34,14 +34,14 @@
 
         #region Ulusal
         public string? UlusalAdoktora { get; set; }
-        public string? UlusalAmakale { get; set; }
+        public string? UlusalAmakalesayisi { get; set; }
         public string? UlusalAyazarsayisi { get; set; }
         public string? UlusalAsirasi { get; set; }
         public string? UlusalAhatirlatici { get; set; }
 
 
         public string? UlusalBdoktora { get; set; }
-        public string? UlusalBmakale { get; set; }
+        public string? UlusalBmakalesayisi { get; set; }
         public string? UlusalByazarsayisi { get; set; }
         public string? UlusalBsirasi { get; set; }
         public string? UlusalBhatirlatici { get; set; }
