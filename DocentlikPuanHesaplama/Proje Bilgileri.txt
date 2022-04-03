@@ -82,6 +82,8 @@ hesaplaDocent33
 
 
 
+// java Scriptle gelen modellerin doldurulması gerekiyor
+
 
 
 
