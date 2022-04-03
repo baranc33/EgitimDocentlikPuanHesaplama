@@ -1,4 +1,6 @@
-﻿ 
+﻿@using DocentlikPuanHesaplama.IdentityModel.Entity
+@using System.Text.Json
+ 
 @model DocentlikPuanHesaplama.Models.Egitim.EgitimDocentModel
  
   @section Alt_Menu{
@@ -20,6 +22,21 @@
   }
 @{
 
+    EgitimEntity entity=new();
+entity.uluslararasiAhatirlatici="safasdf";
+
+var a= JsonSerializer.Serialize(entity);
+ <script>
+    console.log('asdas');
+
+    test();
+    function test(){
+    console.log(JSON.parse(a));
+
+    console.log('asdas');
+    }
+
+</script>
 @* EgitimEntity entity=new();
 entity.uluslararasiAhatirlatici="safasdf"; *@
 
@@ -1079,12 +1096,3 @@ entity.uluslararasiAhatirlatici="safasdf"; *@
 </form>
 
 
- <script>
-    console.log('asdas');
-
-    test();
-    function test(){
-    console.log('asdas');
-    }
-
-</script>
