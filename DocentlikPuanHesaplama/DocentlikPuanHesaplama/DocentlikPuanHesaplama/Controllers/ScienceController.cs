@@ -1,4 +1,5 @@
-﻿using DocentlikPuanHesaplama.Models;
+﻿using DocentlikPuanHesaplama.IdentityModel.Entity;
+using DocentlikPuanHesaplama.Models;
 using DocentlikPuanHesaplama.Models.Egitim;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
@@ -13,14 +14,14 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpGet]
         public IActionResult Answer()
         {
-            if (!TempData.ContainsKey("message"))
-            {
-                var model = JsonSerializer.Deserialize<object>(TempData["model"].ToString());
-                TempData["modelagain"] = JsonSerializer.Serialize(model);
-                var action = JsonSerializer.Deserialize<string>(TempData["lasturl"].ToString());
+            //if (!TempData.ContainsKey("message"))
+            //{
+            //    var model = JsonSerializer.Deserialize<object>(TempData["model"].ToString());
+            //    TempData["modelagain"] = JsonSerializer.Serialize(model);
+            //    var action = JsonSerializer.Deserialize<string>(TempData["lasturl"].ToString());
 
-                return RedirectToAction(action, "Science");
-            }
+            //    return RedirectToAction(action, "Science");
+            //}
             Messages m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
            
            
@@ -35,14 +36,14 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpGet]
         public IActionResult Egitim()
         {
-            if (TempData.ContainsKey("modelagain"))
-            {
-                EgitimDocentModel models = JsonSerializer.Deserialize<EgitimDocentModel>(TempData["modelagain"].ToString());
+            //if (TempData.ContainsKey("modelagain"))
+            //{
+            //    //EgitimDocentModel models = JsonSerializer.Deserialize<EgitimDocentModel>(TempData["modelagain"].ToString());
 
-                ViewBag.OldData = true;
-                return View(models);
-            }
-            ViewBag.OldData = false;
+            //    ViewBag.OldData = true;
+            //    return View();
+            //}
+            //ViewBag.OldData = false;
 
             return View();
         }
@@ -51,11 +52,25 @@ namespace DocentlikPuanHesaplama.Controllers
         public IActionResult Egitim(EgitimDocentModel model)
         {/*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
 
-        
-            Messages message=new ();
-                message = model.Hesapla();
+            //EgitimEntity entity = new();
+
+
+            //if (model.UluslarArasiAdoktora.Count()>1)
+            //{
+            //    for (int i = 1; i < model.UluslarArasiAdoktora.Count(); i++)
+            //    {
+            //        entity.uluslararasiAhatirlatici += model.uluslararasiAhatirlatici[i].ToString()+"/";
+            //        entity.UluslarArasiAdoktora += model.UluslarArasiAdoktora[i].ToString()+"/";
+            //        entity.UluslarArasiAyazarsayisi += model.UluslarArasiAyazarsayisi[i].ToString()+"/";
+            //    }
+
+            //}
+
+             Messages message=new ();
+            message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            TempData["model"] = JsonSerializer.Serialize(model);
+            //TempData["model"] = JsonSerializer.Serialize(model);
+            //TempData["model"] = JsonSerializer.Serialize(entity);
             TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
             return RedirectToAction("Answer");
         }

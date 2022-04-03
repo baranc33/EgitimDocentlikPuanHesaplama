@@ -1,8 +1,6 @@
 ﻿@model DocentlikPuanHesaplama.Models.Messages
 
 
-
-
 <head>
     <link href="~/css/hesap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -10,12 +8,15 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <div style="text-align: left; color:black;" class="container" id="ErrorMessage">
+    
+    <a asp-controller="" asp-action=""  class="offset-9" style="text-align:right"> <i class="fa-solid fa-rotate-left"></i> Form Doldurma Sayfasına Geri Dön</a> 
+    
     @{
         if (Model.Error==true )
         {
             
 
-            <h1 style="text-align: center; margin-top:100px;color: rgb(230, 166, 47);">Sağlanmayan Kriterler</h1>
+            <h1 style="text-align: center; margin-top:100px;color: rgb(230, 166, 47);"> Sağlanmayan Kriterler</h1>
             <center>
                 <hr style="width: 500px;" />
             </center>

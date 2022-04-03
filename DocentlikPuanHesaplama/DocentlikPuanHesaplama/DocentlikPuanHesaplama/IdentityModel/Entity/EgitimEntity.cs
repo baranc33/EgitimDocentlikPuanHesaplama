@@ -12,7 +12,7 @@ namespace DocentlikPuanHesaplama.IdentityModel.Entity
         public string? UluslarArasiAdoktora { get; set; }
         public string? UluslarArasiAmakalesayisi { get; set; }
         public string? UluslarArasiAyazarsayisi{ get; set; }
-        public string? uluslararasiAhatirlatici { get; set; }
+        public string uluslararasiAhatirlatici { get; set; } = default!;
 
    
 
