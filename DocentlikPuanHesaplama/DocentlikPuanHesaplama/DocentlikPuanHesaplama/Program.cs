@@ -38,15 +38,15 @@ else
 builder.Services.AddDbContext<MyIdentityDbContext>(opts =>
 {
     opts.UseSqlServer(con);
-});// entity framework db baðlantýsý
+});// entity framework db baï¿½lantï¿½sï¿½
 
-// ýdentity Baðlantýýsý
+// ï¿½dentity Baï¿½lantï¿½ï¿½sï¿½
 builder.Services.AddIdentity<MyUser, MyRole>(opt =>
 {
-    opt.User.RequireUniqueEmail = true;//evet tek mail olmalý
-    opt.User.AllowedUserNameCharacters = "çiöüðÐÝÇÖÜabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._";
+    opt.User.RequireUniqueEmail = true;//evet tek mail olmalï¿½
+    opt.User.AllowedUserNameCharacters = "ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._";
 
-    opt.Password.RequiredLength = 4;//minimun deðer
+    opt.Password.RequiredLength = 4;//minimun deï¿½er
     opt.Password.RequireLowercase = false;
     opt.Password.RequireUppercase = false;
     opt.Password.RequireNonAlphanumeric = false;
@@ -58,8 +58,8 @@ builder.Services.AddIdentity<MyUser, MyRole>(opt =>
 
 
 var app = builder.Build();
-app.UseDeveloperExceptionPage();// developer hata mesajlarý
-app.UseStatusCodePages();// özellikle bir content dönmiyen sayfalarda hata içeriði
+app.UseDeveloperExceptionPage();// developer hata mesajlarï¿½
+app.UseStatusCodePages();// ï¿½zellikle bir content dï¿½nmiyen sayfalarda hata iï¿½eriï¿½i
 app.UseStaticFiles();
 
 app.MapControllerRoute(
