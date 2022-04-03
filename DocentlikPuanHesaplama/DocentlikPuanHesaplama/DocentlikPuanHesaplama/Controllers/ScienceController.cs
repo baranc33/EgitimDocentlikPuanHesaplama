@@ -1,7 +1,6 @@
 ﻿using DocentlikPuanHesaplama.IdentityModel.Entity;
 using DocentlikPuanHesaplama.Models;
 using DocentlikPuanHesaplama.Models.Egitim;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
@@ -67,12 +66,13 @@ namespace DocentlikPuanHesaplama.Controllers
                 }
 
             }
+            
 
-            Messages message=new ();
+            Messages message =new ();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             //TempData["model"] = JsonSerializer.Serialize(model);
-            TempData["model"] = JsonSerializer.Serialize(entity);
+            //TempData["model"] = JsonSerializer.Serialize(entity);
             TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
             return RedirectToAction("Answer");
         }
@@ -140,6 +140,5 @@ namespace DocentlikPuanHesaplama.Controllers
             string action = words[words.Length - 1];
             return action;
         }
-
     }
 }

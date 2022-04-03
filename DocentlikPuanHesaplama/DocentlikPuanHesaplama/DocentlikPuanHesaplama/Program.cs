@@ -55,6 +55,8 @@ builder.Services.AddIdentity<MyUser, MyRole>(opt =>
 }).AddEntityFrameworkStores<MyIdentityDbContext>()
 .AddErrorDescriber<CustomIdentityErrorDescriber>();
 
+
+
 /* Session*/
 builder.Services.AddDistributedMemoryCache();
 
