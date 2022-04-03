@@ -24,19 +24,22 @@
 
     EgitimEntity entity=new();
 entity.uluslararasiAhatirlatici="safasdf";
+var a= JsonSerializer.Serialize(entity);
+
+
 
  <script>
-    console.log('asdas');
-let user={userName :"Hakan Baran Çakır", isActive :true};
 
-localStorage.setItem('userInfo',JSON.stringify(@{JsonSerializer.Serialize(entity);}));
+let jsEntity={
+     UluslarArasiAdoktora :"@entity.UluslarArasiAdoktora",
+        UluslarArasiAmakalesayisi :"@entity.UluslarArasiAmakalesayisi",
+        UluslarArasiAyazarsayisi:"@entity.UluslarArasiAyazarsayisi",
+          uluslararasiAhatirlatici : "@entity.uluslararasiAhatirlatici"
+};
+localStorage.setItem('userInfo',JSON.stringify(jsEntity));
 
 
-    test();
-    function test(){
-
-    console.log('asdas');
-    }
+     
 
 </script>
 @* EgitimEntity entity=new();
