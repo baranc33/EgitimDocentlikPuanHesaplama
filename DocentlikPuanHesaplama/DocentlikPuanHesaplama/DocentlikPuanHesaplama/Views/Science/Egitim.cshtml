@@ -1,4 +1,4 @@
-﻿
+﻿@model DocentlikPuanHesaplama.Models.Egitim.EgitimDocentModel
   @section Alt_Menu{
    <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
      <h1 class="col-md-6 text-white display-4 "  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top:0.6em;">Başvuru şartları</h1>
@@ -16,6 +16,18 @@
        </h5>
    </div>
   }
+@{
+    if (ViewBag.OldData == true)
+    {
+           <script>
+                function  oldPage(){
+                  console.log("Hello world!");
+                }
+                oldPage();
+            </script>
+
+    }
+}
 
 <head>
    <link href="~/css/hesap.css" rel="stylesheet">
@@ -1048,7 +1060,6 @@
         <br>
         </section>
 </form>
-
 
 
 

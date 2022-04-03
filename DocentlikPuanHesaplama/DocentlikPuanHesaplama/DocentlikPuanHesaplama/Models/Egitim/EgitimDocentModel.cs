@@ -16,19 +16,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         public int[] UluslarArasiAmakalesayisi { get; set; } = default!;
         public int[] UluslarArasiAyazarsayisi { get; set; } = default!;
         public string[]? uluslararasiAhatirlatici { get; set; } = default!;
-        private Uluslararasi UluslarArasiHesapla()
-        {
-            Uluslararasi model = default;
-            if (UluslarArasiAdoktora.Count() > 1)
-            {
-
-
-            }
-
-
-
-            return model;
-        }
+       
         public int[] UluslarArasiBdoktora { get; set; } = default!;
         public int[] UluslarArasiBmakalesayisi { get; set; } = default!;
         public int[] UluslarArasiByazarsayisi { get; set; } = default!;
@@ -40,7 +28,63 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         public string[]? uluslararasiChatirlatici { get; set; } = default!;
 
 
+        private Uluslararasi UluslarArasiHesapla()
+        {
+            Uluslararasi model = new();
+            if (UluslarArasiAdoktora.Count() > 1)
+            {
+                for (int i = 1; i < UluslarArasiAdoktora.Count(); i++)
+                {
+                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                    if (UluslarArasiAdoktora[i] == 0 && UluslarArasiAmakalesayisi[i] > 0 && UluslarArasiAyazarsayisi[i] > 0) // doktora öncesi
+                    {
+                        model.HamDoktoraOncesiPuan = (20 * UluslarArasiAmakalesayisi[i]) / UluslarArasiAyazarsayisi[i];
+                    }
+                    else if (UluslarArasiAdoktora[i] == 1 && UluslarArasiAmakalesayisi[i] > 0 && UluslarArasiAyazarsayisi[i] > 0)
+                    {// else yazarsam 0  girilen değerleride alır
+                        model.HamDoktoraSonrasiPuan = (20 * UluslarArasiAmakalesayisi[i]) / UluslarArasiAyazarsayisi[i];
+                    }
+                }
 
+            }
+            if (UluslarArasiBdoktora.Count() > 1)
+            {
+                for (int i = 1; i < UluslarArasiBdoktora.Count(); i++)
+                {
+                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                    if (UluslarArasiBdoktora[i] == 0 && UluslarArasiBmakalesayisi[i] > 0 && UluslarArasiByazarsayisi[i] > 0) // doktora öncesi
+                    {
+                        model.HamDoktoraOncesiPuan = (15 * UluslarArasiBmakalesayisi[i]) / UluslarArasiByazarsayisi[i];
+                    }
+                    else if (UluslarArasiBdoktora[i] == 1 && UluslarArasiBmakalesayisi[i] > 0 && UluslarArasiByazarsayisi[i] > 0)
+                    {// else yazarsam 0  girilen değerleride alır
+                        model.HamDoktoraSonrasiPuan = (15 * UluslarArasiBmakalesayisi[i]) / UluslarArasiByazarsayisi[i];
+                    }
+                }
+
+            }
+            // c seçeniğe girmeden kontrol işlemi yapıyorumki ekstra değişken tanımlama işlemi yapmiyalım 
+            if (model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan < 20) model.Error = true;
+            if (UluslarArasiCdoktora.Count() > 1)
+            {
+                for (int i = 1; i < UluslarArasiCdoktora.Count(); i++)
+                {
+                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                    if (UluslarArasiCdoktora[i] == 0 && UluslarArasiCmakalesayisi[i] > 0 && UluslarArasiCyazarsayisi[i] > 0) // doktora öncesi
+                    {
+                        model.HamDoktoraOncesiPuan = (5 * UluslarArasiCmakalesayisi[i]) / UluslarArasiCyazarsayisi[i];
+                    }
+                    else if (UluslarArasiCdoktora[i] == 1 && UluslarArasiCmakalesayisi[i] > 0 && UluslarArasiCyazarsayisi[i] > 0)
+                    {// else yazarsam 0  girilen değerleride alır
+                        model.HamDoktoraSonrasiPuan = (5 * UluslarArasiCmakalesayisi[i]) / UluslarArasiCyazarsayisi[i];
+                    }
+                }
+
+            }
+            model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
+
+            return model;
+        }
 
         #endregion
 
@@ -215,30 +259,44 @@ namespace DocentlikPuanHesaplama.Models.Egitim
 
         public Messages Hesapla()
         {
-            Messages message = default;
-            message.Error = true;
+            Messages message = new();
+            message.Error = false;
             message.ToplamDoktoraOncesi = 0;
             message.ToplamDoktoraSonrasi= 0;
             Uluslararasi uluslararasi = UluslarArasiHesapla();
-            if (uluslararasi != default)
+            if (uluslararasi != null)
             {
                 ListMadde madde = new ListMadde()
                 {
                     BolumAdi = uluslararasi.BolumAdi,
-                    DoktoraOncesi = uluslararasi.HamDoktoraOncesiPuan,
-                    DoktoraSonrasi = uluslararasi.HamDoktoraSonrasiPuan,
+                    HamDoktoraOncesi = uluslararasi.HamDoktoraOncesiPuan,
+                    HamDoktoraSonrasi = uluslararasi.HamDoktoraSonrasiPuan,
                     NetPuan = uluslararasi.NetPuan,
-                    Sonuc = uluslararasi.Sonuc,
+                    Error = uluslararasi.Error,
                     ErrorMessage=uluslararasi.ErrorMessage
                 };
-                if (uluslararasi.Sonuc == false) message.Error = true;
+                if (uluslararasi.Error == true) message.Error = true;
                 message.Bolumler.Add(madde);
             }
 
 
 
-            message.Colum = message.Bolumler.Count();
-            return message;
+
+
+
+
+
+
+
+
+
+            if (message.Bolumler != null) message.Colum = message.Bolumler.Count();
+            else
+            {
+                message.Colum = 0;
+                message.Error = true;
+            }
+                return message;
         }
 
     }

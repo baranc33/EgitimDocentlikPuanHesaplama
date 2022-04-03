@@ -55,12 +55,21 @@ builder.Services.AddIdentity<MyUser, MyRole>(opt =>
 }).AddEntityFrameworkStores<MyIdentityDbContext>()
 .AddErrorDescriber<CustomIdentityErrorDescriber>();
 
+/* Session*/
+builder.Services.AddDistributedMemoryCache();
 
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = ".AdventureWorks.Session";
+    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 app.UseDeveloperExceptionPage();// developer hata mesajlar�
 app.UseStatusCodePages();// �zellikle bir content d�nmiyen sayfalarda hata i�eri�i
 app.UseStaticFiles();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

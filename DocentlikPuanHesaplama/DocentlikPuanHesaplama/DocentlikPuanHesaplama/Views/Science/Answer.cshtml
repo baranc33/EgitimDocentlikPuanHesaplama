@@ -1,4 +1,6 @@
-﻿@model Messages
+﻿@model DocentlikPuanHesaplama.Models.Messages
+
+
 
 
 <head>
@@ -9,8 +11,9 @@
 </head>
 <div style="text-align: left; color:black;" class="container" id="ErrorMessage">
     @{
-        if (Model.Error == true)
+        if (Model.Error==true )
         {
+            
 
             <h1 style="text-align: center; margin-top:100px;color: rgb(230, 166, 47);">Sağlanmayan Kriterler</h1>
             <center>
@@ -19,7 +22,7 @@
 
             foreach (var val in Model.Bolumler)
             {
-                if (val.Sonuc == true)
+                if (val.Error == true)
                 {
                     <p><i style="color:  rgb(230, 166, 47);" class="fa-solid fa-star"></i> @val.ErrorMessage</p>
                     <hr style="margin-left:20px;width:500px" />
@@ -47,15 +50,15 @@
         for (int i = 0; i < Model.Colum; i++)
         {
             <tr>
-                <td>1. Uluslararası Makale </td>
+                <td>@Model.Bolumler[i].BolumAdi</td>
                 <td>
-                    <?= $UluslararasiMakaledoktoraOncesi ?>
+                   @Model.Bolumler[i].HamDoktoraOncesi
                 </td>
                 <td>
-                    <?=  $UluslararasiMakaledoktoraSonrasi?>
+                    @Model.Bolumler[i].HamDoktoraSonrasi
                 </td>
                 <td>
-                    <?= $UluslararasiMakaleToplam?>
+                   @Model.Bolumler[i].NetPuan
                 </td>
             </tr>
         }

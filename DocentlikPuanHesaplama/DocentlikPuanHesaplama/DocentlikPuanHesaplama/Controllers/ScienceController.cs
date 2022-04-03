@@ -1,5 +1,7 @@
 ﻿using DocentlikPuanHesaplama.Models;
 using DocentlikPuanHesaplama.Models.Egitim;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -11,7 +13,17 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpGet]
         public IActionResult Answer()
         {
+            if (!TempData.ContainsKey("message"))
+            {
+                var model = JsonSerializer.Deserialize<object>(TempData["model"].ToString());
+                TempData["modelagain"] = JsonSerializer.Serialize(model);
+                var action = JsonSerializer.Deserialize<string>(TempData["lasturl"].ToString());
+
+                return RedirectToAction(action, "Science");
+            }
             Messages m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
+           
+           
             return View(m);
         }
 
@@ -23,18 +35,28 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpGet]
         public IActionResult Egitim()
         {
+            if (TempData.ContainsKey("modelagain"))
+            {
+                EgitimDocentModel models = JsonSerializer.Deserialize<EgitimDocentModel>(TempData["modelagain"].ToString());
+
+                ViewBag.OldData = true;
+                return View(models);
+            }
+            ViewBag.OldData = false;
+
             return View();
         }
     
         [HttpPost]
         public IActionResult Egitim(EgitimDocentModel model)
         {/*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
-          
 
+        
             Messages message=new ();
                 message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             TempData["model"] = JsonSerializer.Serialize(model);
+            TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
             return RedirectToAction("Answer");
         }
         [HttpGet]
@@ -93,6 +115,14 @@ namespace DocentlikPuanHesaplama.Controllers
             return View();
         }
 
+
+        private string GetUrl()
+        {
+            var url = HttpContext.Request.GetEncodedUrl();
+            string[] words = url.Split('/');
+            string action = words[words.Length - 1];
+            return action;
+        }
 
     }
 }
