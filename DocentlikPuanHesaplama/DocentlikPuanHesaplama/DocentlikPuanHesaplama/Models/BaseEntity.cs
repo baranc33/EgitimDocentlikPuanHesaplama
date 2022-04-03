@@ -2,9 +2,9 @@
 {
     public class BaseEntity
     {
-        public decimal NetTotalPuan { get; set; } = 0;
-        public decimal HamTotalDoktoraOncesiPuan { get; set; } = 0;
-        public decimal HamTotalDoktoraSonrasiPuan { get; set; } = 0;
+        public decimal NetPuan { get; set; } = 0;
+        public decimal HamDoktoraOncesiPuan { get; set; } = 0;
+        public decimal HamDoktoraSonrasiPuan { get; set; } = 0;
 
     }
 }

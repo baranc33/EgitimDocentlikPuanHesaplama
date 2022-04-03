@@ -11,10 +11,7 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpGet]
         public IActionResult Answer()
         {
-            Messages m = new();
-            //Messages m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
-            string[] a = new string[]{ "Hata1", "Hata2"};
-            m.ErrorMessage = a;
+            Messages m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
             return View(m);
         }
 
@@ -32,16 +29,12 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpPost]
         public IActionResult Egitim(EgitimDocentModel model)
         {/*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
-            //Messages m = new Messages();
-            //if (EgitimBhatirlatici.Length > 1)
-            //{
-            //    m.message = "Bilgi Var";
-            //}
-            //else
-            //{
-            //    m.message = "Bilgi Yok";
-            //}
-            //TempData["message"] = JsonSerializer.Serialize(m);
+          
+
+            Messages message=new ();
+                message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            TempData["model"] = JsonSerializer.Serialize(model);
             return RedirectToAction("Answer");
         }
         [HttpGet]

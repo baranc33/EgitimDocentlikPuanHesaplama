@@ -1,4 +1,5 @@
 ﻿using DocentlikPuanHesaplama.IdentityModel;
+using DocentlikPuanHesaplama.Models.Bolumler;
 
 namespace DocentlikPuanHesaplama.Models.Egitim
 {
@@ -6,15 +7,28 @@ namespace DocentlikPuanHesaplama.Models.Egitim
     {
 
         public int? Id { get; set; } = default!;
-        public string[]? MyUserId { get; set; } = default!;
+        public string? MyUserId { get; set; } = default!;
         public MyUser? MyUser { get; set; } = default!;
+
 
         #region UluslarArasi
         public int[] UluslarArasiAdoktora { get; set; } = default!;
         public int[] UluslarArasiAmakalesayisi { get; set; } = default!;
         public int[] UluslarArasiAyazarsayisi { get; set; } = default!;
         public string[]? uluslararasiAhatirlatici { get; set; } = default!;
+        private Uluslararasi UluslarArasiHesapla()
+        {
+            Uluslararasi model = default;
+            if (UluslarArasiAdoktora.Count() > 1)
+            {
 
+
+            }
+
+
+
+            return model;
+        }
         public int[] UluslarArasiBdoktora { get; set; } = default!;
         public int[] UluslarArasiBmakalesayisi { get; set; } = default!;
         public int[] UluslarArasiByazarsayisi { get; set; } = default!;
@@ -117,7 +131,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
 
         public int[] AtiflarBdoktora { get; set; } = default!;
         public int[] AtiflarBatif { get; set; } = default!;
-        public string[]?  AtiflarBhatirlatici { get; set; } = default!;
+        public string[]? AtiflarBhatirlatici { get; set; } = default!;
 
         public int[] AtiflarCdoktora { get; set; } = default!;
         public int[] AtiflarCatif { get; set; } = default!;
@@ -199,7 +213,33 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         //public string[]? Message { get; set; } = default;
         //public bool Sonuc { get; set; } = false;
 
+        public Messages Hesapla()
+        {
+            Messages message = default;
+            message.Error = true;
+            message.ToplamDoktoraOncesi = 0;
+            message.ToplamDoktoraSonrasi= 0;
+            Uluslararasi uluslararasi = UluslarArasiHesapla();
+            if (uluslararasi != default)
+            {
+                ListMadde madde = new ListMadde()
+                {
+                    BolumAdi = uluslararasi.BolumAdi,
+                    DoktoraOncesi = uluslararasi.HamDoktoraOncesiPuan,
+                    DoktoraSonrasi = uluslararasi.HamDoktoraSonrasiPuan,
+                    NetPuan = uluslararasi.NetPuan,
+                    Sonuc = uluslararasi.Sonuc,
+                    ErrorMessage=uluslararasi.ErrorMessage
+                };
+                if (uluslararasi.Sonuc == false) message.Error = true;
+                message.Bolumler.Add(madde);
+            }
 
+
+
+            message.Colum = message.Bolumler.Count();
+            return message;
+        }
 
     }
 }

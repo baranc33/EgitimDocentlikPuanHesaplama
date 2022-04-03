@@ -2,7 +2,7 @@
 {
     public class Kitap : BaseEntity {
         public string BolumAdi { get; set; } = "4. Kitap ";
-        public string Message { get; set; } = "";
+        public string ErrorMessage { get; set; } = "";
         public bool Sonuc { get; set; } = false;
     }
 }

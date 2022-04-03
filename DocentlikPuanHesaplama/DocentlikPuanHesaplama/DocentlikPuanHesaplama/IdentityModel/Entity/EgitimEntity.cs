@@ -1,4 +1,6 @@
-﻿namespace DocentlikPuanHesaplama.IdentityModel.Entity
+﻿using DocentlikPuanHesaplama.Models.Bolumler;
+
+namespace DocentlikPuanHesaplama.IdentityModel.Entity
 {
     public class EgitimEntity
     {
@@ -11,6 +13,8 @@
         public string? UluslarArasiAmakalesayisi { get; set; }
         public string? UluslarArasiAyazarsayisi{ get; set; }
         public string? uluslararasiAhatirlatici { get; set; }
+
+   
 
         public string? UluslarArasiBdoktora { get; set; }
         public string? UluslarArasiBmakalesayisi { get; set; }
