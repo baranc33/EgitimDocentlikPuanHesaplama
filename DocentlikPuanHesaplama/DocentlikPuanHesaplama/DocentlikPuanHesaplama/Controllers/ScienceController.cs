@@ -21,7 +21,7 @@ namespace DocentlikPuanHesaplama.Controllers
 
                 return RedirectToAction(action, "Science");
             }
-
+            TempData.Remove("modelagain");
             Messages m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
            
             return View(m);
@@ -37,8 +37,6 @@ namespace DocentlikPuanHesaplama.Controllers
         {
             if (TempData.ContainsKey("modelagain"))
             {
-                //EgitimDocentModel models = JsonSerializer.Deserialize<EgitimDocentModel>(TempData["modelagain"].ToString());
-
                 ViewBag.OldData = true;
                 return View();
             }
@@ -50,7 +48,6 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpPost]
         public IActionResult Egitim(EgitimDocentModel model)
         {/*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
-
             EgitimEntity entity = new();
 
 
@@ -60,19 +57,21 @@ namespace DocentlikPuanHesaplama.Controllers
                 {
 
                    if(model.uluslararasiAhatirlatici[i]!=null) entity.uluslararasiAhatirlatici += model.uluslararasiAhatirlatici[i].ToString() + "/";
-                    entity.UluslarArasiAdoktora += model.UluslarArasiAdoktora[i].ToString() + "/";
+                    else entity.uluslararasiAhatirlatici += "./";
+                      entity.UluslarArasiAdoktora += model.UluslarArasiAdoktora[i].ToString() + "/";
                     entity.UluslarArasiAyazarsayisi += model.UluslarArasiAyazarsayisi[i].ToString() + "/";
                     entity.UluslarArasiAmakalesayisi+= model.UluslarArasiAmakalesayisi[i].ToString() + "/";
+                    entity.UluslarArasiACount = model.UluslarArasiAdoktora.Count() - 1;
                 }
 
             }
-            
+            TempData["model"] = JsonSerializer.Serialize(entity);
+
 
             Messages message =new ();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             //TempData["model"] = JsonSerializer.Serialize(model);
-            //TempData["model"] = JsonSerializer.Serialize(entity);
             TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
             return RedirectToAction("Answer");
         }

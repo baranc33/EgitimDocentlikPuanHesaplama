@@ -9,6 +9,7 @@ namespace DocentlikPuanHesaplama.IdentityModel.Entity
         public MyUser? MyUser { get; set; }= default!;
 
         #region UluslarArasi
+        public int UluslarArasiACount { get; set; } = 0;
         public string? UluslarArasiAdoktora { get; set; }
         public string? UluslarArasiAmakalesayisi { get; set; }
         public string? UluslarArasiAyazarsayisi{ get; set; }
