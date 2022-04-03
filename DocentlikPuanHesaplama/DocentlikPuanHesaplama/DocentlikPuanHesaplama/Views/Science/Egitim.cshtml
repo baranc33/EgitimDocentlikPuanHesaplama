@@ -25,13 +25,15 @@
     EgitimEntity entity=new();
 entity.uluslararasiAhatirlatici="safasdf";
 
-var a= JsonSerializer.Serialize(entity);
  <script>
     console.log('asdas');
+let user={userName :"Hakan Baran Çakır", isActive :true};
+
+localStorage.setItem('userInfo',JSON.stringify(@{JsonSerializer.Serialize(entity);}));
+
 
     test();
     function test(){
-    console.log(JSON.parse(a));
 
     console.log('asdas');
     }
