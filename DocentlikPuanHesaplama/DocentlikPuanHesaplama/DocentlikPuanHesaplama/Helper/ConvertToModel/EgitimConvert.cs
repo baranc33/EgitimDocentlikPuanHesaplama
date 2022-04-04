@@ -134,7 +134,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     if (model.YayinDhatirlatici[i] != null) entity.YayinDhatirlatici += model.YayinDhatirlatici[i].ToString() + "/";
                     else entity.YayinDhatirlatici += "./";
                     entity.YayinDdoktora += model.YayinDdoktora[i].ToString() + "/";
-                    entity.YayinBbolumSayisi += model.YayinBbolumSayisi[i].ToString() + "/";
+                    entity.YayinDbolumSayisi += model.YayinDbolumSayisi[i].ToString() + "/";
                     entity.YayinDyazarsayisi += model.YayinDyazarsayisi[i].ToString() + "/";
                     entity.YayinDCount = model.YayinDdoktora.Count() - 1;
                 }
