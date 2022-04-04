@@ -104,7 +104,7 @@ namespace DocentlikPuanHesaplama.IdentityModel.Entity
         public string? KitapAkitap { get; set; }
         public string? KitapAyazarsayisi{ get; set; }
         public string? KitapAhatirlatici{ get; set; }
-        public int KitapAhCount { get; set; } = 0;
+        public int KitapACount { get; set; } = 0;
 
         public string? KitapBdoktora { get; set; }
         public string? KitapBbolumSayisi { get; set; }
