@@ -20,41 +20,11 @@
     </h5>
 </div>
   }
-@{
-  if (ViewBag.OldData == true)
-    {
-
-        EgitimEntity entity = JsonSerializer.Deserialize<EgitimEntity>(TempData["modelagain"].ToString());
-     
-        
-         <script>
-
-            let jsEntity={
-                    UluslarArasiAdoktora :"@entity.UluslarArasiAdoktora",
-                    UluslarArasiAmakalesayisi :"@entity.UluslarArasiAmakalesayisi",
-                    UluslarArasiAyazarsayisi:"@entity.UluslarArasiAyazarsayisi",
-                    uluslararasiAhatirlatici : "@entity.uluslararasiAhatirlatici",
-                    UluslarArasiACount : "@entity.UluslarArasiACount"
-            };
-            localStorage.setItem('userInfo',JSON.stringify(jsEntity));
-
-        </script>
-        <script>
-             if(jsEntity!==null){
-                 //let arrayUluslarArasiAdoktora=
-
-          
-             }
-            
-        </script>
-    } 
-}
-
 
 
 <head>
     <link href="~/css/hesap.css" rel="stylesheet">
-
+<script src="~/js/Egitim.js"></script>
 
 
     <style>
@@ -1120,4 +1090,34 @@
 </form>
 
 
- 
+@{
+  if (ViewBag.OldData == true)
+    {
+
+        EgitimEntity entity = JsonSerializer.Deserialize<EgitimEntity>(TempData["modelagain"].ToString());
+     
+        
+          <script>
+
+            let jsEntity={
+                    UluslarArasiAdoktora :"@entity.UluslarArasiAdoktora",
+                    UluslarArasiAmakalesayisi :"@entity.UluslarArasiAmakalesayisi",
+                    UluslarArasiAyazarsayisi:"@entity.UluslarArasiAyazarsayisi",
+                    uluslararasiAhatirlatici : "@entity.uluslararasiAhatirlatici",
+                    UluslarArasiACount : "@entity.UluslarArasiACount"
+            };
+            localStorage.setItem('userInfo',JSON.stringify(jsEntity));
+        </script> 
+         <script>
+             if(jsEntity!=null){
+                 //let arrayUluslarArasiAdoktora=
+                for(let i=0; i<jsEntity.UluslarArasiACount;i++){
+                     doldur('UluslararasiAul',jsEntity.UluslarArasiAdoktora[i],jsEntity.UluslarArasiAmakalesayisi[i],jsEntity.UluslarArasiAyazarsayisi[i],jsEntity.uluslararasiAhatirlatici[i]) 
+                  
+                }
+          
+             }
+            
+        </script> 
+    } 
+}

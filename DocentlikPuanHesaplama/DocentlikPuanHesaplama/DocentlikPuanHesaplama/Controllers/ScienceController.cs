@@ -58,11 +58,13 @@ namespace DocentlikPuanHesaplama.Controllers
 
                    if(model.uluslararasiAhatirlatici[i]!=null) entity.uluslararasiAhatirlatici += model.uluslararasiAhatirlatici[i].ToString() + "/";
                     else entity.uluslararasiAhatirlatici += "./";
-                      entity.UluslarArasiAdoktora += model.UluslarArasiAdoktora[i].ToString() + "/";
+                    entity.UluslarArasiAdoktora += model.UluslarArasiAdoktora[i].ToString() + "/";
                     entity.UluslarArasiAyazarsayisi += model.UluslarArasiAyazarsayisi[i].ToString() + "/";
                     entity.UluslarArasiAmakalesayisi+= model.UluslarArasiAmakalesayisi[i].ToString() + "/";
                     entity.UluslarArasiACount = model.UluslarArasiAdoktora.Count() - 1;
                 }
+
+                
 
             }
             TempData["model"] = JsonSerializer.Serialize(entity);
