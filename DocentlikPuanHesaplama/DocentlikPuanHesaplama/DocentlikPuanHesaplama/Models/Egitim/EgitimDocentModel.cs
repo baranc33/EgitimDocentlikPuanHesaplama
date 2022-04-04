@@ -16,7 +16,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         public int[] UluslarArasiAmakalesayisi { get; set; } = default!;
         public int[] UluslarArasiAyazarsayisi { get; set; } = default!;
         public string[]? UluslarArasiAhatirlatici { get; set; } = default!;
-       
+
         public int[] UluslarArasiBdoktora { get; set; } = default!;
         public int[] UluslarArasiBmakalesayisi { get; set; } = default!;
         public int[] UluslarArasiByazarsayisi { get; set; } = default!;
@@ -38,11 +38,11 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
                     if (UluslarArasiAdoktora[i] == 0 && UluslarArasiAmakalesayisi[i] > 0 && UluslarArasiAyazarsayisi[i] > 0) // doktora öncesi
                     {
-                        model.HamDoktoraOncesiPuan = (20 * UluslarArasiAmakalesayisi[i]) / UluslarArasiAyazarsayisi[i];
+                        model.HamDoktoraOncesiPuan += (20 * UluslarArasiAmakalesayisi[i]) / UluslarArasiAyazarsayisi[i];
                     }
                     else if (UluslarArasiAdoktora[i] == 1 && UluslarArasiAmakalesayisi[i] > 0 && UluslarArasiAyazarsayisi[i] > 0)
                     {// else yazarsam 0  girilen değerleride alır
-                        model.HamDoktoraSonrasiPuan = (20 * UluslarArasiAmakalesayisi[i]) / UluslarArasiAyazarsayisi[i];
+                        model.HamDoktoraSonrasiPuan += (20 * UluslarArasiAmakalesayisi[i]) / UluslarArasiAyazarsayisi[i];
                     }
                 }
 
@@ -54,11 +54,11 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
                     if (UluslarArasiBdoktora[i] == 0 && UluslarArasiBmakalesayisi[i] > 0 && UluslarArasiByazarsayisi[i] > 0) // doktora öncesi
                     {
-                        model.HamDoktoraOncesiPuan = (15 * UluslarArasiBmakalesayisi[i]) / UluslarArasiByazarsayisi[i];
+                        model.HamDoktoraOncesiPuan += (15 * UluslarArasiBmakalesayisi[i]) / UluslarArasiByazarsayisi[i];
                     }
                     else if (UluslarArasiBdoktora[i] == 1 && UluslarArasiBmakalesayisi[i] > 0 && UluslarArasiByazarsayisi[i] > 0)
                     {// else yazarsam 0  girilen değerleride alır
-                        model.HamDoktoraSonrasiPuan = (15 * UluslarArasiBmakalesayisi[i]) / UluslarArasiByazarsayisi[i];
+                        model.HamDoktoraSonrasiPuan += (15 * UluslarArasiBmakalesayisi[i]) / UluslarArasiByazarsayisi[i];
                     }
                 }
 
@@ -72,17 +72,17 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
                     if (UluslarArasiCdoktora[i] == 0 && UluslarArasiCmakalesayisi[i] > 0 && UluslarArasiCyazarsayisi[i] > 0) // doktora öncesi
                     {
-                        model.HamDoktoraOncesiPuan = (5 * UluslarArasiCmakalesayisi[i]) / UluslarArasiCyazarsayisi[i];
+                        model.HamDoktoraOncesiPuan += (5 * UluslarArasiCmakalesayisi[i]) / UluslarArasiCyazarsayisi[i];
                     }
                     else if (UluslarArasiCdoktora[i] == 1 && UluslarArasiCmakalesayisi[i] > 0 && UluslarArasiCyazarsayisi[i] > 0)
                     {// else yazarsam 0  girilen değerleride alır
-                        model.HamDoktoraSonrasiPuan = (5 * UluslarArasiCmakalesayisi[i]) / UluslarArasiCyazarsayisi[i];
+                        model.HamDoktoraSonrasiPuan += (5 * UluslarArasiCmakalesayisi[i]) / UluslarArasiCyazarsayisi[i];
                     }
                 }
 
             }
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
-
+            model.ErrorMessage = "1. Uluslararası Makale  maddesinin a veya b bentleri kapsamında en az 20 puan almak zorunludur";
             return model;
         }
 
@@ -100,6 +100,54 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         public int[] UlusalBmakalesayisi { get; set; } = default!;
         public int[] UlusalByazarsayisi { get; set; } = default!;
         public string[]? UlusalBhatirlatici { get; set; } = default!;
+        private Ulusal UlusalHesapla()
+        {
+            Ulusal model = new();
+            int sart = 0;
+            int sartB = 0;
+            if (UlusalAdoktora.Count() > 1)
+            {
+                for (int i = 1; i < UlusalAdoktora.Count(); i++)
+                {
+                    if (UlusalAdoktora[i] == 0 && UlusalAmakalesayisi[i] > 0 && UlusalAyazarsayisi[i] > 0)
+                    {
+                        sart += UlusalAmakalesayisi[i];
+                        model.HamDoktoraOncesiPuan += (8 * UlusalAmakalesayisi[i]) / UlusalAyazarsayisi[i];
+                    }
+                    else if (UlusalAdoktora[i] == 1 && UlusalAmakalesayisi[i] > 0 && UlusalAyazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraSonrasiPuan += (8 * UlusalAmakalesayisi[i]) / UlusalAyazarsayisi[i];
+                        sart += UlusalAmakalesayisi[i];
+                    }
+                }
+
+            }
+            if (UlusalBdoktora.Count() > 1)
+            {
+                for (int i = 1; i < UlusalBdoktora.Count(); i++)
+                {
+                    if (UlusalBdoktora[i] == 0 && UlusalBmakalesayisi[i] > 0 && UlusalByazarsayisi[i] > 0)
+                    {
+                        sartB += UlusalBmakalesayisi[i];
+                        model.HamDoktoraOncesiPuan += (4 * UlusalBmakalesayisi[i]) / UlusalByazarsayisi[i];
+                    }
+                    else if (UlusalBdoktora[i] == 1 && UlusalBmakalesayisi[i] > 0 && UlusalByazarsayisi[i] > 0)
+                    {
+                        sartB += UlusalBmakalesayisi[i];
+                        model.HamDoktoraSonrasiPuan += (4 * UlusalBmakalesayisi[i]) / UlusalByazarsayisi[i];
+                    }
+                }
+
+            }
+
+            if (sart < 2 ||(sart==2&& sartB==0 )) model.Error = true;
+
+            model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
+
+            
+            model.ErrorMessage = "2. Ulusal Makale İkisi bu maddenin a bendi kapsamında olmak üzere en az üç yayın yapmak";
+            return model;
+        }
 
         #endregion
 
@@ -139,6 +187,140 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         public int[] YayinGmakalesayisi { get; set; } = default!;
         public int[] YayinGyazarsayisi { get; set; } = default!;
         public string[]? YayinGhatirlatici { get; set; } = default!;
+        private Yayin YayinHesapla()
+        {
+            Yayin model = new();
+            if (YayinAdoktora.Count() > 1)
+            {
+                for (int i = 1; i < YayinAdoktora.Count(); i++)
+                {
+                    if (YayinAdoktora[i] == 0 && YayinAkitap[i] > 0 && YayinAyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraOncesiPuan += (10 * YayinAkitap[i]) / YayinAyazarsayisi[i];
+                    }
+                    else if (YayinAdoktora[i] == 1 && YayinAkitap[i] > 0 && YayinAyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraSonrasiPuan += (10 * YayinAkitap[i]) / YayinAyazarsayisi[i];
+                    }
+                }
+            }
+            if (YayinBdoktora.Count() > 1)
+            {
+                for (int i = 1; i < YayinBdoktora.Count(); i++)
+                {
+                    if (YayinBdoktora[i] == 0 && YayinBbolumSayisi[i] > 0 && YayinByazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraOncesiPuan += (8 * YayinBbolumSayisi[i]) / YayinByazarsayisi[i];
+                    }
+                    else if (YayinBdoktora[i] == 1 && YayinBbolumSayisi[i] > 0 && YayinByazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraSonrasiPuan += (8 * YayinBbolumSayisi[i]) / YayinByazarsayisi[i];
+                    }
+                }
+
+            }
+            if (YayinCdoktora.Count() > 1)
+            {
+                for (int i = 1; i < YayinCdoktora.Count(); i++)
+                {
+                    if (YayinCdoktora[i] == 0 && YayinCkitap[i] > 0 && YayinCyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraOncesiPuan += (5 * YayinCkitap[i]) / YayinCyazarsayisi[i];
+                    }
+                    else if (YayinCdoktora[i] == 1 && YayinCkitap[i] > 0 && YayinCyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraSonrasiPuan += (5 * YayinCkitap[i]) / YayinCyazarsayisi[i];
+                    }
+                }
+
+            }
+
+            if (YayinDdoktora.Count() > 1)
+            {
+                for (int i = 1; i < YayinDdoktora.Count(); i++)
+                {
+                    if (YayinDdoktora[i] == 0 && YayinDbolumSayisi[i] > 0 && YayinDyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraOncesiPuan += (4 * YayinDbolumSayisi[i]) / YayinDyazarsayisi[i];
+                    }
+                    else if (YayinDdoktora[i] == 1 && YayinDbolumSayisi[i] > 0 && YayinDyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraSonrasiPuan += (4 * YayinDbolumSayisi[i]) / YayinDyazarsayisi[i];
+                    }
+                }
+            }
+            if (YayinEdoktora.Count() > 1)
+            {
+                for (int i = 1; i < YayinEdoktora.Count(); i++)
+                {
+                    if (YayinEdoktora[i] == 0 && YayinEmakalesayisi[i] > 0 && YayinEyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraOncesiPuan += (8 * YayinEmakalesayisi[i]) / YayinEyazarsayisi[i];
+                    }
+                    else if (YayinEdoktora[i] == 1 && YayinEmakalesayisi[i] > 0 && YayinEyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraSonrasiPuan += (8 * YayinEmakalesayisi[i]) / YayinEyazarsayisi[i];
+                    }
+                }
+            }
+
+            if (YayinFdoktora.Count() > 1)
+            {
+                for (int i = 1; i < YayinFdoktora.Count(); i++)
+                {
+                    if (YayinFdoktora[i] == 0 && YayinFmakalesayisi[i] > 0 && YayinFyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraOncesiPuan += (6 * YayinFmakalesayisi[i]) / YayinFyazarsayisi[i];
+                    }
+                    else if (YayinFdoktora[i] == 1 && YayinFmakalesayisi[i] > 0 && YayinFyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraSonrasiPuan += (6 * YayinFmakalesayisi[i]) / YayinFyazarsayisi[i];
+                    }
+                }
+            }
+            if (YayinGdoktora.Count() > 1)
+            {
+                for (int i = 1; i < YayinGdoktora.Count(); i++)
+                {
+                    if (YayinGdoktora[i] == 0 && YayinGmakalesayisi[i] > 0 && YayinGyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraOncesiPuan += (4 * YayinGmakalesayisi[i]) / YayinGyazarsayisi[i];
+                    }
+                    else if (YayinGdoktora[i] == 1 && YayinGmakalesayisi[i] > 0 && YayinGyazarsayisi[i] > 0)
+                    {
+                        model.Error = false;
+                        model.HamDoktoraSonrasiPuan += (4 * YayinGmakalesayisi[i]) / YayinGyazarsayisi[i];
+                    }
+                }
+            }
+
+
+
+
+
+
+
+            model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
+            if (model.NetPuan > 10) model.NetPuan = 10;
+
+           
+            model.ErrorMessage = "3. Lisansüstü Tezlerden Üretilmiş Yayın maddesi kapsamında en az 1 yayın zorunludur";
+            return model;
+        }
+
 
         #endregion
 
@@ -164,6 +346,77 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         public int[] KitapDbolumSayisi { get; set; } = default!;
         public int[] KitapDyazarsayisi { get; set; } = default!;
         public string[]? KitapDhatirlatici { get; set; } = default!;
+
+        private Kitap KitapHesapla()
+        {
+            Kitap model = new();
+            if (KitapAdoktora.Count() > 1)
+            {
+                for (int i = 1; i < KitapAdoktora.Count(); i++)
+                {
+                    if (KitapAdoktora[i] == 0 && KitapAkitap[i] > 0 && KitapAyazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraOncesiPuan += (20 * KitapAkitap[i]) / KitapAyazarsayisi[i];
+                    }
+                    else if (KitapAdoktora[i] == 1 && KitapAkitap[i] > 0 && KitapAyazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraSonrasiPuan += (20 * KitapAkitap[i]) / KitapAyazarsayisi[i];
+                    }
+                }
+            }
+            if (KitapBdoktora.Count() > 1)
+            {
+                for (int i = 1; i < KitapBdoktora.Count(); i++)
+                {
+                    if (KitapBdoktora[i] == 0 && KitapBbolumSayisi[i] > 0 && KitapByazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraOncesiPuan += (10 * KitapBbolumSayisi[i]) / KitapByazarsayisi[i];
+                    }
+                    else if (KitapBdoktora[i] == 1 && KitapBbolumSayisi[i] > 0 && KitapByazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraSonrasiPuan += (10 * KitapBbolumSayisi[i]) / KitapByazarsayisi[i];
+                    }
+                }
+
+            }
+            if (KitapCdoktora.Count() > 1)
+            {
+                for (int i = 1; i < KitapCdoktora.Count(); i++)
+                {
+                    if (KitapCdoktora[i] == 0 && KitapCkitap[i] > 0 && KitapCyazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraOncesiPuan += (15 * KitapCkitap[i]) / KitapCyazarsayisi[i];
+                    }
+                    else if (KitapCdoktora[i] == 1 && KitapCkitap[i] > 0 && KitapCyazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraSonrasiPuan += (15 * KitapCkitap[i]) / KitapCyazarsayisi[i];
+                    }
+                }
+
+            }
+
+            if (KitapDdoktora.Count() > 1)
+            {
+                for (int i = 1; i < KitapDdoktora.Count(); i++)
+                {
+                    if (KitapDdoktora[i] == 0 && KitapDbolumSayisi[i] > 0 && KitapDyazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraOncesiPuan += (8 * KitapDbolumSayisi[i]) / KitapDyazarsayisi[i];
+                    }
+                    else if (KitapDdoktora[i] == 1 && KitapDbolumSayisi[i] > 0 && KitapDyazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraSonrasiPuan += (8 * KitapDbolumSayisi[i]) / KitapDyazarsayisi[i];
+                    }
+                }
+            }
+
+            model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
+
+            return model;
+        }
+
+
+
         #endregion
 
 
@@ -180,6 +433,62 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         public int[] AtiflarCdoktora { get; set; } = default!;
         public int[] AtiflarCatif { get; set; } = default!;
         public string[]? AtiflarChatirlatici { get; set; } = default!;
+
+        private Atiflar AtifHesapla()
+        {
+            Atiflar model = new();
+            if (AtiflarAdoktora.Count() > 1)
+            {
+                for (int i = 1; i < AtiflarAdoktora.Count(); i++)
+                {
+                    if (AtiflarAdoktora[i] == 0 && AtiflarAatif[i] > 0)
+                    {
+                        model.HamDoktoraOncesiPuan += 3 * AtiflarAatif[i];
+                    }
+                    else if (AtiflarAdoktora[i] == 1 && AtiflarAatif[i] > 0)
+                    {
+                        model.HamDoktoraSonrasiPuan += 3 * AtiflarAatif[i];
+                    }
+                }
+            }
+            if (AtiflarBdoktora.Count() > 1)
+            {
+                for (int i = 1; i < AtiflarBdoktora.Count(); i++)
+                {
+                    if (AtiflarBdoktora[i] == 0 && AtiflarBatif[i] > 0)
+                    {
+                        model.HamDoktoraOncesiPuan += 3 * AtiflarBatif[i];
+                    }
+                    else if (AtiflarBdoktora[i] == 1 && AtiflarBatif[i] > 0)
+                    {
+                        model.HamDoktoraSonrasiPuan += 3 * AtiflarBatif[i];
+                    }
+                }
+            }
+            if (AtiflarCdoktora.Count() > 1)
+            {
+                for (int i = 1; i < AtiflarCdoktora.Count(); i++)
+                {
+                    if (AtiflarCdoktora[i] == 0 && AtiflarCatif[i] > 0)
+                    {
+                        model.HamDoktoraOncesiPuan += 3 * AtiflarCatif[i];
+                    }
+                    else if (AtiflarCdoktora[i] == 1 && AtiflarCatif[i] > 0)
+                    {
+                        model.HamDoktoraSonrasiPuan += 3 * AtiflarCatif[i];
+                    }
+                }
+            }
+
+
+            model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
+            if (model.NetPuan > 20) model.NetPuan = 20;
+            if (model.NetPuan < 4) model.Error = true;
+            model.ErrorMessage = "5. Atıflar maddesi kapsamında en az 4 puan alınması zorunludur";
+            return model;
+        }
+
+
         #endregion
 
 
@@ -262,7 +571,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
             Messages message = new();
             message.Error = false;
             message.ToplamDoktoraOncesi = 0;
-            message.ToplamDoktoraSonrasi= 0;
+            message.ToplamDoktoraSonrasi = 0;
             UluslarArasi UluslarArasi = UluslarArasiHesapla();
             if (UluslarArasi != null)
             {
@@ -273,7 +582,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     HamDoktoraSonrasi = UluslarArasi.HamDoktoraSonrasiPuan,
                     NetPuan = UluslarArasi.NetPuan,
                     Error = UluslarArasi.Error,
-                    ErrorMessage=UluslarArasi.ErrorMessage
+                    ErrorMessage = UluslarArasi.ErrorMessage
                 };
                 if (UluslarArasi.Error == true) message.Error = true;
                 message.Bolumler.Add(madde);
@@ -296,7 +605,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                 message.Colum = 0;
                 message.Error = true;
             }
-                return message;
+            return message;
         }
 
     }

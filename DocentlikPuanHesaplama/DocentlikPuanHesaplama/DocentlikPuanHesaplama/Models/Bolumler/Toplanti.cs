@@ -3,6 +3,6 @@
     public class Toplanti : BaseEntity {
         public string BolumAdi { get; set; } = "8. Bilimsel Toplantı Faaliyeti ";
         public string ErrorMessage { get; set; } = "";
-        public bool Sonuc { get; set; } = false;
+        public bool Error { get; set; } = false;
     }
 }

@@ -49,11 +49,24 @@
 
     @{
         for (int i = 0; i < Model.Colum; i++)
-        {
-            <tr>
-                <td>@Model.Bolumler[i].BolumAdi</td>
+        {string bgcolor="";
+        string color="";
+        if( Model.Bolumler[i].Error==true){
+            bgcolor="red";
+            color="white";
+        } 
+
+
+            <tr style="background-color: @bgcolor;color: @color;">
+                <td  >
+                 <p>
+                        @Model.Bolumler[i].BolumAdi
+                 </p>
+                </td>
                 <td>
+                    <p>
                    @Model.Bolumler[i].HamDoktoraOncesi
+                   </p>
                 </td>
                 <td>
                     @Model.Bolumler[i].HamDoktoraSonrasi
