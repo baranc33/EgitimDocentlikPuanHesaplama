@@ -1104,17 +1104,32 @@
                     UluslarArasiAmakalesayisi :"@entity.UluslarArasiAmakalesayisi",
                     UluslarArasiAyazarsayisi:"@entity.UluslarArasiAyazarsayisi",
                     UluslarArasiAhatirlatici : "@entity.UluslarArasiAhatirlatici",
-                    UluslarArasiACount : "@entity.UluslarArasiACount"
+                    UluslarArasiACount : "@entity.UluslarArasiACount",
+
+                     UluslarArasiBdoktora :"@entity.UluslarArasiBdoktora",
+                    UluslarArasiBmakalesayisi :"@entity.UluslarArasiBmakalesayisi",
+                    UluslarArasiByazarsayisi:"@entity.UluslarArasiByazarsayisi",
+                    UluslarArasiBhatirlatici : "@entity.UluslarArasiBhatirlatici",
+                    UluslarArasiBCount : "@entity.UluslarArasiBCount",
+
+
+                    UluslarArasiCdoktora :"@entity.UluslarArasiCdoktora",
+                    UluslarArasiCmakalesayisi :"@entity.UluslarArasiCmakalesayisi",
+                    UluslarArasiCyazarsayisi:"@entity.UluslarArasiCyazarsayisi",
+                    UluslarArasiChatirlatici : "@entity.UluslarArasiChatirlatici",
+                    UluslarArasiCCount : "@entity.UluslarArasiCCount" 
             };
             localStorage.setItem('Egitim',JSON.stringify(jsEntity));
         </script> 
          <script>
              if(jsEntity!=null){
                  //let arrayUluslarArasiAdoktora=
-                for(let i=0; i<jsEntity.UluslarArasiACount;i++){
-                     UluslarArasiAdoldur('UluslarArasiAul','Egitim',i) 
+                @* for(let i=0; i<jsEntity.UluslarArasiACount;i++){ *@
+                     UluslarArasiAdoldur('Egitim');
+                     UluslarArasiBdoldur('Egitim');
+                     UluslarArasiCdoldur('Egitim');
                   
-                }
+                @* } *@
           
              }
             
