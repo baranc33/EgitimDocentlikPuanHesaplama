@@ -1106,13 +1106,13 @@
                     uluslararasiAhatirlatici : "@entity.uluslararasiAhatirlatici",
                     UluslarArasiACount : "@entity.UluslarArasiACount"
             };
-            localStorage.setItem('userInfo',JSON.stringify(jsEntity));
+            localStorage.setItem('Egitim',JSON.stringify(jsEntity));
         </script> 
          <script>
              if(jsEntity!=null){
                  //let arrayUluslarArasiAdoktora=
                 for(let i=0; i<jsEntity.UluslarArasiACount;i++){
-                     doldur('UluslararasiAul',jsEntity.UluslarArasiAdoktora[i],jsEntity.UluslarArasiAmakalesayisi[i],jsEntity.UluslarArasiAyazarsayisi[i],jsEntity.uluslararasiAhatirlatici[i]) 
+                     doldur('UluslararasiAul','Egitim',i) 
                   
                 }
           
