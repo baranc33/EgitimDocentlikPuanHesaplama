@@ -6,5 +6,6 @@
         public decimal HamDoktoraOncesiPuan { get; set; } = 0;
         public decimal HamDoktoraSonrasiPuan { get; set; } = 0;
 
+
     }
 }

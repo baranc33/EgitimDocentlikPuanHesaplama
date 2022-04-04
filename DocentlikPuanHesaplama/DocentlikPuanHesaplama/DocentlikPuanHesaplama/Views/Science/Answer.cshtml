@@ -65,14 +65,14 @@
                 </td>
                 <td>
                     <p>
-                   @Model.Bolumler[i].HamDoktoraOncesi
+                   @Model.Bolumler[i].HamDoktoraOncesi.ToString("0.##")
                    </p>
                 </td>
                 <td>
-                    @Model.Bolumler[i].HamDoktoraSonrasi
+                    @Model.Bolumler[i].HamDoktoraSonrasi.ToString("0.##")
                 </td>
                 <td>
-                   @Model.Bolumler[i].NetPuan
+                   @Model.Bolumler[i].NetPuan.ToString("0.##")
                 </td>
             </tr>
         }
@@ -82,13 +82,13 @@
     <tr>
         <td>Toplam =</td>
         <td>
-            <?= $totalOncesi ?>
+            @Model.ToplamDoktoraOncesi.ToString("0.##")
         </td>
         <td>
-            <?=  $totalSonrasi?>
+            @Model.ToplamDoktoraSonrasi.ToString("0.##")
         </td>
         <td>
-            <?= $totaltoplam?>
+            @Model.ToplamNetPuan.ToString("0.##")
         </td>
     </tr>
 </table>

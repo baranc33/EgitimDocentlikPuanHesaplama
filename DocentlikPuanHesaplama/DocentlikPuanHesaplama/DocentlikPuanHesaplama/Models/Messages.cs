@@ -10,9 +10,9 @@
         public List<ListMadde> Bolumler { get; set; }
 
 
-        public decimal ToplamDoktoraOncesi { get; set; }
-        public decimal ToplamDoktoraSonrasi { get; set; }
-        public decimal ToplamNetPuan { get; set; }
+        public decimal ToplamDoktoraOncesi { get; set; }=0;
+        public decimal ToplamDoktoraSonrasi { get; set; } = 0;
+        public decimal ToplamNetPuan { get; set; } = 0;
 
         public int Colum { get; set; } = 9;
         //public string[] ErrorMessage { get; set; }
