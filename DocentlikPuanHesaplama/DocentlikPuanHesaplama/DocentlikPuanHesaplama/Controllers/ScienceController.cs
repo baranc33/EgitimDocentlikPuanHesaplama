@@ -1,4 +1,5 @@
-﻿using DocentlikPuanHesaplama.IdentityModel.Entity;
+﻿using DocentlikPuanHesaplama.Helper.ConvertToModel;
+using DocentlikPuanHesaplama.IdentityModel.Entity;
 using DocentlikPuanHesaplama.Models;
 using DocentlikPuanHesaplama.Models.Egitim;
 using Microsoft.AspNetCore.Http.Extensions;
@@ -14,16 +15,14 @@ namespace DocentlikPuanHesaplama.Controllers
         public IActionResult Answer()
         {
             if (!TempData.ContainsKey("message"))
-            {
+            {// Form sayfasına dönüş için tasarlandı
                 var model = JsonSerializer.Deserialize<object>(TempData["model"].ToString());
                 TempData["modelagain"] = JsonSerializer.Serialize(model);
                 var action = JsonSerializer.Deserialize<string>(TempData["lasturl"].ToString());
-
                 return RedirectToAction(action, "Science");
             }
             TempData.Remove("modelagain");
             Messages m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
-           
             return View(m);
         }
 
@@ -35,6 +34,7 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpGet]
         public IActionResult Egitim()
         {
+            // yeni açılan sayfa veya geri dönüş olduğunu tespit ediyorum.
             if (TempData.ContainsKey("modelagain"))
             {
                 ViewBag.OldData = true;
@@ -45,35 +45,17 @@ namespace DocentlikPuanHesaplama.Controllers
             return View();
         }
     
+     
         [HttpPost]
         public IActionResult Egitim(EgitimDocentModel model)
-        {/*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
-            EgitimEntity entity = new();
+        {
 
-
-            if (model.UluslarArasiAdoktora.Count() > 1)
-            {
-                for (int i = 1; i < model.UluslarArasiAdoktora.Count(); i++)
-                {
-
-                   if(model.uluslararasiAhatirlatici[i]!=null) entity.uluslararasiAhatirlatici += model.uluslararasiAhatirlatici[i].ToString() + "/";
-                    else entity.uluslararasiAhatirlatici += "./";
-                    entity.UluslarArasiAdoktora += model.UluslarArasiAdoktora[i].ToString() + "/";
-                    entity.UluslarArasiAyazarsayisi += model.UluslarArasiAyazarsayisi[i].ToString() + "/";
-                    entity.UluslarArasiAmakalesayisi+= model.UluslarArasiAmakalesayisi[i].ToString() + "/";
-                    entity.UluslarArasiACount = model.UluslarArasiAdoktora.Count() - 1;
-                }
-
-                
-
-            }
-            TempData["model"] = JsonSerializer.Serialize(entity);
+            TempData["model"] = JsonSerializer.Serialize(EgitimConvert.EgitimModelToEgitimEntity(model));
 
 
             Messages message =new ();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            //TempData["model"] = JsonSerializer.Serialize(model);
             TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
             return RedirectToAction("Answer");
         }
@@ -134,6 +116,7 @@ namespace DocentlikPuanHesaplama.Controllers
         }
 
 
+        [NonAction]
         private string GetUrl()
         {
             var url = HttpContext.Request.GetEncodedUrl();
