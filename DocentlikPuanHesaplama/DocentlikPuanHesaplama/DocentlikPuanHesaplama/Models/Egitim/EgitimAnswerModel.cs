@@ -15,7 +15,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         public decimal DoktoraOncesi { get; set; }
         public decimal DoktoraSonrasi { get; set; }
         public decimal TotalPuan { get; set; }
-        public Uluslararasi Uluslararasi { get; set; }=new Uluslararasi();
+        public UluslarArasi Uluslararasi { get; set; }=new UluslarArasi();
         public Ulusal Ulusal { get; set; }=new  Ulusal();
         //public UcAnswerModel ucAnswerModel { get; set; }
         //public DortAnswerModel dortAnswerModel { get; set; }

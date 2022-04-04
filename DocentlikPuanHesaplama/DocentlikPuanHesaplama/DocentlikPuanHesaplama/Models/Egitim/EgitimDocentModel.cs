@@ -15,22 +15,22 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         public int[] UluslarArasiAdoktora { get; set; } = default!;
         public int[] UluslarArasiAmakalesayisi { get; set; } = default!;
         public int[] UluslarArasiAyazarsayisi { get; set; } = default!;
-        public string[]? uluslararasiAhatirlatici { get; set; } = default!;
+        public string[]? UluslarArasiAhatirlatici { get; set; } = default!;
        
         public int[] UluslarArasiBdoktora { get; set; } = default!;
         public int[] UluslarArasiBmakalesayisi { get; set; } = default!;
         public int[] UluslarArasiByazarsayisi { get; set; } = default!;
-        public string[]? uluslararasiBhatirlatici { get; set; } = default!;
+        public string[]? UluslarArasiBhatirlatici { get; set; } = default!;
 
         public int[] UluslarArasiCdoktora { get; set; } = default!;
         public int[] UluslarArasiCmakalesayisi { get; set; } = default!;
         public int[] UluslarArasiCyazarsayisi { get; set; } = default!;
-        public string[]? uluslararasiChatirlatici { get; set; } = default!;
+        public string[]? UluslarArasiChatirlatici { get; set; } = default!;
 
 
-        private Uluslararasi UluslarArasiHesapla()
+        private UluslarArasi UluslarArasiHesapla()
         {
-            Uluslararasi model = new();
+            UluslarArasi model = new();
             if (UluslarArasiAdoktora.Count() > 1)
             {
                 for (int i = 1; i < UluslarArasiAdoktora.Count(); i++)
@@ -263,19 +263,19 @@ namespace DocentlikPuanHesaplama.Models.Egitim
             message.Error = false;
             message.ToplamDoktoraOncesi = 0;
             message.ToplamDoktoraSonrasi= 0;
-            Uluslararasi uluslararasi = UluslarArasiHesapla();
-            if (uluslararasi != null)
+            UluslarArasi UluslarArasi = UluslarArasiHesapla();
+            if (UluslarArasi != null)
             {
                 ListMadde madde = new ListMadde()
                 {
-                    BolumAdi = uluslararasi.BolumAdi,
-                    HamDoktoraOncesi = uluslararasi.HamDoktoraOncesiPuan,
-                    HamDoktoraSonrasi = uluslararasi.HamDoktoraSonrasiPuan,
-                    NetPuan = uluslararasi.NetPuan,
-                    Error = uluslararasi.Error,
-                    ErrorMessage=uluslararasi.ErrorMessage
+                    BolumAdi = UluslarArasi.BolumAdi,
+                    HamDoktoraOncesi = UluslarArasi.HamDoktoraOncesiPuan,
+                    HamDoktoraSonrasi = UluslarArasi.HamDoktoraSonrasiPuan,
+                    NetPuan = UluslarArasi.NetPuan,
+                    Error = UluslarArasi.Error,
+                    ErrorMessage=UluslarArasi.ErrorMessage
                 };
-                if (uluslararasi.Error == true) message.Error = true;
+                if (UluslarArasi.Error == true) message.Error = true;
                 message.Bolumler.Add(madde);
             }
 

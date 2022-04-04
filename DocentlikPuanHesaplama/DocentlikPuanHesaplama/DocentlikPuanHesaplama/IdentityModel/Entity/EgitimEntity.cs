@@ -13,21 +13,21 @@ namespace DocentlikPuanHesaplama.IdentityModel.Entity
         public string? UluslarArasiAdoktora { get; set; }
         public string? UluslarArasiAmakalesayisi { get; set; }
         public string? UluslarArasiAyazarsayisi{ get; set; }
-        public string uluslararasiAhatirlatici { get; set; } = default!;
+        public string UluslarArasiAhatirlatici { get; set; } = default!;
 
    
 
         public string? UluslarArasiBdoktora { get; set; }
         public string? UluslarArasiBmakalesayisi { get; set; }
         public string? UluslarArasiByazarsayisi{ get; set; }
-        public string? uluslararasiBhatirlatici { get; set; }
-        public int uluslararasiBCount { get; set; } = 0;
+        public string? UluslarArasiBhatirlatici { get; set; }
+        public int UluslarArasiBCount { get; set; } = 0;
 
         public string? UluslarArasiCdoktora { get; set; }
         public string? UluslarArasiCmakalesayisi { get; set; }
         public string? UluslarArasiCyazarsayisi{ get; set; }
-        public string? uluslararasiChatirlatici { get; set; }
-        public int uluslararasiCCount { get; set; } = 0;
+        public string? UluslarArasiChatirlatici { get; set; }
+        public int UluslarArasiCCount { get; set; } = 0;
 
 
 
