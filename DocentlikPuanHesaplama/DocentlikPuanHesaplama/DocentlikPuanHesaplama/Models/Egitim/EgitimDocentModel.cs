@@ -1002,7 +1002,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
 
             if (message.NetToplamDoktoraSonrasi <90 || message.NetToplamDoktoraSonrasi < 100)
             {
-                message.AsgariMessage = " doktora sonrası en az 90 puan elde edilmiş olmalıdır asgari 100 puan olmalıdır !";
+                message.AsgariMessage = " - Doktora sonrası en az 90 Net puan elde edilmiş olmalıdır Toplam Asgari 100 Net puan olmalıdır !";
                 message.Error = true;
             }
 

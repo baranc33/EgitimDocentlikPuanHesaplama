@@ -21,6 +21,11 @@
                 <hr style="width: 500px;" />
             </center>
 
+                if (Model.AsgariMessage != null)
+                {
+                    <p><i style="color:  rgb(230, 166, 47);" class="fa-solid fa-star"></i> @Model.AsgariMessage   / <span class="text-danger">  Doktara Sonra  Net Puanınız : @Model.NetToplamDoktoraSonrasi </span> </p>
+                    <hr style="margin-left:20px;width:500px" />
+                }
             foreach (var val in Model.Bolumler)
             {
                 if (val.Error == true)
