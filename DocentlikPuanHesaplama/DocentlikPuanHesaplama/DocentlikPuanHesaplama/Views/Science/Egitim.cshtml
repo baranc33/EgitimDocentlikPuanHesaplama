@@ -28,9 +28,9 @@
 
 
     <style>
-button{
-    max-height: 40px;
-}
+    button{
+        max-height: 40px;
+    }
         .Egitim {
             background-image: url(../img/diplomaa.png);
             background-repeat: no-repeat;
@@ -46,7 +46,7 @@ button{
 </head>
 
 <a href="#SubmitButton"  class="btn btn-primary" id="Hesapla">Hemen Hesapla</a>
- <form onsubmit="egitimSave() asp-controller="Science" asp-action="Egitim" method="post"> 
+ <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Egitim" method="post"> 
 
     <section class="Egitim">
         <div class="Bir">
@@ -1281,18 +1281,14 @@ button{
                     EgitimBders : "@entity.EgitimBders",
                     EgitimBhatirlatici : "@entity.EgitimBhatirlatici",
                     EgitimBCount : "@entity.EgitimBCount", 
-  
                     Gorev2yil : "@entity.Gorev2yil" 
                 
-
 
             };
             localStorage.setItem('Egitim',JSON.stringify(jsEntity));
         </script> 
          <script>
              if(jsEntity!=null){
-                 //let arrayUluslarArasiAdoktora=
-                @* for(let i=0; i<jsEntity.UluslarArasiACount;i++){ *@
                      UluslarArasiAdoldur('Egitim');
                      UluslarArasiBdoldur('Egitim');
                      UluslarArasiCdoldur('Egitim');
@@ -1314,8 +1310,16 @@ button{
                      AtiflarCdoldur('Egitim'); 
                      DanismanlikAdoldur('Egitim'); 
                      DanismanlikBdoldur('Egitim'); 
+                     ArastirmaAdoldur('Egitim'); 
+                     ArastirmaBdoldur('Egitim'); 
+                     ArastirmaCdoldur('Egitim'); 
+                     ArastirmaDdoldur('Egitim'); 
+                     ToplantiAdoldur('Egitim'); 
+                     ToplantiBdoldur('Egitim'); 
+                     EgitimAdoldur('Egitim'); 
+                     EgitimBdoldur('Egitim'); 
+                     EgitimCdoldur('Egitim'); 
                   
-                @* } *@
           
              }
             

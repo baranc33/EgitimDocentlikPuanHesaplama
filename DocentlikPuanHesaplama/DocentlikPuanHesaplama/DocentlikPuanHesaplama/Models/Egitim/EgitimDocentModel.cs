@@ -778,6 +778,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
         {
             Messages message = new();
             message.Error = false;
+            message.NetToplamDoktoraSonrasi = 0;
             message.ToplamDoktoraOncesi = 0;
             message.ToplamDoktoraSonrasi = 0;
             UluslarArasi UluslarArasi = UluslarArasiHesapla();
@@ -796,6 +797,8 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     ErrorMessage = UluslarArasi.ErrorMessage
                 };
                 if (UluslarArasi.Error == true) message.Error = true;
+
+                message.NetToplamDoktoraSonrasi += UluslarArasi.HamDoktoraSonrasiPuan;
                 message.Bolumler.Add(madde);
             }
 
@@ -816,6 +819,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     ErrorMessage = Ulusal.ErrorMessage
                 };
                 if (Ulusal.Error == true) message.Error = true;
+                message.NetToplamDoktoraSonrasi += Ulusal.HamDoktoraSonrasiPuan;
                 message.Bolumler.Add(madde);
             }
 
@@ -837,6 +841,14 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     ErrorMessage = Yayin.ErrorMessage
                 };
                 if (Yayin.Error == true) message.Error = true;
+                if (Yayin.HamDoktoraSonrasiPuan>10)
+                {
+                    message.NetToplamDoktoraSonrasi += 10;
+                }
+                else
+                {
+                    message.NetToplamDoktoraSonrasi += Yayin.HamDoktoraSonrasiPuan;
+                }
                 message.Bolumler.Add(madde);
             }
 
@@ -845,7 +857,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
             if (Kitap != null)
             {
                 message.ToplamNetPuan += Kitap.NetPuan;
-                  message.ToplamDoktoraOncesi  += Kitap.HamDoktoraOncesiPuan;
+                message.ToplamDoktoraOncesi  += Kitap.HamDoktoraOncesiPuan;
                 message.ToplamDoktoraSonrasi += Kitap.HamDoktoraSonrasiPuan;
                 ListMadde madde = new ListMadde()
                 {
@@ -857,6 +869,8 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     ErrorMessage = Kitap.ErrorMessage
                 };
                 if (Kitap.Error == true) message.Error = true;
+
+                message.NetToplamDoktoraSonrasi += Kitap.HamDoktoraSonrasiPuan;
                 message.Bolumler.Add(madde);
             }
 
@@ -877,6 +891,13 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     ErrorMessage = Atiflar.ErrorMessage
                 };
                 if (Atiflar.Error == true) message.Error = true;
+
+                if (Atiflar.HamDoktoraSonrasiPuan>20)
+                {
+                    message.NetToplamDoktoraSonrasi += 20;
+                }
+                else message.NetToplamDoktoraSonrasi += Atiflar.HamDoktoraSonrasiPuan;
+
                 message.Bolumler.Add(madde);
             }
 
@@ -885,7 +906,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
             if (Danismanlik != null)
             {
                 message.ToplamNetPuan += Danismanlik.NetPuan;
-                  message.ToplamDoktoraOncesi  += Danismanlik.HamDoktoraOncesiPuan;
+                message.ToplamDoktoraOncesi  += Danismanlik.HamDoktoraOncesiPuan;
                 message.ToplamDoktoraSonrasi += Danismanlik.HamDoktoraSonrasiPuan;
                 ListMadde madde = new ListMadde()
                 {
@@ -897,6 +918,12 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     ErrorMessage = Danismanlik.ErrorMessage
                 };
                 if (Danismanlik.Error == true) message.Error = true;
+
+                if (Danismanlik.HamDoktoraSonrasiPuan > 20)
+                {
+                    message.NetToplamDoktoraSonrasi += 20;
+                }
+                else message.NetToplamDoktoraSonrasi += Danismanlik.HamDoktoraSonrasiPuan;
                 message.Bolumler.Add(madde);
             }
 
@@ -905,7 +932,7 @@ namespace DocentlikPuanHesaplama.Models.Egitim
             if (Arastirma != null)
             {
                 message.ToplamNetPuan += Arastirma.NetPuan;
-                  message.ToplamDoktoraOncesi  += Arastirma.HamDoktoraOncesiPuan;
+                message.ToplamDoktoraOncesi  += Arastirma.HamDoktoraOncesiPuan;
                 message.ToplamDoktoraSonrasi += Arastirma.HamDoktoraSonrasiPuan;
                 ListMadde madde = new ListMadde()
                 {
@@ -917,6 +944,12 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     ErrorMessage = Arastirma.ErrorMessage
                 };
                 if (Arastirma.Error == true) message.Error = true;
+
+                if (Arastirma.HamDoktoraSonrasiPuan > 20)
+                {
+                    message.NetToplamDoktoraSonrasi += 20;
+                }
+                else message.NetToplamDoktoraSonrasi += Arastirma.HamDoktoraSonrasiPuan;
                 message.Bolumler.Add(madde);
             }
 
@@ -936,6 +969,9 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     ErrorMessage = Toplanti.ErrorMessage
                 };
                 if (Toplanti.Error == true) message.Error = true;
+                if (Toplanti.HamDoktoraSonrasiPuan > 10)
+                    message.NetToplamDoktoraSonrasi += 10;
+                else message.NetToplamDoktoraSonrasi += Toplanti.HamDoktoraSonrasiPuan;
                 message.Bolumler.Add(madde);
             }
 
@@ -955,10 +991,20 @@ namespace DocentlikPuanHesaplama.Models.Egitim
                     ErrorMessage = Egitim.ErrorMessage
                 };
                 if (Egitim.Error == true) message.Error = true;
+
+                if (Egitim.HamDoktoraSonrasiPuan > 4)
+                    message.NetToplamDoktoraSonrasi += 4;
+                else message.NetToplamDoktoraSonrasi += Egitim.HamDoktoraSonrasiPuan;
                 message.Bolumler.Add(madde);
             }
 
 
+
+            if (message.NetToplamDoktoraSonrasi <90 || message.NetToplamDoktoraSonrasi < 100)
+            {
+                message.AsgariMessage = " doktora sonrası en az 90 puan elde edilmiş olmalıdır asgari 100 puan olmalıdır !";
+                message.Error = true;
+            }
 
 
             if (message.Bolumler != null) message.Colum = message.Bolumler.Count();

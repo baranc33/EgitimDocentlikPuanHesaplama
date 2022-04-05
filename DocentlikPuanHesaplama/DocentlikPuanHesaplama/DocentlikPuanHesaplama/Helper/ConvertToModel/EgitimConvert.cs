@@ -429,10 +429,10 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.EgitimAdoktora += model.EgitimAdoktora[i].ToString() + "/";
                     entity.EgitimAders += model.EgitimAders[i].ToString() + "/";
                     entity.EgitimACount = model.EgitimAdoktora.Count() - 1;
-                    entity.Gorev2yil = model.Gorev2yil;
+                   
                 }
             }
-
+            entity.Gorev2yil = model.Gorev2yil;
             if (model.EgitimBdoktora.Count() > 1)
             {
                 for (int i = 1; i < model.EgitimBdoktora.Count(); i++)
@@ -443,7 +443,6 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.EgitimBdoktora += model.EgitimBdoktora[i].ToString() + "/";
                     entity.EgitimBders += model.EgitimBders[i].ToString() + "/";
                     entity.EgitimBCount = model.EgitimBdoktora.Count() - 1;
-                    entity.Gorev2yil = model.Gorev2yil;
 
                 }
             }
