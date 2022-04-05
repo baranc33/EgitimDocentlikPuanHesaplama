@@ -13,21 +13,21 @@
         public string? MakaleAyazarsayisi { get; set; }
         public string? MakaleAsirasi { get; set; }
         public string? MakaleAhatirlatici { get; set; }
-        public string? MakaleAhatirlatici { get; set; }s
+        public int MakaleACount { get; set; } = 0;
 
         public string? MakaleBdoktora { get; set; }
         public string? MakaleBmakale { get; set; }
         public string? MakaleByazarsayisi { get; set; }
         public string? MakaleBsirasi { get; set; }
         public string? MakaleBhatirlatici { get; set; }
-        public string? MakaleBhatirlatici { get; set; }s
+        public int MakaleBCount { get; set; } = 0;
 
         public string? MakaleCdoktora { get; set; }
         public string? MakaleCmakale { get; set; }
         public string? MakaleCyazarsayisi { get; set; }
         public string? MakaleCsirasi { get; set; }
         public string? MakaleChatirlatici { get; set; }
-        public string? MakaleChatirlatici { get; set; }s
+        public int MakaleCCount { get; set; } = 0;
 
  
 
@@ -42,28 +42,28 @@
         public string? YayinAyazarsayisi { get; set; }
         public string? YayinAsirasi { get; set; }
         public string? YayinAhatirlatici { get; set; }
-        public string? YayinAhatirlatici { get; set; }s
+        public int YayinACount { get; set; } = 0;
 
         public string? YayinBdoktora { get; set; }
         public string? YayinByayin { get; set; }
         public string? YayinByazarsayisi { get; set; }
         public string? YayinBsirasi { get; set; }
         public string? YayinBhatirlatici { get; set; }
-        public string? YayinBhatirlatici { get; set; }s
+        public int YayinBCount { get; set; } = 0;
 
         public string? YayinCdoktora { get; set; }
         public string? YayinCyayin { get; set; }
         public string? YayinCyazarsayisi { get; set; }
         public string? YayinCsirasi { get; set; }
         public string? YayinChatirlatici { get; set; }
-        public string? YayinChatirlatici { get; set; }s
+        public int YayinCCount { get; set; } = 0;
 
         public string? YayinDdoktora { get; set; }
         public string? YayinDyayin { get; set; }
         public string? YayinDyazarsayisi { get; set; }
         public string? YayinDsirasi { get; set; }
         public string? YayinDhatirlatici { get; set; }
-        public string? YayinDhatirlatici { get; set; }s
+        public int YayinDCount { get; set; } = 0;
 
        
 
@@ -78,28 +78,28 @@
         public string? KitapAyazarsayisi { get; set; }
         public string? KitapAsirasi { get; set; }
         public string? KitapAhatirlatici { get; set; }
-        public string? KitapAhatirlatici { get; set; }s
+        public int KitapACount { get; set; } = 0;
 
         public string? KitapBdoktora { get; set; }
         public string? KitapBkitap { get; set; }
         public string? KitapByazarsayisi { get; set; }
         public string? KitapBsirasi { get; set; }
         public string? KitapBhatirlatici { get; set; }
-        public string? KitapBhatirlatici { get; set; }s
+        public int KitapBCount { get; set; } = 0;
 
         public string? KitapCdoktora { get; set; }
         public string? KitapCkitap { get; set; }
         public string? KitapCyazarsayisi { get; set; }
         public string? KitapCsirasi { get; set; }
         public string? KitapChatirlatici { get; set; }
-        public string? KitapChatirlatici { get; set; }s
+        public int KitapCCount { get; set; } = 0;
 
         public string? KitapDdoktora { get; set; }
         public string? KitapDkitap { get; set; }
         public string? KitapDyazarsayisi { get; set; }
         public string? KitapDsirasi { get; set; }
         public string? KitapDhatirlatici { get; set; }
-        public string? KitapDhatirlatici { get; set; }s
+        public int KitapDCount { get; set; } = 0;
 
         #endregion
 
@@ -109,13 +109,13 @@
         public string? PatentAsayi { get; set; }
         public string? PatentAyazarsayisi { get; set; }
         public string? PatentAhatirlatici { get; set; }
-        public string? PatentAhatirlatici { get; set; }s
+        public int PatentACount { get; set; } = 0;
 
         public string? PatentBdoktora { get; set; }
         public string? PatentBsayi { get; set; }
         public string? PatentByazarsayisi { get; set; }
         public string? PatentBhatirlatici { get; set; }
-        public string? PatentBhatirlatici { get; set; }s
+        public int PatentBCount { get; set; } = 0;
 
 
         #endregion
@@ -125,17 +125,17 @@
         public string? AtiflarAdoktora { get; set; }
         public string? AtiflarAatif { get; set; }
         public string? AtiflarAhatirlatici { get; set; }
-        public string? AtiflarAhatirlatici { get; set; }s
+        public int AtiflarACount { get; set; } = 0;
 
         public string? AtiflarBdoktora { get; set; }
         public string? AtiflarBatif { get; set; }
         public string? AtiflarBhatirlatici { get; set; }
-        public string? AtiflarBhatirlatici { get; set; }s
+        public int AtiflarBCount { get; set; } = 0;
 
         public string? AtiflarCdoktora { get; set; }
         public string? AtiflarCatif { get; set; }
         public string? AtiflarChatirlatici { get; set; }
-        public string? AtiflarChatirlatici { get; set; }s
+        public int AtiflarCCount { get; set; } = 0;
         #endregion
 
 
@@ -147,14 +147,14 @@
         public string? DanismanlikAseviye { get; set; }
         public string? DanismanlikAsayi { get; set; }
         public string? DanismanlikAhatirlatici { get; set; }
-        public string? DanismanlikAhatirlatici { get; set; }s
+        public int DanismanlikACount { get; set; } = 0;
 
 
         public string? DanismanlikBdoktora { get; set; }
         public string? DanismanlikBseviye { get; set; }
         public string? DanismanlikBsayi { get; set; }
         public string? DanismanlikBhatirlatici { get; set; }
-        public string? DanismanlikBhatirlatici { get; set; }s
+        public int DanismanlikBCount { get; set; } = 0;
 
         #endregion
 
@@ -164,22 +164,22 @@
         public string? ArastirmaAdoktora { get; set; }
         public string? ArastirmaAproje { get; set; }
         public string? ArastirmaAhatirlatici { get; set; }
-        public string? ArastirmaAhatirlatici { get; set; }s
+        public int ArastirmaACount { get; set; } = 0;
 
         public string? ArastirmaBdoktora { get; set; }
         public string? ArastirmaBproje { get; set; }
         public string? ArastirmaBhatirlatici { get; set; }
-        public string? ArastirmaBhatirlatici { get; set; }s
+        public int ArastirmaBCount { get; set; } = 0;
 
         public string? ArastirmaCdoktora { get; set; }
         public string? ArastirmaCproje { get; set; }
         public string? ArastirmaChatirlatici { get; set; }
-        public string? ArastirmaChatirlatici { get; set; }s
+        public int ArastirmaCCount { get; set; } = 0;
 
         public string? ArastirmaDdoktora { get; set; }
         public string? ArastirmaDproje { get; set; }
         public string? ArastirmaDhatirlatici { get; set; }
-        public string? ArastirmaDhatirlatici { get; set; }s
+        public int ArastirmaDCount { get; set; } = 0;
         #endregion
 
 
@@ -190,7 +190,7 @@
         public string? ToplantiAyazarsayisi { get; set; }
         public string? ToplantiAsirasi { get; set; }
         public string? ToplantiAhatirlatici { get; set; }
-        public string? ToplantiAhatirlatici { get; set; }s
+        public int ToplantiACount { get; set; } = 0;
 
 
         public string? ToplantiBdoktora { get; set; }
@@ -198,7 +198,7 @@
         public string? ToplantiByazarsayisi { get; set; }
         public string? ToplantiBsirasi { get; set; }
         public string? ToplantiBhatirlatici { get; set; }
-        public string? ToplantiBhatirlatici { get; set; }s
+        public int ToplantiBCount { get; set; } = 0;
 
         #endregion
 
@@ -209,10 +209,12 @@
         public string? EgitimAdoktora { get; set; }
         public string? EgitimAders { get; set; }
         public string? EgitimAhatirlatici { get; set; }
+        public int EgitimACount { get; set; } = 0;
 
         public string? EgitimBdoktora { get; set; }
         public string? EgitimBders { get; set; }
         public string? EgitimBhatirlatici { get; set; }
+        public int EgitimBCount { get; set; } = 0;
 
         public bool Gorev2yil { get; set; } = false;
         #endregion
