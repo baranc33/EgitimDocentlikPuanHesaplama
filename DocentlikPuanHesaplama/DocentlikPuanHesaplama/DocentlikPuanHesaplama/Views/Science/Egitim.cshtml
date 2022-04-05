@@ -1,8 +1,4 @@
-﻿@using DocentlikPuanHesaplama.IdentityModel.Entity
-@using System.Text.Json
-@model DocentlikPuanHesaplama.Models.Egitim.EgitimDocentModel
-
-@section Alt_Menu{
+﻿@section Alt_Menu{
 <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
 <h1 class="col-md-6 text-white display-4 " style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top:0.6em;">Başvuru şartları</h1>
 <div class="">
@@ -21,14 +17,12 @@
   }
 
 
-<head>
+ <head>
     <link href="~/css/hesap.css" rel="stylesheet">
     <script src="~/js/Bolumler.js"></script>
     <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
 
-
-
-</head>
+</head> 
  
  <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Egitim" method="post"> 
         <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
@@ -1069,7 +1063,6 @@
         </div>
 
 
-        <br>
         <br>
         <br>
         <br>

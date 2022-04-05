@@ -1,6 +1,7 @@
 ﻿using DocentlikPuanHesaplama.IdentityModel;
 using DocentlikPuanHesaplama.Models.Bolumler;
 
+
 namespace DocentlikPuanHesaplama.Models.Egitim
 {
     public class EgitimDocentModel

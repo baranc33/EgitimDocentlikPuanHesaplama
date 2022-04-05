@@ -10,13 +10,13 @@ namespace DocentlikPuanHesaplama.IdentityModel.Entity
 
 
         #region UluslarArasi
-        public int UluslarArasiACount { get; set; } = 0;
+
         public string? UluslarArasiAdoktora { get; set; }
         public string? UluslarArasiAmakalesayisi { get; set; }
         public string? UluslarArasiAyazarsayisi{ get; set; }
         public string UluslarArasiAhatirlatici { get; set; } = default!;
+        public int UluslarArasiACount { get; set; } = 0;
 
-   
 
         public string? UluslarArasiBdoktora { get; set; }
         public string? UluslarArasiBmakalesayisi { get; set; }
