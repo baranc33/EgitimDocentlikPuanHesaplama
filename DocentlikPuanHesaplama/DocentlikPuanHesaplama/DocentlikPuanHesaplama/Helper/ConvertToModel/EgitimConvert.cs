@@ -239,7 +239,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     if (model.KitapDhatirlatici[i] != null) entity.KitapDhatirlatici += model.KitapDhatirlatici[i].ToString() + "/";
                     else entity.KitapDhatirlatici += "./";
                     entity.KitapDdoktora += model.KitapDdoktora[i].ToString() + "/";
-                    entity.KitapBbolumSayisi += model.KitapBbolumSayisi[i].ToString() + "/";
+                    entity.KitapDbolumSayisi += model.KitapDbolumSayisi[i].ToString() + "/";
                     entity.KitapDyazarsayisi += model.KitapDyazarsayisi[i].ToString() + "/";
                     entity.KitapDCount = model.KitapDdoktora.Count() - 1;
                 }

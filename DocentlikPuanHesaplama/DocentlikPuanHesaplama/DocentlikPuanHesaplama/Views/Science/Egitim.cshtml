@@ -39,9 +39,13 @@ button{
             background-position-y: 90%;
             background-size: contain;
         }
+        #Hesapla{
+            position: fixed;
+        }
     </style>
 </head>
 
+<a href="#SubmitButton"  class="btn btn-primary" id="Hesapla">Hemen Hesapla</a>
  <form onsubmit="egitimSave() asp-controller="Science" asp-action="Egitim" method="post"> 
 
     <section class="Egitim">
@@ -1299,8 +1303,15 @@ button{
                      YayinCdoldur('Egitim');
                      YayinDdoldur('Egitim');
                      YayinEdoldur('Egitim');
-                      YayinFdoldur('Egitim');
+                     YayinFdoldur('Egitim');
                      YayinGdoldur('Egitim'); 
+                     KitapAdoldur('Egitim'); 
+                     KitapBdoldur('Egitim'); 
+                     KitapCdoldur('Egitim'); 
+                     KitapDdoldur('Egitim'); 
+                     AtiflarAdoldur('Egitim'); 
+                     AtiflarBdoldur('Egitim'); 
+                     AtiflarCdoldur('Egitim'); 
                   
                 @* } *@
           
