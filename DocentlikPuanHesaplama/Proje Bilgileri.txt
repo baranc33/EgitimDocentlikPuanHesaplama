@@ -12,7 +12,7 @@ Admin Bölümü olacak bu sayede admin bloğunu düzenliyebilcek
 
 
 Eğitim Bilimleri		+
-Filoloji Temel Alanı		-
+Filoloji Temel Alanı		+
 Hukuk Temel Alanı		-
 İlahiyat Temel Alanı		-
 - Sosyal, Beşeri ve 		-

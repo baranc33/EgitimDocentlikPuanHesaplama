@@ -68,37 +68,53 @@
     </script>
   <script>
       // chekbo işlemeri
-      function cheked(ulId){
-        let clearul = document.querySelector(ulId);
+      function cheked(ulId1,ulId2){
+            let clearul = document.querySelector(ulId1);
             let ulChildCount = clearul.childElementCount;
+               let clearul2 = document.querySelector(ulId2);
+            let ulChildCount2 = clearul2.childElementCount;
 
           let cb = document.querySelector('#checkBox');
           if(cb.checked){
              alert(" 2 yıl öğretim elemanı olarak görev Yapanlar 9. Maddenin B bendinden Yararlanamaz");
-              document.getElementById("addButton").disabled = true;
-              document.getElementById("removeButton").disabled = true;
-
+              document.getElementById("addButton1").disabled = true;
+              document.getElementById("removeButton1").disabled = true;
+              document.getElementById("addButton2").disabled = true;
+              document.getElementById("removeButton2").disabled = true;
               console.log('chked')
                 for(let i=0;i<ulChildCount-1;i++)
                {
                     if(ulChildCount > 1) {
                      clearul.removeChild(clearul.lastElementChild);
                     }
-                    else{}
                
                }  
+
+              for(let i=0;i<ulChildCount2-1;i++)
+               {
+                    if(ulChildCount2 > 1) {
+                     clearul2.removeChild(clearul2.lastElementChild);
+                    }
+               
+               }  
+
+
           }
           else{
-               document.getElementById("addButton").disabled = false;
-              document.getElementById("removeButton").disabled = false;
+            document.getElementById("addButton1").disabled = false;
+              document.getElementById("removeButton1").disabled = false;
+             document.getElementById("addButton2").disabled = false;
+              document.getElementById("removeButton2").disabled = false;
           }
       }
   </script>
 
   <script>
       function Reset(){
-           document.getElementById("addButton").disabled = false;
-              document.getElementById("removeButton").disabled = false;
+          document.getElementById("addButton1").disabled = false;
+              document.getElementById("removeButton1").disabled = false;
+             document.getElementById("addButton2").disabled = false;
+              document.getElementById("removeButton2").disabled = false;
       }
   </script>
 </body>

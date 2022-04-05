@@ -1,6 +1,5 @@
 ﻿@using DocentlikPuanHesaplama.IdentityModel.Entity
 @using System.Text.Json
-
 @model DocentlikPuanHesaplama.Models.Egitim.EgitimDocentModel
 
 @section Alt_Menu{
@@ -24,28 +23,16 @@
 
 <head>
     <link href="~/css/hesap.css" rel="stylesheet">
-      <script src="~/js/Egitim.js"></script>
+    <script src="~/js/Bolumler.js"></script>
+    <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
 
 
-    <style>
-    button{
-        max-height: 40px;
-    }
-        .Egitim {
-            background-image: url(../img/diplomaa.png);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position-x: 90%;
-            background-size: contain;
-        }
-        #Hesapla{
-            position: fixed;
-        }
-    </style>
+
 </head>
-
-<a href="#SubmitButton"  class="btn btn-primary" id="Hesapla">Hemen Hesapla</a>
+ 
  <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Egitim" method="post"> 
+        <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
+
 
     <section class="Egitim">
         <div class="Bir">
@@ -65,7 +52,7 @@
                     <li class="row d-none ">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="UluslarArasiAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -99,7 +86,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="UluslarArasiBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -133,7 +120,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="UluslarArasiCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -179,7 +166,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="UlusalAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -210,7 +197,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="UlusalBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -250,7 +237,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="YayinAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -281,7 +268,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="YayinBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -313,7 +300,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="YayinCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -345,7 +332,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="YayinDdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -376,7 +363,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="YayinEdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -408,7 +395,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="YayinFdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -440,7 +427,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="YayinGdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -485,7 +472,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="KitapAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -516,7 +503,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="KitapBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -548,7 +535,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="KitapCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -580,7 +567,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="KitapDdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -625,7 +612,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="AtiflarAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -659,7 +646,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="AtiflarBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -691,7 +678,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="AtiflarCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -809,7 +796,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ArastirmaAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -840,7 +827,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ArastirmaBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -872,7 +859,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ArastirmaCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -901,7 +888,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ArastirmaDdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -938,7 +925,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ToplantiAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -972,7 +959,7 @@
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ToplantiBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -1009,13 +996,13 @@
 
             <div class="row mt-5">
                 <label class="col-md-8">A ) Bir dönem yüksek lisans veya doktora dersi ~ 3 Puan</label>
-                <button onclick="add('EgitimAul')" type="button" class="btn btn-primary col-md-1">+ </button>
-                <button onclick="remove('EgitimAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <button id="addButton1" onclick="add('EgitimAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button id="removeButton1" onclick="remove('EgitimAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="EgitimAul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="EgitimAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -1038,14 +1025,14 @@
 
             <div class="row mt-5">
                 <label class="col-md-8">B)  Bir dönem önlisans veya lisans dersi ~ 2 Puan</label>
-                <button id="addButton" onclick="add('EgitimBul')" type="button" class="btn btn-primary col-md-1">+ </button>
-                <button id="removeButton" onclick="remove('EgitimBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <button id="addButton2" onclick="add('EgitimBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button id="removeButton2" onclick="remove('EgitimBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="EgitimBul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="EgitimBdoktora[]" class="form-select form-select-sm"
                                     aria-label=".form-select-lg example">
-                                <option value="0" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
                             </select>
@@ -1067,7 +1054,7 @@
 
             <div class="form-check m-4">
                 <center>   <strong>Bu Maddeyi işaretlediğinizde 9. Madde B bendi bilgileriniz silinecektir. </strong></center>
-                <input class="form-check-input" id="checkBox" onchange="cheked('#EgitimBul')" type="checkbox" name="Gorev2yil" value="true">
+                <input class="form-check-input" id="checkBox" onchange="cheked('#EgitimBul','#EgitimAul')" type="checkbox" name="Gorev2yil" value="true">
                 <p>
                     Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en
                     az 2 yıl öğretim elemanı olarak görev Yaptıysanız işaretleyin
@@ -1082,10 +1069,6 @@
         </div>
 
 
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
         <br>
