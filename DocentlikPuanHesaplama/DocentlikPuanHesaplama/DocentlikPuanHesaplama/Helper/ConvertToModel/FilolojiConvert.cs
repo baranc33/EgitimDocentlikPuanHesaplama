@@ -3,13 +3,13 @@ using DocentlikPuanHesaplama.Models.DocentModels;
 
 namespace DocentlikPuanHesaplama.Helper.ConvertToModel
 {
-    static public class EgitimConvert
+    public class FilolojiConvert
     {
-        static public EgitimEntity EgitimModelToEgitimEntity(EgitimDocentModel model)
+        static public FilolojiEntity EgitimModelToEgitimEntity(FilolojiDocentModel model)
         {
             /*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
 
-            EgitimEntity entity = new();
+            FilolojiEntity entity = new();
 
             /***  U L U S L A R    A R A S I   ***/
             if (model.UluslarArasiAdoktora.Count() > 1)
@@ -353,7 +353,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.ArastirmaBCount = model.ArastirmaBdoktora.Count() - 1;
                 }
             }
-            
+
             if (model.ArastirmaCdoktora.Count() > 1)
             {
                 for (int i = 1; i < model.ArastirmaCdoktora.Count(); i++)
@@ -366,7 +366,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.ArastirmaCCount = model.ArastirmaCdoktora.Count() - 1;
                 }
             }
-          
+
             if (model.ArastirmaDdoktora.Count() > 1)
             {
                 for (int i = 1; i < model.ArastirmaDdoktora.Count(); i++)
@@ -429,7 +429,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.EgitimAdoktora += model.EgitimAdoktora[i].ToString() + "/";
                     entity.EgitimAders += model.EgitimAders[i].ToString() + "/";
                     entity.EgitimACount = model.EgitimAdoktora.Count() - 1;
-                   
+
                 }
             }
             entity.Gorev2yil = model.Gorev2yil;
@@ -446,7 +446,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
 
                 }
             }
-           
+
 
 
             return entity;

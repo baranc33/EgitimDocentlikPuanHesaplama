@@ -1,7 +1,7 @@
 ﻿using DocentlikPuanHesaplama.Helper.ConvertToModel;
 using DocentlikPuanHesaplama.IdentityModel.Entity;
 using DocentlikPuanHesaplama.Models;
-using DocentlikPuanHesaplama.Models.Egitim;
+using DocentlikPuanHesaplama.Models.DocentModels;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
@@ -22,7 +22,7 @@ namespace DocentlikPuanHesaplama.Controllers
                 return RedirectToAction(action, "Science");
             }
             TempData.Remove("modelagain");
-            Messages m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
+            Messages? m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
             return View(m);
         }
 
@@ -35,13 +35,10 @@ namespace DocentlikPuanHesaplama.Controllers
         public IActionResult Egitim()
         {
             // yeni açılan sayfa veya geri dönüş olduğunu tespit ediyorum.
-            if (TempData.ContainsKey("modelagain"))
-            {
-                ViewBag.OldData = true;
-                return View();
-            }
             ViewBag.OldData = false;
-
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+          
             return View();
         }
     
@@ -59,16 +56,41 @@ namespace DocentlikPuanHesaplama.Controllers
             TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
             return RedirectToAction("Answer");
         }
-        [HttpGet]
-        public IActionResult Fen()
-        {
-            return View();
-        }
+     
+
+
+
         [HttpGet]
         public IActionResult Filoloji()
         {
+            // yeni açılan sayfa veya geri dönüş olduğunu tespit ediyorum.
+            ViewBag.OldData = false;
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Filoloji(FilolojiDocentModel model)
+        {
+
+            TempData["model"] = JsonSerializer.Serialize(FilolojiConvert.EgitimModelToEgitimEntity(model));
+
+
+            Messages message = new();
+            message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
+            return RedirectToAction("Answer");
+        }
+
+
+
+
+
+
+
         [HttpGet]
         public IActionResult GuzelSanatlar()
         {
@@ -81,6 +103,12 @@ namespace DocentlikPuanHesaplama.Controllers
         }
         [HttpGet]
         public IActionResult ilahiyat()
+        {
+            return View();
+        }
+        
+        [HttpGet]
+        public IActionResult Fen()
         {
             return View();
         }

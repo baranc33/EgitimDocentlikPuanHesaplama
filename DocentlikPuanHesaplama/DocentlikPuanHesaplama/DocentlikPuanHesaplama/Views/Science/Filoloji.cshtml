@@ -27,7 +27,7 @@
 
 </head> 
  
- <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Egitim" method="post"> 
+ <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Filoloji" method="post"> 
         <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
 
 
@@ -1080,7 +1080,7 @@
   if (ViewBag.OldData == true)
     {
 
-        EgitimEntity entity = JsonSerializer.Deserialize<EgitimEntity>(TempData["modelagain"].ToString());
+        FilolojiEntity entity = JsonSerializer.Deserialize<FilolojiEntity>(TempData["modelagain"].ToString());
      
         
           <script>
@@ -1265,40 +1265,40 @@
                 
 
             };
-            localStorage.setItem('Egitim',JSON.stringify(jsEntity));
+            localStorage.setItem('Filoloji',JSON.stringify(jsEntity));
         </script> 
          <script>
              if(jsEntity!=null){
-                     UluslarArasiAdoldur('Egitim');
-                     UluslarArasiBdoldur('Egitim');
-                     UluslarArasiCdoldur('Egitim');
-                     UlusalAdoldur('Egitim');
-                     UlusalBdoldur('Egitim');
-                     YayinAdoldur('Egitim');
-                     YayinBdoldur('Egitim');
-                     YayinCdoldur('Egitim');
-                     YayinDdoldur('Egitim');
-                     YayinEdoldur('Egitim');
-                     YayinFdoldur('Egitim');
-                     YayinGdoldur('Egitim'); 
-                     KitapAdoldur('Egitim'); 
-                     KitapBdoldur('Egitim'); 
-                     KitapCdoldur('Egitim'); 
-                     KitapDdoldur('Egitim'); 
-                     AtiflarAdoldur('Egitim'); 
-                     AtiflarBdoldur('Egitim'); 
-                     AtiflarCdoldur('Egitim'); 
-                     DanismanlikAdoldur('Egitim'); 
-                     DanismanlikBdoldur('Egitim'); 
-                     ArastirmaAdoldur('Egitim'); 
-                     ArastirmaBdoldur('Egitim'); 
-                     ArastirmaCdoldur('Egitim'); 
-                     ArastirmaDdoldur('Egitim'); 
-                     ToplantiAdoldur('Egitim'); 
-                     ToplantiBdoldur('Egitim'); 
-                     EgitimAdoldur('Egitim'); 
-                     EgitimBdoldur('Egitim'); 
-                     EgitimCdoldur('Egitim'); 
+                     UluslarArasiAdoldur('Filoloji');
+                     UluslarArasiBdoldur('Filoloji');
+                     UluslarArasiCdoldur('Filoloji');
+                     UlusalAdoldur('Filoloji');
+                     UlusalBdoldur('Filoloji');
+                     YayinAdoldur('Filoloji');
+                     YayinBdoldur('Filoloji');
+                     YayinCdoldur('Filoloji');
+                     YayinDdoldur('Filoloji');
+                     YayinEdoldur('Filoloji');
+                     YayinFdoldur('Filoloji');
+                     YayinGdoldur('Filoloji'); 
+                     KitapAdoldur('Filoloji'); 
+                     KitapBdoldur('Filoloji'); 
+                     KitapCdoldur('Filoloji'); 
+                     KitapDdoldur('Filoloji'); 
+                     AtiflarAdoldur('Filoloji'); 
+                     AtiflarBdoldur('Filoloji'); 
+                     AtiflarCdoldur('Filoloji'); 
+                     DanismanlikAdoldur('Filoloji'); 
+                     DanismanlikBdoldur('Filoloji'); 
+                     ArastirmaAdoldur('Filoloji'); 
+                     ArastirmaBdoldur('Filoloji'); 
+                     ArastirmaCdoldur('Filoloji'); 
+                     ArastirmaDdoldur('Filoloji'); 
+                     ToplantiAdoldur('Filoloji'); 
+                     ToplantiBdoldur('Filoloji'); 
+                     EgitimAdoldur('Filoloji'); 
+                     EgitimBdoldur('Filoloji'); 
+                     EgitimCdoldur('Filoloji'); 
                   
           
              }

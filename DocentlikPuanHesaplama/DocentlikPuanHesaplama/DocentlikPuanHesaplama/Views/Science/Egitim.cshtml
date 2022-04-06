@@ -1,4 +1,8 @@
-﻿@section Alt_Menu{
+﻿@using DocentlikPuanHesaplama.IdentityModel.Entity
+@using System.Text.Json
+@*@model DocentlikPuanHesaplama.Models.DocentModels.EgitimDocentModel*@
+
+@section Alt_Menu{
 <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
 <h1 class="col-md-6 text-white display-4 " style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top:0.6em;">Başvuru şartları</h1>
 <div class="">
@@ -25,6 +29,7 @@
 </head> 
  
  <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Egitim" method="post"> 
+ @* <form  asp-controller="Science" asp-action="Egitim" method="post">  *@
         <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
 
 
