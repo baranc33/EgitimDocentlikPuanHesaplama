@@ -67,24 +67,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
         public bool[] UluslarArasiCbasYazar { get; set; } = default!;
 
 
-
-
-        /*
-            -Tek yazarlı makale  1=>1
-        
-        
-            -İki yazarlı makalelerde başlıca yazar tam
-            1=>  puanın 0.8'ini,  2=> 0.5'ini alır.
-            
-            -Üç ve daha fazla yazarlı makalelerde ise, başlıca
-            1=>  0.5    2 ve sonras=> 0.5 / yazar sayısı
-
-            -Başlıca yazar yoksa  1 / yazar sayısı
-
-              NetPuan  += (puan * makaleSayısı) * (decimal)YazarSirasi(UluslarArasiAyazarsayisi[i]);
-         
-         */
-
+ 
         private UluslarArasi UluslarArasiHesapla()
         {
             UluslarArasi model = new();
@@ -93,7 +76,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiAdoktora.Count(); i++)
                 {
-                    if (UluslarArasiAyazarsayisi[i] == 1) BaslicaYazar += 20 * UluslarArasiAmakalesayisi[i];
+                    if (UluslarArasiAbasYazar[i] == true) BaslicaYazar += 20 * UluslarArasiAmakalesayisi[i];
                     if (UluslarArasiAdoktora[i] == 0 && UluslarArasiAmakalesayisi[i] > 0 && UluslarArasiAyazarsayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += (20 * UluslarArasiAmakalesayisi[i]) * 
@@ -111,7 +94,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiBdoktora.Count(); i++)
                 {
-                    if (UluslarArasiByazarsayisi[i] == 1) BaslicaYazar += 15 * UluslarArasiBmakalesayisi[i];
+                    if (UluslarArasiBbasYazar[i] == true) BaslicaYazar += 15 * UluslarArasiBmakalesayisi[i];
                     if (UluslarArasiBdoktora[i] == 0 && UluslarArasiBmakalesayisi[i] > 0 && UluslarArasiByazarsayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += (15 * UluslarArasiBmakalesayisi[i]) *
@@ -130,7 +113,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiCdoktora.Count(); i++)
                 {
-                    if (UluslarArasiCyazarsayisi[i] == 1) BaslicaYazar += 5 * UluslarArasiCmakalesayisi[i];
+                    if (UluslarArasiCbasYazar[i] == true) BaslicaYazar += 5 * UluslarArasiCmakalesayisi[i];
                     if (UluslarArasiCdoktora[i] == 0 && UluslarArasiCmakalesayisi[i] > 0 && UluslarArasiCyazarsayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += (5 * UluslarArasiCmakalesayisi[i]) *
