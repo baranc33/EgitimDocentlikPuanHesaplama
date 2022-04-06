@@ -24,7 +24,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             else
             {
 
-                if (YazarSayisi == 1) return 1.0m;
+                if (YazarSayisi == 1 && YazarSirasi==1) return 1.0m;
                 else if (YazarSayisi == 2)
                 {
                     if (YazarSirasi == 1) return 0.8m;
@@ -33,7 +33,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 else
                 {
                     if (YazarSirasi == 1) return 0.5m;
-                    else return 0.5m / (decimal)YazarSayisi;
+                    else return 0.5m / ((decimal)YazarSayisi - 1);// baş yazarı çıkarıp kalan kişi sayısına böldüm
                 }
             }
 

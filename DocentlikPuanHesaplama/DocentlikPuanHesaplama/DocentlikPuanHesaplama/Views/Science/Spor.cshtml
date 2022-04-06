@@ -64,9 +64,9 @@
                         </div>
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
-                            <select onchange="hrefGo()" name="UluslarArasiAdoktora[]" class="form-select form-select-sm mb-3"
+                            <select  name="UluslarArasiAbasYazar[]" class="form-select form-select-sm mb-3"
                                 aria-label=".form-select-lg example">
-                                <option value="false">Başlıca Yazar Yok</option>
+                                <option value="False">Başlıca Yazar Yok</option>
                                 <option value="True">Başlıca Yazar Var</option>
                             </select>
                         </div>
@@ -91,7 +91,6 @@
                                 placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
-
                 </ul>
                 <hr />
             </div>
@@ -105,14 +104,26 @@
                 <button onclick="remove('UluslarArasiBul')" type="button" class="btn btn-danger col-md-1 ms-4">
                     -</button>
                 <ul class="mt-3" id="UluslarArasiBul" type="none">
-                    <li class="row d-none">
-                        <div class="mb-3 col-md-3 mt-4">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="UluslarArasiBdoktora[]" class="form-select form-select-sm mb-3"
                                 aria-label=".form-select-lg example">
-                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
-                                <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
+                                <option value="0">Doktora Öncesi</option>
                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
+                            <select  name="UluslarArasiBbasYazar[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="False">Başlıca Yazar Yok</option>
+                                <option value="True">Başlıca Yazar Var</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-1 ">
+                            <label>Sıranız</label>
+                            <input type="number" class="form-control " value="1" name="UluslarArasiBsirasi[]" min="1" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
@@ -124,18 +135,13 @@
                             <input type="number" class="form-control" value="1" name="UluslarArasiByazarsayisi[]"
                                 min="0" required>
                         </div>
-                        <div class="mb-3 col-md-2">
-                            <label>Yazar Sırası</label>
-                            <input type="number" class="form-control" value="1" name="UluslarArasiBsirasi[]" min="1"
-                                required>
-                        </div>
+
                         <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="UluslarArasiBhatirlatici[]"
                                 placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
-
                 </ul>
                 <hr />
             </div>
@@ -149,14 +155,26 @@
                 <button onclick="remove('UluslarArasiCul')" type="button" class="btn btn-danger col-md-1 ms-4">
                     -</button>
                 <ul class="mt-3" id="UluslarArasiCul" type="none">
-                    <li class="row d-none">
-                        <div class="mb-3 col-md-3 mt-4">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="UluslarArasiCdoktora[]" class="form-select form-select-sm mb-3"
                                 aria-label=".form-select-lg example">
-                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
-                                <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
+                                <option value="0">Doktora Öncesi</option>
                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
+                            <select  name="UluslarArasiCbasYazar[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="False">Başlıca Yazar Yok</option>
+                                <option value="True">Başlıca Yazar Var</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-1 ">
+                            <label>Sıranız</label>
+                            <input type="number" class="form-control " value="1" name="UluslarArasiCsirasi[]" min="1" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
@@ -168,18 +186,13 @@
                             <input type="number" class="form-control" value="1" name="UluslarArasiCyazarsayisi[]"
                                 min="0" required>
                         </div>
-                        <div class="mb-3 col-md-2">
-                            <label>Yazar Sırası</label>
-                            <input type="number" class="form-control" value="1" name="UluslarArasiCsirasi[]" min="1"
-                                required>
-                        </div>
+
                         <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="UluslarArasiChatirlatici[]"
                                 placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
-
                 </ul>
                 <hr />
             </div>
@@ -205,36 +218,44 @@
                 <button onclick="add('UlusalAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UlusalAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="UlusalAul" type="none">
-                    <li class="row d-none">
-                        <div class="mb-3 col-md-3 mt-4">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="UlusalAdoktora[]" class="form-select form-select-sm mb-3"
                                 aria-label=".form-select-lg example">
-                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
-                                <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
+                                <option value="0">Doktora Öncesi</option>
                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
+                            <select  name="UlusalAbasYazar[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="False">Başlıca Yazar Yok</option>
+                                <option value="True">Başlıca Yazar Var</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-1 ">
+                            <label>Sıranız</label>
+                            <input type="number" class="form-control " value="1" name="UlusalAsirasi[]" min="1" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="UlusalAmakalesayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="UlusalAmakalesayisi[]"
+                                min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="UlusalAyazarsayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="UlusalAyazarsayisi[]"
+                                min="0" required>
                         </div>
-                        <div class="mb-3 col-md-2">
-                            <label>Yazar Sırası</label>
-                            <input type="number" class="form-control" value="1" name="UlusalAsirasi[]" min="1" required>
-                        </div>
+
                         <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="UlusalAhatirlatici[]"
                                 placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
-
                 </ul>
                 <hr />
             </div>
@@ -245,36 +266,44 @@
                 <button onclick="add('UlusalBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UlusalBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="UlusalBul" type="none">
-                    <li class="row d-none">
-                        <div class="mb-3 col-md-3 mt-4">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="UlusalBdoktora[]" class="form-select form-select-sm mb-3"
                                 aria-label=".form-select-lg example">
-                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
-                                <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
+                                <option value="0">Doktora Öncesi</option>
                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
+                            <select  name="UlusalBbasYazar[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="False">Başlıca Yazar Yok</option>
+                                <option value="True">Başlıca Yazar Var</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-1 ">
+                            <label>Sıranız</label>
+                            <input type="number" class="form-control " value="1" name="UlusalBsirasi[]" min="1" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="UlusalBmakalesayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="UlusalBmakalesayisi[]"
+                                min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="UlusalByazarsayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="UlusalByazarsayisi[]"
+                                min="0" required>
                         </div>
-                        <div class="mb-3 col-md-2">
-                            <label>Yazar Sırası</label>
-                            <input type="number" class="form-control" value="1" name="UlusalBsirasi[]" min="1" required>
-                        </div>
+
                         <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="UlusalBhatirlatici[]"
                                 placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
-
                 </ul>
                 <hr />
             </div>
@@ -436,32 +465,44 @@
                 <button onclick="add('YayinEul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinEul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="YayinEul" type="none">
-                    <li class="row d-none">
-                        <div class="mb-3 col-md-3 mt-4">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="YayinEdoktora[]" class="form-select form-select-sm mb-3"
                                 aria-label=".form-select-lg example">
-                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
-                                <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
+                                <option value="0">Doktora Öncesi</option>
                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
+                            <select  name="YayinEbasYazar[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="False">Başlıca Yazar Yok</option>
+                                <option value="True">Başlıca Yazar Var</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-1 ">
+                            <label>Sıranız</label>
+                            <input type="number" class="form-control " value="1" name="YayinEsirasi[]" min="1" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="YayinEmakalesayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="YayinEmakalesayisi[]"
+                                min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="YayinEyazarsayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="YayinEyazarsayisi[]"
+                                min="0" required>
                         </div>
-                        <div class="mb-3 col-md-5">
+
+                        <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="YayinEhatirlatici[]"
                                 placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
-
                 </ul>
                 <hr />
             </div>
@@ -473,32 +514,44 @@
                 <button onclick="add('YayinFul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinFul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="YayinFul" type="none">
-                    <li class="row d-none">
-                        <div class="mb-3 col-md-3 mt-4">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="YayinFdoktora[]" class="form-select form-select-sm mb-3"
                                 aria-label=".form-select-lg example">
-                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
-                                <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
+                                <option value="0">Doktora Öncesi</option>
                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
+                            <select  name="YayinFbasYazar[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="False">Başlıca Yazar Yok</option>
+                                <option value="True">Başlıca Yazar Var</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-1 ">
+                            <label>Sıranız</label>
+                            <input type="number" class="form-control " value="1" name="YayinFsirasi[]" min="1" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="YayinFmakalesayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="YayinFmakalesayisi[]"
+                                min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="YayinFyazarsayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="YayinFyazarsayisi[]"
+                                min="0" required>
                         </div>
-                        <div class="mb-3 col-md-5">
+
+                        <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="YayinFhatirlatici[]"
                                 placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
-
                 </ul>
                 <hr />
             </div>
@@ -509,32 +562,44 @@
                 <button onclick="add('YayinGul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('YayinGul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="YayinGul" type="none">
-                    <li class="row d-none">
-                        <div class="mb-3 col-md-3 mt-4">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="YayinGdoktora[]" class="form-select form-select-sm mb-3"
                                 aria-label=".form-select-lg example">
-                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
-                                <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
+                                <option value="0">Doktora Öncesi</option>
                             </select>
+                        </div>
+                        <div class="mb-3 col-md-2 mt-4">
+                            <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
+                            <select  name="YayinGbasYazar[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="False">Başlıca Yazar Yok</option>
+                                <option value="True">Başlıca Yazar Var</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-1 ">
+                            <label>Sıranız</label>
+                            <input type="number" class="form-control " value="1" name="YayinGsirasi[]" min="1" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="YayinGmakalesayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="YayinGmakalesayisi[]"
+                                min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="YayinGyazarsayisi[]" min="0"
-                                required>
+                            <input type="number" class="form-control" value="1" name="YayinGyazarsayisi[]"
+                                min="0" required>
                         </div>
-                        <div class="mb-3 col-md-5">
+
+                        <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="YayinGhatirlatici[]"
                                 placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
-
                 </ul>
                 <hr />
             </div>
@@ -1249,6 +1314,7 @@
                 UluslarArasiAyazarsayisi: "@entity.UluslarArasiAyazarsayisi",
                 UluslarArasiAhatirlatici: "@entity.UluslarArasiAhatirlatici",
                 UluslarArasiAsirasi: "@entity.UluslarArasiAsirasi",
+                UluslarArasiAbasYazar: "@entity.UluslarArasiAbasYazar",
                 UluslarArasiACount: "@entity.UluslarArasiACount",
 
                 UluslarArasiBdoktora: "@entity.UluslarArasiBdoktora",
@@ -1256,6 +1322,7 @@
                 UluslarArasiByazarsayisi: "@entity.UluslarArasiByazarsayisi",
                 UluslarArasiBhatirlatici: "@entity.UluslarArasiBhatirlatici",
                 UluslarArasiBsirasi: "@entity.UluslarArasiBsirasi",
+                UluslarArasiBbasYazar: "@entity.UluslarArasiBbasYazar",
                 UluslarArasiBCount: "@entity.UluslarArasiBCount",
 
                 UluslarArasiCdoktora: "@entity.UluslarArasiCdoktora",
@@ -1263,6 +1330,7 @@
                 UluslarArasiCyazarsayisi: "@entity.UluslarArasiCyazarsayisi",
                 UluslarArasiChatirlatici: "@entity.UluslarArasiChatirlatici",
                 UluslarArasiCsirasi: "@entity.UluslarArasiCsirasi",
+                UluslarArasiCbasYazar: "@entity.UluslarArasiCbasYazar",
                 UluslarArasiCCount: "@entity.UluslarArasiCCount",
 
 
@@ -1271,6 +1339,7 @@
                 UlusalAyazarsayisi: "@entity.UlusalAyazarsayisi",
                 UlusalAhatirlatici: "@entity.UlusalAhatirlatici",
                 UlusalAsirasi: "@entity.UlusalAsirasi",
+                UlusalAbasYazar: "@entity.UlusalAbasYazar",
                 UlusalACount: "@entity.UlusalACount",
 
 
@@ -1279,6 +1348,7 @@
                 UlusalByazarsayisi: "@entity.UlusalByazarsayisi",
                 UlusalBhatirlatici: "@entity.UlusalBhatirlatici",
                 UlusalBsirasi: "@entity.UlusalBsirasi",
+                UlusalBbasYazar: "@entity.UlusalBbasYazar",
                 UlusalBCount: "@entity.UlusalBCount",
 
 
@@ -1310,18 +1380,21 @@
                 YayinEmakalesayisi: "@entity.YayinEmakalesayisi",
                 YayinEyazarsayisi: "@entity.YayinEyazarsayisi",
                 YayinEhatirlatici: "@entity.YayinEhatirlatici",
+                YayinEbasYazar: "@entity.YayinEbasYazar",
                 YayinECount: "@entity.YayinECount",
 
                 YayinFdoktora: "@entity.YayinFdoktora",
                 YayinFmakalesayisi: "@entity.YayinFmakalesayisi",
                 YayinFyazarsayisi: "@entity.YayinFyazarsayisi",
                 YayinFhatirlatici: "@entity.YayinFhatirlatici",
+                YayinFbasYazar: "@entity.YayinFbasYazar",
                 YayinFCount: "@entity.YayinFCount",
 
                 YayinGdoktora: "@entity.YayinGdoktora",
                 YayinGmakalesayisi: "@entity.YayinGmakalesayisi",
                 YayinGyazarsayisi: "@entity.YayinGyazarsayisi",
                 YayinGhatirlatici: "@entity.YayinGhatirlatici",
+                YayinGbasYazar: "@entity.YayinGbasYazar",
                 YayinGCount: "@entity.YayinGCount",
 
 
@@ -1428,41 +1501,42 @@
 
 
             };
-            localStorage.setItem('Filoloji', JSON.stringify(jsEntity));
+            localStorage.setItem('Spor', JSON.stringify(jsEntity));
         </script>
         <script>
             if (jsEntity != null) {
-                UluslarArasiAdoldur2('Filoloji');
-                UluslarArasiBdoldur2('Filoloji');
-                UluslarArasiCdoldur2('Filoloji');
-                UlusalAdoldur2('Filoloji');
-                UlusalBdoldur2('Filoloji');
+                UluslarArasiAdoldur2('Spor');
+                UluslarArasiBdoldur2('Spor');
+                UluslarArasiCdoldur2('Spor');
+                UlusalAdoldur2('Spor');
+                UlusalBdoldur2('Spor');
+                YayinEdoldur2('Spor');
+                YayinFdoldur2('Spor');
+                YayinGdoldur2('Spor');
 
-                YayinAdoldur('Filoloji');
-                YayinBdoldur('Filoloji');
-                YayinCdoldur('Filoloji');
-                YayinDdoldur('Filoloji');
-                YayinEdoldur('Filoloji');
-                YayinFdoldur('Filoloji');
-                YayinGdoldur('Filoloji');
-                KitapAdoldur('Filoloji');
-                KitapBdoldur('Filoloji');
-                KitapCdoldur('Filoloji');
-                KitapDdoldur('Filoloji');
-                AtiflarAdoldur('Filoloji');
-                AtiflarBdoldur('Filoloji');
-                AtiflarCdoldur('Filoloji');
-                DanismanlikAdoldur('Filoloji');
-                DanismanlikBdoldur('Filoloji');
-                ArastirmaAdoldur('Filoloji');
-                ArastirmaBdoldur('Filoloji');
-                ArastirmaCdoldur('Filoloji');
-                ArastirmaDdoldur('Filoloji');
-                ToplantiAdoldur('Filoloji');
-                ToplantiBdoldur('Filoloji');
-                EgitimAdoldur('Filoloji');
-                EgitimBdoldur('Filoloji');
-                EgitimCdoldur('Filoloji');
+                YayinAdoldur('Spor');
+                YayinBdoldur('Spor');
+                YayinCdoldur('Spor');
+                YayinDdoldur('Spor');
+                
+                KitapAdoldur('Spor');
+                KitapBdoldur('Spor');
+                KitapCdoldur('Spor');
+                KitapDdoldur('Spor');
+                AtiflarAdoldur('Spor');
+                AtiflarBdoldur('Spor');
+                AtiflarCdoldur('Spor');
+                DanismanlikAdoldur('Spor');
+                DanismanlikBdoldur('Spor');
+                ArastirmaAdoldur('Spor');
+                ArastirmaBdoldur('Spor');
+                ArastirmaCdoldur('Spor');
+                ArastirmaDdoldur('Spor');
+                ToplantiAdoldur('Spor');
+                ToplantiBdoldur('Spor');
+                EgitimAdoldur('Spor');
+                EgitimBdoldur('Spor');
+                EgitimCdoldur('Spor');
 
 
             }

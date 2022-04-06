@@ -17,8 +17,10 @@ namespace DocentlikPuanHesaplama.Controllers
             if (!TempData.ContainsKey("message"))
             {// Form sayfasına dönüş için tasarlandı
                 var model = JsonSerializer.Deserialize<object>(TempData["model"].ToString());
+                //TempData.Remove("model");
                 TempData["modelagain"] = JsonSerializer.Serialize(model);
                 var action = JsonSerializer.Deserialize<string>(TempData["lasturl"].ToString());
+                TempData.Remove("lasturl");
                 return RedirectToAction(action, "Science");
             }
             TempData.Remove("modelagain");

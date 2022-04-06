@@ -8,7 +8,7 @@ CookieBuilder cookieBuilder = new ();
 cookieBuilder.Name = "Docent";
 cookieBuilder.HttpOnly = false;
 cookieBuilder.SameSite = SameSiteMode.Lax;
-cookieBuilder.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+//cookieBuilder.SecurePolicy = CookieSecurePolicy.SameAsRequest;
 
 
 
