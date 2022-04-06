@@ -10,7 +10,7 @@ namespace DocentlikPuanHesaplama.Controllers
 {
     public class ScienceController : Controller
     {
-      
+      // get url yerine dinamik işlem yapmayı denicem
         [HttpGet]
         public IActionResult Answer()
         {
@@ -52,7 +52,8 @@ namespace DocentlikPuanHesaplama.Controllers
             Messages message =new ();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
+            TempData["lasturl"] = JsonSerializer.Serialize("Egitim");
+            //TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
             return RedirectToAction("Answer");
         }
      
@@ -80,11 +81,117 @@ namespace DocentlikPuanHesaplama.Controllers
             Messages message = new();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
+            TempData["lasturl"] = JsonSerializer.Serialize("Filoloji");
+            //TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
             return RedirectToAction("Answer");
         }
 
 
+        [HttpGet]
+        public IActionResult Hukuk()
+        {
+            ViewBag.OldData = false;
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Hukuk(HukukDocentModel model)
+        {
+
+            TempData["model"] = JsonSerializer.Serialize(HukukConvert.EgitimModelToEgitimEntity(model));
+
+            Messages message = new();
+            message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            TempData["lasturl"] = JsonSerializer.Serialize("Hukuk");
+            return RedirectToAction("Answer");
+        }
+
+
+
+
+ 
+
+ 
+        [HttpGet]
+        public IActionResult ilahiyat()
+        {
+            ViewBag.OldData = false;
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ilahiyat(ilahiyatDocentModel model)
+        {
+
+            TempData["model"] = JsonSerializer.Serialize(ilahiyatConvert.EgitimModelToEgitimEntity(model));
+
+            Messages message = new();
+            message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            TempData["lasturl"] = JsonSerializer.Serialize("ilahiyat");
+            return RedirectToAction("Answer");
+        }
+
+
+
+        
+        [HttpGet]
+        public IActionResult SosyalBeseri()
+        {
+            ViewBag.OldData = false;
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SosyalBeseri(SosyalBeseriDocentModel model)
+        {
+
+            TempData["model"] = JsonSerializer.Serialize(SosyalBeseriConvert.EgitimModelToEgitimEntity(model));
+
+            Messages message = new();
+            message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            TempData["lasturl"] = JsonSerializer.Serialize("SosyalBeseri");
+            return RedirectToAction("Answer");
+        }
+
+
+
+
+       
+
+        [HttpGet]
+        public IActionResult Spor()
+        {
+            ViewBag.OldData = false;
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Spor(SporDocentModel model)
+        {
+
+            TempData["model"] = JsonSerializer.Serialize(SporConvert.EgitimModelToEgitimEntity(model));
+
+            Messages message = new();
+            message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            TempData["lasturl"] = JsonSerializer.Serialize("Spor");
+            return RedirectToAction("Answer");
+        }
 
 
 
@@ -95,16 +202,7 @@ namespace DocentlikPuanHesaplama.Controllers
         {
             return View();
         }
-        [HttpGet]
-        public IActionResult Hukuk()
-        {
-            return View();
-        }
-        [HttpGet]
-        public IActionResult ilahiyat()
-        {
-            return View();
-        }
+      
         
         [HttpGet]
         public IActionResult Fen()
@@ -126,22 +224,13 @@ namespace DocentlikPuanHesaplama.Controllers
         {
             return View();
         }
-        [HttpGet]
-        public IActionResult SosyalBeseri()
-        {
-            return View();
-        }
+
         [HttpGet]
         public IActionResult Ziraat()
         {
             return View();
         }
-        [HttpGet]
-        public IActionResult Spor()
-        {
-            return View();
-        }
-
+  
 
         [NonAction]
         private string GetUrl()
