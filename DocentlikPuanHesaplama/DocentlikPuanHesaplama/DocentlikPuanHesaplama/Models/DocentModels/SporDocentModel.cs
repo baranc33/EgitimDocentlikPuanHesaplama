@@ -125,7 +125,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
         {
             Ulusal model = new();
             int sart = 0;
-            int sartB = 0;
+            //int sartB = 0;
             if (UlusalAdoktora.Count() > 1)
             {
                 for (int i = 1; i < UlusalAdoktora.Count(); i++)
@@ -176,37 +176,37 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
         public int[] YayinAdoktora { get; set; } = default!;
         public int[] YayinAkitap { get; set; } = default!;
         public int[] YayinAyazarsayisi { get; set; } = default!;
-        public string[]? YayinAhatirlatici { get; set; } = default!;
+        public string[] YayinAhatirlatici { get; set; } = default!;
 
         public int[] YayinBdoktora { get; set; } = default!;
         public int[] YayinBbolumSayisi { get; set; } = default!;
         public int[] YayinByazarsayisi { get; set; } = default!;
-        public string[]? YayinBhatirlatici { get; set; } = default!;
+        public string[] YayinBhatirlatici { get; set; } = default!;
 
         public int[] YayinCdoktora { get; set; } = default!;
         public int[] YayinCkitap { get; set; } = default!;
         public int[] YayinCyazarsayisi { get; set; } = default!;
-        public string[]? YayinChatirlatici { get; set; } = default!;
+        public string[] YayinChatirlatici { get; set; } = default!;
 
         public int[] YayinDdoktora { get; set; } = default!;
         public int[] YayinDbolumSayisi { get; set; } = default!;
         public int[] YayinDyazarsayisi { get; set; } = default!;
-        public string[]? YayinDhatirlatici { get; set; } = default!;
+        public string[] YayinDhatirlatici { get; set; } = default!;
 
         public int[] YayinEdoktora { get; set; } = default!;
         public int[] YayinEmakalesayisi { get; set; } = default!;
         public int[] YayinEyazarsayisi { get; set; } = default!;
-        public string[]? YayinEhatirlatici { get; set; } = default!;
+        public string[] YayinEhatirlatici { get; set; } = default!;
 
         public int[] YayinFdoktora { get; set; } = default!;
         public int[] YayinFmakalesayisi { get; set; } = default!;
         public int[] YayinFyazarsayisi { get; set; } = default!;
-        public string[]? YayinFhatirlatici { get; set; } = default!;
+        public string[] YayinFhatirlatici { get; set; } = default!;
 
         public int[] YayinGdoktora { get; set; } = default!;
         public int[] YayinGmakalesayisi { get; set; } = default!;
         public int[] YayinGyazarsayisi { get; set; } = default!;
-        public string[]? YayinGhatirlatici { get; set; } = default!;
+        public string[] YayinGhatirlatici { get; set; } = default!;
         private Yayin YayinHesapla()
         {
             Yayin model = new();
@@ -351,22 +351,22 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
         public int[] KitapAdoktora { get; set; } = default!;
         public int[] KitapAkitap { get; set; } = default!;
         public int[] KitapAyazarsayisi { get; set; } = default!;
-        public string[]? KitapAhatirlatici { get; set; } = default!;
+        public string[] KitapAhatirlatici { get; set; } = default!;
 
         public int[] KitapBdoktora { get; set; } = default!;
         public int[] KitapBbolumSayisi { get; set; } = default!;
         public int[] KitapByazarsayisi { get; set; } = default!;
-        public string[]? KitapBhatirlatici { get; set; } = default!;
+        public string[] KitapBhatirlatici { get; set; } = default!;
 
         public int[] KitapCdoktora { get; set; } = default!;
         public int[] KitapCkitap { get; set; } = default!;
         public int[] KitapCyazarsayisi { get; set; } = default!;
-        public string[]? KitapChatirlatici { get; set; } = default!;
+        public string[] KitapChatirlatici { get; set; } = default!;
 
         public int[] KitapDdoktora { get; set; } = default!;
         public int[] KitapDbolumSayisi { get; set; } = default!;
         public int[] KitapDyazarsayisi { get; set; } = default!;
-        public string[]? KitapDhatirlatici { get; set; } = default!;
+        public string[] KitapDhatirlatici { get; set; } = default!;
 
         private Kitap KitapHesapla()
         {
@@ -669,13 +669,13 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
         public int[] ToplantiAdoktora { get; set; } = default!;
         public int[] ToplantiAsayi { get; set; } = default!;
         public int[] ToplantiAyazarsayisi { get; set; } = default!;
-        public string[]? ToplantiAhatirlatici { get; set; } = default!;
+        public string[] ToplantiAhatirlatici { get; set; } = default!;
 
 
         public int[] ToplantiBdoktora { get; set; } = default!;
         public int[] ToplantiBsayi { get; set; } = default!;
         public int[] ToplantiByazarsayisi { get; set; } = default!;
-        public string[]? ToplantiBhatirlatici { get; set; } = default!;
+        public string[] ToplantiBhatirlatici { get; set; } = default!;
 
 
         private Toplanti ToplantiHesapla()

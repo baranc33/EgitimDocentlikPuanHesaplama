@@ -3,12 +3,12 @@ using DocentlikPuanHesaplama.Models.DocentModels;
 
 namespace DocentlikPuanHesaplama.Helper.ConvertToModel
 {
-    public class FilolojiConvert
+    public class HukukConvert
     {
-        static public FilolojiEntity EgitimModelToEgitimEntity(FilolojiDocentModel model)
+        static public HukukEntity EgitimModelToEgitimEntity(HukukDocentModel model)
         {
 
-            FilolojiEntity entity = new();
+            HukukEntity entity = new();
 
             /***  U L U S L A R    A R A S I   ***/
             if (model.UluslarArasiAdoktora.Count() > 1)

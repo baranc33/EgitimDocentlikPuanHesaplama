@@ -1,6 +1,6 @@
 ﻿namespace DocentlikPuanHesaplama.IdentityModel.Entity
 {
-    public class HukunEntity
+    public class HukukEntity
     {
         public int Id { get; set; }
         public string MyUserId { get; set; } = "";
@@ -49,47 +49,48 @@
 
         #region Yayin
         public string? YayinAdoktora { get; set; }
-        public string? YayinAyayin { get; set; }
+        public string? YayinAkitap { get; set; }
         public string? YayinAyazarsayisi { get; set; }
         public string? YayinAhatirlatici { get; set; }
         public int YayinACount { get; set; } = 0;
 
         public string? YayinBdoktora { get; set; }
-        public string? YayinByayin { get; set; }
+        public string? YayinBbolumSayisi { get; set; }
         public string? YayinByazarsayisi { get; set; }
         public string? YayinBhatirlatici { get; set; }
         public int YayinBCount { get; set; } = 0;
 
         public string? YayinCdoktora { get; set; }
-        public string? YayinCyayin { get; set; }
+        public string? YayinCkitap { get; set; }
         public string? YayinCyazarsayisi { get; set; }
         public string? YayinChatirlatici { get; set; }
         public int YayinCCount { get; set; } = 0;
 
         public string? YayinDdoktora { get; set; }
-        public string? YayinDyayin { get; set; }
+        public string? YayinDbolumSayisi { get; set; }
         public string? YayinDyazarsayisi { get; set; }
         public string? YayinDhatirlatici { get; set; }
         public int YayinDCount { get; set; } = 0;
 
         public string? YayinEdoktora { get; set; }
-        public string? YayinEyayin { get; set; }
+        public string? YayinEmakalesayisi { get; set; }
         public string? YayinEyazarsayisi { get; set; }
         public string? YayinEhatirlatici { get; set; }
         public int YayinECount { get; set; } = 0;
 
         public string? YayinFdoktora { get; set; }
-        public string? YayinFyayin { get; set; }
+        public string? YayinFmakalesayisi { get; set; }
         public string? YayinFyazarsayisi { get; set; }
         public string? YayinFhatirlatici { get; set; }
         public int YayinFCount { get; set; } = 0;
 
         public string? YayinGdoktora { get; set; }
-        public string? YayinGyayin { get; set; }
+        public string? YayinGmakalesayisi { get; set; }
         public string? YayinGyazarsayisi { get; set; }
         public string? YayinGhatirlatici { get; set; }
         public int YayinGCount { get; set; } = 0;
         #endregion
+
 
 
 
@@ -101,7 +102,7 @@
         public int KitapACount { get; set; } = 0;
 
         public string? KitapBdoktora { get; set; }
-        public string? KitapBkitap { get; set; }
+        public string? KitapBbolumSayisi { get; set; }
         public string? KitapByazarsayisi { get; set; }
         public string? KitapBhatirlatici { get; set; }
         public int KitapBCount { get; set; } = 0;
@@ -113,7 +114,7 @@
         public int KitapCCount { get; set; } = 0;
 
         public string? KitapDdoktora { get; set; }
-        public string? KitapDkitap { get; set; }
+        public string? KitapDbolumSayisi { get; set; }
         public string? KitapDyazarsayisi { get; set; }
         public string? KitapDhatirlatici { get; set; }
         public int KitapDCount { get; set; } = 0;

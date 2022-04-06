@@ -41,8 +41,7 @@ namespace DocentlikPuanHesaplama.Controllers
           
             return View();
         }
-    
-     
+         
         [HttpPost]
         public IActionResult Egitim(EgitimDocentModel model)
         {

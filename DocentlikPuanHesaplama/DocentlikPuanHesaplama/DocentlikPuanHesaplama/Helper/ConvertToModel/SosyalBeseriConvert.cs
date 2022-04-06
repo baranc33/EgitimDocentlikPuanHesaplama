@@ -3,12 +3,12 @@ using DocentlikPuanHesaplama.Models.DocentModels;
 
 namespace DocentlikPuanHesaplama.Helper.ConvertToModel
 {
-    public class FilolojiConvert
+    public class SosyalBeseriConvert
     {
-        static public FilolojiEntity EgitimModelToEgitimEntity(FilolojiDocentModel model)
+        static public SosyalEntity EgitimModelToEgitimEntity(SosyalBeseriDocentModel model)
         {
 
-            FilolojiEntity entity = new();
+            SosyalEntity entity = new();
 
             /***  U L U S L A R    A R A S I   ***/
             if (model.UluslarArasiAdoktora.Count() > 1)
@@ -38,6 +38,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.UluslarArasiBCount = model.UluslarArasiBdoktora.Count() - 1;
                 }
             }
+           
             if (model.UluslarArasiCdoktora.Count() > 1)
             {
                 for (int i = 1; i < model.UluslarArasiCdoktora.Count(); i++)
@@ -51,7 +52,19 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.UluslarArasiCCount = model.UluslarArasiCdoktora.Count() - 1;
                 }
             }
+            if (model.UluslarArasiDdoktora.Count() > 1)
+            {
+                for (int i = 1; i < model.UluslarArasiDdoktora.Count(); i++)
+                {
 
+                    if (model.UluslarArasiDhatirlatici[i] != null) entity.UluslarArasiDhatirlatici += model.UluslarArasiDhatirlatici[i].ToString() + "/";
+                    else entity.UluslarArasiDhatirlatici += "./";
+                    entity.UluslarArasiDdoktora += model.UluslarArasiDdoktora[i].ToString() + "/";
+                    entity.UluslarArasiDyazarsayisi += model.UluslarArasiDyazarsayisi[i].ToString() + "/";
+                    entity.UluslarArasiDmakalesayisi += model.UluslarArasiDmakalesayisi[i].ToString() + "/";
+                    entity.UluslarArasiDCount = model.UluslarArasiDdoktora.Count() - 1;
+                }
+            }
             /********  U L U S A L  ********/
             if (model.UlusalAdoktora.Count() > 1)
             {

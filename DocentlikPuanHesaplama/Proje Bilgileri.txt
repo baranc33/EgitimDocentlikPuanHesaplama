@@ -11,6 +11,23 @@ Admin Bölümü olacak bu sayede admin bloğunu düzenliyebilcek
 
 
 
+
+
+Bilim Dahil Etme
+
+-DocentModelini oluşturmak
+-Identity Entity Model Kontrolü
+-Conver Model
+-controller 
+-front end
+
+
+
+
+
+
+
+
 Eğitim Bilimleri		+
 Filoloji Temel Alanı		+
 Hukuk Temel Alanı		-
@@ -38,8 +55,6 @@ Ziraat, Orman ve Su Ürünleri Temel Alanı
 
 
 - Güzel Sanatlar Temel Alanı
-
-
 
 
 
@@ -81,10 +96,7 @@ DocentHesapla@gmail.com
 hesaplaDocent33
 
 
-
-// java Scriptle gelen modellerin doldurulması gerekiyor
-
-
+ 
 
 
 

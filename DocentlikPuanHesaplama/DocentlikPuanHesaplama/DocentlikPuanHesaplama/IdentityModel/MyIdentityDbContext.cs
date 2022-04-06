@@ -18,8 +18,8 @@ namespace DocentlikPuanHesaplama.IdentityModel
         public DbSet<EgitimEntity> EgitimEntities { get; set; }= default!;
         public DbSet<FenEntity> FenEntities { get; set; }= default!;
         public DbSet<FilolojiEntity> FilolojiEntities { get; set; }= default!;
-        public DbSet<HukunEntity> HukukEntities { get; set; }= default!;
-        public DbSet<IlahiyatEntity> IlahiyatEntities { get; set; }= default!;
+        public DbSet<HukukEntity> HukukEntities { get; set; }= default!;
+        public DbSet<ilahiyatEntity> IlahiyatEntities { get; set; }= default!;
         public DbSet<MimarlikEntity> MimarlikEntities { get; set; }= default!;
         public DbSet<MuhendisEntity> MuhendisEntities { get; set; }= default!;
         public DbSet<SaglikEntity> SaglikEntities { get; set; }= default!;
