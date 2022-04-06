@@ -38,13 +38,13 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiAdoktora.Count(); i++)
                 {
-                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                   
                     if (UluslarArasiAdoktora[i] == 0 && UluslarArasiAmakalesayisi[i] > 0 && UluslarArasiAyazarsayisi[i] > 0) // doktora öncesi
                     {
                         model.HamDoktoraOncesiPuan += (20 * UluslarArasiAmakalesayisi[i]) / (decimal)UluslarArasiAyazarsayisi[i];
                     }
                     else if (UluslarArasiAdoktora[i] == 1 && UluslarArasiAmakalesayisi[i] > 0 && UluslarArasiAyazarsayisi[i] > 0)
-                    {// else yazarsam 0  girilen değerleride alır
+                    {
                         model.HamDoktoraSonrasiPuan += (20 * UluslarArasiAmakalesayisi[i]) / (decimal)UluslarArasiAyazarsayisi[i];
                     }
                 }
@@ -54,13 +54,13 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiBdoktora.Count(); i++)
                 {
-                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                   
                     if (UluslarArasiBdoktora[i] == 0 && UluslarArasiBmakalesayisi[i] > 0 && UluslarArasiByazarsayisi[i] > 0) // doktora öncesi
                     {
                         model.HamDoktoraOncesiPuan += (10 * UluslarArasiBmakalesayisi[i]) / (decimal)UluslarArasiByazarsayisi[i];
                     }
                     else if (UluslarArasiBdoktora[i] == 1 && UluslarArasiBmakalesayisi[i] > 0 && UluslarArasiByazarsayisi[i] > 0)
-                    {// else yazarsam 0  girilen değerleride alır
+                    {
                         model.HamDoktoraSonrasiPuan += (10 * UluslarArasiBmakalesayisi[i]) / (decimal)UluslarArasiByazarsayisi[i];
                     }
                 }
@@ -70,13 +70,13 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiCdoktora.Count(); i++)
                 {
-                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                   
                     if (UluslarArasiCdoktora[i] == 0 && UluslarArasiCmakalesayisi[i] > 0 && UluslarArasiCyazarsayisi[i] > 0) // doktora öncesi
                     {
                         model.HamDoktoraOncesiPuan += (5 * UluslarArasiCmakalesayisi[i]) / (decimal)UluslarArasiCyazarsayisi[i];
                     }
                     else if (UluslarArasiCdoktora[i] == 1 && UluslarArasiCmakalesayisi[i] > 0 && UluslarArasiCyazarsayisi[i] > 0)
-                    {// else yazarsam 0  girilen değerleride alır
+                    {
                         model.HamDoktoraSonrasiPuan += (5 * UluslarArasiCmakalesayisi[i]) / (decimal)UluslarArasiCyazarsayisi[i];
                     }
                 }
@@ -85,13 +85,13 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiDdoktora.Count(); i++)
                 {
-                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                   
                     if (UluslarArasiDdoktora[i] == 0 && UluslarArasiDmakalesayisi[i] > 0 && UluslarArasiDyazarsayisi[i] > 0) // doktora öncesi
                     {
                         model.HamDoktoraOncesiPuan += (5 * UluslarArasiDmakalesayisi[i]) / (decimal)UluslarArasiDyazarsayisi[i];
                     }
                     else if (UluslarArasiDdoktora[i] == 1 && UluslarArasiDmakalesayisi[i] > 0 && UluslarArasiDyazarsayisi[i] > 0)
-                    {// else yazarsam 0  girilen değerleride alır
+                    {
                         model.HamDoktoraSonrasiPuan += (5 * UluslarArasiDmakalesayisi[i]) / (decimal)UluslarArasiDyazarsayisi[i];
                     }
                 }
@@ -100,7 +100,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
 
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
-            //model.ErrorMessage = "1. Uluslararası Makale  maddesinin a veya b bentleri kapsamında en az 20 puan almak zorunludur";
+            
             return model;
         }
 
@@ -787,9 +787,9 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
         #endregion
 
-        //public decimal message.ToplamNetPuan { get; set; } = 0;
-        //public decimal   message.ToplamDoktoraOncesi  { get; set; } = 0;
-        //public decimal message.ToplamDoktoraSonras { get; set; } = 0;
+       
+        
+        
 
 
 

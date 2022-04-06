@@ -764,9 +764,9 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
         #endregion
 
-        //public decimal message.ToplamNetPuan { get; set; } = 0;
-        //public decimal   message.ToplamDoktoraOncesi  { get; set; } = 0;
-        //public decimal message.ToplamDoktoraSonras { get; set; } = 0;
+       
+        
+        
 
 
 

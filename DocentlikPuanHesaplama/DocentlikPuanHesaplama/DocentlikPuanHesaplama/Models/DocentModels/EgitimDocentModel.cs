@@ -36,7 +36,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiAdoktora.Count(); i++)
                 {
-                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                    
                     if (UluslarArasiAdoktora[i] == 0 && UluslarArasiAmakalesayisi[i] > 0 && UluslarArasiAyazarsayisi[i] > 0) // doktora öncesi
                     {
                         model.HamDoktoraOncesiPuan += (20 * UluslarArasiAmakalesayisi[i]) /(decimal)UluslarArasiAyazarsayisi[i];
@@ -52,7 +52,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiBdoktora.Count(); i++)
                 {
-                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                    
                     if (UluslarArasiBdoktora[i] == 0 && UluslarArasiBmakalesayisi[i] > 0 && UluslarArasiByazarsayisi[i] > 0) // doktora öncesi
                     {
                         model.HamDoktoraOncesiPuan += (15 * UluslarArasiBmakalesayisi[i]) /(decimal)UluslarArasiByazarsayisi[i];
@@ -70,7 +70,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiCdoktora.Count(); i++)
                 {
-                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                    
                     if (UluslarArasiCdoktora[i] == 0 && UluslarArasiCmakalesayisi[i] > 0 && UluslarArasiCyazarsayisi[i] > 0) // doktora öncesi
                     {
                         model.HamDoktoraOncesiPuan += (5 * UluslarArasiCmakalesayisi[i]) /(decimal)UluslarArasiCyazarsayisi[i];
