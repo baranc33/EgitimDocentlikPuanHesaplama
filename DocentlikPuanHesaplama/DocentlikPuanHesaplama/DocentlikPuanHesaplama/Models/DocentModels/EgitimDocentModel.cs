@@ -457,11 +457,11 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 {
                     if (AtiflarBdoktora[i] == 0 && AtiflarBatif[i] > 0)
                     {
-                        model.HamDoktoraOncesiPuan += 3 * AtiflarBatif[i];
+                        model.HamDoktoraOncesiPuan += 2 * AtiflarBatif[i];
                     }
                     else if (AtiflarBdoktora[i] == 1 && AtiflarBatif[i] > 0)
                     {
-                        model.HamDoktoraSonrasiPuan += 3 * AtiflarBatif[i];
+                        model.HamDoktoraSonrasiPuan += 2 * AtiflarBatif[i];
                     }
                 }
             }
@@ -471,11 +471,11 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 {
                     if (AtiflarCdoktora[i] == 0 && AtiflarCatif[i] > 0)
                     {
-                        model.HamDoktoraOncesiPuan += 3 * AtiflarCatif[i];
+                        model.HamDoktoraOncesiPuan += 1 * AtiflarCatif[i];
                     }
                     else if (AtiflarCdoktora[i] == 1 && AtiflarCatif[i] > 0)
                     {
-                        model.HamDoktoraSonrasiPuan += 3 * AtiflarCatif[i];
+                        model.HamDoktoraSonrasiPuan += 1 * AtiflarCatif[i];
                     }
                 }
             }

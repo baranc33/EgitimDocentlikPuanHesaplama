@@ -27,7 +27,10 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
         public int[] UluslarArasiCyazarsayisi { get; set; } = default!;
         public string[] UluslarArasiChatirlatici { get; set; } = default!;
 
-
+        public int[] UluslarArasiDdoktora { get; set; } = default!;
+        public int[] UluslarArasiDmakalesayisi { get; set; } = default!;
+        public int[] UluslarArasiDyazarsayisi { get; set; } = default!;
+        public string[] UluslarArasiDhatirlatici { get; set; } = default!;
         private UluslarArasi UluslarArasiHesapla()
         {
             UluslarArasi model = new();
@@ -78,6 +81,24 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                     }
                 }
             }
+            if (UluslarArasiDdoktora.Count() > 1)
+            {
+                for (int i = 1; i < UluslarArasiDdoktora.Count(); i++)
+                {
+                    // 0. indexteki numune olduğundan dolayı almadım diğer 2 parametre 0 girilmesine tedbiren
+                    if (UluslarArasiDdoktora[i] == 0 && UluslarArasiDmakalesayisi[i] > 0 && UluslarArasiDyazarsayisi[i] > 0) // doktora öncesi
+                    {
+                        model.HamDoktoraOncesiPuan += (5 * UluslarArasiDmakalesayisi[i]) / (decimal)UluslarArasiDyazarsayisi[i];
+                    }
+                    else if (UluslarArasiDdoktora[i] == 1 && UluslarArasiDmakalesayisi[i] > 0 && UluslarArasiDyazarsayisi[i] > 0)
+                    {// else yazarsam 0  girilen değerleride alır
+                        model.HamDoktoraSonrasiPuan += (5 * UluslarArasiDmakalesayisi[i]) / (decimal)UluslarArasiDyazarsayisi[i];
+                    }
+                }
+            }
+
+
+
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
             //model.ErrorMessage = "1. Uluslararası Makale  maddesinin a veya b bentleri kapsamında en az 20 puan almak zorunludur";
             return model;
@@ -136,13 +157,13 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 }
 
             }
-            // 2-2  
-            if (sart < 2 || (sart + sartB < 4)) model.Error = true;
+
+            if (sart < 2 || (sart == 2 && sartB == 0)) model.Error = true;
 
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
 
 
-            model.ErrorMessage = "2. Ulusal Makale İkisi bu maddenin a bendi kapsamında olmak üzere en az dört yayın yapmak";
+            model.ErrorMessage = "2. Ulusal Makale İkisi bu maddenin a bendi kapsamında olmak üzere en az üç yayın yapmak";
             return model;
         }
 
@@ -391,12 +412,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 }
 
             }
-
-            if (model.HamDoktoraOncesiPuan + model.HamDoktoraSonrasiPuan == 0)
-            {
-                model.Error = true;
-                model.ErrorMessage = "4. Kitap maddesi kapsamında a, b veya c bentlerinden en az bir yayın zorunludur";
-            }
+ 
 
             if (KitapDdoktora.Count() > 1)
             {
