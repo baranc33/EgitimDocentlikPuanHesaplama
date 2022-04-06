@@ -36,6 +36,8 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < UluslarArasiAdoktora.Count(); i++)
                 {
+
+                    // puan * makale sayısı / yazar sayısı
                     
                     if (UluslarArasiAdoktora[i] == 0 && UluslarArasiAmakalesayisi[i] > 0 && UluslarArasiAyazarsayisi[i] > 0) // doktora öncesi
                     {

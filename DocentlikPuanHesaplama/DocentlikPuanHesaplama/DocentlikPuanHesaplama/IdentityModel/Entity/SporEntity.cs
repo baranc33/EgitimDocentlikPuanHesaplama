@@ -13,6 +13,7 @@
         public string? UluslarArasiAyazarsayisi { get; set; }
         public string? UluslarArasiAsirasi { get; set; }
         public string? UluslarArasiAhatirlatici { get; set; }
+        public string? UluslarArasiAbasYazar { get; set; } = default!;
         public int UluslarArasiACount { get; set; } = 0;
 
         public string? UluslarArasiBdoktora { get; set; }
@@ -20,6 +21,7 @@
         public string? UluslarArasiByazarsayisi { get; set; }
         public string? UluslarArasiBsirasi { get; set; }
         public string? UluslarArasiBhatirlatici { get; set; }
+        public string? UluslarArasiBbasYazar { get; set; } = default!;
         public int UluslarArasiBCount { get; set; } = 0;
 
         public string? UluslarArasiCdoktora { get; set; }
@@ -27,6 +29,7 @@
         public string? UluslarArasiCyazarsayisi { get; set; }
         public string? UluslarArasiCsirasi { get; set; }
         public string? UluslarArasiChatirlatici { get; set; }
+        public string? UluslarArasiCbasYazar { get; set; } = default!;
         public int UluslarArasiCCount { get; set; } = 0;
 
      
@@ -41,6 +44,7 @@
         public string? UlusalAyazarsayisi { get; set; }
         public string? UlusalAsirasi { get; set; }
         public string? UlusalAhatirlatici { get; set; }
+        public string? UlusalAbasYazar { get; set; } = default!;
         public int UlusalACount { get; set; } = 0;
 
 
@@ -49,6 +53,7 @@
         public string? UlusalByazarsayisi { get; set; }
         public string? UlusalBsirasi { get; set; }
         public string? UlusalBhatirlatici { get; set; }
+        public string? UlusalBbasYazar { get; set; } = default!;
         public int UlusalBCount { get; set; } = 0;
 
         #endregion
@@ -82,18 +87,24 @@
         public string? YayinEmakalesayisi { get; set; }
         public string? YayinEyazarsayisi { get; set; }
         public string? YayinEhatirlatici { get; set; }
+        public string? YayinEsirasi { get; set; } = default!;
+        public string? YayinEbasYazar { get; set; } = default!;
         public int YayinECount { get; set; } = 0;
 
         public string? YayinFdoktora { get; set; }
         public string? YayinFmakalesayisi { get; set; }
         public string? YayinFyazarsayisi { get; set; }
         public string? YayinFhatirlatici { get; set; }
+        public string? YayinFbasYazar { get; set; } = default!;
+        public string? YayinFsirasi { get; set; } = default!;
         public int YayinFCount { get; set; } = 0;
 
         public string? YayinGdoktora { get; set; }
         public string? YayinGmakalesayisi { get; set; }
         public string? YayinGyazarsayisi { get; set; }
         public string? YayinGhatirlatici { get; set; }
+        public string? YayinGbasYazar { get; set; } = default!;
+        public string? YayinGsirasi { get; set; } = default!;
         public int YayinGCount { get; set; } = 0;
         #endregion
 

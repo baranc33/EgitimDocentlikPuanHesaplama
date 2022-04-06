@@ -22,6 +22,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.UluslarArasiAyazarsayisi += model.UluslarArasiAyazarsayisi[i].ToString() + "/";
                     entity.UluslarArasiAsirasi += model.UluslarArasiAsirasi[i].ToString() + "/";
                     entity.UluslarArasiAmakalesayisi += model.UluslarArasiAmakalesayisi[i].ToString() + "/";
+                    entity.UluslarArasiAbasYazar += model.UluslarArasiAbasYazar[i].ToString() + "/";
                     entity.UluslarArasiACount = model.UluslarArasiAdoktora.Count() - 1;
                 }
             }
@@ -37,6 +38,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.UluslarArasiByazarsayisi += model.UluslarArasiByazarsayisi[i].ToString() + "/";
                     entity.UluslarArasiBmakalesayisi += model.UluslarArasiBmakalesayisi[i].ToString() + "/";
                     entity.UluslarArasiBsirasi += model.UluslarArasiBsirasi[i].ToString() + "/";
+                    entity.UluslarArasiBbasYazar += model.UluslarArasiBbasYazar[i].ToString() + "/";
                     entity.UluslarArasiBCount = model.UluslarArasiBdoktora.Count() - 1;
                 }
             }
@@ -51,6 +53,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.UluslarArasiCyazarsayisi += model.UluslarArasiCyazarsayisi[i].ToString() + "/";
                     entity.UluslarArasiCmakalesayisi += model.UluslarArasiCmakalesayisi[i].ToString() + "/";
                     entity.UluslarArasiCsirasi += model.UluslarArasiCsirasi[i].ToString() + "/";
+                    entity.UluslarArasiCbasYazar += model.UluslarArasiCbasYazar[i].ToString() + "/";
                     entity.UluslarArasiCCount = model.UluslarArasiCdoktora.Count() - 1;
                 }
             }
@@ -67,6 +70,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.UlusalAyazarsayisi += model.UlusalAyazarsayisi[i].ToString() + "/";
                     entity.UlusalAmakalesayisi += model.UlusalAmakalesayisi[i].ToString() + "/";
                     entity.UlusalAsirasi += model.UlusalAsirasi[i].ToString() + "/";
+                    entity.UlusalAbasYazar += model.UlusalAbasYazar[i].ToString() + "/";
                     entity.UlusalACount = model.UlusalAdoktora.Count() - 1;
                 }
             }
@@ -82,6 +86,7 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.UlusalByazarsayisi += model.UlusalByazarsayisi[i].ToString() + "/";
                     entity.UlusalBmakalesayisi += model.UlusalBmakalesayisi[i].ToString() + "/";
                     entity.UlusalBsirasi += model.UlusalBsirasi[i].ToString() + "/";
+                    entity.UlusalBbasYazar += model.UlusalBbasYazar[i].ToString() + "/";
                     entity.UlusalBCount = model.UlusalBdoktora.Count() - 1;
                 }
             }
@@ -154,7 +159,9 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     else entity.YayinEhatirlatici += "./";
                     entity.YayinEdoktora += model.YayinEdoktora[i].ToString() + "/";
                     entity.YayinEyazarsayisi += model.YayinEyazarsayisi[i].ToString() + "/";
+                    entity.YayinEsirasi += model.YayinEsirasi[i].ToString() + "/";
                     entity.YayinEmakalesayisi += model.YayinEmakalesayisi[i].ToString() + "/";
+                    entity.YayinEbasYazar += model.YayinEbasYazar[i].ToString() + "/";
                     entity.YayinECount = model.YayinEdoktora.Count() - 1;
                 }
             }
@@ -170,6 +177,8 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.YayinFdoktora += model.YayinFdoktora[i].ToString() + "/";
                     entity.YayinFyazarsayisi += model.YayinFyazarsayisi[i].ToString() + "/";
                     entity.YayinFmakalesayisi += model.YayinFmakalesayisi[i].ToString() + "/";
+                    entity.YayinFsirasi += model.YayinFsirasi[i].ToString() + "/";
+                    entity.YayinFbasYazar += model.YayinFbasYazar[i].ToString() + "/";
                     entity.YayinFCount = model.YayinFdoktora.Count() - 1;
                 }
             }
@@ -185,6 +194,8 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.YayinGdoktora += model.YayinGdoktora[i].ToString() + "/";
                     entity.YayinGyazarsayisi += model.YayinGyazarsayisi[i].ToString() + "/";
                     entity.YayinGmakalesayisi += model.YayinGmakalesayisi[i].ToString() + "/";
+                    entity.YayinGsirasi += model.YayinGsirasi[i].ToString() + "/";
+                    entity.YayinGbasYazar += model.YayinGbasYazar[i].ToString() + "/";
                     entity.YayinGCount = model.YayinGdoktora.Count() - 1;
                 }
             }

@@ -8,10 +8,15 @@ takım bölümü olacak -içersinde keiplerin kısa blokları olcak
 Admin Bölümü olacak bu sayede admin bloğunu düzenliyebilcek
 
 
+Makleler A formülüne göre hrsapla
+Kitaplar B formülüne göre hesaplanıyr
 
+3. bölümde hem makale var hem kitap
+- kitap => kitaba  || m=> m 
 
-
-
+kitap bölümünde neden ekstradan belirtmiş bu durumu ?
+2. eğer bunlar ayrı hesaplanıyorsa  
+3.bölümde niye makale ile kitabı aynı kategori koyuyor
 
 Bilim Dahil Etme
 
