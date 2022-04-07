@@ -27,20 +27,30 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
         public int[] SinemaIDoktora { get; set; } = default!;
         public int[] SinemaIEtkinlikSayisi { get; set; } = default!;
-        public string? SinemaIHatirlatici { get; set; }
+        public string[] SinemaIHatirlatici { get; set; } = default!;
 
         public int[] SinemaIIDoktora { get; set; } = default!;
         public int[] SinemaIIEtkinlikSayisi { get; set; } = default!;
-        public string? SinemaIIHatirlatici { get; set; }
+        public string[] SinemaIIHatirlatici { get; set; } = default!;
 
 
 
         public int[] SinemaIIIDoktora { get; set; } = default!;
         public int[] SinemaIIIEtkinlikSayisi { get; set; } = default!;
-        public string? SinemaIIIHatirlatici { get; set; }
+        public string[] SinemaIIIHatirlatici { get; set; } = default!;
 
-      
-            private Sinema SinemaHesapla()
+        public int[] SinemaIVDoktora { get; set; } = default!;
+        public int[] SinemaIVEtkinlikSayisi { get; set; } = default!;
+        public int[] SinemaIVTur { get; set; } = default!; /* 0-kitap 12.5  // 1-kitapçeviri 6.25 //    2-makale 6.25  / 3-makale çeviri 2.5*/
+        public string[] SinemaIVHatirlatici { get; set; } = default!;
+
+
+
+        public int[] SinemaVDoktora { get; set; } = default!;
+        public int[] SinemaVEtkinlikSayisi { get; set; } = default!;
+        public string[] SinemaVHatirlatici { get; set; } = default!;
+
+        private Sinema SinemaHesapla()
         {
             Sinema model = new();
             decimal Madde1 = 0;
@@ -89,7 +99,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 {
                     if (SinemaIIIDoktora[i] == 0 && SinemaIIIEtkinlikSayisi[i] > 0)
                     {
-                        model.HamDoktoraOncesiPuan += 7.5m * (decimal) SinemaIIIEtkinlikSayisi[i];
+                        model.HamDoktoraOncesiPuan += 7.5m * (decimal)SinemaIIIEtkinlikSayisi[i];
 
                     }
                     else if (SinemaIIIDoktora[i] == 1 && SinemaIIIEtkinlikSayisi[i] > 0)
@@ -100,8 +110,22 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 }
             }
 
-
-
+            if (SinemaIVDoktora.Count() > 1)
+            {
+                for (int i = 1; i < SinemaIVDoktora.Count(); i++)
+                {
+                    decimal iValue = SinemaMadde4(SinemaIVTur[i]);
+                    if (SinemaIVDoktora[i] == 0 && SinemaIVEtkinlikSayisi[i] > 0)
+                    {
+                        model.HamDoktoraOncesiPuan += iValue * (decimal)SinemaIVEtkinlikSayisi[i];
+                    }
+                    else if (SinemaIVDoktora[i] == 1 && SinemaIVEtkinlikSayisi[i] > 0)
+                    {
+                        model.HamDoktoraSonrasiPuan += iValue * (decimal)SinemaIVEtkinlikSayisi[i];
+                        Madde4 += iValue * (decimal)SinemaIVEtkinlikSayisi[i];
+                    }
+                }
+            }
 
             if (SinemaVDoktora.Count() > 1)
             {
@@ -110,7 +134,6 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                     if (SinemaVDoktora[i] == 0 && SinemaVEtkinlikSayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += 5.0m * (decimal)SinemaVEtkinlikSayisi[i];
-
                     }
                     else if (SinemaVDoktora[i] == 1 && SinemaVEtkinlikSayisi[i] > 0)
                     {
@@ -120,36 +143,28 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 }
             }
 
-
-
+            /*
+       I- 40
+      II -10 
+      III 15
+      IV-25
+      V - 10
+      TOPLAM 100  - 90 SI doktora sonrası
+       */
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
+            if (Madde1<40|| Madde2 < 10||Madde3<15 || Madde4<25 || Madde5<10 ||model.HamDoktoraSonrasiPuan>90||model.NetPuan<100)
+            {
+                model.Error = true;
+            }
+
+
+
 
             return model;
         }
 
 
-        public int[] SinemaIVDoktora { get; set; } = default!;
-        public int[] SinemaIVEtkinlikSayisi { get; set; } = default!;
-        public int[] SinemaIVTur { get; set; } = default!; /* 0-kitap 12.5  // 1-kitapçeviri 6.25 //    2-makale 6.25  / 3-makale çeviri 2.5*/
-        public string? SinemaIVHatirlatici { get; set; }
-
-
-
-        public int[] SinemaVDoktora { get; set; } = default!;
-        public int[] SinemaVEtkinlikSayisi { get; set; } = default!;
-        public string? SinemaVHatirlatici { get; set; }
-
-
-
-
-        /*
-         I- 40
-        III 15
-        IV-25
-        II -10 
-        V - 10
-        TOPLAM 100  - 90 SI doktora sonrası
-         */
+      
         #endregion
 
 
@@ -172,8 +187,43 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             message.NetToplamDoktoraSonrasi = 0;
             message.ToplamDoktoraOncesi = 0;
             message.ToplamDoktoraSonrasi = 0;
-             
 
+            Sinema Sinema = SinemaHesapla();
+            if (Sinema != null)
+            {
+                message.ToplamNetPuan += Sinema.NetPuan;
+                message.ToplamDoktoraOncesi += Sinema.HamDoktoraOncesiPuan;
+                message.ToplamDoktoraSonrasi += Sinema.HamDoktoraSonrasiPuan;
+                ListMadde madde = new ListMadde()
+                {
+                    BolumAdi = Sinema.BolumAdi,
+                    HamDoktoraOncesi = Sinema.HamDoktoraOncesiPuan,
+                    HamDoktoraSonrasi = Sinema.HamDoktoraSonrasiPuan,
+                    NetPuan = Sinema.NetPuan,
+                    Error = Sinema.Error,
+                    ErrorMessage = Sinema.ErrorMessage
+                };
+                if (Sinema.Error == true) message.Error = true;
+
+                message.NetToplamDoktoraSonrasi += Sinema.HamDoktoraSonrasiPuan;
+                
+                message.Bolumler.Add(madde);
+            }
+
+
+
+
+
+
+
+
+
+            if (message.Bolumler != null) message.Colum = message.Bolumler.Count();
+            else
+            {
+                message.Colum = 0;
+                message.Error = true;
+            }
             return message;
         }
 
