@@ -845,7 +845,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
 
 
-            Patent Patent = new();
+            Patent Patent = PatentHesapla();
             if (Patent != null)
             {
                 message.ToplamNetPuan += Patent.NetPuan;
