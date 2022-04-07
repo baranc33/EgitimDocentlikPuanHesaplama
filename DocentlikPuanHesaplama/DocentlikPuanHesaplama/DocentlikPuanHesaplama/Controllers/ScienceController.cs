@@ -200,38 +200,111 @@ namespace DocentlikPuanHesaplama.Controllers
 
 
         [HttpGet]
+        public IActionResult Muhendis()
+        {
+            ViewBag.OldData = false;
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Muhendis(MuhendislikDocentModel model)
+        {
+            TempData["model"] = JsonSerializer.Serialize(MuhendislikConvert.MuhendislikModelToMuhendislikEntity(model));
+
+            Messages message = new();
+            message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            TempData["lasturl"] = JsonSerializer.Serialize("Muhendis");
+            return RedirectToAction("Answer");
+        }
+
+
+
+
+
+        [HttpGet]
+        public IActionResult Fen()
+        {
+            ViewBag.OldData = false;
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Fen(FenDocentModel model)
+        {
+
+            TempData["model"] = JsonSerializer.Serialize(FenConvert.FenModelToFenEntity(model));
+
+            Messages message = new();
+            message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            TempData["lasturl"] = JsonSerializer.Serialize("Fen");
+            return RedirectToAction("Answer");
+        }
+
+
+
+
+        [HttpGet]
+        public IActionResult Ziraat()
+        {
+            ViewBag.OldData = false;
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Ziraat(ZiraatDocentModel model)
+        {
+
+            TempData["model"] = JsonSerializer.Serialize(ZiraatConvert.ZiraatModelToZiraatEntity(model));
+
+            Messages message = new();
+            message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            TempData["lasturl"] = JsonSerializer.Serialize("Ziraat");
+            return RedirectToAction("Answer");
+        }
+ 
+
+
+
+
+
+
+
+        [HttpGet]
         public IActionResult GuzelSanatlar()
         {
             return View();
         }
       
-        
-        [HttpGet]
-        public IActionResult Fen()
-        {
-            return View();
-        }
+     
         [HttpGet]
         public IActionResult Mimarlik()
         {
             return View();
         }
-        [HttpGet]
-        public IActionResult Muhendis()
-        {
-            return View();
-        }
+
         [HttpGet]
         public IActionResult Saglik()
         {
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Ziraat()
-        {
-            return View();
-        }
+ 
+
+
+
+
   
 
         [NonAction]

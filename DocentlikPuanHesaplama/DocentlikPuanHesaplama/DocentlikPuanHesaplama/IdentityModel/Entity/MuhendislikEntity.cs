@@ -1,6 +1,6 @@
 ﻿namespace DocentlikPuanHesaplama.IdentityModel.Entity
 {
-    public class MuhendisEntity
+    public class MuhendislikEntity
     {
         public int Id { get; set; }
         public string MyUserId { get; set; } = "";

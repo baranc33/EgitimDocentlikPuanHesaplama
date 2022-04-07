@@ -21,7 +21,7 @@ namespace DocentlikPuanHesaplama.IdentityModel
         public DbSet<HukukEntity> HukukEntities { get; set; }= default!;
         public DbSet<ilahiyatEntity> IlahiyatEntities { get; set; }= default!;
         public DbSet<MimarlikEntity> MimarlikEntities { get; set; }= default!;
-        public DbSet<MuhendisEntity> MuhendisEntities { get; set; }= default!;
+        public DbSet<MuhendislikEntity> MuhendisEntities { get; set; }= default!;
         public DbSet<SaglikEntity> SaglikEntities { get; set; }= default!;
         public DbSet<SosyalEntity> SosyalEntities { get; set; }= default!;
         public DbSet<SporEntity> SporEntities { get; set; }= default!;
