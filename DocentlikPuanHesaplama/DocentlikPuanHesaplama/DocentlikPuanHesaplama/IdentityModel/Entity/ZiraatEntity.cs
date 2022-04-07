@@ -7,12 +7,16 @@
             public MyUser MyUser { get; set; } = new MyUser();
 
 
+
+
+
         #region Makaleler
         public string? MakalelerAdoktora { get; set; }
         public string? MakalelerAmakalesayisi { get; set; }
         public string? MakalelerAyazarsayisi { get; set; }
         public string? MakalelerAsirasi { get; set; }
         public string? MakalelerAhatirlatici { get; set; }
+        public string? MakalelerAbasYazar { get; set; }
         public int MakalelerACount { get; set; } = 0;
 
 
@@ -21,6 +25,7 @@
         public string? MakalelerByazarsayisi { get; set; }
         public string? MakalelerBsirasi { get; set; }
         public string? MakalelerBhatirlatici { get; set; }
+        public string? MakalelerBbasYazar { get; set; }
         public int MakalelerBCount { get; set; } = 0;
 
         public string? MakalelerCdoktora { get; set; }
@@ -28,6 +33,7 @@
         public string? MakalelerCyazarsayisi { get; set; }
         public string? MakalelerCsirasi { get; set; }
         public string? MakalelerChatirlatici { get; set; }
+        public string? MakalelerCbasYazar { get; set; }
         public int MakalelerCCount { get; set; } = 0;
 
 
@@ -69,6 +75,7 @@
 
 
         #endregion
+
 
 
 

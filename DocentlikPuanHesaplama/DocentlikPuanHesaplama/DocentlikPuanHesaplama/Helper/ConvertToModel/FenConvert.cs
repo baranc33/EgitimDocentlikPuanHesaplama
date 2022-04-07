@@ -5,13 +5,13 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
 {
     static public class FenConvert   
     {
+
         static public FenEntity FenModelToFenEntity(FenDocentModel model)
         {
             /*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
 
             FenEntity entity = new();
-
-            /***  U L U S L A R    A R A S I   ***/
+            /***   M a k a l e l e r  ***/
             if (model.MakalelerAdoktora.Count() > 1)
             {
                 for (int i = 1; i < model.MakalelerAdoktora.Count(); i++)
@@ -22,6 +22,8 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.MakalelerAdoktora += model.MakalelerAdoktora[i].ToString() + "/";
                     entity.MakalelerAyazarsayisi += model.MakalelerAyazarsayisi[i].ToString() + "/";
                     entity.MakalelerAmakalesayisi += model.MakalelerAmakalesayisi[i].ToString() + "/";
+                    entity.MakalelerAbasYazar += model.MakalelerAbasYazar[i].ToString() + "/";
+                    entity.MakalelerAsirasi += model.MakalelerAsirasi[i].ToString() + "/";
                     entity.MakalelerACount = model.MakalelerAdoktora.Count() - 1;
                 }
             }
@@ -36,9 +38,12 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.MakalelerBdoktora += model.MakalelerBdoktora[i].ToString() + "/";
                     entity.MakalelerByazarsayisi += model.MakalelerByazarsayisi[i].ToString() + "/";
                     entity.MakalelerBmakalesayisi += model.MakalelerBmakalesayisi[i].ToString() + "/";
+                    entity.MakalelerBbasYazar += model.MakalelerBbasYazar[i].ToString() + "/";
+                    entity.MakalelerBsirasi += model.MakalelerBsirasi[i].ToString() + "/";
                     entity.MakalelerBCount = model.MakalelerBdoktora.Count() - 1;
                 }
             }
+
             if (model.MakalelerCdoktora.Count() > 1)
             {
                 for (int i = 1; i < model.MakalelerCdoktora.Count(); i++)
@@ -49,9 +54,12 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.MakalelerCdoktora += model.MakalelerCdoktora[i].ToString() + "/";
                     entity.MakalelerCyazarsayisi += model.MakalelerCyazarsayisi[i].ToString() + "/";
                     entity.MakalelerCmakalesayisi += model.MakalelerCmakalesayisi[i].ToString() + "/";
+                    entity.MakalelerCbasYazar += model.MakalelerCbasYazar[i].ToString() + "/";
+                    entity.MakalelerCsirasi += model.MakalelerCsirasi[i].ToString() + "/";
                     entity.MakalelerCCount = model.MakalelerCdoktora.Count() - 1;
                 }
             }
+
 
             /********  P A T E N T  ********/
             if (model.PatentAdoktora.Count() > 1)
@@ -93,7 +101,9 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     else entity.YayinAhatirlatici += "./";
                     entity.YayinAdoktora += model.YayinAdoktora[i].ToString() + "/";
                     entity.YayinAyazarsayisi += model.YayinAyazarsayisi[i].ToString() + "/";
-                    entity.YayinAmakalesayisi+= model.YayinAmakalesayisi[i].ToString() + "/";
+                    entity.YayinAmakalesayisi += model.YayinAmakalesayisi[i].ToString() + "/";
+                    entity.YayinAbasYazar += model.YayinAbasYazar[i].ToString() + "/";
+                    entity.YayinAsirasi += model.YayinAsirasi[i].ToString() + "/";
                     entity.YayinACount = model.YayinAdoktora.Count() - 1;
                 }
             }
@@ -108,6 +118,8 @@ namespace DocentlikPuanHesaplama.Helper.ConvertToModel
                     entity.YayinBdoktora += model.YayinBdoktora[i].ToString() + "/";
                     entity.YayinBmakalesayisi += model.YayinBmakalesayisi[i].ToString() + "/";
                     entity.YayinByazarsayisi += model.YayinByazarsayisi[i].ToString() + "/";
+                    entity.YayinBbasYazar += model.YayinBbasYazar[i].ToString() + "/";
+                    entity.YayinBsirasi += model.YayinBsirasi[i].ToString() + "/";
                     entity.YayinBCount = model.YayinBdoktora.Count() - 1;
                 }
             }
