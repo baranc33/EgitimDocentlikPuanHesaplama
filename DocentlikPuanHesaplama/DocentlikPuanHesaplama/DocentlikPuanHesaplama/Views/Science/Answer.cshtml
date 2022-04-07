@@ -9,7 +9,10 @@
 </head>
 <div style="text-align: left; color:black;" class="container" id="ErrorMessage">
     
-    <a asp-controller="Science" asp-action="Answer"  class="offset-9" style="text-align:right"> <i class="fa-solid fa-rotate-left"></i> Form Doldurma Sayfasına Geri Dön</a> 
+    <form action="Answer" method="get">
+        <input type="hidden" value="@ViewBag.link" name="link"/>
+    <button asp-controller="Science" asp-action="Answer"  class="btn btn-outline-secondary offset-9" style="text-align:right"> <i class="fa-solid fa-rotate-left"></i> Form Doldurma Sayfasına Geri Dön</button> 
+    </form>
     
     @{
         if (Model.Error==true )

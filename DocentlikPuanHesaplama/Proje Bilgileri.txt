@@ -20,13 +20,6 @@ Bilim Dahil Etme
 
 
 
-
-
-
-
-
-
-
 Eğitim Bilimleri		+
 Filoloji Temel Alanı		+
 Hukuk Temel Alanı		+
@@ -57,8 +50,10 @@ yayın farklı , patent var
 - Güzel Sanatlar Temel Alanı
 
 
+      \"UluslarArasiBhatirlatici\":null,\"UluslarArasiBbasYazar\":null,\"UluslarArasiBCount\":0,\"UluslarArasiCdoktora\":null,\"UluslarArasiCmakalesayisi\":null,\"UluslarArasiCyazarsayisi\":null,\"UluslarArasiCsirasi\":null,\"UluslarArasiChatirlatici\":null,\"UluslarArasiCbasYazar\":null,\"UluslarArasiCCount\":0,\"UlusalAdoktora\":null,\"UlusalAmakalesayisi\":null,\"UlusalAyazarsayisi\":null,\"UlusalAsirasi\":null,\"UlusalAhatirlatici\":null,\"UlusalAbasYazar\":null,\"UlusalACount\":0,\"YayinAdoktora\":null,\"YayinAmakalesayisi\":null,\"YayinAyazarsayisi\":null,\"YayinAsirasi\":null,\"YayinAhatirlatici\":null,\"YayinAbasYazar\":null,\"YayinACount\":0,\"YayinBdoktora\":null,\"YayinBmakalesayisi\":null,\"YayinBsirasi\":null,\"YayinBhatirlatici\":null,\"YayinByazarsayisi\":null,\"YayinBbasYazar\":null,\"YayinBCount\":0,\"YayinCdoktora\":null,\"YayinCbildiri\":null,\"YayinCyazarsayisi\":null,\"YayinChatirlatici\":null,\"YayinCCount\":0,\"YayinDdoktora\":null,\"YayinDbildiri\":null,\"YayinDyazarsayisi\":null,\"YayinDhatirlatici\":null,\"YayinDCount\":0,\"KitapAdoktora\":null,\"KitapAkitap\":null,\
+"KitapAyazarsayisi\":null,\"KitapAhatirlatici\":null,\"KitapACount\":0,\"KitapBdoktora\":null,\"KitapBbolumSayisi\":null,\"KitapByazarsayisi\":null,\"KitapBhatirlatici\":null,\"KitapBCount\":0,\"KitapCdoktora\":null,\"KitapCkitap\":null,\"KitapCyazarsayisi\":null,\"KitapChatirlatici\":null,\"KitapCCount\":0,\"KitapDdoktora\":null,\"KitapDbolumSayisi\":null,\"KitapDyazarsayisi\":null,\"KitapDhatirlatici\":null,\"KitapDCount\":0,\"PatentAdoktora\":\"1/1/1/\",\"PatentAsayi\":\"1/1/1/\",\"PatentAyazarsayisi\":\"1/1/1/\",\"PatentAhatirlatici\":\"./././\",\"PatentACount\":3,\"PatentBdoktora\":\"1/1/1/1/\",\"PatentBsayi\":\"1/1/1/1/\",\"PatentByazarsayisi\":\"1/1/1/1/\",\"PatentBhatirlatici\":\"././././\",\"PatentBCount\":4,\"AtiflarAdoktora\":null,\"AtiflarAatif\":null,\"AtiflarAhatirlatici\":null,\"AtiflarACount\":0,\"AtiflarBdoktora\":null,\"AtiflarBatif\":null,\"AtiflarBhatirlatici\":null,\"AtiflarBCount\":0,\"AtiflarCdoktora\":null,\"AtiflarCatif\":null,\"AtiflarChatirlatici\":null,\"AtiflarCCount\":0,\"Danisma
 
-
+\"DanismanlikACount\":0,\"DanismanlikBdoktora\":null,\"DanismanlikBseviye\":null,\"DanismanlikBsayi\":null,\"DanismanlikBhatirlatici\":null,\"DanismanlikBCount\":0,\"ArastirmaAdoktora\":null,\"ArastirmaAproje\":null,\"ArastirmaAhatirlatici\":null,\"ArastirmaACount\":0,\"ArastirmaBdoktora\":null,\"ArastirmaBproje\":null,\"ArastirmaBhatirlatici\":null,\"ArastirmaBCount\":0,\"ArastirmaCdoktora\":null,\"ArastirmaCproje\":null,\"ArastirmaChatirlatici\":null,\"ArastirmaCCount\":0,\"ArastirmaDdoktora\":null,\"ArastirmaDproje\":null,\"ArastirmaDhatirlatici\":null,\"ArastirmaDCount\":0,\"ToplantiAdoktora\":null,\"ToplantiAsayi\":null,\"ToplantiAyazarsayisi\":null,\"ToplantiAsirasi\":null,\"ToplantiAhatirlatici\":null,\"ToplantiACount\":0,\"ToplantiBdoktora\":null,\"ToplantiBsayi\":null,\"ToplantiByazarsayisi\":null,\"ToplantiBsirasi\":null,\"ToplantiBhatirlatici\":null,\"ToplantiBCount\":0,\"EgitimAdoktora\":null,\"EgitimAders\":null,\"EgitimAhatirlatici\":null,\"EgitimACount\":0,\"EgitimBdoktora\":null,\"EgitimBders\":null,\"EgitimBhatirlatici\":null,\"EgitimBCount\":0,\"Gorev2yil\":false}"
 
 
 
