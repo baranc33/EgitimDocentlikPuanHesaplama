@@ -7,16 +7,7 @@ isteyen üye olmadan bakabilcek
 takım bölümü olacak -içersinde keiplerin kısa blokları olcak
 Admin Bölümü olacak bu sayede admin bloğunu düzenliyebilcek
 
-  -Tek yazarlı makale  1=>1
-        
-        
-            -İki yazarlı makalelerde başlıca yazar tam
-            1=>  puanın 0.8'ini,  2=> 0.5'ini alır.
-            
-            -Üç ve daha fazla yazarlı makalelerde ise, başlıca
-            1=>  0.5    2 ve sonras=> 0.5 / yazar sayısı
-
-            -Başlıca yazar yoksa  1 / yazar sayısı
+ 
 
 Bilim Dahil Etme
 
@@ -29,37 +20,38 @@ Bilim Dahil Etme
 
 
 
-FenConvert
-MuhendislikConvert
-ZiraatConvert
+
+
+
 
 
 
 
 Eğitim Bilimleri		+
 Filoloji Temel Alanı		+
-Hukuk Temel Alanı		-
-İlahiyat Temel Alanı		-
-- Sosyal, Beşeri ve 		-
-Spor Bilimleri Temel Alanı	-
+Hukuk Temel Alanı		+
+İlahiyat Temel Alanı		+
+- Sosyal, Beşeri ve 		+
+Spor Bilimleri Temel Alanı	+
 
 
  
 
-Fen Bilimleri ve Matematik Temel Alanı
-Mühendislik Temel Alanı
-Ziraat, Orman ve Su Ürünleri Temel Alanı
+Fen Bilimleri ve Matematik Temel Alanı   +
+Mühendislik Temel Alanı			 +
+Ziraat, Orman ve Su Ürünleri Temel Alanı +
+
+
+
+- Sağlık Bilimleri Temel Alanı        -spora benziyor  ulusal makalede b yok
+yayın farklı , patent var
+
+
+ Mimarlık, Planlama ve Tasarım Temel Alanı  - mühendisliğe benziyor Patent değişik sadece
 
 
 
 
-
-
-
-- Sağlık Bilimleri Temel Alanı
-
-
- Mimarlık, Planlama ve Tasarım Temel Alanı
 
 
 - Güzel Sanatlar Temel Alanı
