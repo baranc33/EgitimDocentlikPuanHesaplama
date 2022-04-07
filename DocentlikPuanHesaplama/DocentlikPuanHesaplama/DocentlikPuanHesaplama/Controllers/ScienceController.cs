@@ -337,14 +337,30 @@ namespace DocentlikPuanHesaplama.Controllers
         }
 
 
-   
-
 
         [HttpGet]
         public IActionResult GuzelSanatlar()
         {
+            ViewBag.OldData = false;
+            if (TempData.ContainsKey("modelagain"))
+                ViewBag.OldData = true;
+
             return View();
         }
+
+        [HttpPost]
+        public IActionResult GuzelSanatlar(GuzelSanatlarDocentModel model)
+        {
+            TempData["model"] = JsonSerializer.Serialize(GuzelSanatlarConvert.GuzelSanatlarModelToGuzelSanatlarEntity(model));
+
+            Messages message = new();
+            message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            return RedirectToAction("Answer", "Science", new { link = "GuzelSanatlar" });
+            //TempData["lasturl"] = JsonSerializer.Serialize("Saglik");
+            //return RedirectToAction("Answer");
+        }
+ 
 
 
 

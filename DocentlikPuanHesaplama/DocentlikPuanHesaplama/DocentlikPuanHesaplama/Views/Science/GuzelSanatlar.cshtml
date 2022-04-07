@@ -1,101 +1,238 @@
 ﻿@using DocentlikPuanHesaplama.IdentityModel.Entity
 @using System.Text.Json
 
-  @section Alt_Menu{
-   <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
-     <h1 class="col-md-6 text-white display-4 "  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top:0.6em;">Başvuru şartları</h1>
-   
-   <div class="">
-       <h4 class="Calculation_information">
- 
-       </h4>
-     <h5 class="Calculation_information2 col-md-8">
- 
-       </h5>
-   </div>
-  }
+@section Alt_Menu{
+<partial name="~/Views/Science/Partial/Selectbox.cshtml" />
+<h1 class="col-md-6 text-white display-4 "
+  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top:0.6em;">Başvuru şartları</h1>
+
+<div class="">
+  <h4 class="Calculation_information">
+
+  </h4>
+  <h5 class="Calculation_information2 col-md-8">
+
+  </h5>
+</div>
+}
 
 <head>
-    <link href="~/css/hesap.css" rel="stylesheet">
-    <script src="~/js/Bolumler.js"></script>
-    <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
-</head> 
- 
- @* <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Filoloji" method="post">  *@
- <form  asp-controller="Science" asp-action="ilahiyat" method="post"> 
-        <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
+  <link href="~/css/hesap.css" rel="stylesheet">
+  <script src="~/js/Bolumler.js"></script>
+  <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
+
+  <style>
+    b {
+      color: black;
+    }
+  </style>
+</head>
+
+@* <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Filoloji" method="post"> *@
+<form asp-controller="Science" asp-action="GuzelSanatlar" method="post">
+  <a href="#SubmitButton" id="hesapla"> <i class="fa-regular fa-circle-down"></i> </a>
 
 
-    @* <section class="Egitim"> *@
-    <section >
-        <div class="Bir">
-            <h2>1. Sinema, Plastik Sanatlar</h2>
-            <h5> Tasarım, Geleneksel Türk Sanatları, Taşınabilir Kültür Varlıkları / Sanat Eserleri Restorasyonu ve Konservasyonu  </h5>
-            <h6>
-              Başvurulan doçentlik alanı ile ilgili ve adayın yaptığı lisansüstü çalışmalardan
-              üretilmemiş olmak şartıyla aşağıdaki maddelerin toplamından,
-              <br> 
-              40 puanı (i) maddesinden,       25 puanı (iv) maddesinden,   15 puanı (iii) maddesinden, 
-              (ii) ve (v) maddelerinden 10' ar puan olmak üzere adayın en az 100 puan karşılığı sanatsal etkinlikte
-              bulunması ve en az 90 puan karşılığı çalışmanın sanatta yeterlik/ doktora unvanının
-              alınmasından sonra gerçekleştirilmiş olması gerekir. 
-            </h6>
-            <hr>
+  @* <section class="Egitim"> *@
+  <section>
+    <div class="Bir">
+      <h2>1. Sinema, Plastik Sanatlar</h2>
+      <h5> Tasarım, Geleneksel Türk Sanatları, Taşınabilir Kültür Varlıkları / Sanat Eserleri Restorasyonu ve
+        Konservasyonu </h5>
+      <h6>
+        Başvurulan doçentlik alanı ile ilgili ve adayın yaptığı lisansüstü çalışmalardan
+        üretilmemiş olmak şartıyla aşağıdaki maddelerin toplamından,
+        <br>
+        40 puanı (i) maddesinden, 25 puanı (iv) maddesinden, 15 puanı (iii) maddesinden,
+        (ii) ve (v) maddelerinden 10' ar puan olmak üzere adayın en az 100 puan karşılığı sanatsal etkinlikte
+        bulunması ve en az 90 puan karşılığı çalışmanın sanatta yeterlik/ doktora unvanının
+        alınmasından sonra gerçekleştirilmiş olması gerekir.
+      </h6>
+      <hr>
 
-            <div class="row mt-5">
-                <label class="col-md-8">
-                    A)   SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
-                        mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale  ~ 20 Puan
-                </label>
-                <button onclick="add('UluslarArasiAul')" type="button" class="btn btn-primary col-md-1">+ </button>
-                <button onclick="remove('UluslarArasiAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
-                <ul class="mt-3" id="UluslarArasiAul" type="none">
-                    <li class="row d-none ">
-                        <div class="mb-3 col-md-3 mt-4">
-                            <select name="UluslarArasiAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
-                                <option value="0">Doktora Öncesi</option>
-                                <option value="1">Doktora Sonrası</option>
-                            </select>
-                        </div>
-                        <div class="mb-3 col-md-2">
-                            <label>Makale Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="UluslarArasiAmakalesayisi[]" min="0" required>
-                        </div>
-                        <div class="mb-3 col-md-2">
-                            <label>Yazar Sayısı</label>
-                            <input type="number" class="form-control" value="1" name="UluslarArasiAyazarsayisi[]" min="0" required>
-                        </div>
-                        <div class="mb-3 col-md-5">
-                            <label>Hatırlatıcı İsim</label>
-                            <input type="text" class="form-control" name="UluslarArasiAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
-                        </div>
-                    </li>
-
-                </ul>
-                <hr />
+      <div class="row mt-5">
+        <label class="col-md-8">
+          <b>&#8544; ) </b> Özgün sanat eserleri, tasarımlar ya da yorum çalışmalarıyla en az iki
+          kişisel etkinlikte (sergi, bienal, gösteri, dinleti, festival, gösterim)
+          bulunmak. Her bir etkinlik için; ~ 20 Puan
+        </label>
+        <button onclick="add('SinemaIul')" type="button" class="btn btn-primary col-md-1">+ </button>
+        <button onclick="remove('SinemaIul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+        <ul class="mt-3" id="SinemaIul" type="none">
+          <li class="row d-none ">
+            <div class="mb-3 col-md-4 mt-3">
+              <select name="SinemaIDoktora[]" class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example">
+                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                <option value="0">Doktora Öncesi</option>
+                <option value="1">Doktora Sonrası</option>
+              </select>
             </div>
- 
-        </div>
+            <div class="mb-3 col-md-2">
+              <label>Makale Sayısı</label>
+              <input type="number" class="form-control" value="1" name="SinemaIEtkinlikSayisi[]" min="0" required>
+            </div>
+            <div class="mb-3 col-md-5">
+              <label>Hatırlatıcı Not</label>
+              <input type="text" class="form-control" name="SinemaIHatirlatici[]"
+                placeholder="Kendinize Not Tutabilirsiniz">
+            </div>
+          </li>
 
-         <div class="iki">
-            <h2>2. Müzik </h2>
-            <h5> Başvurulan doçentlik alanı ile ilgili ve adayın yaptığı lisansüstü çalışmalardan
-              (kuramsal - teorik ) bütünüyle veya kısmen tekrarlanmamış olmak koşuluyla
-              aşağıdaki maddelerin yerine getirilmesi zorunludur </h5>
-            <h6>
-             Aday, lisansüstü çalışmalarından
-                  bütünüyle üretilmemiş, ancak, uygulamalı, icraya dayalı çalışmalarına atıf yapan ve kısmen
-                  tekrarlanmış olan kitap, makale, türündeki çalışmalarını aşağıdaki koşullara ek olarak
-                  sunabilir. Konser, gösteri, sahne performansı vb. sunumlar için, lisansüstü çalışmalardan
-                  bütünüyle veya kısmen tekrarlanmamış olmak şartı aranmaz.
-                <span style="color: red;">   Bu madde kapsamında tüm şartlar zorunludur.</span>
-            </h6>
-            <hr>
+        </ul>
+        <hr />
+      </div>
 
-            
- 
-        </div>
+      <div class="row mt-5">
+        <label class="col-md-8">
+          <b>&#8545; ) </b> Özgün sanat eserleri, tasarımlar ya da yorum çalışmalarıyla karma-ortak
+          etkinliklere (sergi, bienal, gösteri, dinleti, film, festival, gösterim, ulusal ve
+          uluslararası alanda yarışmalar) katılmak ve / ve ya kamusal alanda bir veya
+          birden fazla eserinin daimi olarak sergilenmesi, satın alınması. Her bir
+          etkinlik için; ~ 5 Puan
+        </label>
+        <button onclick="add('SinemaIIul')" type="button" class="btn btn-primary col-md-1">+ </button>
+        <button onclick="remove('SinemaIIul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+        <ul class="mt-3" id="SinemaIIul" type="none">
+          <li class="row d-none ">
+            <div class="mb-3 col-md-4 mt-3">
+              <select name="SinemaIIDoktora[]" class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example">
+                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                <option value="0">Doktora Öncesi</option>
+                <option value="1">Doktora Sonrası</option>
+              </select>
+            </div>
+            <div class="mb-3 col-md-2">
+              <label>Makale Sayısı</label>
+              <input type="number" class="form-control" value="1" name="SinemaIIEtkinlikSayisi[]" min="0" required>
+            </div>
+            <div class="mb-3 col-md-5">
+              <label>Hatırlatıcı Not</label>
+              <input type="text" class="form-control" name="SinemaIIHatirlatici[]"
+                placeholder="Kendinize Not Tutabilirsiniz">
+            </div>
+          </li>
+
+        </ul>
+        <hr />
+      </div>
+
+
+      <div class="row mt-5">
+        <label class="col-md-8">
+          <b>&#8546; ) </b> Sempozyum, festival, workshop, bienal gibi etkinliklere eserleriyle
+          katılmak, veya Yürütücüsü olduğu ve sonuçlandırılmış Lisansüstü Tez / Eser
+          metin Danışmanlıkları bulunmak. Her bir etkinlik için; ~ 7.5 Puan
+        </label>
+        <button onclick="add('SinemaIIIul')" type="button" class="btn btn-primary col-md-1">+ </button>
+        <button onclick="remove('SinemaIIIul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+        <ul class="mt-3" id="SinemaIIIul" type="none">
+          <li class="row d-none ">
+            <div class="mb-3 col-md-4 mt-3">
+              <select name="SinemaIIIDoktora[]" class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example">
+                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                <option value="0">Doktora Öncesi</option>
+                <option value="1">Doktora Sonrası</option>
+              </select>
+            </div>
+            <div class="mb-3 col-md-2">
+              <label>Makale Sayısı</label>
+              <input type="number" class="form-control" value="1" name="SinemaIIIEtkinlikSayisi[]" min="0" required>
+            </div>
+            <div class="mb-3 col-md-5">
+              <label>Hatırlatıcı Not</label>
+              <input type="text" class="form-control" name="SinemaIIIHatirlatici[]"
+                placeholder="Kendinize Not Tutabilirsiniz">
+            </div>
+          </li>
+
+        </ul>
+        <hr />
+      </div>
+
+
+      <div class="row mt-5">
+        <label class="col-md-8">
+          <b>&#8547; ) </b> Bir kitap veya en az iki makale veya alanı ile ilgili en az beş çeviri makale
+          veya alanı ile ilgili en az iki çeviri kitap yayımlamak. Her bir etkinlik için; ~ 12.5 Puan
+        </label>
+        <button onclick="add('SinemaIVul')" type="button" class="btn btn-primary col-md-1">+ </button>
+        <button onclick="remove('SinemaIVul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+        <span>Bir kitap= 12,5 </span>
+        <span>Bir makale= 6,25</span>
+        <span>Bir çeviri makale= 2,5</span>
+        <p>Bir çeviri kitap= 6,25</p>
+
+        <ul class="mt-3" id="SinemaIVul" type="none">
+          <li class="row d-none ">
+            <div class="mb-3 col-md-3 mt-4">
+              <select name="SinemaIVDoktora[]" class="form-select form-select-sm mb-3"
+                aria-label=".form-select-lg example">
+                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                <option value="0">Doktora Öncesi</option>
+                <option value="1">Doktora Sonrası</option>
+              </select>
+            </div>
+            <div class="mb-3 col-md-2 mt-4">
+              <label class="SelectLabel">Tür Seçiniz</label>
+              <select name="SinemaIVTur[]" class="form-select form-select-sm mb-3"
+                aria-label=".form-select-lg example">
+                <option value="0">Kitap</option>
+                <option value="1">Kitap Çeviri</option>
+                <option value="2">Makale</option>
+                <option value="3">Makale Çeviri</option>
+              </select>
+            </div>
+            <div class="mb-3 col-md-2">
+              <label>Makale Sayısı</label>
+              <input type="number" class="form-control" value="1" name="SinemaIVEtkinlikSayisi[]" min="0" required>
+            </div>
+            <div class="mb-3 col-md-5">
+              <label>Hatırlatıcı Not</label>
+              <input type="text" class="form-control" name="SinemaIVHatirlatici[]"
+                placeholder="Kendinize Not Tutabilirsiniz">
+            </div>
+          </li>
+
+        </ul>
+        <hr />
+      </div>
+
+
+
+      <div class="row mt-5">
+        <label class="col-md-8">
+          <b>&#8548; ) </b> Sempozyum, kongre ve panel gibi bilimsel/sanatsal toplantılara birden
+          fazla bildiri ile katılmak. Her bir etkinlik için; ~ 5 Puan
+        </label>
+        <button onclick="add('SinemaVul')" type="button" class="btn btn-primary col-md-1">+ </button>
+        <button onclick="remove('SinemaVul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+        <ul class="mt-3" id="SinemaVul" type="none">
+          <li class="row d-none ">
+            <div class="mb-3 col-md-4 mt-3">
+              <select name="SinemaVDoktora[]" class="form-select form-select-lg mb-3"
+                aria-label=".form-select-lg example">
+                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                <option value="0">Doktora Öncesi</option>
+                <option value="1">Doktora Sonrası</option>
+              </select>
+            </div>
+            <div class="mb-3 col-md-2">
+              <label>Makale Sayısı</label>
+              <input type="number" class="form-control" value="1" name="SinemaVEtkinlikSayisi[]" min="0" required>
+            </div>
+            <div class="mb-3 col-md-5">
+              <label>Hatırlatıcı Not</label>
+              <input type="text" class="form-control" name="SinemaVHatirlatici[]"
+                placeholder="Kendinize Not Tutabilirsiniz">
+            </div>
+          </li>
+
+        </ul>
+        <hr />
+      </div>
 
 
 
@@ -105,15 +242,48 @@
 
 
 
-        <div class="container row">
-            <button type="reset"   class="btn btn-danger col-md-3 offset-3" id="SubmitButton"> Temizle</button>
-            <button type="submit" class="btn btn-primary col-md-3 offset-1" id="SubmitButton"> Hesapla</button>
-        </div>
 
 
-        <br>
-        <br>
-        <br>
-        <br>
-    </section>
+
+
+    </div>
+
+    <div class="iki">
+      <h2>2. Müzik </h2>
+      <h5> Başvurulan doçentlik alanı ile ilgili ve adayın yaptığı lisansüstü çalışmalardan
+        (kuramsal - teorik ) bütünüyle veya kısmen tekrarlanmamış olmak koşuluyla
+        aşağıdaki maddelerin yerine getirilmesi zorunludur </h5>
+      <h6>
+        Aday, lisansüstü çalışmalarından
+        bütünüyle üretilmemiş, ancak, uygulamalı, icraya dayalı çalışmalarına atıf yapan ve kısmen
+        tekrarlanmış olan kitap, makale, türündeki çalışmalarını aşağıdaki koşullara ek olarak
+        sunabilir. Konser, gösteri, sahne performansı vb. sunumlar için, lisansüstü çalışmalardan
+        bütünüyle veya kısmen tekrarlanmamış olmak şartı aranmaz.
+        <span style="color: red;"> Bu madde kapsamında tüm şartlar zorunludur.</span>
+      </h6>
+      <hr>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="container row">
+      <button type="reset" class="btn btn-danger col-md-3 offset-3" id="SubmitButton"> Temizle</button>
+      <button type="submit" class="btn btn-primary col-md-3 offset-1" id="SubmitButton"> Hesapla</button>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+  </section>
 </form>

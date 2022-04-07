@@ -9,27 +9,35 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
         public MyUser? MyUser { get; set; } = default!;
 
 
-        #region Sinama
+        #region Sinema
 
-        public int[] SinamaIDoktora { get; set; } = default!;
-        public int[] SinamaIEtkinlikSayisi { get; set; } = default!;
-
-
-        public int[] SinamaIIDoktora { get; set; } = default!;
-        public int[] SinamaIIEtkinlikSayisi { get; set; } = default!;
-
-        public int[] SinamaIIIDoktora { get; set; } = default!;
-        public int[] SinamaIIIEtkinlikSayisi { get; set; } = default!;
-
-
-        public int[] SinamaIVDoktora { get; set; } = default!;
-        public int[] SinamaIVEtkinlikSayisi { get; set; } = default!;
-        public int[] SinamaIVTur { get; set; } = default!; /* kitap 12.5  // kitapçeviri 6.25 //    makale 6.25  / makale çeviri 6.25*/
+        public int[] SinemaIDoktora { get; set; } = default!;
+        public int[] SinemaIEtkinlikSayisi { get; set; } = default!;
+        public string? SinemaIHatirlatici { get; set; }
 
 
 
-        public int[] SinamaVDoktora { get; set; } = default!;
-        public int[] SinamaV { get; set; } = default!;
+        public int[] SinemaIIDoktora { get; set; } = default!;
+        public int[] SinemaIIEtkinlikSayisi { get; set; } = default!;
+        public string? SinemaIIHatirlatici { get; set; }
+
+
+
+        public int[] SinemaIIIDoktora { get; set; } = default!;
+        public int[] SinemaIIIEtkinlikSayisi { get; set; } = default!;
+        public string? SinemaIIIHatirlatici { get; set; }
+
+
+        public int[] SinemaIVDoktora { get; set; } = default!;
+        public int[] SinemaIVEtkinlikSayisi { get; set; } = default!;
+        public int[] SinemaIVTur { get; set; } = default!; /* 0-kitap 12.5  // 1-kitapçeviri 6.25 //    2-makale 6.25  / 3-makale çeviri 6.25*/
+        public string? SinemaIVHatirlatici { get; set; }
+
+
+
+        public int[] SinemaVDoktora { get; set; } = default!;
+        public int[] SinemaVEtkinlikSayisi { get; set; } = default!;
+        public string? SinemaVHatirlatici { get; set; }
 
 
 
@@ -55,6 +63,19 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
         #endregion
 
+
+
+        public Messages Hesapla()
+        {
+            Messages message = new();
+            message.Error = false;
+            message.NetToplamDoktoraSonrasi = 0;
+            message.ToplamDoktoraOncesi = 0;
+            message.ToplamDoktoraSonrasi = 0;
+             
+
+            return message;
+        }
 
     }
 }
