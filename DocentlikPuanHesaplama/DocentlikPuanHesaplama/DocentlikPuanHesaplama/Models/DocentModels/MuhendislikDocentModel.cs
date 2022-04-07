@@ -35,33 +35,32 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             public MyUser? MyUser { get; set; } = default!;
 
 
-            #region Makaleler
-            public int[] MakalelerAdoktora { get; set; } = default!;
-            public int[] MakalelerAmakalesayisi { get; set; } = default!;
-            public int[] MakalelerAyazarsayisi { get; set; } = default!;
-            public int[] MakalelerAsirasi { get; set; } = default!;
-            public string[] MakalelerAhatirlatici { get; set; } = default!;
-            public bool[] MakalelerAbasYazar { get; set; } = default!;
+        #region Makaleler
+        public int[] MakalelerAdoktora { get; set; } = default!;
+        public int[] MakalelerAmakalesayisi { get; set; } = default!;
+        public int[] MakalelerAyazarsayisi { get; set; } = default!;
+        public int[] MakalelerAsirasi { get; set; } = default!;
+        public string[] MakalelerAhatirlatici { get; set; } = default!;
+        public bool[] MakalelerAbasYazar { get; set; } = default!;
 
-            public int[] MakalelerBdoktora { get; set; } = default!;
-            public int[] MakalelerBmakalesayisi { get; set; } = default!;
-            public int[] MakalelerByazarsayisi { get; set; } = default!;
-            public int[] MakalelerBsirasi { get; set; } = default!;
-            public string[] MakalelerBhatirlatici { get; set; } = default!;
-            public bool[] MakalelerBbasYazar { get; set; } = default!;
-
-
-            public int[] MakalelerCdoktora { get; set; } = default!;
-            public int[] MakalelerCmakalesayisi { get; set; } = default!;
-            public int[] MakalelerCyazarsayisi { get; set; } = default!;
-            public int[] MakalelerCsirasi { get; set; } = default!;
-            public string[] MakalelerChatirlatici { get; set; } = default!;
-            public bool[] MakalelerCbasYazar { get; set; } = default!;
+        public int[] MakalelerBdoktora { get; set; } = default!;
+        public int[] MakalelerBmakalesayisi { get; set; } = default!;
+        public int[] MakalelerByazarsayisi { get; set; } = default!;
+        public int[] MakalelerBsirasi { get; set; } = default!;
+        public string[] MakalelerBhatirlatici { get; set; } = default!;
+        public bool[] MakalelerBbasYazar { get; set; } = default!;
 
 
+        public int[] MakalelerCdoktora { get; set; } = default!;
+        public int[] MakalelerCmakalesayisi { get; set; } = default!;
+        public int[] MakalelerCyazarsayisi { get; set; } = default!;
+        public int[] MakalelerCsirasi { get; set; } = default!;
+        public string[] MakalelerChatirlatici { get; set; } = default!;
+        public bool[] MakalelerCbasYazar { get; set; } = default!;
 
 
-            private Makaleler MakalelerHesapla()
+
+        private Makaleler MakalelerHesapla()
             {
                 Makaleler model = new();
                 int BaslicaYazar = 0;
@@ -149,16 +148,16 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
         public int[] YayinAdoktora { get; set; } = default!;
         public int[] YayinAmakalesayisi { get; set; } = default!;
         public int[] YayinAyazarsayisi { get; set; } = default!;
-        public string[] YayinAhatirlatici { get; set; } = default!;
         public int[] YayinAsirasi { get; set; } = default!;
+        public string[] YayinAhatirlatici { get; set; } = default!;
         public bool[] YayinAbasYazar { get; set; } = default!;
 
 
         public int[] YayinBdoktora { get; set; } = default!;
         public int[] YayinBmakalesayisi { get; set; } = default!;
-        public int[] YayinByazarsayisi { get; set; } = default!;
-        public string[] YayinBhatirlatici { get; set; } = default!;
         public int[] YayinBsirasi { get; set; } = default!;
+        public string[] YayinBhatirlatici { get; set; } = default!;
+        public int[] YayinByazarsayisi { get; set; } = default!;
         public bool[] YayinBbasYazar { get; set; } = default!;
 
 
@@ -275,26 +274,26 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
         #region Kitap
         public int[] KitapAdoktora { get; set; } = default!;
-            public int[] KitapAkitap { get; set; } = default!;
-            public int[] KitapAyazarsayisi { get; set; } = default!;
-            public string[] KitapAhatirlatici { get; set; } = default!;
+        public int[] KitapAkitap { get; set; } = default!;
+        public int[] KitapAyazarsayisi { get; set; } = default!;
+        public string[] KitapAhatirlatici { get; set; } = default!;
 
-            public int[] KitapBdoktora { get; set; } = default!;
-            public int[] KitapBbolumSayisi { get; set; } = default!;
-            public int[] KitapByazarsayisi { get; set; } = default!;
-            public string[] KitapBhatirlatici { get; set; } = default!;
+        public int[] KitapBdoktora { get; set; } = default!;
+        public int[] KitapBbolumSayisi { get; set; } = default!;
+        public int[] KitapByazarsayisi { get; set; } = default!;
+        public string[] KitapBhatirlatici { get; set; } = default!;
 
-            public int[] KitapCdoktora { get; set; } = default!;
-            public int[] KitapCkitap { get; set; } = default!;
-            public int[] KitapCyazarsayisi { get; set; } = default!;
-            public string[] KitapChatirlatici { get; set; } = default!;
+        public int[] KitapCdoktora { get; set; } = default!;
+        public int[] KitapCkitap { get; set; } = default!;
+        public int[] KitapCyazarsayisi { get; set; } = default!;
+        public string[] KitapChatirlatici { get; set; } = default!;
 
-            public int[] KitapDdoktora { get; set; } = default!;
-            public int[] KitapDbolumSayisi { get; set; } = default!;
-            public int[] KitapDyazarsayisi { get; set; } = default!;
-            public string[] KitapDhatirlatici { get; set; } = default!;
+        public int[] KitapDdoktora { get; set; } = default!;
+        public int[] KitapDbolumSayisi { get; set; } = default!;
+        public int[] KitapDyazarsayisi { get; set; } = default!;
+        public string[] KitapDhatirlatici { get; set; } = default!;
 
-            private Kitap KitapHesapla()
+        private Kitap KitapHesapla()
             {
                 Kitap model = new();
                 if (KitapAdoktora.Count() > 1)
@@ -365,69 +364,68 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
 
 
-            #endregion
+        #endregion
 
 
 
-            #region Patent
-            public int[] PatentAdoktora { get; set; } = default!;
-            public int[] PatentApatentsayisi { get; set; } = default!;
-            public int[] PatentAyazarsayisi { get; set; } = default!;
-            public string[] PatentAhatirlatici { get; set; } = default!;
+        #region Patent
+        public int[] PatentAdoktora { get; set; } = default!;
+        public int[] PatentAsayi { get; set; } = default!;
+        public int[] PatentAyazarsayisi { get; set; } = default!;
+        public string[] PatentAhatirlatici { get; set; } = default!;
 
-            public int[] PatentBdoktora { get; set; } = default!;
-            public int[] PatentBpatentsayisi { get; set; } = default!;
-            public int[] PatentByazarsayisi { get; set; } = default!;
-            public string[] PatentBhatirlatici { get; set; } = default!;
+        public int[] PatentBdoktora { get; set; } = default!;
+        public int[] PatentBsayi { get; set; } = default!;
+        public int[] PatentByazarsayisi { get; set; } = default!;
+        public string[] PatentBhatirlatici { get; set; } = default!;
 
-            private Patent PatentHesapla()
+        private Patent PatentHesapla()
+        {
+            Patent model = new();
+            if (PatentAdoktora.Count() > 1)
             {
-                Patent model = new();
-                if (PatentAdoktora.Count() > 1)
+                for (int i = 1; i < PatentAdoktora.Count(); i++)
                 {
-                    for (int i = 1; i < PatentAdoktora.Count(); i++)
+                    if (PatentAdoktora[i] == 0 && PatentAsayi[i] > 0 && PatentAyazarsayisi[i] > 0)
                     {
-                        if (PatentAdoktora[i] == 0 && PatentApatentsayisi[i] > 0 && PatentAyazarsayisi[i] > 0)
-                        {
-                            model.HamDoktoraOncesiPuan += (20 * PatentApatentsayisi[i]) / (decimal)PatentAyazarsayisi[i];
-                        }
-                        else if (PatentAdoktora[i] == 1 && PatentApatentsayisi[i] > 0 && PatentAyazarsayisi[i] > 0)
-                        {
-                            model.HamDoktoraSonrasiPuan += (20 * PatentApatentsayisi[i]) / (decimal)PatentAyazarsayisi[i];
-                        }
+                        model.HamDoktoraOncesiPuan += (20 * PatentAsayi[i]) / (decimal)PatentAyazarsayisi[i];
                     }
-
-                }
-                if (PatentBdoktora.Count() > 1)
-                {
-                    for (int i = 1; i < PatentBdoktora.Count(); i++)
+                    else if (PatentAdoktora[i] == 1 && PatentAsayi[i] > 0 && PatentAyazarsayisi[i] > 0)
                     {
-                        if (PatentBdoktora[i] == 0 && PatentBpatentsayisi[i] > 0 && PatentByazarsayisi[i] > 0)
-                        {
-                            model.HamDoktoraOncesiPuan += (10 * PatentBpatentsayisi[i]) / (decimal)PatentByazarsayisi[i];
-                        }
-                        else if (PatentBdoktora[i] == 1 && PatentBpatentsayisi[i] > 0 && PatentByazarsayisi[i] > 0)
-                        {
-
-                            model.HamDoktoraSonrasiPuan += (10 * PatentBpatentsayisi[i]) / (decimal)PatentByazarsayisi[i];
-                        }
+                        model.HamDoktoraSonrasiPuan += (20 * PatentAsayi[i]) / (decimal)PatentAyazarsayisi[i];
                     }
-
                 }
 
-                model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
+            }
+            if (PatentBdoktora.Count() > 1)
+            {
+                for (int i = 1; i < PatentBdoktora.Count(); i++)
+                {
+                    if (PatentBdoktora[i] == 0 && PatentBsayi[i] > 0 && PatentByazarsayisi[i] > 0)
+                    {
+                        model.HamDoktoraOncesiPuan += (10 * PatentBsayi[i]) / (decimal)PatentByazarsayisi[i];
+                    }
+                    else if (PatentBdoktora[i] == 1 && PatentBsayi[i] > 0 && PatentByazarsayisi[i] > 0)
+                    {
 
+                        model.HamDoktoraSonrasiPuan += (10 * PatentBsayi[i]) / (decimal)PatentByazarsayisi[i];
+                    }
+                }
 
-                return model;
             }
 
-            #endregion
+            model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
+
+
+            return model;
+        }
+
+        #endregion
 
 
 
-
-            #region Atiflar
-            public int[] AtiflarAdoktora { get; set; } = default!;
+        #region Atiflar
+        public int[] AtiflarAdoktora { get; set; } = default!;
             public int[] AtiflarAatif { get; set; } = default!;
             public string[] AtiflarAhatirlatici { get; set; } = default!;
 

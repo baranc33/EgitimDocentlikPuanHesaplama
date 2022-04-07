@@ -8,28 +8,28 @@
 
 
 
-        #region Makale
-        public string? MakaleAdoktora { get; set; }
-        public string? MakaleAmakalesayisi { get; set; }
-        public string? MakaleAyazarsayisi{ get; set; }
-        public string? MakaleAsirasi { get; set; }
-        public string? MakaleAhatirlatici { get; set; }
-        public int MakaleACount { get; set; } = 0;
+        #region Makaleler
+        public string? MakalelerAdoktora { get; set; }
+        public string? MakalelerAmakalesayisi { get; set; }
+        public string? MakalelerAyazarsayisi{ get; set; }
+        public string? MakalelerAsirasi { get; set; }
+        public string? MakalelerAhatirlatici { get; set; }
+        public int MakalelerACount { get; set; } = 0;
  
 
-        public string? MakaleBdoktora { get; set; }
-        public string? MakaleBmakalesayisi { get; set; }
-        public string? MakaleByazarsayisi{ get; set; }
-        public string? MakaleBsirasi { get; set; }
-        public string? MakaleBhatirlatici { get; set; }
-        public int MakaleBCount { get; set; } = 0;
+        public string? MakalelerBdoktora { get; set; }
+        public string? MakalelerBmakalesayisi { get; set; }
+        public string? MakalelerByazarsayisi{ get; set; }
+        public string? MakalelerBsirasi { get; set; }
+        public string? MakalelerBhatirlatici { get; set; }
+        public int MakalelerBCount { get; set; } = 0;
 
-        public string? MakaleCdoktora { get; set; }
-        public string? MakaleCmakalesayisi { get; set; }
-        public string? MakaleCyazarsayisi{ get; set; }
-        public string? MakaleCsirasi { get; set; }
-        public string? MakaleChatirlatici { get; set; }
-        public int MakaleCCount { get; set; } = 0;
+        public string? MakalelerCdoktora { get; set; }
+        public string? MakalelerCmakalesayisi { get; set; }
+        public string? MakalelerCyazarsayisi{ get; set; }
+        public string? MakalelerCsirasi { get; set; }
+        public string? MakalelerChatirlatici { get; set; }
+        public int MakalelerCCount { get; set; } = 0;
 
 
 
@@ -82,7 +82,7 @@
         public int KitapACount { get; set; } = 0;
 
         public string? KitapBdoktora { get; set; }
-        public string? KitapBkitap { get; set; }
+        public string? KitapBbolumSayisi { get; set; }
         public string? KitapByazarsayisi{ get; set; }
         public string? KitapBhatirlatici { get; set; }
         public int KitapBCount { get; set; } = 0;
@@ -94,7 +94,7 @@
         public int KitapCCount { get; set; } = 0;
 
         public string? KitapDdoktora { get; set; }
-        public string? KitapDkitap { get; set; }
+        public string? KitapDbolumSayisi { get; set; }
         public string? KitapDyazarsayisi{ get; set; }
         public string? KitapDhatirlatici { get; set; }
         public int KitapDCount { get; set; } = 0;

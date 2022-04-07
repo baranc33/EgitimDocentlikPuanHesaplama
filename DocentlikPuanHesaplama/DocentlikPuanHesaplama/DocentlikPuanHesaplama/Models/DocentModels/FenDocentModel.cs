@@ -371,12 +371,12 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
         #region Patent
         public int[] PatentAdoktora { get; set; } = default!;
-        public int[] PatentApatentsayisi { get; set; } = default!;
+        public int[] PatentAsayi{ get; set; } = default!;
         public int[] PatentAyazarsayisi { get; set; } = default!;
         public string[] PatentAhatirlatici { get; set; } = default!;
 
         public int[] PatentBdoktora { get; set; } = default!;
-        public int[] PatentBpatentsayisi { get; set; } = default!;
+        public int[] PatentBsayi { get; set; } = default!;
         public int[] PatentByazarsayisi { get; set; } = default!;
         public string[] PatentBhatirlatici { get; set; } = default!;
 
@@ -387,13 +387,13 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < PatentAdoktora.Count(); i++)
                 {
-                    if (PatentAdoktora[i] == 0 && PatentApatentsayisi[i] > 0 && PatentAyazarsayisi[i] > 0)
+                    if (PatentAdoktora[i] == 0 && PatentAsayi[i] > 0 && PatentAyazarsayisi[i] > 0)
                     {
-                        model.HamDoktoraOncesiPuan += (20 * PatentApatentsayisi[i]) / (decimal)PatentAyazarsayisi[i];
+                        model.HamDoktoraOncesiPuan += (20 * PatentAsayi[i]) / (decimal)PatentAyazarsayisi[i];
                     }
-                    else if (PatentAdoktora[i] == 1 && PatentApatentsayisi[i] > 0 && PatentAyazarsayisi[i] > 0)
+                    else if (PatentAdoktora[i] == 1 && PatentAsayi[i] > 0 && PatentAyazarsayisi[i] > 0)
                     {
-                        model.HamDoktoraSonrasiPuan += (20 * PatentApatentsayisi[i]) / (decimal)PatentAyazarsayisi[i];
+                        model.HamDoktoraSonrasiPuan += (20 * PatentAsayi[i]) / (decimal)PatentAyazarsayisi[i];
                     }
                 }
 
@@ -402,14 +402,14 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < PatentBdoktora.Count(); i++)
                 {
-                    if (PatentBdoktora[i] == 0 && PatentBpatentsayisi[i] > 0 && PatentByazarsayisi[i] > 0)
+                    if (PatentBdoktora[i] == 0 && PatentBsayi[i] > 0 && PatentByazarsayisi[i] > 0)
                     {
-                        model.HamDoktoraOncesiPuan += (10 * PatentBpatentsayisi[i]) / (decimal)PatentByazarsayisi[i];
+                        model.HamDoktoraOncesiPuan += (10 * PatentBsayi[i]) / (decimal)PatentByazarsayisi[i];
                     }
-                    else if (PatentBdoktora[i] == 1 && PatentBpatentsayisi[i] > 0 && PatentByazarsayisi[i] > 0)
+                    else if (PatentBdoktora[i] == 1 && PatentBsayi[i] > 0 && PatentByazarsayisi[i] > 0)
                     {
 
-                        model.HamDoktoraSonrasiPuan += (10 * PatentBpatentsayisi[i]) / (decimal)PatentByazarsayisi[i];
+                        model.HamDoktoraSonrasiPuan += (10 * PatentBsayi[i]) / (decimal)PatentByazarsayisi[i];
                     }
                 }
 
