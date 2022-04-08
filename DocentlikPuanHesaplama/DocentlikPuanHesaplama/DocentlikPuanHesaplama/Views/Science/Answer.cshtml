@@ -6,12 +6,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <style>
+              .geridon:hover{
+                    color: white;
+              }
+
+          </style>
 </head>
 <div style="text-align: left; color:black;" class="container" id="ErrorMessage">
     
-    <form action="Answer" method="get">
+    <form asp-controller="Science" asp-action="Answer"  method="get">
         <input type="hidden" value="@ViewBag.link" name="link"/>
-    <button asp-controller="Science" asp-action="Answer"  class="btn btn-outline-secondary offset-7" style="text-align:right;font-size:20px"> <i class="fa-solid fa-rotate-left"></i> Bilgileri Düzenlemek için Geri Dön</button> 
+    <button  class="btn btn-outline-secondary offset-8 geridon" style="text-align:right;font-size:20px"> <i class="fa-solid fa-rotate-left"></i> Bilgileri Düzenlemek için Geri Dön</button> 
     </form>
     
     @{

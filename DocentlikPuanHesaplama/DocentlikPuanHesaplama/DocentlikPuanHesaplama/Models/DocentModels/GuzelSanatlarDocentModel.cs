@@ -66,7 +66,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                     if (SinemaIDoktora[i] == 0 && SinemaIEtkinlikSayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += 20.0m * (decimal)SinemaIEtkinlikSayisi[i];
-
+                        Madde1 += 20 * SinemaIEtkinlikSayisi[i];
                     }
                     else if (SinemaIDoktora[i] == 1 && SinemaIEtkinlikSayisi[i] > 0)
                     {
@@ -83,6 +83,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                     if (SinemaIIDoktora[i] == 0 && SinemaIIEtkinlikSayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += 5.0m * (decimal)SinemaIIEtkinlikSayisi[i];
+                        Madde2 += 5.0m * (decimal)SinemaIIEtkinlikSayisi[i];
 
                     }
                     else if (SinemaIIDoktora[i] == 1 && SinemaIIEtkinlikSayisi[i] > 0)
@@ -100,6 +101,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                     if (SinemaIIIDoktora[i] == 0 && SinemaIIIEtkinlikSayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += 7.5m * (decimal)SinemaIIIEtkinlikSayisi[i];
+                        Madde3 += 7.5m * (decimal)SinemaIIIEtkinlikSayisi[i];
 
                     }
                     else if (SinemaIIIDoktora[i] == 1 && SinemaIIIEtkinlikSayisi[i] > 0)
@@ -118,6 +120,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                     if (SinemaIVDoktora[i] == 0 && SinemaIVEtkinlikSayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += iValue * (decimal)SinemaIVEtkinlikSayisi[i];
+                        Madde4 += iValue * (decimal)SinemaIVEtkinlikSayisi[i];
                     }
                     else if (SinemaIVDoktora[i] == 1 && SinemaIVEtkinlikSayisi[i] > 0)
                     {
@@ -134,6 +137,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                     if (SinemaVDoktora[i] == 0 && SinemaVEtkinlikSayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += 5.0m * (decimal)SinemaVEtkinlikSayisi[i];
+                        Madde5 += 5.0m * (decimal)SinemaVEtkinlikSayisi[i];
                     }
                     else if (SinemaVDoktora[i] == 1 && SinemaVEtkinlikSayisi[i] > 0)
                     {
@@ -152,7 +156,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
       TOPLAM 100  - 90 SI doktora sonrası
        */
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
-            if (Madde1<40|| Madde2 < 10||Madde3<15 || Madde4<25 || Madde5<10 ||model.HamDoktoraSonrasiPuan>90||model.NetPuan<100)
+            if (Madde1<40|| Madde2 < 10||Madde3<15 || Madde4<25 || Madde5<10 ||model.HamDoktoraSonrasiPuan<90||model.NetPuan<100)
             {
                 model.Error = true;
             }

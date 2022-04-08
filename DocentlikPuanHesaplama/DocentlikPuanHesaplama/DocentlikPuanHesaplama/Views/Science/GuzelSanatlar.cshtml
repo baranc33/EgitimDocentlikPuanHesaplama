@@ -27,13 +27,11 @@
     }
   </style>
 </head>
-
-@* <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Filoloji" method="post"> *@
+ 
 <form asp-controller="Science" asp-action="GuzelSanatlar" method="post">
   <a href="#SubmitButton" id="hesapla"> <i class="fa-regular fa-circle-down"></i> </a>
 
-
-  @* <section class="Egitim"> *@
+ 
   <section>
     <div class="Bir">
       <h2>1. Sinema, Plastik Sanatlar</h2>
@@ -287,3 +285,60 @@
     <br>
   </section>
 </form>
+
+
+
+
+@{
+  if (ViewBag.OldData == true)
+    {
+
+        GuzelSanatlarEntity entity = JsonSerializer.Deserialize<GuzelSanatlarEntity>(TempData["modelagain"].ToString());
+     
+        
+          <script>
+
+            let jsEntity={
+                    SinemaIDoktora :"@entity.SinemaIDoktora",
+                    SinemaIEtkinlikSayisi :"@entity.SinemaIEtkinlikSayisi",
+                    SinemaIHatirlatici:"@entity.SinemaIHatirlatici",
+                    SinemaICount : "@entity.SinemaICount",
+ 
+                    SinemaIIDoktora :"@entity.SinemaIIDoktora",
+                    SinemaIIEtkinlikSayisi :"@entity.SinemaIIEtkinlikSayisi",
+                    SinemaIIHatirlatici:"@entity.SinemaIIHatirlatici",
+                    SinemaIICount : "@entity.SinemaIICount",
+                    
+                    SinemaIIIDoktora :"@entity.SinemaIIIDoktora",
+                    SinemaIIIEtkinlikSayisi :"@entity.SinemaIIIEtkinlikSayisi",
+                    SinemaIIIHatirlatici:"@entity.SinemaIIIHatirlatici",
+                    SinemaIIICount : "@entity.SinemaIIICount",
+                    
+                    SinemaIVDoktora :"@entity.SinemaIVDoktora",
+                    SinemaIVEtkinlikSayisi :"@entity.SinemaIVEtkinlikSayisi",
+                    SinemaIVHatirlatici:"@entity.SinemaIVHatirlatici",
+                    SinemaIVTur : "@entity.SinemaIVTur",
+                    SinemaIVCount : "@entity.SinemaIVCount",
+                    
+                    SinemaVDoktora :"@entity.SinemaVDoktora",
+                    SinemaVEtkinlikSayisi :"@entity.SinemaVEtkinlikSayisi",
+                    SinemaVHatirlatici:"@entity.SinemaVHatirlatici",
+                    SinemaVCount : "@entity.SinemaVCount",
+
+            };
+            localStorage.setItem('GuzelSanatlar',JSON.stringify(jsEntity));
+        </script> 
+         <script>
+             if(jsEntity!=null){
+                     SinemaDoldur1('GuzelSanatlar');
+                     SinemaDoldur2('GuzelSanatlar');
+                     SinemaDoldur3('GuzelSanatlar');
+                     SinemaDoldur4('GuzelSanatlar');
+                     SinemaDoldur5('GuzelSanatlar');
+                     
+          
+             }
+            
+        </script> 
+    } 
+}
