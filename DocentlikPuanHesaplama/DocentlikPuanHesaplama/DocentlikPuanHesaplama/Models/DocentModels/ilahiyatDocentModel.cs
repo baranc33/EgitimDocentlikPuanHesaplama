@@ -997,7 +997,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
 
 
-            if (message.NetToplamDoktoraSonrasi < 90 || message.NetToplamDoktoraSonrasi < 100)
+            if (message.NetToplamDoktoraSonrasi < 90 || message.ToplamNetPuan < 100)
             {
                 message.AsgariMessage = " - Doktora sonrası en az 90 Net puan elde edilmiş olmalıdır Toplam Asgari 100 Net puan olmalıdır !";
                 message.Error = true;

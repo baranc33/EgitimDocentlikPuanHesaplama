@@ -69,15 +69,14 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < MakalelerCdoktora.Count(); i++)
                 {
+                    decimal puan = (decimal)YazarSirasi(MakalelerCyazarsayisi[i], MakalelerCsirasi[i], MakalelerCbasYazar[i]);
                     if (MakalelerCdoktora[i] == 0 && MakalelerCmakalesayisi[i] > 0 && MakalelerCyazarsayisi[i] > 0)
                     {
-                        model.HamDoktoraOncesiPuan += (8 * MakalelerCmakalesayisi[i]) *
-                                   (decimal)YazarSirasi(MakalelerCyazarsayisi[i], MakalelerCsirasi[i], MakalelerCbasYazar[i]);
+                        model.HamDoktoraOncesiPuan += (8 * MakalelerCmakalesayisi[i]) *puan;
                     }
                     else if (MakalelerCdoktora[i] == 1 && MakalelerCmakalesayisi[i] > 0 && MakalelerCyazarsayisi[i] > 0)
                     {
-                        model.HamDoktoraSonrasiPuan += (8 * MakalelerCmakalesayisi[i]) *
-                             (decimal)YazarSirasi(MakalelerCyazarsayisi[i], MakalelerCsirasi[i], MakalelerCbasYazar[i]);
+                        model.HamDoktoraSonrasiPuan += (8 * MakalelerCmakalesayisi[i]) * puan;
                     }
                 }
             }
