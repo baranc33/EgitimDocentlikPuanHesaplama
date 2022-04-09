@@ -25,7 +25,11 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 else
                 {
                     if (YazarSirasi == 1) return 0.5m;
-                    else return 0.5m / ((decimal)YazarSayisi - 1);// baş yazarı çıkarıp kalan kişi sayısına böldüm
+                    else if (YazarSirasi > 1 && YazarSayisi > 1) return 0.5m / ((decimal)YazarSayisi - 1);// baş yazarı çıkarıp kalan kişi sayısına böldüm
+                    else
+                    {
+                        return 1;
+                    }
                 }
             }
 
@@ -124,7 +128,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < MakalelerAdoktora.Count(); i++)
                 {
-                    if (MakalelerAbasYazar[i] == true) BaslicaYazar += 20 * MakalelerAmakalesayisi[i];
+                    if (MakalelerAbasYazar[i] == true || MakalelerAyazarsayisi[i]==1) BaslicaYazar += 20 * MakalelerAmakalesayisi[i];
                     if (MakalelerAdoktora[i] == 0 && MakalelerAmakalesayisi[i] > 0 && MakalelerAyazarsayisi[i] > 0)
                     {
                         makaleA_B = true;
@@ -141,11 +145,16 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
             }
 
-            if (BaslicaYazar ==0 && model.Error==true)
+            if (BaslicaYazar <40 && model.Error==true)
             {
                 model.Error = true;
                 model.ErrorMessage += "yada  a bendi kapsamında en az bir eserde başlıca yazar olarak yayın yapmak zorunludur";
             }
+            else if (BaslicaYazar >=40 && model.Error == true)
+            {
+                model.Error = false;
+            }
+
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
             model.BolumAdi = "1. Makaleler";
             return model;
@@ -565,11 +574,11 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 {
                     if (DanismanlikAsayi[i] > 0 && DanismanlikAseviye[i] == 0)
                     {
-                        model.HamDoktoraSonrasiPuan = 4 * DanismanlikAsayi[i];
+                        model.HamDoktoraSonrasiPuan += 4 * DanismanlikAsayi[i];
                     }
                     else if (DanismanlikAsayi[i] > 0 && DanismanlikAseviye[i] == 1)
                     {
-                        model.HamDoktoraSonrasiPuan = 2 * DanismanlikAsayi[i];
+                        model.HamDoktoraSonrasiPuan += 2 * DanismanlikAsayi[i];
                     }
                 }
             }
@@ -579,11 +588,11 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 {
                     if (DanismanlikBsayi[i] > 0 && DanismanlikBseviye[i] == 0)
                     {
-                        model.HamDoktoraSonrasiPuan = 2 * DanismanlikBsayi[i];
+                        model.HamDoktoraSonrasiPuan += 2 * DanismanlikBsayi[i];
                     }
                     else if (DanismanlikBsayi[i] > 0 && DanismanlikBseviye[i] == 1)
                     {
-                        model.HamDoktoraSonrasiPuan = 1 * DanismanlikBsayi[i];
+                        model.HamDoktoraSonrasiPuan += 1 * DanismanlikBsayi[i];
                     }
                 }
             }

@@ -25,7 +25,11 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 else
                 {
                     if (YazarSirasi == 1) return 0.5m;
-                    else return 0.5m / ((decimal)YazarSayisi - 1);// baş yazarı çıkarıp kalan kişi sayısına böldüm
+                    else if (YazarSirasi > 1 && YazarSayisi > 1) return 0.5m / ((decimal)YazarSayisi - 1);// baş yazarı çıkarıp kalan kişi sayısına böldüm
+                    else
+                    {
+                        return 1;
+                    }
                 }
             }
 
@@ -557,11 +561,11 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 {
                     if (DanismanlikAsayi[i] > 0 && DanismanlikAseviye[i] == 0)
                     {
-                        model.HamDoktoraSonrasiPuan = 4 * DanismanlikAsayi[i];
+                        model.HamDoktoraSonrasiPuan += 4 * DanismanlikAsayi[i];
                     }
                     else if (DanismanlikAsayi[i] > 0 && DanismanlikAseviye[i] == 1)
                     {
-                        model.HamDoktoraSonrasiPuan = 2 * DanismanlikAsayi[i];
+                        model.HamDoktoraSonrasiPuan += 2 * DanismanlikAsayi[i];
                     }
                 }
             }
@@ -571,11 +575,11 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 {
                     if (DanismanlikBsayi[i] > 0 && DanismanlikBseviye[i] == 0)
                     {
-                        model.HamDoktoraSonrasiPuan = 2 * DanismanlikBsayi[i];
+                        model.HamDoktoraSonrasiPuan += 2 * DanismanlikBsayi[i];
                     }
                     else if (DanismanlikBsayi[i] > 0 && DanismanlikBseviye[i] == 1)
                     {
-                        model.HamDoktoraSonrasiPuan = 1 * DanismanlikBsayi[i];
+                        model.HamDoktoraSonrasiPuan += 1 * DanismanlikBsayi[i];
                     }
                 }
             }

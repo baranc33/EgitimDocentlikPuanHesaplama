@@ -17,7 +17,7 @@
     
     <form asp-controller="Science" asp-action="Answer"  method="get">
         <input type="hidden" value="@ViewBag.link" name="link"/>
-    <button  class="btn btn-outline-secondary offset-8 geridon" style="text-align:right;font-size:20px"> <i class="fa-solid fa-rotate-left"></i> Bilgileri Düzenlemek için Geri Dön</button> 
+    <button onclick="disableButton()" id="backButton" class="btn btn-outline-secondary offset-8 geridon" style="text-align:right;font-size:20px"> <i class="fa-solid fa-rotate-left"></i> Bilgileri Düzenlemek için Geri Dön</button> 
     </form>
     
     @{
@@ -106,3 +106,13 @@
         </td>
     </tr>
 </table>
+
+
+<script>
+    function disableButton(){
+        console.log('Disable');
+        let buttonn=document.getElementById("backButton").style.visibility = "hidden";
+ // document.getElementById("backButton").disabled = true;
+ //location.href = `/Science/${@ViewBag.link}`;
+    }
+</script>
