@@ -15,7 +15,6 @@ C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHes
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\obj\Debug\net6.0\scopedcss\bundle\DocentlikPuanHesaplama.styles.css
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\obj\Debug\net6.0\DocentlikPuanHesaplama.dll
-C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\obj\Debug\net6.0\refint\DocentlikPuanHesaplama.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\obj\Debug\net6.0\DocentlikPuanHesaplama.pdb
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\obj\Debug\net6.0\DocentlikPuanHesaplama.genruntimeconfig.cache
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\obj\Debug\net6.0\ref\DocentlikPuanHesaplama.dll
@@ -268,3 +267,4 @@ C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHes
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\DocentlikPuanHesaplama\bin\Debug\net6.0\ref\DocentlikPuanHesaplama.dll

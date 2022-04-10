@@ -361,7 +361,9 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 }
 
                 model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
-                model.BolumAdi = "3. Kitap  ";
+
+            if (model.NetPuan > 20) model.NetPuan = 20;
+            model.BolumAdi = "3. Kitap  ";
 
                 return model;
             }

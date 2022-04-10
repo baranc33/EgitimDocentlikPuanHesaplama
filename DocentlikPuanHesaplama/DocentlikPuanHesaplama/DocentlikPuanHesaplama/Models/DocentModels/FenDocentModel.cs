@@ -416,6 +416,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
 
+            if (model.NetPuan > 20) model.NetPuan = 20;
 
             return model;
         }
@@ -522,12 +523,12 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 for (int i = 1; i < DanismanlikAdoktora.Count(); i++)
                 {
                     if (DanismanlikAsayi[i] > 0 && DanismanlikAseviye[i] == 0)
-                    {
-                        model.HamDoktoraSonrasiPuan = 4 * DanismanlikAsayi[i];
+                    {// 3 +3
+                        model.HamDoktoraSonrasiPuan += 4 * DanismanlikAsayi[i];
                     }
                     else if (DanismanlikAsayi[i] > 0 && DanismanlikAseviye[i] == 1)
                     {
-                        model.HamDoktoraSonrasiPuan = 2 * DanismanlikAsayi[i];
+                        model.HamDoktoraSonrasiPuan += 2 * DanismanlikAsayi[i];
                     }
                 }
             }
@@ -537,11 +538,11 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 {
                     if (DanismanlikBsayi[i] > 0 && DanismanlikBseviye[i] == 0)
                     {
-                        model.HamDoktoraSonrasiPuan = 2 * DanismanlikBsayi[i];
+                        model.HamDoktoraSonrasiPuan += 2 * DanismanlikBsayi[i];
                     }
                     else if (DanismanlikBsayi[i] > 0 && DanismanlikBseviye[i] == 1)
                     {
-                        model.HamDoktoraSonrasiPuan = 1 * DanismanlikBsayi[i];
+                        model.HamDoktoraSonrasiPuan += 1 * DanismanlikBsayi[i];
                     }
                 }
             }

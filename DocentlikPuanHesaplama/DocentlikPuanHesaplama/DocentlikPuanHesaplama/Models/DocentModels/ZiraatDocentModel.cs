@@ -360,6 +360,8 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             }
 
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
+
+            if (model.NetPuan > 20) model.NetPuan = 20;
             model.BolumAdi = "3. Kitap  ";
 
             return model;
@@ -842,6 +844,30 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 }
                 message.Bolumler.Add(madde);
             }
+            Kitap Kitap = KitapHesapla();
+            if (Kitap != null)
+            {
+                message.ToplamNetPuan += Kitap.NetPuan;
+                message.ToplamDoktoraOncesi += Kitap.HamDoktoraOncesiPuan;
+                message.ToplamDoktoraSonrasi += Kitap.HamDoktoraSonrasiPuan;
+                ListMadde madde = new ListMadde()
+                {
+                    BolumAdi = Kitap.BolumAdi,
+                    HamDoktoraOncesi = Kitap.HamDoktoraOncesiPuan,
+                    HamDoktoraSonrasi = Kitap.HamDoktoraSonrasiPuan,
+                    NetPuan = Kitap.NetPuan,
+                    Error = Kitap.Error,
+                    ErrorMessage = Kitap.ErrorMessage
+                };
+                if (Kitap.Error == true) message.Error = true;
+ 
+                if (Kitap.HamDoktoraSonrasiPuan > 20)
+                    message.NetToplamDoktoraSonrasi += 20;
+                else message.NetToplamDoktoraSonrasi += Kitap.HamDoktoraSonrasiPuan;
+                message.Bolumler.Add(madde);
+
+                message.Bolumler.Add(madde);
+            }
 
 
 
@@ -865,28 +891,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 message.Bolumler.Add(madde);
             }
 
-            Kitap Kitap = KitapHesapla();
-            if (Kitap != null)
-            {
-                message.ToplamNetPuan += Kitap.NetPuan;
-                message.ToplamDoktoraOncesi += Kitap.HamDoktoraOncesiPuan;
-                message.ToplamDoktoraSonrasi += Kitap.HamDoktoraSonrasiPuan;
-                ListMadde madde = new ListMadde()
-                {
-                    BolumAdi = Kitap.BolumAdi,
-                    HamDoktoraOncesi = Kitap.HamDoktoraOncesiPuan,
-                    HamDoktoraSonrasi = Kitap.HamDoktoraSonrasiPuan,
-                    NetPuan = Kitap.NetPuan,
-                    Error = Kitap.Error,
-                    ErrorMessage = Kitap.ErrorMessage
-                };
-                if (Kitap.Error == true) message.Error = true;
-
-                if (Kitap.HamDoktoraSonrasiPuan > 20) message.NetToplamDoktoraSonrasi += 20;
-                else message.NetToplamDoktoraSonrasi += Kitap.HamDoktoraSonrasiPuan;
-                message.Bolumler.Add(madde);
-            }
-
+  
 
             Atiflar Atiflar = AtifHesapla();
             if (Atiflar != null)

@@ -10,11 +10,11 @@ namespace DocentlikPuanHesaplama.Controllers
 {
     public class ScienceController : Controller
     {
-      // get url yerine dinamik işlem yapmayı denicem
+        // get url yerine dinamik işlem yapmayı denicem
         [HttpGet]
         public IActionResult Answer(string link)
         {
-            ViewBag.link=link;
+            ViewBag.link = link;
             if (!TempData.ContainsKey("message"))
             {// Form sayfasına dönüş için tasarlandı
                 var model = JsonSerializer.Deserialize<object>(TempData["model"].ToString());
@@ -25,7 +25,7 @@ namespace DocentlikPuanHesaplama.Controllers
                 return RedirectToAction(link, "Science");
             }
             TempData.Remove("modelagain");
-            Messages? m = JsonSerializer.Deserialize <Messages>(TempData["message"].ToString());
+            Messages? m = JsonSerializer.Deserialize<Messages>(TempData["message"].ToString());
             TempData.Remove("message");
 
             return View(m);
@@ -43,23 +43,22 @@ namespace DocentlikPuanHesaplama.Controllers
             ViewBag.OldData = false;
             if (TempData.ContainsKey("modelagain"))
                 ViewBag.OldData = true;
-          
+
             return View();
         }
-         
+
         [HttpPost]
         public IActionResult Egitim(EgitimDocentModel model)
         {
-
             TempData["model"] = JsonSerializer.Serialize(EgitimConvert.EgitimModelToEgitimEntity(model));
-            Messages message =new ();
+            Messages message = new();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             //TempData["lasturl"] = JsonSerializer.Serialize("Egitim");
             //TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
-            return RedirectToAction("Answer","Science",new {link="Egitim"});
+            return RedirectToAction("Answer", "Science", new { link = "Egitim" });
         }
-     
+
 
 
 
@@ -86,7 +85,7 @@ namespace DocentlikPuanHesaplama.Controllers
             TempData["message"] = JsonSerializer.Serialize(message);
             //TempData["lasturl"] = JsonSerializer.Serialize("Filoloji");
             //TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
-            return RedirectToAction("Answer","Science",new {link= "Filoloji" });
+            return RedirectToAction("Answer", "Science", new { link = "Filoloji" });
             //return RedirectToAction("Answer");
         }
 
@@ -111,16 +110,16 @@ namespace DocentlikPuanHesaplama.Controllers
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             //TempData["lasturl"] = JsonSerializer.Serialize("Hukuk");
-            return RedirectToAction("Answer","Science",new {link= "Hukuk" });
+            return RedirectToAction("Answer", "Science", new { link = "Hukuk" });
             //return RedirectToAction("Answer");
         }
 
 
 
 
- 
 
- 
+
+
         [HttpGet]
         public IActionResult ilahiyat()
         {
@@ -141,13 +140,13 @@ namespace DocentlikPuanHesaplama.Controllers
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             //TempData["lasturl"] = JsonSerializer.Serialize("ilahiyat");
-            return RedirectToAction("Answer","Science",new {link= "ilahiyat" });
+            return RedirectToAction("Answer", "Science", new { link = "ilahiyat" });
             //return RedirectToAction("Answer");
         }
 
 
 
-        
+
         [HttpGet]
         public IActionResult SosyalBeseri()
         {
@@ -168,14 +167,14 @@ namespace DocentlikPuanHesaplama.Controllers
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             //TempData["lasturl"] = JsonSerializer.Serialize("SosyalBeseri");
-            return RedirectToAction("Answer","Science",new {link= "SosyalBeseri" });
+            return RedirectToAction("Answer", "Science", new { link = "SosyalBeseri" });
             //return RedirectToAction("Answer");
         }
 
 
 
 
-       
+
 
         [HttpGet]
         public IActionResult Spor()
@@ -196,7 +195,7 @@ namespace DocentlikPuanHesaplama.Controllers
             Messages message = new();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer","Science",new {link= "Spor" });
+            return RedirectToAction("Answer", "Science", new { link = "Spor" });
             //TempData["lasturl"] = JsonSerializer.Serialize("Spor");
             //return RedirectToAction("Answer");
         }
@@ -223,7 +222,7 @@ namespace DocentlikPuanHesaplama.Controllers
             Messages message = new();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer","Science",new {link= "Muhendis" });
+            return RedirectToAction("Answer", "Science", new { link = "Muhendis" });
             //TempData["lasturl"] = JsonSerializer.Serialize("Muhendis");
             //return RedirectToAction("Answer");
         }
@@ -251,7 +250,7 @@ namespace DocentlikPuanHesaplama.Controllers
             Messages message = new();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer","Science",new {link= "Fen" });
+            return RedirectToAction("Answer", "Science", new { link = "Fen" });
             //TempData["lasturl"] = JsonSerializer.Serialize("Fen");
             //return RedirectToAction("Answer");
         }
@@ -277,7 +276,7 @@ namespace DocentlikPuanHesaplama.Controllers
             Messages message = new();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer","Science",new {link= "Ziraat" });
+            return RedirectToAction("Answer", "Science", new { link = "Ziraat" });
             //TempData["lasturl"] = JsonSerializer.Serialize("Ziraat");
             //return RedirectToAction("Answer");
         }
@@ -304,7 +303,7 @@ namespace DocentlikPuanHesaplama.Controllers
             Messages message = new();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer","Science",new {link= "Mimarlik" });
+            return RedirectToAction("Answer", "Science", new { link = "Mimarlik" });
             //TempData["lasturl"] = JsonSerializer.Serialize("Mimarlik");
             //return RedirectToAction("Answer");
         }
@@ -312,7 +311,7 @@ namespace DocentlikPuanHesaplama.Controllers
 
 
 
- 
+
         [HttpGet]
         public IActionResult Saglik()
         {
@@ -331,7 +330,7 @@ namespace DocentlikPuanHesaplama.Controllers
             Messages message = new();
             message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer","Science",new {link= "Saglik" });
+            return RedirectToAction("Answer", "Science", new { link = "Saglik" });
             //TempData["lasturl"] = JsonSerializer.Serialize("Saglik");
             //return RedirectToAction("Answer");
         }
@@ -360,7 +359,7 @@ namespace DocentlikPuanHesaplama.Controllers
             //TempData["lasturl"] = JsonSerializer.Serialize("Saglik");
             //return RedirectToAction("Answer");
         }
- 
+
 
 
 

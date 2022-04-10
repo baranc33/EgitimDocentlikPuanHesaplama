@@ -1081,11 +1081,12 @@
     {
 
         EgitimEntity entity = JsonSerializer.Deserialize<EgitimEntity>(TempData["modelagain"].ToString());
-     
+     Console.WriteLine(entity);
         
           <script>
-
+     
             let jsEntity={
+
                     UluslarArasiAdoktora :"@entity.UluslarArasiAdoktora",
                     UluslarArasiAmakalesayisi :"@entity.UluslarArasiAmakalesayisi",
                     UluslarArasiAyazarsayisi:"@entity.UluslarArasiAyazarsayisi",
