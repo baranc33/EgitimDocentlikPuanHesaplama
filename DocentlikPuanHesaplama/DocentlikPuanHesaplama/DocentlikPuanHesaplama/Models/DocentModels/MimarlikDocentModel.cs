@@ -145,12 +145,12 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
             }
 
-            if (BaslicaYazar <40 && model.Error==true)
+            if (BaslicaYazar ==0 && model.Error==true)
             {
                 model.Error = true;
                 model.ErrorMessage += "yada  a bendi kapsamında en az bir eserde başlıca yazar olarak yayın yapmak zorunludur";
             }
-            else if (BaslicaYazar >=40 && model.Error == true)
+            else if (BaslicaYazar >=0 && model.Error == true)
             {
                 model.Error = false;
             }

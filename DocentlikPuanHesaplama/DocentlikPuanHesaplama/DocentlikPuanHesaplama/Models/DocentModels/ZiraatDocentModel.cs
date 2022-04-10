@@ -94,7 +94,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < MakalelerAdoktora.Count(); i++)
                 {
-                    if (MakalelerAbasYazar[i] == true) BaslicaYazar += 20 * MakalelerAmakalesayisi[i];
+                    if (MakalelerAbasYazar[i] == true || MakalelerAyazarsayisi[i]==1) BaslicaYazar += 20 * MakalelerAmakalesayisi[i];
                     if (MakalelerAdoktora[i] == 0 && MakalelerAmakalesayisi[i] > 0 && MakalelerAyazarsayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += (20 * MakalelerAmakalesayisi[i]) *

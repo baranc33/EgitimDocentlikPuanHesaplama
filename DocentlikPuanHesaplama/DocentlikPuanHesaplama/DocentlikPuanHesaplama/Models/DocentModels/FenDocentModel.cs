@@ -69,6 +69,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < MakalelerCdoktora.Count(); i++)
                 {
+
                     decimal puan = (decimal)YazarSirasi(MakalelerCyazarsayisi[i], MakalelerCsirasi[i], MakalelerCbasYazar[i]);
                     if (MakalelerCdoktora[i] == 0 && MakalelerCmakalesayisi[i] > 0 && MakalelerCyazarsayisi[i] > 0)
                     {
@@ -90,7 +91,8 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
             {
                 for (int i = 1; i < MakalelerAdoktora.Count(); i++)
                 {
-                    if (MakalelerAbasYazar[i] == true) BaslicaYazar += 20 * MakalelerAmakalesayisi[i];
+
+                    if (MakalelerAbasYazar[i] == true || MakalelerAyazarsayisi[i]==1) BaslicaYazar += 20 * MakalelerAmakalesayisi[i];
                     if (MakalelerAdoktora[i] == 0 && MakalelerAmakalesayisi[i] > 0 && MakalelerAyazarsayisi[i] > 0)
                     {
                         model.HamDoktoraOncesiPuan += (20 * MakalelerAmakalesayisi[i]) *
@@ -104,7 +106,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 }
 
             }
-            if (BaslicaYazar < 40)
+            if (BaslicaYazar == 0)
             {
                 model.Error = true;
                 model.ErrorMessage = "1. Makaleeler maddesi kapsamında başlıca yazar olmak kaydıyla, en az 40 puan almak zorunludur ";
@@ -117,6 +119,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
                 {
                     if (MakalelerBdoktora[i] == 0 && MakalelerBmakalesayisi[i] > 0 && MakalelerByazarsayisi[i] > 0)
                     {
+
                         model.HamDoktoraOncesiPuan += (8 * MakalelerBmakalesayisi[i]) *
                               (decimal)YazarSirasi(MakalelerByazarsayisi[i], MakalelerBsirasi[i], MakalelerBbasYazar[i]);
                     }
@@ -358,6 +361,7 @@ namespace DocentlikPuanHesaplama.Models.DocentModels
 
             model.NetPuan = model.HamDoktoraSonrasiPuan + model.HamDoktoraOncesiPuan;
             model.BolumAdi = "3. Kitap  ";
+            if (model.NetPuan > 20) model.NetPuan = 20;
 
             return model;
         }

@@ -14,6 +14,7 @@ namespace DocentlikPuanHesaplama.Controllers
         [HttpGet]
         public IActionResult Answer(string link)
         {
+
             ViewBag.link = link;
             if (!TempData.ContainsKey("message"))
             {// Form sayfasına dönüş için tasarlandı
@@ -56,7 +57,10 @@ namespace DocentlikPuanHesaplama.Controllers
             TempData["message"] = JsonSerializer.Serialize(message);
             //TempData["lasturl"] = JsonSerializer.Serialize("Egitim");
             //TempData["lasturl"] = JsonSerializer.Serialize(GetUrl());
+            ViewBag.OldData = false;
+
             return RedirectToAction("Answer", "Science", new { link = "Egitim" });
+
         }
 
 
