@@ -15,12 +15,12 @@ namespace AkademikHesaplamalar.Controllers
             ViewBag.link = link;
             if (!TempData.ContainsKey("message"))
             {// Form sayfasına dönüş için tasarlandı
-                TempData["modelagain"] = TempData["model"].ToString();
+                TempData["modelagain"] = TempData["model"]?.ToString();
                 TempData.Remove("model");
                 return RedirectToAction(link, "Science");
             }
             TempData.Remove("modelagain");
-            Messages? m = JsonSerializer.Deserialize<Messages>(TempData["message"].ToString());
+            Messages? m = JsonSerializer.Deserialize<Messages>(TempData["message"]?.ToString());
             TempData.Remove("message");
 
             return View(m);
