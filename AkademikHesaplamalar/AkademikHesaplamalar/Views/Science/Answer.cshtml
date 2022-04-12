@@ -1,0 +1,118 @@
+﻿@model Messages
+
+
+<head>
+    <link href="~/css/hesap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <style>
+              .geridon:hover{
+                    color: white;
+              }
+
+          </style>
+</head>
+<div style="text-align: left; color:black;" class="container" id="ErrorMessage">
+    
+    <form asp-controller="Science" asp-action="Answer"  method="get">
+        <input type="hidden" value="@ViewBag.link" name="link"/>
+    <button onclick="disableButton()" id="backButton" class="btn btn-outline-secondary offset-8 geridon" style="text-align:right;font-size:20px"> <i class="fa-solid fa-rotate-left"></i> Bilgileri Düzenlemek için Geri Dön</button> 
+    </form>
+    
+    @{
+        if (Model.Error==true )
+        {
+            
+
+            <h1 style="text-align: center; margin-top:100px;color: rgb(230, 166, 47);"> Sağlanmayan Kriterler</h1>
+            <center>
+                <hr style="width: 500px;" />
+            </center>
+
+                if (Model.AsgariMessage != null)
+                {
+                    <p><i style="color:  rgb(230, 166, 47);" class="fa-solid fa-star"></i> @Model.AsgariMessage   / <span class="text-danger">  Doktara Sonra  Net Puanınız : @Model.NetToplamDoktoraSonrasi.ToString("0.##") </span> </p>
+                    <hr style="margin-left:20px;width:500px" />
+                }
+            foreach (var val in Model.Bolumler)
+            {
+                if (val.Error == true)
+                {
+                    <p><i style="color:  rgb(230, 166, 47);" class="fa-solid fa-star"></i> @val.ErrorMessage</p>
+                    <hr style="margin-left:20px;width:500px" />
+                }
+
+            }
+        }
+        else
+        {
+            <h1 id="Tebrikler"><b>* TEBRİKLER * </b>Doçentlik Başvuru Hakkı Kazandınız . </h1>
+
+        }
+    }
+
+</div>
+<table id="customers" class="container">
+    <tr>
+        <th>Madde</th>
+        <th>Doktora Öncesi Ham Puan</th>
+        <th>Doktora Sonrası Ham Puan</th>
+        <th>Toplam Puan Net Puan</th>
+    </tr>
+
+    @{
+        for (int i = 0; i < Model.Colum; i++)
+        {string bgcolor="";
+        string color="";
+        if( Model.Bolumler[i].Error==true){
+            bgcolor="red";
+            color="white";
+        } 
+
+
+            <tr style="background-color: @bgcolor;color: @color;">
+                <td  >
+                 <p>
+                        @Model.Bolumler[i].BolumAdi
+                 </p>
+                </td>
+                <td>
+                    <p>
+                   @Model.Bolumler[i].HamDoktoraOncesi.ToString("0.##")
+                   </p>
+                </td>
+                <td>
+                    @Model.Bolumler[i].HamDoktoraSonrasi.ToString("0.##")
+                </td>
+                <td>
+                   @Model.Bolumler[i].NetPuan.ToString("0.##")
+                </td>
+            </tr>
+        }
+    }
+
+
+    <tr>
+        <td>Toplam =</td>
+        <td>
+            @Model.ToplamDoktoraOncesi.ToString("0.##")
+        </td>
+        <td>
+            @Model.ToplamDoktoraSonrasi.ToString("0.##")
+        </td>
+        <td>
+            @Model.ToplamNetPuan.ToString("0.##")
+        </td>
+    </tr>
+</table>
+
+
+<script>
+    function disableButton(){
+        console.log('Disable');
+        let buttonn=document.getElementById("backButton").style.visibility = "hidden";
+ // document.getElementById("backButton").disabled = true;
+ //location.href = `/Science/${@ViewBag.link}`;
+    }
+</script>
