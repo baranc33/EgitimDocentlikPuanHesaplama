@@ -1,0 +1,115 @@
+﻿<body onload="myFunction()">
+
+
+            <div class="col-lg-6 text-center text-lg-start">
+
+                <select style="color:black;"
+                        onchange="hrefGo()" id="select_id" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option value="Index">Bilim Alanı Seçiniz </option>
+                    <option value="Egitim">    Eğitim Bilimleri</option>
+                    <option value="Fen">    Fen Bilimleri ve Matematik Temel Alanı</option>
+                    <option value="Filoloji">    Filoloji Temel Alanı </option>
+                    <option value="GuzelSanatlar">    Güzel Sanatlar Temel Alanı </option>
+                    <option value="Hukuk">    Hukuk Temel Alanı </option>
+                    <option value="ilahiyat">    İlahiyat Temel Alanı </option>
+                    <option value="Mimarlik">    Mimarlık, Planlama ve Tasarım Temel Alanı </option>
+                    <option value="Muhendis">    Mühendislik Temel Alanı </option>
+                    <option value="Saglik">    Sağlık Bilimleri Temel Alanı </option>
+                    <option value="SosyalBeseri">    Sosyal, Beşeri ve İdari Bilimler Temel Alanı </option>
+                    <option value="Ziraat">    Ziraat, Orman ve Su Ürünleri Temel Alanı </option>
+                    <option value="Spor">    Spor Bilimleri Temel Alanı </option>
+                </select>
+            </div>
+      
+
+
+    <script>
+         function hrefGo(){
+            Rotation= document.getElementById("select_id").value;
+            location.href = `/Science/${Rotation}`;
+         }
+         //let link ="Index";
+           const myFunction = () => {
+                    let link = document.querySelector('#science');
+                     link.classList.add("active");
+                }
+        let currentLocation = window.location.pathname;//http://localhost:5125/Science/Muhendis
+        let linkArray=currentLocation.split("/");
+
+                function show(){
+                let e = document.getElementById("select_id");
+                if(linkArray[2]!=null)
+                {
+                    e.value = linkArray[2];
+                }
+                }
+                    show();
+    </script>
+
+      <script>
+        function add(ulid) {
+            let ul = document.getElementById(ulid);
+            let Liicerik = ul.firstElementChild.innerHTML;
+            let li = document.createElement('li');
+            li.classList.add("row");
+            li.innerHTML = Liicerik;
+            ul.append(li);
+        }
+
+        function remove(id) {
+            let ul = document.getElementById(id);
+            let ulChildCount = ul.childElementCount;
+            if (ulChildCount > 1) {
+                ul.removeChild(ul.lastElementChild);
+            }
+        }
+    </script>
+  <script>
+      // chekbo işlemeri
+      function cheked(ulId1,ulId2){
+            let clearul = document.querySelector(ulId1);
+            let ulChildCount = clearul.childElementCount;
+               let clearul2 = document.querySelector(ulId2);
+            let ulChildCount2 = clearul2.childElementCount;
+
+          let cb = document.querySelector('#checkBox');
+          if(cb.checked){
+             alert(" 2 yıl öğretim elemanı olarak görev Yapanlar 9. Maddenin A ve B bendinden Yararlanamaz");
+              document.getElementById("addButton1").disabled = true;
+              document.getElementById("removeButton1").disabled = true;
+              document.getElementById("addButton2").disabled = true;
+              document.getElementById("removeButton2").disabled = true;
+              console.log('chked')
+                for(let i=0;i<ulChildCount-1;i++)
+               {
+                    if(ulChildCount > 1) {
+                     clearul.removeChild(clearul.lastElementChild);
+                    }
+               
+               }  
+
+              for(let i=0;i<ulChildCount2-1;i++)
+               {
+                    if(ulChildCount2 > 1) {
+                     clearul2.removeChild(clearul2.lastElementChild);
+                    }
+               
+               }  
+
+
+          }
+          else{
+            document.getElementById("addButton1").disabled = false;
+              document.getElementById("removeButton1").disabled = false;
+             document.getElementById("addButton2").disabled = false;
+              document.getElementById("removeButton2").disabled = false;
+          }
+      }
+  </script>
+
+  <script>
+      function Reset(){
+document.location.reload(true);
+      }
+  </script>
+</body>

@@ -1,0 +1,52 @@
+﻿
+  @section Alt_Menu{
+   <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
+     <h1 class="col-md-6 text-white display-4 "  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top:0.6em;">Hoş Geldiniz...</h1>
+   
+   <div class="">
+       <h4 class="Calculation_information"> Siteyi kullanabilmek için Web sitesi ayarlarınızdan Java Script kullanımına açık olduğundan emin olunuz
+       </h4>
+       <br>
+     <h5 class="Calculation_information2 col-md-8">
+           Java Script Nasıl Aktif Edilir ? => 
+           <a style="color: red;"  href="#capa"> Videolu Anlatım için tıklayınız. </a>
+
+       </h5>
+   </div>
+  }
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  #videoDiv{
+    border-style: solid;
+    @* border-width: 10px; *@
+    border-width: 20px;
+    border-radius: 10px;
+    border-color:gray;
+    @* background-color: red ; *@
+    margin-bottom:100px;
+    max-width:80%;
+  }
+  video {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+</head>
+
+
+<center><h1 id="capa">Java Script Nasıl Aktif Edilir ?</h1>
+  <div id="videoDiv" class="" >
+    <video  controls="controls"> 
+
+  <source src="~/Video/JavaScriptMerve.mp4" type="video/mp4">
+  <source src="~/Video/javascriptMüjdatAbi.mp4" type="video/mp4">
+  <source src="~/Video/Java_Script_Aktif_Etme.mp4" type="video/mp4">
+ </video>
+ @* <iframe width="560" height="315" src="https://www.youtube.com/embed/jnNlE0ZTqEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> *@
+  </div></center>
