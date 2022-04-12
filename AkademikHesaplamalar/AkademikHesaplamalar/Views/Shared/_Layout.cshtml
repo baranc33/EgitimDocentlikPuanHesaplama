@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mersin Üniverstesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a asp-controller="home" asp-action="Index" class="navbar-brand p-0">
+                    <h1 class="m-0"><i class="fa fa-search me-2"></i>Akademik<span class="fs-5">Hesaplamalar</span></h1>
+                </a>
+              
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0" style="margin-right: 200px;">
+                        <a asp-controller="Home" asp-action="Index" class="nav-item nav-link" id="home">Ana Sayfa</a>
+                         <div class="dropdown">
+                               <a asp-controller="Science" asp-action="Index" class="nav-item nav-link" id="science">Hesaplamalar</a>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                  <a asp-controller="Science" asp-action="Index" class="dropdown-item" id="science">Doçent Hesalama</a>
+                                  <a asp-controller="Tesvik" asp-action="Index" class="dropdown-item" id="science">Teşfik Hesaplama</a>
+                              </div>
+                        </div>
+                        <a asp-controller="Home" asp-action="About" class="nav-item nav-link" id="about">Hakkımızda</a>
+                        <a asp-controller="Home" asp-action="Contact" class="nav-item nav-link" id="contact">İletişim</a>
+                    </div>
+
+                    <div class="nav-item dropdown  btn btn-secondary text-light rounded-pill py-2 px-4 ms-3 " data-bs-toggle="dropdown">
+                       <a asp-action="Login" style="color: white;"> Giriş Yap</a>
+                        <div class="dropdown-menu m-0  mt-2 mr-4">
+                            <a asp-controller="home" asp-action="Login" class="dropdown-item">Giriş</a>
+                            <a asp-controller="home" asp-action="SignUp" class="dropdown-item">Kayıt Ol</a>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header mb-5">
+
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        @RenderSection("Alt_Menu",false)
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                @RenderBody()
+            </div>
+
+    </div>
+        </div>
+
+</body>
+</html>
+
+    <script src="~/jquery/jquery.js"></script>
+    <script src="~/js/wow.min.js"></script>
+    <script src="~/js/main.js"></script>
