@@ -14,7 +14,7 @@ namespace AkademikHesaplamalar.Controllers
 
         public IActionResult Index()
         {
-            if (User.Identity.IsAuthenticated) return RedirectToAction("Index", "Member");
+            if (User.Identity.IsAuthenticated) return RedirectToAction("Index", "MemberHome");
             return View();
         }
         public IActionResult SignUp()
@@ -62,7 +62,12 @@ namespace AkademikHesaplamalar.Controllers
         {
             if (ModelState.IsValid)
             {
-                MyUser user = await _userManager.FindByNameAsync(model.UserName);
+                MyUser user = new();
+                if (model.UserName.Contains("@"))
+                    user = await _userManager.FindByEmailAsync(model.UserName);
+                else
+                    user = await _userManager.FindByNameAsync(model.UserName);
+
                 if (user != null)
                 {
                     if (await _userManager.IsLockedOutAsync(user)) // true dönerse kitlidir
@@ -120,6 +125,7 @@ namespace AkademikHesaplamalar.Controllers
             }
 
 
+            ModelState.AddModelError("", "Geçersiz kullanıcı adı veya  şifresi");
 
 
 

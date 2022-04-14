@@ -11,8 +11,12 @@ namespace AkademikHesaplamalar.Controllers
         {
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            IList<string> Roles = await _userManager.GetRolesAsync(CurrentUser);
+            if (Roles.Contains("Admin"))
+                return RedirectToAction("Index", "Admin");
+
             return View();
         }
     }
