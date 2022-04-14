@@ -10,6 +10,7 @@
         <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="~/css/style.css" rel="stylesheet">
           <link rel="shortcut icon" href="~/img/mersin-universitesi-logo.png" type="image/x-icon">
+          <meta name="viewport" content="widh=device-width,initial-scale=1,maximum-scale=1">
 </head>
 <body>
     <div class="container-xxl bg-white p-0">
@@ -18,7 +19,9 @@
                 <a asp-controller="home" asp-action="Index" class="navbar-brand p-0">
                     <h1 class="m-0"><i class="fa fa-search me-2"></i>Akademik<span class="fs-5">Hesaplamalar</span></h1>
                 </a>
-              
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0" style="margin-right: 100px;">
                         <a asp-controller="Home" asp-action="Index" class="nav-item nav-link" id="home">Ana Sayfa</a>
