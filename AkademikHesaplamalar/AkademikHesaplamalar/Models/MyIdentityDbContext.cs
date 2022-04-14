@@ -9,6 +9,9 @@ namespace AkademikHesaplamalar.Models
         {
         }
 
+        public DbSet<Contact> Contact { get; set; }
+        public DbSet<AdminMember> AdminMember { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
     }
 }
