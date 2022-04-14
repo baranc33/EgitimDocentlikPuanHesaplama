@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using AkademikHesaplamalar.Models.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AkademikHesaplamalar.Models
@@ -9,10 +10,21 @@ namespace AkademikHesaplamalar.Models
         {
         }
 
-        public DbSet<Contact> Contact { get; set; }
+        public DbSet<MyContact> MyContacts { get; set; }
         public DbSet<AdminMember> AdminMember { get; set; }
         public DbSet<Message> Messages { get; set; }
-
+        public DbSet<EgitimEntity> EgitimEntities { get; set; } = default!;
+        public DbSet<FenEntity> FenEntities { get; set; } = default!;
+        public DbSet<FilolojiEntity> FilolojiEntities { get; set; } = default!;
+        public DbSet<GuzelSanatlarEntity> GuzelSanatlarEntities { get; set; } = default!;
+        public DbSet<HukukEntity> HukukEntities { get; set; } = default!;
+        public DbSet<ilahiyatEntity> IlahiyatEntities { get; set; } = default!;
+        public DbSet<MimarlikEntity> MimarlikEntities { get; set; } = default!;
+        public DbSet<MuhendislikEntity> MuhendisEntities { get; set; } = default!;
+        public DbSet<SaglikEntity> SaglikEntities { get; set; } = default!;
+        public DbSet<SosyalEntity> SosyalEntities { get; set; } = default!;
+        public DbSet<SporEntity> SporEntities { get; set; } = default!;
+        public DbSet<ZiraatEntity> ZiraatEntities { get; set; } = default!;
     }
 }
 

@@ -37,6 +37,7 @@ namespace AkademikHesaplamalar.Controllers
 
                 if (result.Succeeded)
                 {
+                    TempData["SignMessage"] ="Kayıt işleminiz Başarıyla gerçekleştirildi";
                     return RedirectToAction("Login");
                 }
                 else
@@ -89,7 +90,7 @@ namespace AkademikHesaplamalar.Controllers
                             {
                                 return Redirect(TempData["ReturnUrl"].ToString());
                             }
-                            return RedirectToAction("Index", "Member");
+                            return RedirectToAction("Index", "MemberHome");
                         }
                         else
                         {
