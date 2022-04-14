@@ -10,13 +10,10 @@
 
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Mersin Üniverstesi</title>
     <script src="~/jquery/jquery.js"></script>
     <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="~/lib/jquery-validate/jquery.validate.js"></script>
-
-    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="~/css/login.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
@@ -24,19 +21,28 @@
       integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
  
+
+
 </head>
 <body>
  
         
  
 
-<div class="offset-md-3 mt-5 navLinks" style="position:fixed">
+<div class="offset-md-3 mt-5 mynavLinks" >
     <a asp-action="Index" asp-controller="home"
 	class="btn  text-light rounded-pill  py-2 px-4 ms-3"  >Ana Sayfa</a>
 	<br />
 	<br />
-	  <a asp-action="Login" asp-controller="home" 
-	class="btn  text-light rounded-pill   py-2 px-4 ms-3"  >Giriş</a>
+	  <a asp-action="SignUp" asp-controller="home" 
+	class="btn  text-light rounded-pill   py-2 px-4 ms-3"  >Kayıt Ol</a>
+</div>
+  
+<div class="offset-md-3 mt-5 mynavLinks2" >
+    <a asp-action="Index" asp-controller="home"
+	class="btn  text-light rounded-pill  py-2 px-4 ms-3"  >Ana Sayfa</a>
+	  <a asp-action="SignUp" asp-controller="home" 
+	class="btn  text-light rounded-pill   py-2 px-4 ms-3"  >Kayıt Ol</a>
 </div>
  
 <div class="container">

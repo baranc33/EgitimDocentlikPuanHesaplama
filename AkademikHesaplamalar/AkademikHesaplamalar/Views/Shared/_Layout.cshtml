@@ -16,14 +16,16 @@
     <div class="container-xxl bg-white p-0">
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a asp-controller="home" asp-action="Index" class="navbar-brand p-0">
+                @* <a asp-controller="home" asp-action="Index" class="navbar-brand p-0">
                     <h1 class="m-0"><i class="fa fa-search me-2"></i>Akademik<span class="fs-5">Hesaplamalar</span></h1>
-                </a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+                </a> *@
+                <button class="btn btn-outline-light navbar-toggler" data-toggle="collapse" data-target="#navs">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+                <div class="collapse navbar-collapse" id="navs">
+                @* <div class="collapse navbar-collapse" id="navbarCollapse"> *@
                     <div class="navbar-nav ms-auto py-0" style="margin-right: 100px;">
+                    @* <div class="navbar-nav ms-auto py-0" style="margin-right: 100px;"> *@
                         <a asp-controller="Home" asp-action="Index" class="nav-item nav-link" id="home">Ana Sayfa</a>
                          <div class="dropdown">
                                <a asp-controller="Science" asp-action="Index" class="nav-item nav-link" id="science">Hesaplamalar</a>
