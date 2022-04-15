@@ -1,4 +1,5 @@
 ﻿using AkademikHesaplamalar.Models;
+using Core.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 

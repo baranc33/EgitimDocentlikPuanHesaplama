@@ -1,6 +1,6 @@
 ﻿using AkademikHesaplamalar.Helpers.smtp;
 using AkademikHesaplamalar.Models;
-using AkademikHesaplamalar.ViewModels;
+using Core.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 

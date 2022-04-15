@@ -1,6 +1,6 @@
 ﻿using AkademikHesaplamalar.Helpers.ConvertToModel;
-using AkademikHesaplamalar.ViewModels.DocentModels;
-using AkademikHesaplamalar.ViewModels.DocentModels.Models;
+using AkademikHesaplamalar.Models.DocentModels;
+using AkademikHesaplamalar.Models.DocentModels.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 

@@ -1,5 +1,5 @@
-﻿using AkademikHesaplamalar.Models.Entities;
-using AkademikHesaplamalar.ViewModels.DocentModels.Models;
+﻿using AkademikHesaplamalar.Models.DocentModels.Models;
+using Core.Models.Entities;
 
 namespace AkademikHesaplamalar.Helpers.ConvertToModel
 {
