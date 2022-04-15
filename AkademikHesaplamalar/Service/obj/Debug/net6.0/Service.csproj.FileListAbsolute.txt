@@ -12,3 +12,6 @@ C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplam
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Debug\net6.0\Service.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Debug\net6.0\ref\Service.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Debug\net6.0\Service.pdb
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Debug\net6.0\Service.csproj.AssemblyReference.cache
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Debug\net6.0\Repository.dll
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Debug\net6.0\Repository.pdb

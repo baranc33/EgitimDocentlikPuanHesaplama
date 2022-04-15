@@ -5,9 +5,11 @@ using Core.Serviecs;
 
 namespace Service.Services
 {
-    public class MyUserService : Service<MyUser>, IMyUserService
+    public class MyUserService :  IMyUserService
     {
-        public MyUserService(IGenericRepository<MyUser> repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
-        { }
+        public MyUserService()
+        {
+
+        }
     }
 }

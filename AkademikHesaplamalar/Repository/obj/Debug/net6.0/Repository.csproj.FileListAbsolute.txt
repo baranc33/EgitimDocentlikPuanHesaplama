@@ -13,3 +13,5 @@ C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplam
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Repository\obj\Debug\net6.0\Repository.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Repository\obj\Debug\net6.0\ref\Repository.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Repository\obj\Debug\net6.0\Repository.pdb
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Repository\bin\Debug\net6.0\Repository.runtimeconfig.json
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Repository\obj\Debug\net6.0\Repository.genruntimeconfig.cache

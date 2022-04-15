@@ -2,5 +2,7 @@
 
 namespace Core.Serviecs
 {
-    public interface IMyUserService : IService<MyUser> { }
+    public interface IMyUserService 
+    { 
+    }
 }

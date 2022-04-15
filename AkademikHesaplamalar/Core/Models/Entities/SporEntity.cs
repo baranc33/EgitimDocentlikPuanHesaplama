@@ -1,157 +1,160 @@
-﻿namespace Core.Models.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Core.Models.Entities
 {
     public class SporEntity
     {
         public int Id { get; set; }
         public string MyUserId { get; set; } = "";
-        public MyUser MyUser { get; set; }=new MyUser();
+        public MyUser MyUser { get; set; } = new MyUser();
 
 
         #region UluslarArasi
-        public string? UluslarArasiAdoktora { get; set; }
-        public string? UluslarArasiAmakalesayisi { get; set; }
-        public string? UluslarArasiAyazarsayisi { get; set; }
-        public string? UluslarArasiAsirasi { get; set; }
-        public string? UluslarArasiAhatirlatici { get; set; }
-        public string? UluslarArasiAbasYazar { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiAdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiAmakalesayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiAyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiAsirasi { get; set; }
+        [MaxLength(100, ErrorMessage = "En Fazla 100 karakter olabilir")] public string? UluslarArasiAhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiAbasYazar { get; set; } = default!;
         public int UluslarArasiACount { get; set; } = 0;
 
-        public string? UluslarArasiBdoktora { get; set; }
-        public string? UluslarArasiBmakalesayisi { get; set; }
-        public string? UluslarArasiByazarsayisi { get; set; }
-        public string? UluslarArasiBsirasi { get; set; }
-        public string? UluslarArasiBhatirlatici { get; set; }
-        public string? UluslarArasiBbasYazar { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiBdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiBmakalesayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiByazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiBsirasi { get; set; }
+       [MaxLength(100, ErrorMessage = "En Fazla 100 karakter olabilir")] public string? UluslarArasiBhatirlatici { get; set; }
+        
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiBbasYazar { get; set; } = default!;
         public int UluslarArasiBCount { get; set; } = 0;
 
-        public string? UluslarArasiCdoktora { get; set; }
-        public string? UluslarArasiCmakalesayisi { get; set; }
-        public string? UluslarArasiCyazarsayisi { get; set; }
-        public string? UluslarArasiCsirasi { get; set; }
-        public string? UluslarArasiChatirlatici { get; set; }
-        public string? UluslarArasiCbasYazar { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiCdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiCmakalesayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiCyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiCsirasi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiChatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiCbasYazar { get; set; } = default!;
         public int UluslarArasiCCount { get; set; } = 0;
 
-     
+
 
 
         #endregion
 
 
         #region Ulusal
-        public string? UlusalAdoktora { get; set; }
-        public string? UlusalAmakalesayisi { get; set; }
-        public string? UlusalAyazarsayisi { get; set; }
-        public string? UlusalAsirasi { get; set; }
-        public string? UlusalAhatirlatici { get; set; }
-        public string? UlusalAbasYazar { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalAdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalAmakalesayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalAyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalAsirasi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalAhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalAbasYazar { get; set; } = default!;
         public int UlusalACount { get; set; } = 0;
 
 
-        public string? UlusalBdoktora { get; set; }
-        public string? UlusalBmakalesayisi { get; set; }
-        public string? UlusalByazarsayisi { get; set; }
-        public string? UlusalBsirasi { get; set; }
-        public string? UlusalBhatirlatici { get; set; }
-        public string? UlusalBbasYazar { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalBdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalBmakalesayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalByazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalBsirasi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalBhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UlusalBbasYazar { get; set; } = default!;
         public int UlusalBCount { get; set; } = 0;
 
         #endregion
 
         #region Yayin
-        public string? YayinAdoktora { get; set; }
-        public string? YayinAkitap { get; set; }
-        public string? YayinAyazarsayisi { get; set; }
-        public string? YayinAhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinAdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinAkitap { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinAyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinAhatirlatici { get; set; }
         public int YayinACount { get; set; } = 0;
 
-        public string? YayinBdoktora { get; set; }
-        public string? YayinBbolumSayisi { get; set; }
-        public string? YayinByazarsayisi { get; set; }
-        public string? YayinBhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinBdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinBbolumSayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinByazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinBhatirlatici { get; set; }
         public int YayinBCount { get; set; } = 0;
 
-        public string? YayinCdoktora { get; set; }
-        public string? YayinCkitap { get; set; }
-        public string? YayinCyazarsayisi { get; set; }
-        public string? YayinChatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinCdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinCkitap { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinCyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinChatirlatici { get; set; }
         public int YayinCCount { get; set; } = 0;
 
-        public string? YayinDdoktora { get; set; }
-        public string? YayinDbolumSayisi { get; set; }
-        public string? YayinDyazarsayisi { get; set; }
-        public string? YayinDhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinDdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinDbolumSayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinDyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinDhatirlatici { get; set; }
         public int YayinDCount { get; set; } = 0;
 
-        public string? YayinEdoktora { get; set; }
-        public string? YayinEmakalesayisi { get; set; }
-        public string? YayinEyazarsayisi { get; set; }
-        public string? YayinEhatirlatici { get; set; }
-        public string? YayinEsirasi { get; set; } = default!;
-        public string? YayinEbasYazar { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinEdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinEmakalesayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinEyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinEhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinEsirasi { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinEbasYazar { get; set; } = default!;
         public int YayinECount { get; set; } = 0;
 
-        public string? YayinFdoktora { get; set; }
-        public string? YayinFmakalesayisi { get; set; }
-        public string? YayinFyazarsayisi { get; set; }
-        public string? YayinFhatirlatici { get; set; }
-        public string? YayinFbasYazar { get; set; } = default!;
-        public string? YayinFsirasi { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinFdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinFmakalesayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinFyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinFhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinFbasYazar { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinFsirasi { get; set; } = default!;
         public int YayinFCount { get; set; } = 0;
 
-        public string? YayinGdoktora { get; set; }
-        public string? YayinGmakalesayisi { get; set; }
-        public string? YayinGyazarsayisi { get; set; }
-        public string? YayinGhatirlatici { get; set; }
-        public string? YayinGbasYazar { get; set; } = default!;
-        public string? YayinGsirasi { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinGdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinGmakalesayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinGyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinGhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinGbasYazar { get; set; } = default!;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? YayinGsirasi { get; set; } = default!;
         public int YayinGCount { get; set; } = 0;
         #endregion
 
 
 
         #region Kitap
-        public string? KitapAdoktora { get; set; }
-        public string? KitapAkitap { get; set; }
-        public string? KitapAyazarsayisi { get; set; }
-        public string? KitapAhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapAdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapAkitap { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapAyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapAhatirlatici { get; set; }
         public int KitapACount { get; set; } = 0;
 
-        public string? KitapBdoktora { get; set; }
-        public string? KitapBbolumSayisi { get; set; }
-        public string? KitapByazarsayisi { get; set; }
-        public string? KitapBhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapBdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapBbolumSayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapByazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapBhatirlatici { get; set; }
         public int KitapBCount { get; set; } = 0;
 
-        public string? KitapCdoktora { get; set; }
-        public string? KitapCkitap { get; set; }
-        public string? KitapCyazarsayisi { get; set; }
-        public string? KitapChatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapCdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapCkitap { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapCyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapChatirlatici { get; set; }
         public int KitapCCount { get; set; } = 0;
 
-        public string? KitapDdoktora { get; set; }
-        public string? KitapDbolumSayisi { get; set; }
-        public string? KitapDyazarsayisi { get; set; }
-        public string? KitapDhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapDdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapDbolumSayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapDyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? KitapDhatirlatici { get; set; }
         public int KitapDCount { get; set; } = 0;
         #endregion
 
 
 
         #region Atiflar
-        public string? AtiflarAdoktora { get; set; }
-        public string? AtiflarAatif { get; set; }
-        public string? AtiflarAhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? AtiflarAdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? AtiflarAatif { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? AtiflarAhatirlatici { get; set; }
         public int AtiflarACount { get; set; } = 0;
 
-        public string? AtiflarBdoktora { get; set; }
-        public string? AtiflarBatif { get; set; }
-        public string? AtiflarBhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? AtiflarBdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? AtiflarBatif { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? AtiflarBhatirlatici { get; set; }
         public int AtiflarBCount { get; set; } = 0;
 
-        public string? AtiflarCdoktora { get; set; }
-        public string? AtiflarCatif { get; set; }
-        public string? AtiflarChatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? AtiflarCdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? AtiflarCatif { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? AtiflarChatirlatici { get; set; }
         public int AtiflarCCount { get; set; } = 0;
         #endregion
 
@@ -159,17 +162,17 @@
 
         #region Danismanlik
         // altıncı kısım verileri
-        public string? DanismanlikAdoktora { get; set; }
-        public string? DanismanlikAseviye { get; set; }
-        public string? DanismanlikAsayi { get; set; }
-        public string? DanismanlikAhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? DanismanlikAdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? DanismanlikAseviye { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? DanismanlikAsayi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? DanismanlikAhatirlatici { get; set; }
         public int DanismanlikACount { get; set; } = 0;
 
 
-        public string? DanismanlikBdoktora { get; set; }
-        public string? DanismanlikBseviye { get; set; }
-        public string? DanismanlikBsayi { get; set; }
-        public string? DanismanlikBhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? DanismanlikBdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? DanismanlikBseviye { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? DanismanlikBsayi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? DanismanlikBhatirlatici { get; set; }
         public int DanismanlikBCount { get; set; } = 0;
 
         #endregion
@@ -177,58 +180,58 @@
 
 
         #region Arastirma
-        public string? ArastirmaAdoktora { get; set; }
-        public string? ArastirmaAproje { get; set; }
-        public string? ArastirmaAhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaAdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaAproje { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaAhatirlatici { get; set; }
         public int ArastirmaACount { get; set; } = 0;
 
-        public string? ArastirmaBdoktora { get; set; }
-        public string? ArastirmaBproje { get; set; }
-        public string? ArastirmaBhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaBdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaBproje { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaBhatirlatici { get; set; }
         public int ArastirmaBCount { get; set; } = 0;
 
-        public string? ArastirmaCdoktora { get; set; }
-        public string? ArastirmaCproje { get; set; }
-        public string? ArastirmaChatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaCdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaCproje { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaChatirlatici { get; set; }
         public int ArastirmaCCount { get; set; } = 0;
 
-        public string? ArastirmaDdoktora { get; set; }
-        public string? ArastirmaDproje { get; set; }
-        public string? ArastirmaDhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaDdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaDproje { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ArastirmaDhatirlatici { get; set; }
         public int ArastirmaDCount { get; set; } = 0;
         #endregion
 
 
 
         #region Toplanti
-        public string? ToplantiAdoktora { get; set; }
-        public string? ToplantiAsayi { get; set; }
-        public string? ToplantiAyazarsayisi { get; set; }
-        public string? ToplantiAhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ToplantiAdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ToplantiAsayi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ToplantiAyazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ToplantiAhatirlatici { get; set; }
         public int ToplantiACount { get; set; } = 0;
 
 
-        public string? ToplantiBdoktora { get; set; }
-        public string? ToplantiBsayi { get; set; }
-        public string? ToplantiByazarsayisi { get; set; }
-        public string? ToplantiBhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ToplantiBdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ToplantiBsayi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ToplantiByazarsayisi { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? ToplantiBhatirlatici { get; set; }
         public int ToplantiBCount { get; set; } = 0;
 
         #endregion
 
 
         #region Egitim
-        public string? EgitimAdoktora { get; set; }
-        public string? EgitimAders { get; set; }
-        public string? EgitimAhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? EgitimAdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? EgitimAders { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? EgitimAhatirlatici { get; set; }
         public int EgitimACount { get; set; } = 0;
 
-        public string? EgitimBdoktora { get; set; }
-        public string? EgitimBders { get; set; }
-        public string? EgitimBhatirlatici { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? EgitimBdoktora { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? EgitimBders { get; set; }
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? EgitimBhatirlatici { get; set; }
         public int EgitimBCount { get; set; } = 0;
 
-        public bool Gorev2yil { get; set; } = false;
+        [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public bool Gorev2yil { get; set; } = false;
         #endregion
 
     }
