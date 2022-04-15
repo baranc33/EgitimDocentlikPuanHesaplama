@@ -6,6 +6,7 @@ namespace Core.smtp
     public static class PasswordReset
     {
 
+
         public static void PasswordResetSendEmail(string link, string email)
         {
             // mail göndere bilmek önce mail açıkken güvenliğini izin vermeliyiz
@@ -55,8 +56,5 @@ namespace Core.smtp
 
 
         }
-
-         
-
     }
 }

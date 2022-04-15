@@ -22,7 +22,7 @@
                     <select style="color:black;" 
                         onchange="hrefGo2()" id="select_id2" class="selectFormsm form-select form-select-sm mb-3 w-75" >
                     <option value="Index">Bilim Alanı Seçiniz </option>
-                    <option value="Egitim">    Eğitim Bilimleri</option>
+                    <option value="Eğitim">    Eğitim Bilimleri</option>
                     <option value="Fen">    Fen Bilimleri ve Matematik </option>
                     <option value="Filoloji">    Filoloji Temel Alanı </option>
                     <option value="GuzelSanatlar">    Güzel Sanatlar </option>
@@ -42,7 +42,7 @@
     <script>
          function hrefGo(){
             Rotation= document.getElementById("select_id").value;
-            location.href = `/Science/${Rotation}`;
+            location.href = `${Rotation}-bilimleri-doçentlik-puan-hesaplama`;
            
          }
            function hrefGo2(){
@@ -63,20 +63,20 @@
                      }
                 }
         let currentLocation = window.location.pathname;//http://localhost:5125/Science/Muhendis
-        let linkArray=currentLocation.split("/");
+        let linkArray=currentLocation.split("-");
 
                 function show(){
                         let e = document.getElementById("select_id");
-                        if(linkArray[2]!=null)
+                        if(linkArray[0]!=null)
                         {
-                            e.value = linkArray[2];
+                            e.value = linkArray[0];
                         }
                 }
                      function show2(){
                         let e = document.getElementById("select_id2");
-                        if(linkArray[2]!=null)
+                        if(linkArray[]!=null)
                         {
-                            e.value = linkArray[2];
+                            e.value = linkArray[0];
                         }
                 }
                     

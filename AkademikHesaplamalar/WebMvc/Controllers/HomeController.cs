@@ -93,11 +93,7 @@ namespace WebMvc.Controllers
                 //  kullanıcı doğru varmı bakıyoruz
                 if (user != null)
                 {
-                    //user manager sınıfından bir token oluşturuyoruz
-                    // bu tokenı maile ile yollicazki doğrulama işleminde doğru mail adresinden 
-                    // dönüş olduğunu onaylamak için bu tokenı oluşturmak için program.cs te service eklemeliyiz
-                    // ıdentity altına .AddDefaultTokenProviders();
-                    //
+                 
                     string passwordResetToken = _userManager.GeneratePasswordResetTokenAsync(user).Result;
 
                     // bir link oluşturcaz mailde tıkladığında gideceği yer
@@ -107,13 +103,14 @@ namespace WebMvc.Controllers
                         token = passwordResetToken
                     }, HttpContext.Request.Scheme);
 
-                    //  www.bıdıbıdı.com/Home/ResetPasswordConfirm?userId=sdjfsjf&token=dfjkdjfdjf
+                 
 
                     PasswordReset.PasswordResetSendEmail(passwordResetLink, user.Email);
+                    TempData["passwordGmail"] = "Mail Adresinize Yenilemek için bir posta gönderdik Şifrenizi yenilemek için oraya tıklayınız";
 
-                    // mail gönderildimi diğe bilgi ekliyoruz
                     ViewBag.status = "success";
                     TempData["durum"] = true.ToString();
+                return RedirectToAction("ResetPasswordConfirm");
                 }
                 else
                 {
