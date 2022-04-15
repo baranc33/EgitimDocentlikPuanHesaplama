@@ -2,5 +2,5 @@
 
 namespace Core.Repositories
 {
-    public interface IMessageRepository : IGenericRepository<Message> {}
+    public interface IMessageRepository : IGenericRepository<MyMessage> {}
 }

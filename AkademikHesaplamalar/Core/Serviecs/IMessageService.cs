@@ -2,5 +2,5 @@
 
 namespace Core.Serviecs
 {
-    public interface IMessageService : IService<Message> { }
+    public interface IMessageService : IService<MyMessage> { }
 }

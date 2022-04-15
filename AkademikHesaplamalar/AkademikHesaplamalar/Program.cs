@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using AkademikHesaplamalar.Helpers.Validaton;
 using AkademikHesaplamalar.Models;
-
-
+using Repository;
+using Core.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

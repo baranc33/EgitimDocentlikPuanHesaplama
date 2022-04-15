@@ -1,5 +1,6 @@
 ﻿using AkademikHesaplamalar.Models;
 using AkademikHesaplamalar.Models.DocentModels.Bolumler;
+using Core.Models;
 
 namespace AkademikHesaplamalar.Models.DocentModels.Models
 {
