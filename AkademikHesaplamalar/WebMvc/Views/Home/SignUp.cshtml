@@ -22,7 +22,13 @@
       crossorigin="anonymous" referrerpolicy="no-referrer" />
  
 
-
+	<style>
+		#gizleGoz,
+		#gizleGoz:hover {
+			color: black;
+			font-size: 20px;
+		}
+	</style>
 </head>
 <body>
  
@@ -34,15 +40,15 @@
 	class="btn  text-light rounded-pill  py-2 px-4 ms-3"  >Ana Sayfa</a>
 	<br />
 	<br />
-	  <a asp-action="SignUp" asp-controller="home" 
-	class="btn  text-light rounded-pill   py-2 px-4 ms-3"  >Kayıt Ol</a>
+	  <a asp-action="login" asp-controller="home" 
+	class="btn  text-light rounded-pill   py-2 px-4 ms-3"  >Giriş Yap</a>
 </div>
   
 <div class="offset-md-3 mt-5 mynavLinks2" >
     <a asp-action="Index" asp-controller="home"
 	class="btn  text-light rounded-pill  py-2 px-4 ms-3"  >Ana Sayfa</a>
-	  <a asp-action="SignUp" asp-controller="home" 
-	class="btn  text-light rounded-pill   py-2 px-4 ms-3"  >Kayıt Ol</a>
+	  <a asp-action="login" asp-controller="home" 
+	class="btn  text-light rounded-pill   py-2 px-4 ms-3"  >Giriş Yap</a>
 </div>
  
 <div class="container">
@@ -64,9 +70,10 @@
                 <span asp-validation-for="UserName" class="text-danger"></span>
 			
 				</div>
-				<div class="login__field">
+				<div class="login__field form-group" id="show_hide_password">
 					<i class="login__icon fas fa-lock"></i>
 					<input type="password" class="login__input" placeholder="Şifreniz"asp-for="Password">
+											<a id="gizleGoz" href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
 				 <br />
 					<span asp-validation-for="Password" class="text-danger"></span>
 				</div>
@@ -88,3 +95,21 @@
 </body>
 
 </html>
+
+
+<script>
+	$(document).ready(function () {
+		$("#show_hide_password a").on('click', function (event) {
+			event.preventDefault();
+			if ($('#show_hide_password input').attr("type") == "text") {
+				$('#show_hide_password input').attr('type', 'password');
+				$('#show_hide_password i').addClass("fa-eye-slash");
+				$('#show_hide_password i').removeClass("fa-eye");
+			} else if ($('#show_hide_password input').attr("type") == "password") {
+				$('#show_hide_password input').attr('type', 'text');
+				$('#show_hide_password i').removeClass("fa-eye-slash");
+				$('#show_hide_password i').addClass("fa-eye");
+			}
+		});
+	});
+</script>

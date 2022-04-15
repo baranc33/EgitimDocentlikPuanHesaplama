@@ -1,4 +1,4 @@
-﻿using WebMvc.Helpers.smtp;
+﻿using Core.smtp;
 using WebMvc.Models;
 using Core.Models;
 using Microsoft.AspNetCore.Identity;
@@ -32,8 +32,6 @@ namespace WebMvc.Controllers
             if (ModelState.IsValid)
             {
                 IdentityResult result = await _myUserService.CreateUser(model);
-
-
                 if (result.Succeeded)
                 {
                     TempData["SignMessage"] ="Kayıt işleminiz Başarıyla gerçekleştirildi";
@@ -41,7 +39,6 @@ namespace WebMvc.Controllers
                 }
                 else
                     AddModelError(result);
-
             }
             return View(model);
         }
@@ -59,38 +56,36 @@ namespace WebMvc.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 string result = await _myUserService.Login(model);
                 if (result!="Success")
-                {
                     ModelState.AddModelError("", result);
-                }
                 else
                 {
-
                     if (TempData["ReturnUrl"] != null)
-                    {
                         return Redirect(TempData["ReturnUrl"].ToString());
-                    }
+                    
                     return RedirectToAction("Index", "MemberHome");
                 }
-
             }
-
+            else
             ModelState.AddModelError("", "Geçersiz kullanıcı adı veya  şifresi");
+
             return View(model);
         }
-
+        public IActionResult LogOut()
+        {
+            signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
         [HttpGet]
         public IActionResult ResetPassword()
         {
-            // post kısmında temp data kullanacağımız için burda null a çekiyoruz
             TempData["durum"] = null;
             return View();
         }
 
         [HttpPost]
-        public IActionResult ResetPassword(PasswordResetViewModel passwordResetViewModel)
+        public IActionResult ResetPassword(PasswordResetDto passwordResetViewModel)
         {
             if (TempData["durum"] == null)
             {
@@ -136,9 +131,7 @@ namespace WebMvc.Controllers
         [HttpGet]
         public IActionResult ResetPasswordConfirm(string userId, string token)
         {
-            // gelen bilgileri tempdataya yazıyoruz post kısmından erişebilmek için
-            // aynı zamanda bu şifre ve şifre tekrarı gibi seçenek yaparsak
-            // bu bilgileri tekrar tekrar göndermek yerine temp datadan çekeriiz
+           
             TempData["userId"] = userId;
             TempData["token"] = token;
             return View();
@@ -180,8 +173,6 @@ namespace WebMvc.Controllers
             TempData["token"] = token;
             return View(model);
         }
-
-
 
 
         public IActionResult About()

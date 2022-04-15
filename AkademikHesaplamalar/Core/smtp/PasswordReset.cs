@@ -1,7 +1,7 @@
 ﻿using System.Net.Mail;
 using System.Net;
 
-namespace WebMvc.Helpers.smtp
+namespace Core.smtp
 {
     public static class PasswordReset
     {
@@ -20,7 +20,7 @@ namespace WebMvc.Helpers.smtp
                 //Bu kısım mail'in kime gideceğidir.Kendi adresimi yazdım.
                 mail.To.Add(email);
                 //Burası ise kimin göndereceğidir.Kim gönderecek?
-                mail.From = new MailAddress("docenthesapla@gmail.com", "Doçent Hesaplama");
+                mail.From = new MailAddress("docenthesapla@gmail.com", "Akademik Hesaplamalar");
                 //Gelen mailin konusu
                 mail.Subject = "Şifre Sıfırlama isteği";
                 //mail.Body += "<h4 class='text-center'>Eğer Bu isteği siz göndermediyseniz ciddiye almayınız.</h4><hr>";
@@ -28,11 +28,11 @@ namespace WebMvc.Helpers.smtp
                 mail.Body = "<center><h1> Akademik Hesaplamalar sitemize şifre yenilenme isteğinde bulunuldu </h1></center>";
                 mail.Body += "<center style='border-radius: 40px;padding-top:30px;padding-bottom:30px;margin-left: 10%;margin-right: 10%;background-color: rgba(29, 26, 191, 0.834);'>";
                 mail.Body += "<h2 style='color:white'> Saygı Değer Kullanıcımız </h2><hr><div>";
-                mail.Body += $"<p style='color:white'> Az önce wwww.akademikhesaplamalar,net sitesimize.  Mail adresiz adına şifre Sıfırlama isteğinde bulunuldu</p>";
+                mail.Body += $"<p style='color:white'> Az önce wwww.akademikhesaplamalar,com sitesimize.  Mail adresiz adına şifre Sıfırlama isteğinde bulunuldu</p>";
                 mail.Body += "<p style='color:yellow' > Adres size ait değilse veya işlem tarafınızca gerçekleştirilmediyse dikkate almayınız </p>";
                 mail.Body += $"<a style='color:red;text-decoration:none;font-size:20px;' href='{link}' > Şifrenizi Yenilemek için tıklayınız.</a></div> </center> ";
                 mail.Body += $"<p> Bu istek sürekli tekrar ediyor ve sizin değilse sitemizin iletişim kısmından bize bildiriniz.</p>";
-                mail.Body += "<a href='www.akademikhesaplamalar.net' style='text-decoration:none;'> wwww.akademikhesaplamalar.net >></a>";
+                mail.Body += "<a href='www.akademikhesaplamalar.com' style='text-decoration:none;'> wwww.akademikhesaplamalar.com >></a>";
                 mail.IsBodyHtml = true;
                 // smptp clientiını host firmamızdan öğreneceğiz
                 SmtpClient smtp = new SmtpClient();

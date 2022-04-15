@@ -11,13 +11,21 @@
 	<script src="~/lib/jquery-validate/jquery.validate.js"></script>
 	<link href="~/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link href="~/css/login.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
 		integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
 
 
+
+	<style>
+		#gizleGoz,
+		#gizleGoz:hover {
+			color: #333;
+					font-size: 20px;
+		}
+	</style>
 </head>
 
 <body>
@@ -56,19 +64,33 @@
 						<i class="login__icon fas fa-user"></i>
 						<input type="text" class="login__input" placeholder="Kullanıcı Adı  / Email" asp-for="UserName">
 					</div>
-					<div class="login__field">
+					<div class="login__field form-group" id="show_hide_password">
 						<i class="login__icon fas fa-lock"></i>
-						<input type="password" class="login__input" placeholder="Şifreniz" asp-for="Password">
+						<input type="password" class="login__input"  placeholder="Şifreniz"
+							asp-for="Password">
+						<a id="gizleGoz" href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+
 					</div>
 					<div class="form-check form-switch">
-						<input class="form-check-input" type="checkbox" asp-for="RememberMe"  checked/>  <b> Beni Hatırla</b>
+						<input class="form-check-input" type="checkbox" asp-for="RememberMe" checked /> <b> Beni
+							Hatırla</b>
 					</div>
+
+
+
+
+
+
+
 					<button class="button login__submit">
 						<span class="button__text">Giriş Yap</span>
 						<i class="button__icon fas fa-chevron-right"></i>
 					</button>
 				</form>
-				<h4 style="text-align:right;color:white;margin-top:2em"><span style="margin-right:10px">Sosyal Medya
+				<a class="btn btn-link" id="unuttum" asp-controller="home" asp-action="ResetPassword">Şifremi unuttum
+					></a>
+
+				<h4 style="text-align:right;color:white;margin-top:0.3em"><span style="margin-right:10px">Sosyal Medya
 						Girişleri </span></h4>
 
 				<div class="social-icons">
@@ -88,3 +110,19 @@
 	</div>
 
 </body>
+<script>
+	$(document).ready(function () {
+		$("#show_hide_password a").on('click', function (event) {
+			event.preventDefault();
+			if ($('#show_hide_password input').attr("type") == "text") {
+				$('#show_hide_password input').attr('type', 'password');
+				$('#show_hide_password i').addClass("fa-eye-slash");
+				$('#show_hide_password i').removeClass("fa-eye");
+			} else if ($('#show_hide_password input').attr("type") == "password") {
+				$('#show_hide_password input').attr('type', 'text');
+				$('#show_hide_password i').removeClass("fa-eye-slash");
+				$('#show_hide_password i').addClass("fa-eye");
+			}
+		});
+	});
+</script>
