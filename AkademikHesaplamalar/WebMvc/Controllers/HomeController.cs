@@ -3,13 +3,18 @@ using WebMvc.Models;
 using Core.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Core.Serviecs;
+using Core.Dtos;
 
 namespace WebMvc.Controllers
 {
     public class HomeController : BaseController
     {
-        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager) : base(_userManager, _signInManager)
+
+        private readonly IMyUserService _myUserService;
+        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager, IMyUserService myUserService) : base(_userManager, _signInManager)
         {
+            _myUserService=myUserService;
         }
 
         public IActionResult Index()
@@ -22,18 +27,12 @@ namespace WebMvc.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> SignUp(UserViewModel model)
+        public async Task<IActionResult> SignUp(UserDto model)
         {
             if (ModelState.IsValid)
             {
-                MyUser user = new MyUser()
-                {
-                    UserName = model.UserName,
-                    Email = model.Email,
-                    Resim= model.Password
-                };
+                IdentityResult result = await _myUserService.CreateUser(model);
 
-                IdentityResult result = await _userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
                 {
@@ -41,9 +40,7 @@ namespace WebMvc.Controllers
                     return RedirectToAction("Login");
                 }
                 else
-                {
                     AddModelError(result);
-                }
 
             }
             return View(model);
@@ -58,78 +55,29 @@ namespace WebMvc.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginDto model)
         {
             if (ModelState.IsValid)
             {
-                MyUser user = new();
-                if (model.UserName.Contains("@"))
-                    user = await _userManager.FindByEmailAsync(model.UserName);
-                else
-                    user = await _userManager.FindByNameAsync(model.UserName);
 
-                if (user != null)
+                string result = await _myUserService.Login(model);
+                if (result!="Success")
                 {
-                    if (await _userManager.IsLockedOutAsync(user)) // true dönerse kitlidir
-                    {
-                        ModelState.AddModelError("", "Hesabınız Bir Süreliğine kitlenmiştir bir süre sonra tekrar deneyiniz");
-                    }
-                    else
-                    {
-
-                        // önce kayıtlı coockileri siliyoruz
-                        await _signInManager.SignOutAsync();
-
-                        // 1. true/false program.cs te belirttiğimiz coockie ömrünü aktif eder
-                        // 2. true/false başarısız girişlerde kulanıcı kitleme
-                        Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
-
-                        //if (result.IsNotAllowed)//kullanıcı kitliyken doğru giriş yaparsa
-                        //if (result.Succeeded)// işlem başarılımı
-                        //if (result.IsLockedOut)//kullanıcı kitlimi değilmi
-                        //if (result.RequiresTwoFactor)// iki faktörlü koruma açıkmı?
-                        if (result.Succeeded)
-                        {
-                            await _userManager.ResetAccessFailedCountAsync(user);
-                            if (TempData["ReturnUrl"] != null)
-                            {
-                                return Redirect(TempData["ReturnUrl"].ToString());
-                            }
-                            return RedirectToAction("Index", "MemberHome");
-                        }
-                        else
-                        {
-
-                            await _userManager.AccessFailedAsync(user);// hhatalı girişi 1 arttır
-                            int fail = await _userManager.GetAccessFailedCountAsync(user);// hatalı girişleri getir
-
-                            if (fail == 3)
-                            {// 3 başarısız giriş yapmak
-                                await _userManager.SetLockoutEndDateAsync(user, new DateTimeOffset(DateTime.Now.AddMinutes(5)));
-                                ModelState.AddModelError("", "Hesabınız 5 dk boyunca kitlendi.");
-                            }
-                            // hatalı giriş mesajı
-                            ModelState.AddModelError("", $"{fail} Hatalı Giriş Yaptınız");
-
-                        }
-                    }
-
-
-
+                    ModelState.AddModelError("", result);
                 }
                 else
                 {
-                    // kullanıcı yoksa Email inputu hedefli bir mesaj yolliyalım
-                    ModelState.AddModelError(nameof(LoginViewModel.UserName), "Geçersiz kullanıcı adı veya  şifresi");
+
+                    if (TempData["ReturnUrl"] != null)
+                    {
+                        return Redirect(TempData["ReturnUrl"].ToString());
+                    }
+                    return RedirectToAction("Index", "MemberHome");
                 }
+
             }
 
-
             ModelState.AddModelError("", "Geçersiz kullanıcı adı veya  şifresi");
-
-
-
-
             return View(model);
         }
 

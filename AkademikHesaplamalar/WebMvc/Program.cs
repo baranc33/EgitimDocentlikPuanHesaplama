@@ -9,6 +9,7 @@ using Repository;
 using Repository.Repositories;
 using Service.Services;
 using System.Reflection;
+using WebMvc.Helpers.Extensions.IServiceCollectionExtensions;
 using WebMvc.Helpers.Validaton;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,11 +24,7 @@ else
 
 
 // migration yaparken repository seçili set a start up Bu dosya nýn assembly si seçili
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
-
-
+builder.Services.AddScopedExtens();
 
 builder.Services.AddDbContext<MyIdentityDbContext>(opts =>
 {
