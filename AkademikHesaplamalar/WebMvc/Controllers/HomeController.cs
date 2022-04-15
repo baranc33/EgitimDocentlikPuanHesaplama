@@ -74,7 +74,7 @@ namespace WebMvc.Controllers
         }
         public IActionResult LogOut()
         {
-            signInManager.SignOutAsync();
+            _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
         [HttpGet]

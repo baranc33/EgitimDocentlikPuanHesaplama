@@ -12,7 +12,7 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(MyIdentityDbContext))]
-    [Migration("20220415110336_Initial")]
+    [Migration("20220415172202_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

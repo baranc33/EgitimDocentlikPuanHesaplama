@@ -17,6 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 string con = "";
 if (builder.Environment.IsDevelopment())
+    //con = builder.Configuration["ConnectionStrings:ProductionConnectionString"];
     con = builder.Configuration["ConnectionStrings:DefaultConnectionString"];
 else
     con = builder.Configuration["ConnectionStrings:ProductionConnectionString"];

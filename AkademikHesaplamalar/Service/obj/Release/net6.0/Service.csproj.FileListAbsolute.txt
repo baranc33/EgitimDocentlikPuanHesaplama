@@ -1,0 +1,17 @@
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Release\net6.0\Service.deps.json
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Release\net6.0\Service.dll
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Release\net6.0\ref\Service.dll
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Release\net6.0\Service.pdb
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Release\net6.0\Core.dll
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Release\net6.0\Repository.dll
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Release\net6.0\Repository.pdb
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\bin\Release\net6.0\Core.pdb
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Release\net6.0\Service.csproj.AssemblyReference.cache
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Release\net6.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Release\net6.0\Service.AssemblyInfoInputs.cache
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Release\net6.0\Service.AssemblyInfo.cs
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Release\net6.0\Service.csproj.CoreCompileInputs.cache
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Release\net6.0\Service.csproj.CopyComplete
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Release\net6.0\Service.dll
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Release\net6.0\ref\Service.dll
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\Service\obj\Release\net6.0\Service.pdb
