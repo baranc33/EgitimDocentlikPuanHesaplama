@@ -99,6 +99,7 @@ app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();// derste hoca bunu yazmiyor ama yazmayýnca hata veriyor
 
+app.MapControllerRoute("default14", "Docentlik-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "Index" });
 app.MapControllerRoute("default13", "filoloji-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "Filoloji" });
 app.MapControllerRoute("default12", "hukuk-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "Hukuk" });
 app.MapControllerRoute("default11", "ilahiyat-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "ilahiyat" });
@@ -109,8 +110,8 @@ app.MapControllerRoute("default8", "muhendis-bilimleri-doçentlik-puan-hesaplama"
 app.MapControllerRoute("default7", "ziraat-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "Ziraat" });
 app.MapControllerRoute("default6", "mimarlik-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "Mimarlik" });
 app.MapControllerRoute("default5", "saglik-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "Saglik" });
-app.MapControllerRoute("default4", "egitim-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "GuzelSanatlar" });
-app.MapControllerRoute("default3", "guzelsanatlar-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "Egitim" });
+app.MapControllerRoute("default4", "egitim-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "Egitim" });
+app.MapControllerRoute("default3", "guzelsanatlar-bilimleri-doçentlik-puan-hesaplama", new { controller = "Science", action = "GuzelSanatlar" });
 app.MapControllerRoute("default2", "Akademik-hesaplama", new { controller = "Home", action = "Index" });
 
 app.MapControllerRoute(

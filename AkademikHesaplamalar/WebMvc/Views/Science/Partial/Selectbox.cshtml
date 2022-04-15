@@ -5,7 +5,7 @@
 
                 <select style="color:black;" 
                         onchange="hrefGo()" id="select_id" class="selectFormlg form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                    <option value="Index">Bilim Alanı Seçiniz </option>
+                    <option value="Docentlik">Bilim Alanı Seçiniz </option>
                     <option value="Egitim">    Eğitim Bilimleri</option>
                     <option value="Fen">    Fen Bilimleri ve Matematik Temel Alanı</option>
                     <option value="Filoloji">    Filoloji Temel Alanı </option>
@@ -21,7 +21,7 @@
                 </select>
                     <select style="color:black;" 
                         onchange="hrefGo2()" id="select_id2" class="selectFormsm form-select form-select-sm mb-3 w-75" >
-                    <option value="Index">Bilim Alanı Seçiniz </option>
+                    <option value="Docentlik">Bilim Alanı Seçiniz </option>
                     <option value="Eğitim">    Eğitim Bilimleri</option>
                     <option value="Fen">    Fen Bilimleri ve Matematik </option>
                     <option value="Filoloji">    Filoloji Temel Alanı </option>
@@ -69,14 +69,15 @@
                         let e = document.getElementById("select_id");
                         if(linkArray[0]!=null)
                         {
-                            e.value = linkArray[0];
+                            e.value = linkArray[0].replace("/","");
+
                         }
                 }
                      function show2(){
                         let e = document.getElementById("select_id2");
-                        if(linkArray[]!=null)
+                        if(linkArray[0]!=null)
                         {
-                            e.value = linkArray[0];
+                            e.value = linkArray[0].replace("/","");
                         }
                 }
                     

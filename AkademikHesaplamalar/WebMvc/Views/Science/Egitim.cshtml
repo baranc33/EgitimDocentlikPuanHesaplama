@@ -1,7 +1,9 @@
 ﻿
 @section Alt_Menu{
+    
+<h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    Eğitim bilimleri doçentlik puan hesaplama </h1>
 <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
-<h1 class="col-md-6 text-white display-4 " style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top:0.6em;">Başvuru şartları</h1>
 <div class="">
     <h4 class="Calculation_information">
         Eğitim bilimleri temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki
@@ -20,10 +22,8 @@
 
  <head>
     <link href="~/css/hesap.css" rel="stylesheet">
-    <script src="~/js/Bolumler.js"></script>
-    <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
           <meta name="description" content="Eğitim bilimleri doçentlik puan hesaplama" />
-
+   
 </head> 
  
  <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Egitim" method="post"> 
@@ -1071,6 +1071,8 @@
         <br>
     </section>
 </form>
+ <script src="~/js/Bolumler.js"></script>
+    <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
 
 @{
   if (ViewBag.OldData == true)
