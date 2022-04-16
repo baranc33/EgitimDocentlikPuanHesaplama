@@ -5,16 +5,17 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Akademik Hesaplama</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="~/css/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="~/img/mersin-universitesi-logo.png" type="image/x-icon">
     <meta name="viewport" content="widh=device-width,initial-scale=1,maximum-scale=1">
 
     <meta name="description"
-        content="Akademik Hesaplamalar ,doçentlik puan hesaplama  , teşfik hesaplama işlemleri yapabiliyoruz" />
+          content="Akademik Hesaplamalar ,doçentlik puan hesaplama  , teşfik hesaplama işlemleri yapabiliyoruz" />
 </head>
 
 <body>
@@ -25,7 +26,7 @@
                     <h1 class="m-0"><i class="fa fa-search me-2"></i>Akademik<span class="fs-5">Hesaplamalar</span></h1>
                 </a>
                 <button class="btn btn-outline-light navbar-toggler" data-toggle="collapse"
-                    data-target="#navbarCollapse">
+                        data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -33,26 +34,32 @@
                         <a asp-controller="Home" asp-action="Index" class="nav-item nav-link" id="home">Ana Sayfa</a>
                         <div class="dropdown">
                             <a asp-controller="Science" asp-action="Index" class="nav-item nav-link"
-                                id="science">Hesaplamalar</a>
+                               id="science">Hesaplamalar</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <a asp-controller="Science" asp-action="Index" class="dropdown-item" id="science">Doçent
-                                    Hesalama</a>
-                                <a asp-controller="Tesvik" asp-action="Index" class="dropdown-item" id="science">Teşfik
-                                    Hesaplama</a>
+                                <a asp-controller="Science" asp-action="Index" class="dropdown-item" id="science">
+                                    Doçent
+                                    Hesalama
+                                </a>
+                                <a asp-controller="Tesvik" asp-action="Index" class="dropdown-item" id="science">
+                                    Teşfik
+                                    Hesaplama
+                                </a>
                             </div>
                         </div>
                         <a asp-controller="Home" asp-action="About" class="nav-item nav-link" id="about">Hakkımızda</a>
                         <a asp-controller="Home" asp-action="Contact" class="nav-item nav-link"
-                            id="contact">İletişim</a>
+                           id="contact">İletişim</a>
                     </div>
 
                     <div id="loginbtn" class="nav-item dropdown  btn  text-light rounded-pill py-2 px-4 ms-3 "
-                        data-bs-toggle="dropdown">
+                         data-bs-toggle="dropdown">
                         <a asp-controller="home" asp-action="Login" id="loginBtnid"> Giriş Yap</a>
                         <div class="dropdown-menu  mt-2 mr-4">
                             <a asp-controller="home" asp-action="Login" class="dropdown-item minimenugizle">Giriş</a>
-                            <a asp-controller="home" asp-action="SignUp" class="dropdown-item minimenugizle">Kayıt
-                                Ol</a>
+                            <a asp-controller="home" asp-action="SignUp" class="dropdown-item minimenugizle">
+                                Kayıt
+                                Ol
+                            </a>
                         </div>
 
                     </div>
@@ -79,87 +86,73 @@
         <div class="footer">
             <div class="container">
                 <div class="row">
-                    @* <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6" >
-                        <div>
-                        <i class="fa-brands fa-github "> <a href="" target="_blank"> </a> <span>Github</span></i>
-                        </div>
-                        <div>
-                        <i class="fa-brands fa-linkedin-in "><a href="" target="_blank"> </a> <span>Linkedin</span></i>
-                        </div>
-                        <div>
-                        <i class="fa-brands fa-instagram "><a href="" target="_blank"></a> <span>İnstegram</span></i>
-                        </div>
-                        <div>
-                        <i class="fa-brands fa-facebook "> <a href="" target="_blank"> </a><span>FaceBook</span></i>
-                        </div>
 
-                        </div> *@
                     <h3 class="text-center" style="font-family: 'Lobster Two', cursive;">İ Ç E R İ K L E R İ M İ Z </h3>
-                    <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
+                 <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
                         <ul class="about_usFooter">
                             <li>
-                                <a href="Egitim-bilimleri-doçentlik-puan-hesaplama">Eğitim Bilimleri Doçentlik Puan hesaplama </a>
+                                <a href="Egitim-Bilimleri-Doçentlik-Puan-Hesaplama">Eğitim Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                             <li>
-                                <a href="Fen-bilimleri-doçentlik-puan-hesaplama">Fen Bilimleri Doçentlik Puan hesaplama </a>
+                                <a href="Fen-Bilimleri-Doçentlik-puan-hesaplama">Fen Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                             <li>
-                                <a href="Filoloji-bilimleri-doçentlik-puan-hesaplama">Filoloji Bilimleri Doçentlik Puan hesaplama </a>
+                                <a asp-controller="Science" asp-action="Filoloji" >Filoloji Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
-                            <li>
-                                <a href="GuzelSanatlar-bilimleri-doçentlik-puan-hesaplama">Güzel Sanatlar Bilimleri Doçentlik Puan hesaplama </a>
+                           <li>
+                                <a asp-controller="Science" asp-action="GuzelSanatlar"  >Güzel Sanatlar Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
                         <ul class="about_usFooter">
-                            <li>
-                                <a href="Hukuk-bilimleri-doçentlik-puan-hesaplama">Hukuk Bilimleri Doçentlik Puan hesaplama </a>
+                          <li>
+                                <a  asp-controller="Science" asp-action="Hukuk">Hukuk Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                             <li>
-                                <a href="ilahiyat-bilimleri-doçentlik-puan-hesaplama">ilahiyat Bilimleri Doçentlik Puan hesaplama </a>
+                                <a  asp-controller="Science" asp-action="ilahiyat">ilahiyat Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                             <li>
-                                <a href="Mimarlik-bilimleri-doçentlik-puan-hesaplama">Mimarlik Bilimleri Doçentlik Puan hesaplama </a>
+                                <a  asp-controller="Science" asp-action="Mimarlikk">Mimarlik Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                             <li>
-                                <a href="Muhendis-bilimleri-doçentlik-puan-hesaplama">Muhendis Bilimleri Doçentlik Puan hesaplama </a>
+                                <a  asp-controller="Science" asp-action="Muhendis">Muhendis Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
                         <ul class="about_usFooter">
-                            <li>
-                                <a href="Saglik-bilimleri-doçentlik-puan-hesaplama">Saglik Bilimleri Doçentlik Puan hesaplama </a>
+                             <li>
+                                <a  asp-controller="Science" asp-action="Saglik">Saglik Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                             <li>
-                                <a href="SosyalBeseri-bilimleri-doçentlik-puan-hesaplama">SosyalBeseri Bilimleri Doçentlik Puan hesaplama </a>
+                                <a asp-controller="Science" asp-action="SosyalBeseri">SosyalBeseri Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                             <li>
-                                <a href="Ziraat-bilimleri-doçentlik-puan-hesaplama">Ziraat Bilimleri Doçentlik Puan hesaplama </a>
+                                <a asp-controller="Science" asp-action="Ziraat">Ziraat Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                             <li>
-                                <a href="Spor-bilimleri-doçentlik-puan-hesaplama">Spor Bilimleri Doçentlik Puan hesaplama </a>
+                                <a asp-controller="Science" asp-action="Spor">Spor Bilimleri Doçentlik Puan hesaplama </a>
                             </li>
                         </ul>
                     </div>
-
-
                 </div>
             </div>
-                            <p class="text-center">Sitemiz 2022 Yayına alındı. ©
-                                 <a href="https://www.akademikhesaplamalar.com/"  style="text-decoration: none;"> İyi gezinmeler</a></p>
+            <p class="text-center">
+                Sitemiz 2022 Yayına alındı. ©
+                <a href="https://www.akademikhesaplamalar.com/" style="text-decoration: none;"> İyi gezinmeler</a>
+            </p>
         </div>
     </footer>
 </body>
 
 </html>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
 
 <script src="~/jquery/jquery.js"></script>
