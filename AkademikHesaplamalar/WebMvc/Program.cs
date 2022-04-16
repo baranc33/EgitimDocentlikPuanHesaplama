@@ -98,6 +98,30 @@ app.UseStaticFiles();
 
 app.UseAuthentication();
 app.UseAuthorization();// derste hoca bunu yazmiyor ama yazmayýnca hata veriyor
+
+
+
+
+app.MapControllerRoute("MemberDocent", "Docentlik-Puan-Hesaplamalar", new { controller = "MemberScience", action = "Index" });
+app.MapControllerRoute("MemberEgitim", "Eðitim-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Egitim" });
+app.MapControllerRoute("MemberFen", "Fen-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Fen" });
+app.MapControllerRoute("MemberFiloloji", "Filoloji-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Filoloji" });
+app.MapControllerRoute("MemberGuzelsanatlar", "Guzelsanat-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "GuzelSanatlar" });
+app.MapControllerRoute("MemberHukuk", "Hukuk-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Hukuk" });
+app.MapControllerRoute("Memberilahiyat", "ilahiyat-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "ilahiyat" });
+app.MapControllerRoute("MemberMimarlik", "Mimarlýk-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Mimarlik" });
+app.MapControllerRoute("MemberMuhendis", "Mühendis-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Muhendis" });
+app.MapControllerRoute("MemberSaglik", "Saðlýk-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Saglik" });
+app.MapControllerRoute("MemberSosyalBeseri", "SosyalBeseri-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "SosyalBeseri" });
+app.MapControllerRoute("MemberZiraat", "Ziraat-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Ziraat" });
+app.MapControllerRoute("MemberSpor", "Spor-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Spor" });
+app.MapControllerRoute("MemberAkademik", "Akademik-hesaplamalar", new { controller = "MemberHome", action = "Index" });
+
+
+
+
+
+
 app.MapControllerRoute("Docent", "Docentlik-Bilimleri-Puan-Hesaplama", new { controller = "Science", action = "Index" });
 app.MapControllerRoute("Egitim", "Eðitim-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Egitim" });
 app.MapControllerRoute("Fen", "Fen-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Fen" });
