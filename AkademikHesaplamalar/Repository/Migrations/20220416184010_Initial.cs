@@ -16,17 +16,18 @@ namespace Repository.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdRow = table.Column<int>(type: "int", nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Degree = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Github = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Linkedin = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Instegram = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Facebook = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
-                    MailAdres = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    MailExtension = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    WebSiteUrl = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    İmage = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false)
+                    MyUserId = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    FullName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Degree = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Github = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Linkedin = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Instegram = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Facebook = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
+                    MailAdres = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    MailExtension = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
+                    WebSiteUrl = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    İmage = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true)
                 },
                 constraints: table =>
                 {

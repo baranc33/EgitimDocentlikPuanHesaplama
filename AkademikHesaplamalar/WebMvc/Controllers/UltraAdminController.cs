@@ -1,5 +1,6 @@
 ﻿using Core.Dtos;
 using Core.Models;
+using Core.Serviecs;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -8,8 +9,13 @@ namespace WebMvc.Controllers
 {
     public class UltraAdminController : BaseController
     {
-        public UltraAdminController(UserManager<MyUser> userManager,RoleManager<MyRole> _roleManager) : base(userManager, null, _roleManager)
+        private readonly IMyUserService _myUserService;
+        private readonly IAdminMemberService _adminMemberService;
+
+        public UltraAdminController(UserManager<MyUser> userManager, RoleManager<MyRole> _roleManager, IMyUserService myUserService, IAdminMemberService adminMemberService) : base(userManager, null, _roleManager)
         {
+            _myUserService=myUserService;
+            _adminMemberService=adminMemberService;
         }
 
         public IActionResult Index()
@@ -53,8 +59,13 @@ namespace WebMvc.Controllers
             return View(roleViewModel);
         }
 
-     
 
+        [HttpGet]
+        public async Task<IActionResult> AdminMember()
+        {
+            MyRole role = await _roleManager.FindByNameAsync("Admin");
+            return View(_roleManager.Roles.ToList());
+        }
 
 
 
@@ -118,7 +129,7 @@ namespace WebMvc.Controllers
             // içerde kullanmak için username ide alıyoruz
             ViewBag.userName = user.UserName;
             // rolleri listeliyoruz
-            IQueryable<MyRole> roles =_roleManager.Roles;
+            IQueryable<MyRole> roles = _roleManager.Roles;
             // userın rollerini getiriyoruz list<stringe> cast ediyoruz
             List<string> userroles = _userManager.GetRolesAsync(user).Result as List<string>;
             // yeni bi role asignview model oluşturuyoruz
@@ -158,6 +169,13 @@ namespace WebMvc.Controllers
 
                 {
                     await _userManager.AddToRoleAsync(user, item.RoleName);
+                    AdminMember adminMember = new AdminMember()
+                    {
+                        MyUserId=user.Id
+                    };
+                    bool result = await _adminMemberService.AnyAsync(x => x.MyUserId==user.Id);
+                    if (!result)
+                    await _adminMemberService.AddAsync(adminMember);
                 }
                 else
                 {
@@ -168,6 +186,6 @@ namespace WebMvc.Controllers
             return RedirectToAction("Users");
         }
 
-     
+
     }
 }
