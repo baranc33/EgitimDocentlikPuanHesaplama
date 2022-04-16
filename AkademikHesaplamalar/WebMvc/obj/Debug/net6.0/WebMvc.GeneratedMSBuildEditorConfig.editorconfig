@@ -179,6 +179,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/AdminMember.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxBZG1pbk1lbWJlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -193,6 +197,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [c:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/Roles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxSb2xlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/UpdateAdminMember.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxVcGRhdGVBZG1pbk1lbWJlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/Users.cshtml]

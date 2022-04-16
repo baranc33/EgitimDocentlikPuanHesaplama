@@ -63,13 +63,53 @@ namespace WebMvc.Controllers
         [HttpGet]
         public async Task<IActionResult> AdminMember()
         {
-            MyRole role = await _roleManager.FindByNameAsync("Admin");
-            return View(_roleManager.Roles.ToList());
+            IEnumerable<AdminMember> members = await _adminMemberService.GetAllAsync();
+            List<AdminMemberDto> adminMembers = new();
+            foreach (var item in members)
+            {
+                AdminMemberDto dto = new()
+                {
+                    Degree = item.Degree,
+                    Description = item.Description,
+                    Facebook = item.Facebook,  
+                    FullName = item.FullName,
+                    Github = item.Github,
+                    Id = item.Id,
+                    IdRow = item.IdRow,
+                    Instegram = item.Instegram,
+                    Linkedin = item.Linkedin,   
+                    MailAdres = item.MailAdres,
+                    MailExtension = item.MailExtension,
+                    MyUserId = item.MyUserId,
+                    WebSiteUrl = item.WebSiteUrl,
+                    İmage=item.İmage   
+                };
+
+                MyUser Dtouser = await _userManager.FindByIdAsync(item.MyUserId);
+                dto.UserEmail = Dtouser.Email;
+                dto.UserName = Dtouser.UserName;
+
+                adminMembers.Add(dto);
+            }
+
+            return View(adminMembers);
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> UpdateAdminMember(int Id)
+        {
+
+            AdminMember admin= await _adminMemberService.GetByIdAsync(Id);
+            return View(admin);
+        }
+        [HttpGet]
+        public IActionResult DeleteAdminMember(int Id)
+        {
 
 
+            return View();
+        }
 
 
 
@@ -175,7 +215,7 @@ namespace WebMvc.Controllers
                     };
                     bool result = await _adminMemberService.AnyAsync(x => x.MyUserId==user.Id);
                     if (!result)
-                    await _adminMemberService.AddAsync(adminMember);
+                        await _adminMemberService.AddAsync(adminMember);
                 }
                 else
                 {

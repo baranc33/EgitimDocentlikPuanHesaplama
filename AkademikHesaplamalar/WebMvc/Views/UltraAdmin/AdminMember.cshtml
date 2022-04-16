@@ -1,0 +1,51 @@
+﻿@model List<AdminMemberDto>
+
+
+<h3 class="text-center"> Üyeler</h3>
+<hr />
+
+<table class="table table-bordered table-striped container" style="margin-bottom: 200px;">
+    <tr >
+       <td colspan="6">
+            <div class="offset-4 input-group">
+            <div class="form-outline">
+                <input type="search" id="form1" class="form-control" />
+            </div>
+            <button type="button" style="height: 40px;" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+       </td>
+    </tr>
+    <tr>
+        <td>Kullanıcı Sırası</td>
+        <td>Kullanıcı Adı</td>
+        <td>Ad Soyad</td>
+        <td>Kullancı Mail</td>
+        <td>Düzenle</td>
+        <td>Sil</td>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="3">Hiç bir üye yoktur.</td>
+        </tr>
+    }
+    else
+    {
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdRow</td>
+                <td>@item.UserName</td>
+                <td >@item.FullName</td>
+                <td>@item.UserEmail</td>
+                <td> <a class="btn btn-warning" asp-controller="UltraAdmin" asp-action="UpdateAdminMember" asp-route-id="@item.Id">Düzenle</a></td>
+                <td><a class="btn btn-danger" asp-controller="UltraAdmin" asp-action="DeleteAdminMember"
+                asp-route-id="@item.Id">Yetki Sil</a></td>
+            </tr>
+        }
+
+    }
+</table>
