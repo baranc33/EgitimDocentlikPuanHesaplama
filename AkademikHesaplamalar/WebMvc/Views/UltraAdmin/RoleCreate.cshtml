@@ -1,5 +1,7 @@
 ﻿@model RoleDto
 
+<div class="container" style="margin-bottom: 200px;">
+
 
 <h3>Role Oluşturma</h3>
 <hr />
@@ -12,10 +14,12 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-
+<br>
             <div class="form-group">
                 <input type="submit" value="Rol oluştur" class="btn btn-primary" />
             </div>
         </form>
     </div>
+</div>
+
 </div>

@@ -1,10 +1,23 @@
 ﻿@model List<MyUser>
 
 
-<h3>Üyeler</h3>
+<h3 class="text-center"> Üyeler</h3>
 <hr />
-<table class="table table-bordered table-striped">
 
+<table class="table table-bordered table-striped container" style="margin-bottom: 200px;">
+    <tr >
+       <td colspan="6">
+            <div class="offset-4 input-group">
+               <pre style="font-weight: bold;margin-top:7px;font-size:17px">Mail veya Kullanıcı Adı ile Arama yapılabilir  :   </pre>
+            <div class="form-outline">
+                <input type="search" id="form1" class="form-control" />
+            </div>
+            <button type="button" style="height: 40px;" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+       </td>
+    </tr>
     <tr>
         <td>User Id</td>
         <td>User Name</td>
@@ -29,8 +42,10 @@
                 <td>@item.UserName</td>
                 <td>@item.Email</td>
                 <td user-roles="@item.Id"></td>
-                <td> <a class="btn btn-success" asp-controller="UltraAdmin" asp-action="RoleAssign" asp-route-id="@item.Id">Role ata</a></td>
-                <td><a class="btn btn-success"asp-controller="UltraAdmin" asp-action="ResetUserPassword" asp-route-id="@item.Id">şifre yenileme</a></td>
+                <td> <a class="btn btn-success" asp-controller="UltraAdmin" asp-action="RoleAssign" asp-route-id="@item.Id">Role
+                        ata</a></td>
+                <td><a class="btn btn-success" asp-controller="UltraAdmin" asp-action="ResetUserPassword"
+                asp-route-id="@item.Id">şifre yenileme</a></td>
             </tr>
         }
 
