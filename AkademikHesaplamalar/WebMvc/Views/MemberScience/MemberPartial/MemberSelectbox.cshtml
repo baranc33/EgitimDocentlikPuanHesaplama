@@ -1,0 +1,173 @@
+﻿<body onload="myFunction2()">
+
+
+    <div class="col-lg-6 text-center text-lg-start">
+
+        <select style="color:black;"
+                onchange="hrefGo()" id="Memberselect_id" class="selectFormlg form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option value="Docentlik">Bilim Alanı Seçiniz </option>
+            <option value="Eğitim">    Eğitim Bilimleri</option>
+            <option value="Fen">    Fen Bilimleri ve Matematik Temel Alanı</option>
+            <option value="Filoloji">    Filoloji Temel Alanı </option>
+            <option value="Guzelsanat">     Güzel Sanatlar Temel Alanı </option>
+            <option value="Hukuk">    Hukuk Temel Alanı </option>
+            <option value="ilahiyat">    İlahiyat Temel Alanı </option>
+            <option value="Mimarlık">    Mimarlık, Planlama ve Tasarım Temel Alanı </option>
+            <option value="Mühendis">    Mühendislik Temel Alanı </option>
+            <option value="Sağlık">    Sağlık Bilimleri Temel Alanı </option>
+            <option value="SosyalBeseri">    Sosyal, Beşeri ve İdari Bilimler Temel Alanı </option>
+            <option value="Ziraat">    Ziraat, Orman ve Su Ürünleri Temel Alanı </option>
+            <option value="Spor">    Spor Bilimleri Temel Alanı </option>
+        </select>
+        <select style="color:black;"
+                onchange="hrefGo2()" id="Memberselect_id2" class="selectFormsm form-select form-select-sm mb-3 w-75">
+            <option value="Docentlik">Bilim Alanı Seçiniz </option>
+            <option value="Eğitim">    Eğitim Bilimleri</option>
+            <option value="Fen">    Fen Bilimleri ve Matematik </option>
+            <option value="Filoloji">    Filoloji Temel Alanı </option>
+            <option value="Guzelsanat">   Güzel Sanatlar </option>
+            <option value="Hukuk">    Hukuk Temel Alanı </option>
+            <option value="ilahiyat">   İlahiyat Temel Alanı </option>
+            <option value="Mimarlık">    Mimarlık, Planlama ve Tasarım</option>
+            <option value="Mühendis">    Mühendislik Temel Alanı </option>
+            <option value="Sağlık">    Sağlık Bilimleri Temel Alanı </option>
+            <option value="SosyalBeseri">    Sosyal, Beşeri ve İdari Bilimler  </option>
+            <option value="Ziraat">    Ziraat, Orman ve Su Ürünleri  </option>
+            <option value="Spor">    Spor Bilimleri </option>
+        </select>
+    </div>
+
+
+
+
+    
+
+    <script>
+           function hrefGo(){
+                 MemberRotation= document.getElementById("Memberselect_id").value;
+                    if(MemberRotation =="Docentlik")
+                    {
+                        location.href = "Docentlik-Puan-Hesaplamalar";
+                    }
+                    else
+                    {
+                     location.href = `${MemberRotation}-Doçentlik-Puan-Hesaplama`;
+                    }
+                }
+               function hrefGo2()
+               {
+                  MemberRotations= document.getElementById("Memberselect_id2").value;
+                    if(MemberRotations =="Docentlik")
+                    {
+                        location.href = "Docentlik-Puan-Hesaplamalar";
+                    }
+                    else
+                    {
+                     location.href = `${MemberRotations}-Doçentlik-Puan-Hesaplama`;
+                    }
+               }
+        function myFunction2 () {
+                     if(document.body.clientWidth>992)
+                     {
+                         Membershow();
+                     }
+                     else
+                     {
+                         Membershow2();
+                     }
+                }
+
+                
+                 function Membershow(){
+                     let MembercurrentLocation = decodeURIComponent(window.location.pathname);
+                     let MemberlinkArray=MembercurrentLocation.split("-");
+                        let e = document.getElementById("Memberselect_id");
+                        if(MemberlinkArray[0] !="")
+                        {
+                            e.value = MemberlinkArray[0].replace("/","");
+                        }
+                 }
+                 function Membershow2(){
+                     let McurrentLocation = decodeURIComponent(window.location.pathname);
+                     let MlinkArrayM=McurrentLocation.split("-");
+                     let eM = document.getElementById("Memberselect_id2");
+                      if(MlinkArrayM[0]!="")
+                      {
+                          eM.value=MlinkArrayM[0].replace("/","");
+                      }
+                       
+                 }
+    </script>
+
+
+
+
+
+
+    <script>
+        function add(ulid) {
+            let ul = document.getElementById(ulid);
+            let Liicerik = ul.firstElementChild.innerHTML;
+            let li = document.createElement('li');
+            li.classList.add("row");
+            li.innerHTML = Liicerik;
+            ul.append(li);
+        }
+
+        function remove(id) {
+            let ul = document.getElementById(id);
+            let ulChildCount = ul.childElementCount;
+            if (ulChildCount > 1) {
+                ul.removeChild(ul.lastElementChild);
+            }
+        }
+    </script>
+    <script>
+        // chekbo işlemeri
+        function cheked(ulId1,ulId2){
+              let clearul = document.querySelector(ulId1);
+              let ulChildCount = clearul.childElementCount;
+                 let clearul2 = document.querySelector(ulId2);
+              let ulChildCount2 = clearul2.childElementCount;
+
+            let cb = document.querySelector('#checkBox');
+            if(cb.checked){
+               alert(" 2 yıl öğretim elemanı olarak görev Yapanlar 9. Maddenin A ve B bendinden Yararlanamaz");
+                document.getElementById("addButton1").disabled = true;
+                document.getElementById("removeButton1").disabled = true;
+                document.getElementById("addButton2").disabled = true;
+                document.getElementById("removeButton2").disabled = true;
+                console.log('chked')
+                  for(let i=0;i<ulChildCount-1;i++)
+                 {
+                      if(ulChildCount > 1) {
+                       clearul.removeChild(clearul.lastElementChild);
+                      }
+
+                 }
+
+                for(let i=0;i<ulChildCount2-1;i++)
+                 {
+                      if(ulChildCount2 > 1) {
+                       clearul2.removeChild(clearul2.lastElementChild);
+                      }
+
+                 }
+
+
+            }
+            else{
+              document.getElementById("addButton1").disabled = false;
+                document.getElementById("removeButton1").disabled = false;
+               document.getElementById("addButton2").disabled = false;
+                document.getElementById("removeButton2").disabled = false;
+            }
+        }
+    </script>
+
+    <script>
+              function Reset(){
+        document.location.reload(true);
+              }
+    </script>
+</body>

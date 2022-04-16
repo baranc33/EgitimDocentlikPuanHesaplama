@@ -25,16 +25,10 @@
                 </button> 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0" style="margin-right: 100px;">
-                        <a asp-controller="MemberHome" asp-action="Index" class="nav-item nav-link" id="home">Ana Sayfa</a>
-                         <div class="dropdown">
-                               <a asp-controller="MemberScience" asp-action="Index" class="nav-item nav-link" id="science">Hesaplamalar</a>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                  <a asp-controller="MemberScience" asp-action="Index" class="dropdown-item" id="science">Doçent Hesalama</a>
-                                  <a asp-controller="MemberTesvik" asp-action="Index" class="dropdown-item" id="science">Teşfik Hesaplama</a>
-                              </div>
-                        </div>
-                        <a asp-controller="MemberHome" asp-action="About" class="nav-item nav-link" id="about">Hakkımızda</a>
-                        <a asp-controller="MemberHome" asp-action="Contact" class="nav-item nav-link" id="contact">İletişim</a>
+                        <a asp-controller="UltraAdmin" asp-action="Users" class="nav-item nav-link" id="home">Üyeler </a>
+                        <a asp-controller="UltraAdmin" asp-action="roles" class="nav-item nav-link" id="about">Roller</a>
+                        <a asp-controller="UltraAdmin" asp-action="AdminMember" class="nav-item nav-link" id="contact">Admin üyeler</a>
+                        <a asp-controller="UltraAdmin" asp-action="Message" class="nav-item nav-link" id="about">Mesajlar</a>
                     </div>
 
                     <div id="loginbtn" class="nav-item dropdown  btn   rounded-pill py-2 px-4 ms-3 " data-bs-toggle="dropdown">
@@ -45,7 +39,7 @@
                 </div>
             </nav>
 
-            <div class="container-xxl py-5  hero-header mb-5"  id="HeroHeader" >
+            <div class="container-xxl py-5  bg-dark hero-header mb-5"  id="HeroHeader" >
 
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5 py-5">
