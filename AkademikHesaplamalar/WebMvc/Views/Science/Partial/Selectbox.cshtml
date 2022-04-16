@@ -67,8 +67,7 @@
                      location.href = `${Rotations}-Bilimleri-Doçentlik-Puan-Hesaplama`;
                     }
               }
- let currentLocation = decodeURIComponent(window.location.pathname);
-        let linkArray=currentLocation.split("-");
+ 
         const myFunction = () => {
                      if(document.body.clientWidth>992)
                      {
@@ -81,14 +80,22 @@
                 }
 
                  function show(){
+                     let currentLocation = decodeURIComponent(window.location.pathname);
+                     let linkArray=currentLocation.split("-");
                         let e = document.getElementById("select_id");
-                        if(linkArray[0]!=null)
+                        if(linkArray[0] !="")
                         {
                             e.value = linkArray[0].replace("/","");
                         }
                  }
                  function show2(){
-                        
+                     let currentLocation = decodeURIComponent(window.location.pathname);
+                     let linkArray=currentLocation.split("-");
+                     let e = document.getElementById("select_id2");
+                        if(linkArray[0] !="")
+                        {
+                            e.value = linkArray[0].replace("/","");
+                        }
                  }
 
     </script>
