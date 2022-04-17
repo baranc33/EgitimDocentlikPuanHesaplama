@@ -107,9 +107,11 @@ namespace WebMvc.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateAdminMember(AdminMember member)
         {
+            await _adminMemberService.UpdateAsync(member);
+
             ViewBag.success=true;
 
-            return View();
+            return View(member);
         }
         [HttpGet]
         public async Task<IActionResult> DeleteAdminMember(int Id)

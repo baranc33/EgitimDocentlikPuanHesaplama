@@ -26,17 +26,18 @@
 </head>
 
 <h2>Bilgi Güncelleme</h2>
-@if (ViewBag.success == "true")
+@if (ViewBag.success == true)
 {
     <div class="alert alert-info">
         <span>Bilgileriniz güncellenmiştir.</span>
     </div>
 }
 <div class="row" id="icerikUpdate">
+    <div id="icerikUpdateImage" style="background-image: url(/img/@Model.Image);">
 
     </div>
     <div class="col-md-12">
-        <form asp-action="UserEdit" method="post" enctype="multipart/form-data">
+        <form  asp-controller="UltraAdmin" asp-action="UpdateAdminMember" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <input type="hidden" asp-for="MyUserId" class="form-control" />
