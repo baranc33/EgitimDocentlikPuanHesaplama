@@ -68,5 +68,11 @@ namespace Repository.Repositories
         {
             return _dbSet.Where(expression);
         }
+
+        public  T WhereSingle(Expression<Func<T, bool>> expression)
+        {
+            return _dbSet.AsNoTracking().Where(expression).SingleOrDefault();
+
+        }
     }
 }
