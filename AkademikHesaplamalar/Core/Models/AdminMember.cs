@@ -58,6 +58,6 @@ namespace Core.Models
 
 
         [MaxLength(150, ErrorMessage = "En Fazla 150 karakter olabilir")]
-        public string? İmage{ get; set; } = "";
+        public string? Image{ get; set; } = "";
     }
 }

@@ -82,7 +82,7 @@ namespace WebMvc.Controllers
                     MailExtension = item.MailExtension,
                     MyUserId = item.MyUserId,
                     WebSiteUrl = item.WebSiteUrl,
-                    İmage=item.İmage   
+                    İmage=item.Image   
                 };
 
                 MyUser Dtouser = await _userManager.FindByIdAsync(item.MyUserId);
