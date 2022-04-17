@@ -21,14 +21,19 @@
         border-width: 1vh;
         margin-bottom: 2em;
 }
+#UpdateAdminAlert{
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
 </style>
 
 </head>
 
-<h2>Bilgi Güncelleme</h2>
+<h2 class="text-center">Admin Bilgi Güncelleme Sayfası</h2>
 @if (ViewBag.success == true)
 {
-    <div class="alert alert-info">
+    <div class="alert alert-info text-center" id="UpdateAdminAlert">
         <span>Bilgileriniz güncellenmiştir.</span>
     </div>
 }
@@ -41,7 +46,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <input type="hidden" asp-for="MyUserId" class="form-control" />
-            <input type="hidden" asp-for="Image" class="form-control" />
+         
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label class="control-label"> Sıra Numarası</label>
@@ -97,12 +102,18 @@
                 <input asp-for="MailExtension" class="form-control" placeholder="" />
                 <span asp-validation-for="MailExtension" class="text-danger"></span>
             </div>
+                   <div class="form-group">
+                <label class="control-label"> Hosting Dosya Erişimine izin vermediği için Dosyaları FTP ile yüklüyoruz </label>
+                <br />
+                <label class="control-label"> Resim Adı  </label>
+                <input asp-for="Image" class="form-control" placeholder="" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
 
-
-            <div class="form-group">
+           @* <div class="form-group">
                 <label class="control-label">Resim</label>
                 <input class="form-control" type="file" name="userPicture" />
-            </div>
+            </div>*@
 
             <div class="form-group">
                 <input type="submit" value="Güncelle" class="btn btn-primary" />
