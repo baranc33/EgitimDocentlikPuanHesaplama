@@ -71,18 +71,18 @@ namespace WebMvc.Controllers
                 {
                     Degree = item.Degree,
                     Description = item.Description,
-                    Facebook = item.Facebook,  
+                    Facebook = item.Facebook,
                     FullName = item.FullName,
                     Github = item.Github,
                     Id = item.Id,
                     IdRow = item.IdRow,
                     Instegram = item.Instegram,
-                    Linkedin = item.Linkedin,   
+                    Linkedin = item.Linkedin,
                     MailAdres = item.MailAdres,
                     MailExtension = item.MailExtension,
                     MyUserId = item.MyUserId,
                     WebSiteUrl = item.WebSiteUrl,
-                    İmage=item.Image   
+                    İmage=item.Image
                 };
 
                 MyUser Dtouser = await _userManager.FindByIdAsync(item.MyUserId);
@@ -100,8 +100,16 @@ namespace WebMvc.Controllers
         public async Task<IActionResult> UpdateAdminMember(int Id)
         {
 
-            AdminMember admin= await _adminMemberService.GetByIdAsync(Id);
+            AdminMember admin = await _adminMemberService.GetByIdAsync(Id);
             return View(admin);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateAdminMember(AdminMember member)
+        {
+            ViewBag.success=true;
+
+            return View();
         }
         [HttpGet]
         public async Task<IActionResult> DeleteAdminMember(int Id)
