@@ -107,8 +107,7 @@ namespace WebMvc.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateAdminMember(AdminMember member, IFormFile userPicture)
         {
-            if (ModelState.IsValid)
-            {
+           
                 AdminMember oldData=  _adminMemberService.WhereSingle(x=>x.Id==member.Id);
 
                 string oldPictrueName = oldData.Image;
@@ -129,7 +128,7 @@ namespace WebMvc.Controllers
                     // burdan eski resmi silcem 13. indexten alıyorumki user picture yazısını iptal edeyim
                     if (oldPictrueName!=null && oldPictrueName.Length>5)
                     {// hiç resmi yoksa diye kontrol ediyorum
-                        var deletePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserPicture", oldPictrueName.Substring(13));
+                        var deletePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", oldPictrueName.Substring(13));
                         FileInfo fi = new FileInfo(deletePath);
                         System.IO.File.Delete(deletePath);
                         fi.Delete();
@@ -140,7 +139,6 @@ namespace WebMvc.Controllers
                 await _adminMemberService.UpdateAsync(member);
                 ViewBag.success=true;
 
-            }
             return View(member);
         }
         [HttpGet]
