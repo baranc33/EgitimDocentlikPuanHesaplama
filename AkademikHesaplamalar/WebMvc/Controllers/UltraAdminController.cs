@@ -111,9 +111,6 @@ namespace WebMvc.Controllers
             {
                 AdminMember oldData= await _adminMemberService.GetByIdAsync(member.Id);
 
-                await _adminMemberService.UpdateAsync(member);
-                ViewBag.success=true;
-
                 string oldPictrueName = oldData.Image;
 
 
@@ -121,13 +118,13 @@ namespace WebMvc.Controllers
                 {// bir path ismi oluşturuyoruz
                     var fileName = Guid.NewGuid().ToString() + Path.GetExtension(userPicture.FileName);
 
-                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserPicture", fileName);
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
 
                     using (var stream = new FileStream(path, FileMode.Create))
                     {
                         await userPicture.CopyToAsync(stream);
 
-                        user.Picture = "/UserPicture/" + fileName;
+                        member.Image= fileName;
                     }
                     // burdan eski resmi silcem 13. indexten alıyorumki user picture yazısını iptal edeyim
                     if (oldPictrueName!=null && oldPictrueName.Length>5)
@@ -139,6 +136,9 @@ namespace WebMvc.Controllers
                     }
                 }
 
+
+                await _adminMemberService.UpdateAsync(member);
+                ViewBag.success=true;
 
             }
             return View(member);
