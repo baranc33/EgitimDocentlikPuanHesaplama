@@ -1,5 +1,28 @@
 ﻿@model AdminMember
+<head>
+<style>
+#icerikUpdate{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+#icerikUpdateImage{
+        background-repeat: round;
+        border-radius: 100vh;
+        width: 40vh;
+        height: 40vh;
+        border-color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4%;
+        border-style: solid;
+        border-width: 1vh;
+        margin-bottom: 2em;
+}
+</style>
+
+</head>
 
 <h2>Bilgi Güncelleme</h2>
 @if (ViewBag.success == "true")
@@ -8,7 +31,10 @@
         <span>Bilgileriniz güncellenmiştir.</span>
     </div>
 }
-<div class="row">
+<div class="row" id="icerikUpdate">
+    <div id="icerikUpdateImage" style="background-image: url(/img/pp.jpeg);">
+
+    </div>
     <div class="col-md-12">
         <form asp-action="UserEdit" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -71,9 +97,7 @@
             </div>
 
 
-
             <div class="form-group">
-
                 <label class="control-label">Resim</label>
                 <input class="form-control" type="file" name="userPicture" />
             </div>
