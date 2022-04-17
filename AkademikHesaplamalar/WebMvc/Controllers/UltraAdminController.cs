@@ -105,12 +105,42 @@ namespace WebMvc.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateAdminMember(AdminMember member)
+        public async Task<IActionResult> UpdateAdminMember(AdminMember member, IFormFile userPicture)
         {
-            await _adminMemberService.UpdateAsync(member);
+            if (ModelState.IsValid)
+            {
+                AdminMember oldData= await _adminMemberService.GetByIdAsync(member.Id);
 
-            ViewBag.success=true;
+                await _adminMemberService.UpdateAsync(member);
+                ViewBag.success=true;
 
+                string oldPictrueName = oldData.Image;
+
+
+                if (userPicture != null && userPicture.Length > 0)
+                {// bir path ismi oluşturuyoruz
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(userPicture.FileName);
+
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserPicture", fileName);
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        await userPicture.CopyToAsync(stream);
+
+                        user.Picture = "/UserPicture/" + fileName;
+                    }
+                    // burdan eski resmi silcem 13. indexten alıyorumki user picture yazısını iptal edeyim
+                    if (oldPictrueName!=null && oldPictrueName.Length>5)
+                    {// hiç resmi yoksa diye kontrol ediyorum
+                        var deletePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/UserPicture", oldPictrueName.Substring(13));
+                        FileInfo fi = new FileInfo(deletePath);
+                        System.IO.File.Delete(deletePath);
+                        fi.Delete();
+                    }
+                }
+
+
+            }
             return View(member);
         }
         [HttpGet]
