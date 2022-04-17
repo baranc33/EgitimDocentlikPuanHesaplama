@@ -6,6 +6,7 @@ using WebMvc.Models.DocentModels.Models;
 using System.Text.Json;
 using WebMvc.Models.DocentModels;
 using WebMvc.Helpers.ConvertToModel;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebMvc.Controllers
 {
@@ -14,10 +15,12 @@ namespace WebMvc.Controllers
         public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager) : base(userManager, signInManager)
         {
         }
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
+        [Authorize]
         [HttpGet]
         public IActionResult Egitim()
         {
@@ -26,6 +29,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Egitim(EgitimDocentModel model)
         {
@@ -36,6 +40,7 @@ namespace WebMvc.Controllers
         }
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult Filoloji()
         {
@@ -44,6 +49,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Filoloji(FilolojiDocentModel model)
         {
@@ -54,6 +60,7 @@ namespace WebMvc.Controllers
         }
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult Hukuk()
         {
@@ -62,6 +69,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Hukuk(HukukDocentModel model)
         {
@@ -73,6 +81,7 @@ namespace WebMvc.Controllers
 
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult ilahiyat()
         {
@@ -81,6 +90,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult ilahiyat(ilahiyatDocentModel model)
         {
@@ -91,6 +101,7 @@ namespace WebMvc.Controllers
         }
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult SosyalBeseri()
         {
@@ -99,6 +110,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult SosyalBeseri(SosyalBeseriDocentModel model)
         {
@@ -111,6 +123,7 @@ namespace WebMvc.Controllers
 
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult Spor()
         {
@@ -119,6 +132,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Spor(SporDocentModel model)
         {
@@ -132,6 +146,7 @@ namespace WebMvc.Controllers
 
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult Muhendis()
         {
@@ -140,6 +155,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Muhendis(MuhendislikDocentModel model)
         {
@@ -153,6 +169,7 @@ namespace WebMvc.Controllers
 
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult Fen()
         {
@@ -161,6 +178,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Fen(FenDocentModel model)
         {
@@ -173,6 +191,7 @@ namespace WebMvc.Controllers
 
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult Ziraat()
         {
@@ -181,6 +200,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Ziraat(ZiraatDocentModel model)
         {
@@ -194,6 +214,7 @@ namespace WebMvc.Controllers
 
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult Mimarlik()
         {
@@ -202,6 +223,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Mimarlik(MimarlikDocentModel model)
         {
@@ -215,6 +237,7 @@ namespace WebMvc.Controllers
 
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult Saglik()
         {
@@ -223,6 +246,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Saglik(SaglikDocentModel model)
         {
@@ -234,6 +258,7 @@ namespace WebMvc.Controllers
 
 
 
+        [Authorize]
         [HttpGet]
         public IActionResult GuzelSanatlar()
         {
@@ -242,6 +267,7 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult GuzelSanatlar(GuzelSanatlarDocentModel model)
         {

@@ -2,6 +2,7 @@
 using Core.Models;
 using Core.Serviecs;
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,30 +19,40 @@ namespace WebMvc.Controllers
             _adminMemberService=adminMemberService;
         }
 
+        [Authorize(Roles = "UltraAdmin")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Authorize(Roles = "UltraAdmin")]
         public IActionResult Claims()
         {
             return View(User.Claims.ToList());
         }
 
+        [Authorize(Roles = "UltraAdmin")]
         public IActionResult RoleCreate()
         {
             return View();
         }
-        public IActionResult Users()
+        [Authorize(Roles = "UltraAdmin")]
+        public IActionResult Users(string search)
         {
+            if (search !=null && search.Length>1)
+            {
+                return View(_userManager.Users.Where(x => x.UserName.Contains(search)|| x.Email.Contains(search)).ToList());
+            }
             return View(_userManager.Users.ToList());
         }
 
+        [Authorize(Roles = "UltraAdmin")]
         public IActionResult Roles()
         {
             return View(_roleManager.Roles.ToList());
         }
 
+        [Authorize(Roles = "UltraAdmin")]
         [HttpPost]
         public IActionResult RoleCreate(RoleDto roleViewModel)
         {
@@ -60,6 +71,7 @@ namespace WebMvc.Controllers
         }
 
 
+        [Authorize(Roles = "UltraAdmin")]
         [HttpGet]
         public async Task<IActionResult> AdminMember()
         {
@@ -96,6 +108,7 @@ namespace WebMvc.Controllers
         }
 
 
+        [Authorize(Roles = "UltraAdmin")]
         [HttpGet]
         public async Task<IActionResult> UpdateAdminMember(int Id)
         {
@@ -104,13 +117,14 @@ namespace WebMvc.Controllers
             return View(admin);
         }
 
+        [Authorize(Roles = "UltraAdmin")]
         [HttpPost]
         public async Task<IActionResult> UpdateAdminMember(AdminMember member, IFormFile userPicture)
         {
 
             //AdminMember oldData = _adminMemberService.WhereSingle(x => x.Id==member.Id);
 
-          //  string oldPictrueName = oldData.Image;
+            //  string oldPictrueName = oldData.Image;
 
 
             //if (userPicture != null && userPicture.Length > 0)
@@ -145,6 +159,7 @@ namespace WebMvc.Controllers
 
             return View(member);
         }
+        [Authorize(Roles = "UltraAdmin")]
         [HttpGet]
         public async Task<IActionResult> DeleteAdminMember(int Id)
         {
@@ -155,6 +170,7 @@ namespace WebMvc.Controllers
 
 
 
+        [Authorize(Roles = "UltraAdmin")]
         public IActionResult RoleDelete(string id)
         {// klasik silme işlemi id den buluyoru sonra id varsa işlem yapıyoruz
             MyRole role = _roleManager.FindByIdAsync(id).Result;
@@ -165,6 +181,7 @@ namespace WebMvc.Controllers
             return RedirectToAction("Roles");
         }
 
+        [Authorize(Roles = "UltraAdmin")]
         public IActionResult RoleUpdate(string id)
         {
             MyRole role = _roleManager.FindByIdAsync(id).Result;
@@ -180,6 +197,7 @@ namespace WebMvc.Controllers
 
 
         // role atama
+        [Authorize(Roles = "UltraAdmin")]
         [HttpPost]
         public IActionResult RoleUpdate(RoleDto roleViewModel)
         {
@@ -202,6 +220,7 @@ namespace WebMvc.Controllers
         }
 
         // role atama
+        [Authorize(Roles = "UltraAdmin")]
         public IActionResult RoleAssign(string id)
         {
             // üyenin id sini alıyoruz ve temp dataya atıyoruz
@@ -238,6 +257,7 @@ namespace WebMvc.Controllers
             return View(roleAssignViewModels);
         }
 
+        [Authorize(Roles = "UltraAdmin")]
         [HttpPost]
         public async Task<IActionResult> RoleAssign(List<RoleAssignDto> roleAssignViewModels)
         {
