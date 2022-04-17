@@ -104,11 +104,11 @@ namespace WebMvc.Controllers
             return View(admin);
         }
         [HttpGet]
-        public IActionResult DeleteAdminMember(int Id)
+        public async Task<IActionResult> DeleteAdminMember(int Id)
         {
-
-
-            return View();
+            AdminMember admin = await _adminMemberService.GetByIdAsync(Id);
+            await _adminMemberService.RemoveAsync(admin);
+            return RedirectToAction("AdminMember");
         }
 
 
