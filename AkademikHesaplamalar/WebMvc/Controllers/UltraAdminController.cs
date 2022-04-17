@@ -128,7 +128,7 @@ namespace WebMvc.Controllers
                     // burdan eski resmi silcem 13. indexten alıyorumki user picture yazısını iptal edeyim
                     if (oldPictrueName!=null && oldPictrueName.Length>5)
                     {// hiç resmi yoksa diye kontrol ediyorum
-                        var deletePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", oldPictrueName.Substring(13));
+                        var deletePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", oldPictrueName);
                         FileInfo fi = new FileInfo(deletePath);
                         System.IO.File.Delete(deletePath);
                         fi.Delete();
