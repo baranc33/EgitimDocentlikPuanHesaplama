@@ -79,9 +79,9 @@ namespace Service.Services
             return _repository.Where(expression);
         }
 
-        public Task<T> WhereSingle(Expression<Func<T, bool>> expression)
+        public T WhereSingle(Expression<Func<T, bool>> expression)
         {
-            return _repository.WhereSingle(expression);
+            return  _repository.WhereSingle(expression);
         }
     }
 }

@@ -109,7 +109,7 @@ namespace WebMvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                AdminMember oldData= await _adminMemberService.GetByIdAsync(member.Id);
+                AdminMember oldData=  _adminMemberService.WhereSingle(x=>x.Id==member.Id);
 
                 string oldPictrueName = oldData.Image;
 
