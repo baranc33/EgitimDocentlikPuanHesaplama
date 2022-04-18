@@ -1,46 +1,62 @@
-﻿  @section Alt_Menu{
-      <div class="container my-5  px-lg-5">
-       <div class="row g-5 ">
-            <div class="col-lg-6 text-center text-lg-start">
-                <h1 class="text-white mb-4 animated zoomIn">Doçentlik Puan Hesaplama </h1>
-                <p class="text-white pb-3 animated zoomIn">Bu site 
-                    <a style="color: yellow;" 
-                    href="https://www.uak.gov.tr/Sayfalar/docentlik/basvuru-sartlari/2022/2022-mart-donemi-docentlik-basvuru-sartlari.aspx" target="_blank">www.uak.gov.tr</a> sitesi baz alarak 2022 yılı Mart dönemi güncel değerlendirmelere göre  hazırlanmıştır. </p>
-                <a asp-action="Index" asp-controller="Science" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla >></a>
-            </div>
-            <div class="col-lg-5 text-center text-lg-start offset-1">
-                <h1 class="text-white  animated zoomIn">Akademik Teşvik Hesaplama </h1>
-                <p class="text-white pb-3 animated zoomIn"> </p>
-                  <a asp-action="Index" asp-controller="Tesvik" 
-                  class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla>></a>
+﻿  @section head{
+<title>Akademik Hesaplama</title>
+<meta name="keywords" content="Doçentlik, Doçentlik Hesaplama, Akademik , Akademik hesaplama">
+<meta name="author" content="Akademik Hesaplamalar">
+<meta name="description"
+      content="Akademik Hesaplamalar ,doçentlik puan hesaplama  , teşfik hesaplama işlemleri yapabiliyoruz" />
 
-            </div>
-        </div>
-        </div>
+
   }
 
-     <body onload="myFunction()">
+
+@section Alt_Menu{
+<div class="container my-5  px-lg-5">
+    <div class="row g-5 ">
+        <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="text-white mb-4 animated zoomIn">Doçentlik Puan Hesaplama </h1>
+            <p class="text-white pb-3 animated zoomIn">
+                Bu site
+                <a style="color: yellow;"
+                   href="https://www.uak.gov.tr/Sayfalar/docentlik/basvuru-sartlari/2022/2022-mart-donemi-docentlik-basvuru-sartlari.aspx" target="_blank">www.uak.gov.tr</a> sitesi baz alarak 2022 yılı Mart dönemi güncel değerlendirmelere göre  hazırlanmıştır.
+            </p>
+            <a asp-action="Index" asp-controller="Science" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla >></a>
+        </div>
+        <div class="col-lg-5 text-center text-lg-start offset-1">
+            <h1 class="text-white  animated zoomIn">Akademik Teşvik Hesaplama </h1>
+            <p class="text-white pb-3 animated zoomIn"> </p>
+            <a asp-action="Index" asp-controller="Tesvik"
+               class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla>></a>
+
+        </div>
+    </div>
+</div>
+  }
 
 
-<h1>Index</h1>
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<h1>Index</h1>
-<br />
 
 
-  <script>
+<body onload="myFunction()">
+
+
+    <h1>Index</h1>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>Index</h1>
+    <br />
+
+
+    <script>
         const myFunction = () => {
             let link = document.querySelector('#home');
              link.classList.add("active");
