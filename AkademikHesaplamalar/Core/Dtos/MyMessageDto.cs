@@ -20,10 +20,10 @@ namespace Core.Dtos
         [MinLength(10, ErrorMessage = "Mail Adresini Giriniz")]
         public string MailAdres { get; set; } = "";
         [MaxLength(100, ErrorMessage = "En Fazla 100 karakter olabilir")]
-        [MinLength(5, ErrorMessage = "Konu Giriniz")]
+        [MinLength(3, ErrorMessage = "Konu Giriniz")]
         public string Title { get; set; } = "";
         [MaxLength(1000, ErrorMessage = "En Fazla 1000 karakter olabilir")]
-        [MinLength(10, ErrorMessage = "Mesajınızı Giriniz")]
+        [MinLength(5, ErrorMessage = "Mesajınızı Giriniz")]
         public string Description { get; set; } = "";
     }
 }

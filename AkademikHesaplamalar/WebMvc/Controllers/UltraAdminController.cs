@@ -320,6 +320,32 @@ namespace WebMvc.Controllers
         }
 
 
-   
+        [Authorize(Roles = "UltraAdmin")]
+        public async Task<IActionResult> ResetUserPassword(string id)
+        {
+            MyUser user = await _userManager.FindByIdAsync(id);
+
+            PasswordResetByAdminDto passwordResetByAdminViewModel = new PasswordResetByAdminDto();
+            passwordResetByAdminViewModel.UserId = user.Id;
+
+            return View(passwordResetByAdminViewModel);
+        }
+
+        [Authorize(Roles = "UltraAdmin")]
+        [HttpPost]
+        public async Task<IActionResult> ResetUserPassword(PasswordResetByAdminDto passwordResetByAdminViewModel)
+        {
+            MyUser user = await _userManager.FindByIdAsync(passwordResetByAdminViewModel.UserId);
+
+            string token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            await _userManager.ResetPasswordAsync(user, token, passwordResetByAdminViewModel.NewPassword);
+
+            await _userManager.UpdateSecurityStampAsync(user);
+
+
+            return RedirectToAction("Users");
+        }
+
     }
 }
