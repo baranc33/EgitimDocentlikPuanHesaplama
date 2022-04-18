@@ -13,13 +13,13 @@ namespace WebMvc.Controllers
         private readonly IMyUserService _myUserService;
         private readonly IAdminMemberService _adminMemberService;
         private readonly IMyContactService _myContactService;
-        //private readonly IMessageService _myMessageService;
 
         public UltraAdminController(UserManager<MyUser> userManager, RoleManager<MyRole> _roleManager, IMyUserService myUserService, IAdminMemberService adminMemberService, IMyContactService myContactService) : base(userManager, null, _roleManager)
         {
             _myUserService=myUserService;
             _adminMemberService=adminMemberService;
             _myContactService=myContactService;
+         
         }
 
         [Authorize(Roles = "UltraAdmin")]
@@ -318,5 +318,8 @@ namespace WebMvc.Controllers
             ViewBag.success = true;
             return RedirectToAction("Contact");
         }
+
+
+   
     }
 }

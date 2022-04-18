@@ -70,7 +70,7 @@ builder.Services.ConfigureApplicationCookie(opts =>
     opts.SlidingExpiration = true;
     opts.ExpireTimeSpan = System.TimeSpan.FromDays(60);
     // role eriþimi yoksa yönlendirme
-    opts.AccessDeniedPath = new PathString("/Member/AccessDenied");
+    opts.AccessDeniedPath = new PathString("/Home/AccessDenied");
 });
 
 

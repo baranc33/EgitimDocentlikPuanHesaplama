@@ -192,15 +192,21 @@ namespace WebMvc.Controllers
             return View(list.FirstOrDefault());
         }
 
- 
-    [HttpPost]
-    public async Task<IActionResult> Contact(MyMessage entity)
-    {
-        await _myMessageService.AddAsync(entity);
 
-        ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
-        return View();
+        [HttpPost]
+        public async Task<IActionResult> Contact(MyMessage entity)
+        {
+            await _myMessageService.AddAsync(entity);
+
+            ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
+            return View();
+        }
+
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+        
     }
-
-}
 }

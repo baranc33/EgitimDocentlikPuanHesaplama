@@ -17,9 +17,11 @@ namespace WebMvc.Controllers
         [Authorize]
         public async Task<IActionResult> Index()
         {
-            //IList<string> Roles = await _userManager.GetRolesAsync(CurrentUser);
-            //if (Roles.Contains("Admin"))
-            //    return RedirectToAction("Index", "Admin");
+            IList<string> Roles = await _userManager.GetRolesAsync(CurrentUser);
+            if (Roles.Contains("UltraAdmin"))
+                return RedirectToAction("Index", "UltraAdmin");
+            else if (Roles.Contains("Admin"))
+                return RedirectToAction("Index", "Admin");
 
             return View();
         }
