@@ -1,0 +1,64 @@
+﻿@model IQueryable<MyMessage>
+
+
+<h3 class="text-center"> Üyeler</h3>
+<hr />
+
+<table class="table table-bordered table-striped container" style="margin-bottom: 200px;">
+    <tr>
+        <td colspan="6">
+            <form asp-controller="UltraAdmin" asp-action="users" method="get">
+
+                <div class="offset-4 input-group">
+                    <pre style="font-weight: bold;margin-top:7px;font-size:17px">Mail veya Kullanıcı Adı ile Arama yapılabilir  :   </pre>
+                    <div class="form-outline">
+                        <input type="search" name="search" id="form1" class="form-control" />
+                    </div>
+                    <button type="submit" style="height: 40px;" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                </div>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>Mesaj Sırası</td>
+        <td>Gönderen Ad Soyad</td>
+        <td>Gönderen Email</td>
+        <td>Başlık</td>
+        <td>İçerik</td>
+        <td>Rol Atama</td>
+        <td>Şifre değiştirme</td>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="3">Hiç bir Mesaj Bulunmamaktadır.</td>
+        </tr>
+    }
+    else
+    {
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FullName</td>
+                <td>@item.MailAdres</td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>
+                    <a class="btn btn-success" asp-controller="Admin" asp-action="MessageUpdate" asp-route-id="@item.Id">
+                     İncele 
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-controller="Admin" asp-action="MessageDelete"
+               asp-route-id="@item.Id">Sil</a>
+                </td>
+            </tr>
+        }
+
+    }
+</table>

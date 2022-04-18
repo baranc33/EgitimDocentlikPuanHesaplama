@@ -87,11 +87,11 @@ namespace WebMvc.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> MessageUpdate(string id)
+        public async Task<IActionResult> MessageUpdate(int id)
         {
-            IEnumerable<MyMessage> list = await _myMessageService.GetAllAsync();
+            MyMessage message= await _myMessageService.GetByIdAsync(id);
 
-            return View(list);
-        }
+            return View(message);
+        }//MessageDelete
     }
 }

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Core.Serviecs;
 using Core.Dtos;
+using Mapster;
 
 namespace WebMvc.Controllers
 {
@@ -194,12 +195,20 @@ namespace WebMvc.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Contact(MyMessage entity)
+        public async Task<IActionResult> Contact(MyMessageDto entity)
         {
             IEnumerable<MyContact> list = await _myContactService.GetAllAsync();
-         
-                await _myMessageService.AddAsync(entity);
-            ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
+
+            if (ModelState.IsValid)
+            {
+                await _myMessageService.AddAsync(entity.Adapt<MyMessage>());
+                ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
+            }
+            else
+            {
+                ViewBag.MyError="Gerekli Alanları Doldurmadınız Mesajınız Tarafımıza iletilemedi :( ";
+                ModelState.AddModelError("", "Lütfen Bütün Alanları Doldurunuz");
+            }
             return View(list.FirstOrDefault());
 
         }
