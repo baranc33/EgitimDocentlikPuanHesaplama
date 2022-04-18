@@ -13,14 +13,12 @@ namespace WebMvc.Controllers
 
         private readonly IMyUserService _myUserService;
         private readonly IAdminMemberService _adminMemberService;
-        private readonly IMyContactService _myContactService;
         private readonly IMessageService _myMessageService;
 
-        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager, IMyUserService myUserService, IAdminMemberService adminMemberService, IMyContactService myContactService, IMessageService myMessageService) : base(_userManager, _signInManager)
+        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager, IMyUserService myUserService, IAdminMemberService adminMemberService, IMessageService myMessageService) : base(_userManager, _signInManager)
         {
             _myUserService=myUserService;
             _adminMemberService=adminMemberService;
-            _myContactService=myContactService;
             _myMessageService=myMessageService;
         }
 
@@ -188,6 +186,7 @@ namespace WebMvc.Controllers
 
         public IActionResult Contact()
         {
+
             return View();
         }
         [HttpPost]
@@ -195,7 +194,7 @@ namespace WebMvc.Controllers
         {
             await _myMessageService.AddAsync(entity);
 
-            //ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
+            ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
             return View();
         }
 

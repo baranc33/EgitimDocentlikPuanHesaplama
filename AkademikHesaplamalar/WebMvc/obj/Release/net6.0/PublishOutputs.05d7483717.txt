@@ -4,6 +4,7 @@ C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplam
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\obj\Release\net6.0\PubTmp\Out\WebMvc.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\obj\Release\net6.0\PubTmp\Out\WebMvc.runtimeconfig.json
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\obj\Release\net6.0\PubTmp\Out\WebMvc.pdb
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\obj\Release\net6.0\PubTmp\Out\AspNetCore.SEOHelper.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\obj\Release\net6.0\PubTmp\Out\Mapster.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\obj\Release\net6.0\PubTmp\Out\Mapster.Core.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.Facebook.dll

@@ -1,4 +1,5 @@
 
+using AspNetCore.SEOHelper;
 using Core;
 using Core.Models;
 using Core.Repositories;
@@ -99,7 +100,7 @@ app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();// derste hoca bunu yazmiyor ama yazmayýnca hata veriyor
 
-
+app.UseXMLSitemap(builder.Environment.ContentRootPath);
 
 
 app.MapControllerRoute("MemberDocent", "Docentlik-Puan-Hesaplamalar", new { controller = "MemberScience", action = "Index" });
@@ -120,6 +121,10 @@ app.MapControllerRoute("MemberAkademik", "Akademik-hesaplamalar", new { controll
 
 
 
+app.MapControllerRoute("hakkimizda", "Hakkýmýzda", new { controller = "Home", action = "About" });
+app.MapControllerRoute("iletisim", "iletiþim", new { controller = "Home", action = "Contact" });
+app.MapControllerRoute("Giris", "Giriþ", new { controller = "Home", action = "Login" });
+app.MapControllerRoute("kayit", "Kayýt", new { controller = "Home", action = "SignUp" });
 
 
 app.MapControllerRoute("Docent", "Docentlik-Bilimleri-Puan-Hesaplama", new { controller = "Science", action = "Index" });

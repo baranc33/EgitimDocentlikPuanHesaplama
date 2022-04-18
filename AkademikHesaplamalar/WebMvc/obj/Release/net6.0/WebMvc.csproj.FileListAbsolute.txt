@@ -75,3 +75,4 @@ C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplam
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\obj\Release\net6.0\WebMvc.genruntimeconfig.cache
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\bin\Release\net6.0\Mapster.dll
 C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\bin\Release\net6.0\Mapster.Core.dll
+C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\bin\Release\net6.0\AspNetCore.SEOHelper.dll
