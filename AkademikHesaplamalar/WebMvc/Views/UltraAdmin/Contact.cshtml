@@ -1,0 +1,54 @@
+﻿
+@model MyContact
+
+
+</head>
+
+@if (ViewBag.success == true)
+{
+    <div class="alert alert-info text-center" id="UpdateAdminAlert">
+        <span>Bilgileriniz güncellenmiştir.</span>
+    </div>
+}
+<div class="row" id="icerikUpdate">
+
+    <div class="col-md-12">
+        <form  asp-controller="UltraAdmin" asp-action="Contact" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+         
+            <input type="hidden" asp-for="Id" />
+    
+            <div class="form-group">
+                <label class="control-label"> Adres </label>
+                <input asp-for="Adres" class="form-control" placeholder="" />
+                <span asp-validation-for="Adres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Adres Html </label>
+                <input asp-for="AdresHtml" class="form-control" placeholder="" />
+                <span asp-validation-for="AdresHtml" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> MailAdres  &#64; Karakteri öncesi </label>
+                <input asp-for="MailAdres" class="form-control" placeholder="" />
+                <span asp-validation-for="MailAdres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Mail uzantısı  &#64; karakteri sonrası </label>
+                <input asp-for="MailExtension" class="form-control" placeholder="" />
+                <span asp-validation-for="MailExtension" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Telefon numarası </label>
+                <input asp-for="PhoneNumber" class="form-control" placeholder="" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+          
+
+            <div class="form-group">
+                <input type="submit" value="Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

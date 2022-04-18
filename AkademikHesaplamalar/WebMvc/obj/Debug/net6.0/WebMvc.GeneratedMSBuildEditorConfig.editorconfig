@@ -8,221 +8,225 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebMvc
 build_property.RootNamespace = WebMvc
-build_property.ProjectDir = C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc\
+build_property.ProjectDir = C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\webmvc\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\WebMvc
+build_property.MSBuildProjectDirectory = C:\Users\baran\source\repos\Kendi Projelerim\DocentlikHesaplama\AkademikHesaplamalar\webmvc
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Admin/Index.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Home/About.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Home/Contact.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Home/Index.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Home/Login.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Home/ResetPassword.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Home/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Home/ResetPasswordConfirm.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Home/ResetPasswordConfirm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXNldFBhc3N3b3JkQ29uZmlybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Home/SignUp.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Home/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberHome/Index.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberHome/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVySG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberHome/_MemberLayout.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberHome/_MemberLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVySG9tZVxfTWVtYmVyTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberHome/_ViewStart.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberHome/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVySG9tZVxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Egitim.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Egitim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxFZ2l0aW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Fen.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Fen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxGZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Filoloji.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Filoloji.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxGaWxvbG9qaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/GuzelSanatlar.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/GuzelSanatlar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxHdXplbFNhbmF0bGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Hukuk.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Hukuk.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxIdWt1ay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/ilahiyat.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/ilahiyat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxpbGFoaXlhdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Index.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/MemberPartial/MemberSelectbox.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/MemberPartial/MemberSelectbox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxNZW1iZXJQYXJ0aWFsXE1lbWJlclNlbGVjdGJveC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Mimarlik.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Mimarlik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxNaW1hcmxpay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Muhendis.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Muhendis.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxNdWhlbmRpcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Saglik.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Saglik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxTYWdsaWsuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/SosyalBeseri.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/SosyalBeseri.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxTb3N5YWxCZXNlcmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Spor.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Spor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxTcG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/Ziraat.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/Ziraat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxaaXJhYXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/MemberScience/_ViewStart.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/MemberScience/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyU2NpZW5jZVxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Answer.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Answer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxBbnN3ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Egitim.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Egitim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxFZ2l0aW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Fen.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Fen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxGZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Filoloji.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Filoloji.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxGaWxvbG9qaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/GuzelSanatlar.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/GuzelSanatlar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxHdXplbFNhbmF0bGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Hukuk.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Hukuk.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxIdWt1ay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/ilahiyat.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/ilahiyat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxpbGFoaXlhdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Index.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Mimarlik.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Mimarlik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxNaW1hcmxpay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Muhendis.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Muhendis.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxNdWhlbmRpcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Partial/Selectbox.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Partial/Selectbox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxQYXJ0aWFsXFNlbGVjdGJveC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Saglik.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Saglik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxTYWdsaWsuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/SosyalBeseri.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/SosyalBeseri.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxTb3N5YWxCZXNlcmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Spor.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Spor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxTcG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Science/Ziraat.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Science/Ziraat.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NpZW5jZVxaaXJhYXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/Shared/_Layout.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/AdminMember.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/AdminMember.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxBZG1pbk1lbWJlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/Index.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/RoleAssign.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/RoleAssign.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxSb2xlQXNzaWduLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/RoleCreate.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/RoleCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxSb2xlQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/Roles.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/Roles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxSb2xlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/UpdateAdminMember.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/UpdateAdminMember.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxVcGRhdGVBZG1pbk1lbWJlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/Users.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/_UltraAdminLayout.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/_UltraAdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxfVWx0cmFBZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/UltraAdmin/_ViewStart.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/UltraAdmin/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWx0cmFBZG1pblxfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/_ViewImports.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/WebMvc/Views/_ViewStart.cshtml]
+[C:/Users/baran/source/repos/Kendi Projelerim/DocentlikHesaplama/AkademikHesaplamalar/webmvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -12,12 +12,14 @@ namespace WebMvc.Controllers
     {
         private readonly IMyUserService _myUserService;
         private readonly IAdminMemberService _adminMemberService;
+        private readonly IMyContactService _myContactService;
         //private readonly IMessageService _myMessageService;
 
-        public UltraAdminController(UserManager<MyUser> userManager, RoleManager<MyRole> _roleManager, IMyUserService myUserService, IAdminMemberService adminMemberService) : base(userManager, null, _roleManager)
+        public UltraAdminController(UserManager<MyUser> userManager, RoleManager<MyRole> _roleManager, IMyUserService myUserService, IAdminMemberService adminMemberService, IMyContactService myContactService) : base(userManager, null, _roleManager)
         {
             _myUserService=myUserService;
             _adminMemberService=adminMemberService;
+            _myContactService=myContactService;
         }
 
         [Authorize(Roles = "UltraAdmin")]
@@ -134,7 +136,7 @@ namespace WebMvc.Controllers
 
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", fileName);
 
-               
+
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
                     await userPicture.CopyToAsync(stream);
@@ -289,5 +291,32 @@ namespace WebMvc.Controllers
         }
 
 
+
+
+        [HttpGet]
+        [Authorize(Roles = "UltraAdmin")]
+        public async Task<IActionResult> Contact(string id)
+        {
+            IEnumerable<MyContact> list = await _myContactService.GetAllAsync();
+            if (list.Count()==0)
+            {
+                MyContact contact = new MyContact();
+                contact= await _myContactService.AddAsync(contact);
+
+                return View(contact);
+            }
+
+            return View(list.FirstOrDefault());
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "UltraAdmin")]
+        public async Task<IActionResult> Contact(MyContact entity)
+        {
+
+            await _myContactService.UpdateAsync(entity);
+            ViewBag.success = true;
+            return RedirectToAction("Contact");
+        }
     }
 }
