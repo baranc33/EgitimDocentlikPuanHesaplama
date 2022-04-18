@@ -13,13 +13,15 @@ namespace WebMvc.Controllers
 
         private readonly IMyUserService _myUserService;
         private readonly IAdminMemberService _adminMemberService;
+        private readonly IMyContactService _myContactService;
         private readonly IMessageService _myMessageService;
 
-        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager, IMyUserService myUserService, IAdminMemberService adminMemberService, IMessageService myMessageService) : base(_userManager, _signInManager)
+        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager, IMyUserService myUserService, IAdminMemberService adminMemberService, IMessageService myMessageService, IMyContactService myContactService) : base(_userManager, _signInManager)
         {
             _myUserService=myUserService;
             _adminMemberService=adminMemberService;
             _myMessageService=myMessageService;
+            _myContactService=myContactService;
         }
 
         public IActionResult Index()
@@ -184,19 +186,21 @@ namespace WebMvc.Controllers
         }
 
 
-        public IActionResult Contact()
+        public async Task<IActionResult> Contact()
         {
-
-            return View();
-        }
-        [HttpPost]
-        public async Task<IActionResult> Contact(MyMessage entity)
-        {
-            await _myMessageService.AddAsync(entity);
-
-            ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
-            return View();
+            IEnumerable<MyContact> list = await _myContactService.GetAllAsync();
+            return View(list.FirstOrDefault());
         }
 
+ 
+    [HttpPost]
+    public async Task<IActionResult> Contact(MyMessage entity)
+    {
+        await _myMessageService.AddAsync(entity);
+
+        ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
+        return View();
     }
+
+}
 }
