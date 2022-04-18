@@ -12,11 +12,13 @@ namespace WebMvc.Controllers
     {
         private readonly IMyUserService _myUserService;
         private readonly IAdminMemberService _adminMemberService;
+        private readonly IMessageService _myMessageService;
 
-        public UltraAdminController(UserManager<MyUser> userManager, RoleManager<MyRole> _roleManager, IMyUserService myUserService, IAdminMemberService adminMemberService) : base(userManager, null, _roleManager)
+        public UltraAdminController(UserManager<MyUser> userManager, RoleManager<MyRole> _roleManager, IMyUserService myUserService, IAdminMemberService adminMemberService, IMessageService myMessageService) : base(userManager, null, _roleManager)
         {
             _myUserService=myUserService;
             _adminMemberService=adminMemberService;
+            _myMessageService=myMessageService;
         }
 
         [Authorize(Roles = "UltraAdmin")]

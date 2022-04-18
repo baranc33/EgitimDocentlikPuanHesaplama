@@ -13,10 +13,15 @@ namespace WebMvc.Controllers
 
         private readonly IMyUserService _myUserService;
         private readonly IAdminMemberService _adminMemberService;
-        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager, IMyUserService myUserService, IAdminMemberService adminMemberService) : base(_userManager, _signInManager)
+        private readonly IMyContactService _myContactService;
+        private readonly IMessageService _myMessageService;
+
+        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager, IMyUserService myUserService, IAdminMemberService adminMemberService, IMyContactService myContactService, IMessageService myMessageService) : base(_userManager, _signInManager)
         {
             _myUserService=myUserService;
             _adminMemberService=adminMemberService;
+            _myContactService=myContactService;
+            _myMessageService=myMessageService;
         }
 
         public IActionResult Index()
@@ -176,7 +181,7 @@ namespace WebMvc.Controllers
 
         public IActionResult About()
         {
-            IQueryable<AdminMember> admin =  _adminMemberService.Where(x=>x.Id>=0).OrderBy(c=>c.IdRow);
+            IQueryable<AdminMember> admin = _adminMemberService.Where(x => x.Id>=0).OrderBy(c => c.IdRow);
             return View(admin);
         }
 
@@ -186,8 +191,11 @@ namespace WebMvc.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Contact(MyContact entity)
+        public async Task<IActionResult> Contact(MyMessage entity)
         {
+            await _myMessageService.AddAsync(entity);
+
+            //ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
             return View();
         }
 
