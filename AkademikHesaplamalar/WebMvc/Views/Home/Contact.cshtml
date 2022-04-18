@@ -48,32 +48,26 @@
         .btn.btn-secondary {
             color: #FFFFFF;
         }
-        #alertDiv,#alertDiv2{
+        #alertDiv{
             width: 30%;
             margin-left: 35%;
-            position:absolute;
-            margin-top:-700px;
+        
         }
     </style>
 </head>
 
 <body>
     <div class="container-xxl bg-white p-0 mb-5">
-	@{
+
+        @{
 		if (ViewBag.Message != null)
 		{
 			<div class="alert alert-primary" role="alert" id="alertDiv">
 				@ViewBag.Message
 			</div>
 		}
-        if (ViewBag.Error != null)
-		{
-			<div class="alert alert-danger" role="alert" id="alertDiv2">
-				@ViewBag.Error
-			</div>
-		}
+       
 	}
-
 
         <!-- Contact Start -->
         <div class="container-xxl py-5">

@@ -197,22 +197,10 @@ namespace WebMvc.Controllers
         public async Task<IActionResult> Contact(MyMessage entity)
         {
             IEnumerable<MyContact> list = await _myContactService.GetAllAsync();
-            if (ModelState.IsValid)
-            {
+         
                 await _myMessageService.AddAsync(entity);
-                ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
-
-                return View(list.FirstOrDefault());
-            }
-            else
-            {
-                ViewBag.Error="Gerekli Alanları Doldurmadınız Mesajınız Tarafımıza iletilemedi :( ";
-                ModelState.AddModelError("", "Lütfen Bütün Alanları Doldurunuz");
-              
-                return View(list.FirstOrDefault());
-            }
-
-
+            ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
+            return View(list.FirstOrDefault());
 
         }
 
