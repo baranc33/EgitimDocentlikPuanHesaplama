@@ -92,6 +92,17 @@ namespace WebMvc.Controllers
             MyMessage message= await _myMessageService.GetByIdAsync(id);
 
             return View(message);
+        }//
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> MessageDelete(int id)
+        {
+            MyMessage message = await _myMessageService.GetByIdAsync(id);
+
+            await _myMessageService.RemoveAsync(message);
+
+            return RedirectToAction("Message");
         }//MessageDelete
     }
 }
