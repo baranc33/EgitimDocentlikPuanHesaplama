@@ -12,9 +12,11 @@ namespace WebMvc.Controllers
     {
 
         private readonly IMyUserService _myUserService;
-        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager, IMyUserService myUserService) : base(_userManager, _signInManager)
+        private readonly IAdminMemberService _adminMemberService;
+        public HomeController(UserManager<MyUser> _userManager, SignInManager<MyUser> _signInManager, IMyUserService myUserService, IAdminMemberService adminMemberService) : base(_userManager, _signInManager)
         {
             _myUserService=myUserService;
+            _adminMemberService=adminMemberService;
         }
 
         public IActionResult Index()
@@ -63,12 +65,12 @@ namespace WebMvc.Controllers
                 {
                     if (TempData["ReturnUrl"] != null)
                         return Redirect(TempData["ReturnUrl"].ToString());
-                    
+
                     return RedirectToAction("Index", "MemberHome");
                 }
             }
             else
-            ModelState.AddModelError("", "Geçersiz kullanıcı adı veya  şifresi");
+                ModelState.AddModelError("", "Geçersiz kullanıcı adı veya  şifresi");
 
             return View(model);
         }
@@ -93,7 +95,7 @@ namespace WebMvc.Controllers
                 //  kullanıcı doğru varmı bakıyoruz
                 if (user != null)
                 {
-                 
+
                     string passwordResetToken = _userManager.GeneratePasswordResetTokenAsync(user).Result;
 
                     // bir link oluşturcaz mailde tıkladığında gideceği yer
@@ -103,14 +105,14 @@ namespace WebMvc.Controllers
                         token = passwordResetToken
                     }, HttpContext.Request.Scheme);
 
-                 
+
 
                     PasswordReset.PasswordResetSendEmail(passwordResetLink, user.Email);
                     TempData["passwordGmail"] = "Mail Adresinize Yenilemek için bir posta gönderdik Şifrenizi yenilemek için oraya tıklayınız";
 
                     ViewBag.status = "success";
                     TempData["durum"] = true.ToString();
-                return RedirectToAction("ResetPasswordConfirm");
+                    return RedirectToAction("ResetPasswordConfirm");
                 }
                 else
                 {
@@ -128,7 +130,7 @@ namespace WebMvc.Controllers
         [HttpGet]
         public IActionResult ResetPasswordConfirm(string userId, string token)
         {
-           
+
             TempData["userId"] = userId;
             TempData["token"] = token;
             return View();
@@ -174,7 +176,8 @@ namespace WebMvc.Controllers
 
         public IActionResult About()
         {
-            return View();
+            IQueryable<AdminMember> admin =  _adminMemberService.Where(x=>x.Id>=0).OrderBy(c=>c.IdRow);
+            return View(admin);
         }
 
 
@@ -182,5 +185,11 @@ namespace WebMvc.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Contact(MyContact entity)
+        {
+            return View();
+        }
+
     }
 }
