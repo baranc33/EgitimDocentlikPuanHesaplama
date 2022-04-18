@@ -78,8 +78,14 @@ namespace WebMvc.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public IActionResult Message()
+        public IActionResult Message(string search)
         {
+            if (search !=null && search.Length>1)
+            {
+                return View(_myMessageService.Where(x => x.Description.Contains(search) || x.FullName.Contains(search) || x.MailAdres.Contains(search) ||x.Title.Contains(search)).OrderByDescending(x => x.Id));
+            }
+
+
             IQueryable<MyMessage> list = _myMessageService.Where(x => x.Description.Length>1).OrderByDescending(x => x.Id);
 
             return View(list);
@@ -92,9 +98,9 @@ namespace WebMvc.Controllers
             MyMessage message= await _myMessageService.GetByIdAsync(id);
 
             return View(message);
-        }//
+        }
 
-        [HttpPost]
+        [HttpGet]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> MessageDelete(int id)
         {
@@ -103,6 +109,6 @@ namespace WebMvc.Controllers
             await _myMessageService.RemoveAsync(message);
 
             return RedirectToAction("Message");
-        }//MessageDelete
+        }
     }
 }
