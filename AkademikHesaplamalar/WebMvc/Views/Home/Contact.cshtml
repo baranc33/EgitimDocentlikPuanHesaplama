@@ -48,10 +48,11 @@
         .btn.btn-secondary {
             color: #FFFFFF;
         }
-        #alertDiv{
+        #alertDiv,#alertDiv2{
             width: 30%;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 35%;
+            position:absolute;
+            margin-top:-700px;
         }
     </style>
 </head>
@@ -63,6 +64,12 @@
 		{
 			<div class="alert alert-primary" role="alert" id="alertDiv">
 				@ViewBag.Message
+			</div>
+		}
+        if (ViewBag.Error != null)
+		{
+			<div class="alert alert-danger" role="alert" id="alertDiv2">
+				@ViewBag.Error
 			</div>
 		}
 	}
@@ -99,13 +106,18 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6390.877296882755!2d34.52311327627014!3d36.78403196980746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15278ac93d5a3f71%3A0x7eb846bcbf77920e!2sMersin%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1648944050837!5m2!1str!2str"
-                            width="550" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                        <p>
+                            
+                           <iframe src="@Model.AdresHtml" width="550" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                        </p> 
+                        </div>
                     <div class="col-md-6">
                         <div class="" data-wow-delay="0.2s">
                           	<form asp-controller="home" asp-action="Contact" method="post">
+					<div asp-validation-summary="ModelOnly" class="text-danger" ></div>
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">

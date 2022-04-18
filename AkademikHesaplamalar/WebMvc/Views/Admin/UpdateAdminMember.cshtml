@@ -1,0 +1,118 @@
+﻿
+@model AdminMember
+<head>
+<style>
+#icerikUpdate{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#icerikUpdateImage{
+        background-repeat: round;
+        border-radius: 100vh;
+        width: 40vh;
+        height: 40vh;
+        border-color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4%;
+        border-style: solid;
+        border-width: 1vh;
+        margin-bottom: 2em;
+}
+#UpdateAdminAlert{
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+</style>
+
+</head>
+
+<h2 class="text-center">Admin Bilgi Güncelleme Sayfası</h2>
+@if (ViewBag.success == true)
+{
+    <div class="alert alert-info text-center" id="UpdateAdminAlert">
+        <span>Bilgileriniz güncellenmiştir.</span>
+    </div>
+}
+<div class="row" id="icerikUpdate">
+    <div id="icerikUpdateImage" style="background-image: url(/img/@Model.Image);">
+
+    </div>
+    <div class="col-md-12">
+        <form  asp-controller="Admin" asp-action="UpdateAdminMember" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="MyUserId" class="form-control" />
+            <input type="hidden" asp-for="IdRow" class="form-control" />
+         
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label class="control-label"> Ad Soyad </label>
+                <input asp-for="FullName" class="form-control" placeholder="" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Ünvan </label>
+                <input asp-for="Degree" class="form-control" placeholder="" />
+                <span asp-validation-for="Degree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Github </label>
+                <input asp-for="Github" class="form-control" placeholder="" />
+                <span asp-validation-for="Github" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Linkedin </label>
+                <input asp-for="Linkedin" class="form-control" placeholder="" />
+                <span asp-validation-for="Linkedin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> İnstegram </label>
+                <input asp-for="Instegram" class="form-control" placeholder="" />
+                <span asp-validation-for="Instegram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label"> Facebook </label>
+                <input asp-for="Facebook" class="form-control" placeholder="" />
+                <span asp-validation-for="Facebook" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label"> ön yazı </label>
+                <input asp-for="Description" class="form-control" placeholder="" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label"> Mail Adresi  &#64; karakteri sonrası </label>
+                <input asp-for="MailAdres" class="form-control" placeholder="" />
+                <span asp-validation-for="MailAdres" class="text-danger"></span>
+            </div>
+ 
+            <div class="form-group">
+                <label class="control-label">Mail uzantısı  &#64; karakteri sonrası</label>
+                <input asp-for="MailExtension" class="form-control" placeholder="" />
+                <span asp-validation-for="MailExtension" class="text-danger"></span>
+            </div>
+                   <div class="form-group">
+                <label class="control-label"> Resim Yükleyiniz  </label>
+                <input asp-for="Image" class="form-control" placeholder="" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Resim</label>
+                <input class="form-control" type="file" name="userPicture" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
