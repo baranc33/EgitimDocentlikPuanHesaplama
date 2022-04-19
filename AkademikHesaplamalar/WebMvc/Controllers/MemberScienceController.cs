@@ -78,6 +78,7 @@ namespace WebMvc.Controllers
             ViewBag.OldData = false;
 
             MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            ViewBag.MyUserId = user.Id;
             EgitimEntity entity = _egitimEntityService.WhereSingle(x => x.MyUserId==user.Id);
 
             if (entity!=null)
@@ -86,6 +87,9 @@ namespace WebMvc.Controllers
                 ViewBag.OldData = true;
             }
             return View();
+
+
+            ViewBag.OldData = false;
         }
 
         [Authorize]
@@ -100,8 +104,7 @@ namespace WebMvc.Controllers
             EgitimEntity entity = _egitimEntityService.WhereSingle(x => x.MyUserId==user.Id);
             if (entity == null)
             {
-                entity =new();
-                entity.MyUserId = user.Id;
+                entity = JsonSerializer.Deserialize<EgitimEntity>(TempData["model"].ToString());
                 await _egitimEntityService.AddAsync(entity);
             }
             else
@@ -141,14 +144,14 @@ namespace WebMvc.Controllers
         {
             TempData["model"] = JsonSerializer.Serialize(FenConvert.FenModelToFenEntity(model));
 
-    
+
 
 
             FenEntity entity = _fenEntityService.WhereSingle(x => x.MyUserId==model.MyUserId);
             if (entity == null)
             {
 
-                FenEntity  Newentity =JsonSerializer.Deserialize<FenEntity>(TempData["model"].ToString());
+                FenEntity Newentity = JsonSerializer.Deserialize<FenEntity>(TempData["model"].ToString());
                 await _fenEntityService.AddAsync(Newentity);
             }
             else
@@ -165,7 +168,7 @@ namespace WebMvc.Controllers
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
 
-         
+
             return RedirectToAction("Answer", "MemberScience", new { link = "Fen" });
         }
 
@@ -177,6 +180,7 @@ namespace WebMvc.Controllers
         {
             ViewBag.OldData = false;
             MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            ViewBag.MyUserId = user.Id;
             FilolojiEntity entity = _filolojiEntityService.WhereSingle(x => x.MyUserId==user.Id);
 
             if (entity!=null)
@@ -221,6 +225,7 @@ namespace WebMvc.Controllers
         {
             ViewBag.OldData = false;
             MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            ViewBag.MyUserId = user.Id;
             GuzelSanatlarEntity entity = _guzelSanatlarEntityService.WhereSingle(x => x.MyUserId==user.Id);
 
             if (entity!=null)
@@ -265,6 +270,7 @@ namespace WebMvc.Controllers
         {
             ViewBag.OldData = false;
             MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            ViewBag.MyUserId = user.Id;
             HukukEntity entity = _hukukEntityService.WhereSingle(x => x.MyUserId==user.Id);
 
             if (entity!=null)

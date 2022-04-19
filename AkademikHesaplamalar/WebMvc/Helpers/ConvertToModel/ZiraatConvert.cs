@@ -10,8 +10,10 @@ namespace WebMvc.Helpers.ConvertToModel
             /*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
 
             ZiraatEntity entity = new();
-
-
+            if (model.MyUserId  != null && model.MyUserId.Length>5)
+            {
+                entity.MyUserId=model.MyUserId;
+            }
             /***   M a k a l e l e r  ***/
             if (model.MakalelerAdoktora.Count() > 1)
             {

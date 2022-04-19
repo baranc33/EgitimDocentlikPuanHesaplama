@@ -9,7 +9,10 @@ namespace WebMvc.Helpers.ConvertToModel
         {
 
             FilolojiEntity entity = new();
-
+            if (model.MyUserId  != null && model.MyUserId.Length>5)
+            {
+                entity.MyUserId=model.MyUserId;
+            }
             /***  U L U S L A R    A R A S I   ***/
             if (model.UluslarArasiAdoktora.Count() > 1)
             {

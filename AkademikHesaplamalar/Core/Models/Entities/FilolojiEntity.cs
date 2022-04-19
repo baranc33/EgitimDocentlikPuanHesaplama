@@ -6,7 +6,6 @@ namespace Core.Models.Entities
     {
         public int Id { get; set; }
         public string MyUserId { get; set; } = "";
-        public MyUser MyUser { get; set; } = new MyUser();
 
         #region UluslarArasi
         [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiAdoktora { get; set; }

@@ -5,7 +5,6 @@ namespace Core.Models.Entities
     {
         public int Id { get; set; }
         public string MyUserId { get; set; } = "";
-        public MyUser MyUser { get; set; } = new MyUser();
 
 
 

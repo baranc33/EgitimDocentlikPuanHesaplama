@@ -8,8 +8,11 @@ namespace WebMvc.Helpers.ConvertToModel
         static public MuhendislikEntity MuhendislikModelToMuhendislikEntity(MuhendislikDocentModel model)
         {
             /*********** Hesaplama yaparken ilk indexten geleni hesaplama o numune olan************/
-
             MuhendislikEntity entity = new();
+            if (model.MyUserId  != null && model.MyUserId.Length>5)
+            {
+                entity.MyUserId=model.MyUserId;
+            }
 
             /***   M a k a l e l e r  ***/
             if (model.MakalelerAdoktora.Count() > 1)

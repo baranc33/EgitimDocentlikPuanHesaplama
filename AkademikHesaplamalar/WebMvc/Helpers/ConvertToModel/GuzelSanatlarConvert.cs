@@ -8,7 +8,10 @@ namespace WebMvc.Helpers.ConvertToModel
         static public GuzelSanatlarEntity GuzelSanatlarModelToGuzelSanatlarEntity(GuzelSanatlarDocentModel model)
         {
             GuzelSanatlarEntity entity = new();
-
+            if (model.MyUserId  != null && model.MyUserId.Length>5)
+            {
+                entity.MyUserId=model.MyUserId;
+            }
             /***  S İ N E M A  ***/
             if (model.SinemaIDoktora.Count() > 1)
             {

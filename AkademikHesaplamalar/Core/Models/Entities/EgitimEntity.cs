@@ -6,7 +6,6 @@ namespace Core.Models.Entities
     {
                 public int Id { get; set; }
         public string? MyUserId { get; set; } = default!;
-        public MyUser? MyUser { get; set; } = default!;
 
 
         #region UluslarArasi

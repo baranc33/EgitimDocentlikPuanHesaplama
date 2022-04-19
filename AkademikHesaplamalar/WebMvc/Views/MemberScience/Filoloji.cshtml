@@ -38,6 +38,7 @@
  @* <form onsubmit="egitimSave()" asp-controller="MemberScience" asp-action="Filoloji" method="post">  *@
  <form  asp-controller="MemberScience" asp-action="Filoloji" method="post"> 
         <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
+    <input type="hidden" value="@ViewBag.MyUserId" name="MyUserId" />
 
 
     @* <section class="Egitim"> *@
