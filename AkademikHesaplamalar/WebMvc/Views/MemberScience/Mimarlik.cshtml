@@ -1,10 +1,10 @@
 ﻿  @section Alt_Menu{
      <h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
     Mimarlık bilimleri doçentlik puan hesaplama </h1> 
-    
-    
+
+
    <partial name="~/Views/MemberScience/MemberPartial/MemberSelectbox.cshtml" />
-  
+
    <div class="">
        <h4 class="Calculation_information">
           Mimarlık, Planlama, Tasarım Temel Alanında başvurulan bilim alanıyla ilgili olarak
@@ -26,8 +26,8 @@
   }
 
 
-  
-  
+
+
 <head>
     @section head{
         <title>Mimarlık bilimleri</title>
@@ -44,7 +44,8 @@
 <form asp-controller="MemberScience" asp-action="Mimarlik" method="post">
     <a href="#SubmitButton" id="hesapla"> <i class="fa-regular fa-circle-down"></i> </a>
     <input type="hidden" value="@ViewBag.MyUserId" name="MyUserId" />
-    <section>
+    <input type="hidden" value="@ViewBag.Id" name="Id" />
+<section>
         <div class="Bir">
             <h2>1. Makaleler</h2>
             <h5> Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden
@@ -250,7 +251,7 @@
                 </ul>
                 <hr />
             </div>
- 
+
 
             <div class="row mt-5">
                 <label class="col-md-8">B)Diğer uluslararası ve ulusal hakemli dergilerde yayımlanmış makale ~ 5 Puan</label>
@@ -333,7 +334,7 @@
                 </ul>
                 <hr />
             </div>
- 
+
 
             <div class="row mt-5">
                 <label class="col-md-8">D) Ulusal sempozyumda/kongrede sunulmuş ve tam metni basılmış alanında bilime katkı sağlayan sözlü bildiri  ~ 3 Puan</label>
@@ -368,7 +369,7 @@
                 </ul>
                 <hr />
             </div>
- 
+
 
         </div>
 
@@ -527,7 +528,7 @@
 
         </div>
 
-   
+
         <div class="Dort">
             <h2>4. Yarışma, Uygulama, Yazılım ve Patent  </h2>
             <h5>Başvurulan doçentlik bilim alanı ile ilgili olmak kaydıyla alınan </h5>
@@ -554,7 +555,7 @@
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
-               
+
                         <div class="mb-3 col-md-2">
                             <label>Patent Sayısı</label>
                             <input type="number" class="form-control" value="1" name="PatentAsayi[]"
@@ -593,7 +594,7 @@
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
-                  
+
                         <div class="mb-3 col-md-2">
                             <label>Patent Sayısı</label>
                             <input type="number" class="form-control" value="1" name="PatentBmakalekitapbolum[]"
@@ -630,7 +631,7 @@
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
-               
+
                         <div class="mb-3 col-md-2">
                             <label>Patent Sayısı</label>
                             <input type="number" class="form-control" value="1" name="PatentCsayi[]"
@@ -1201,230 +1202,230 @@
 
         <script>
 
-            let jsEntity = {
-                MakalelerAdoktora: "@entity.MakalelerAdoktora",
-                MakalelerAmakalesayisi: "@entity.MakalelerAmakalesayisi",
-                MakalelerAyazarsayisi: "@entity.MakalelerAyazarsayisi",
-                MakalelerAhatirlatici: "@entity.MakalelerAhatirlatici",
-                MakalelerAsirasi: "@entity.MakalelerAsirasi",
-                MakalelerAbasYazar: "@entity.MakalelerAbasYazar",
-                MakalelerACount: "@entity.MakalelerACount",
+                    let jsEntity = {
+                        MakalelerAdoktora: "@entity.MakalelerAdoktora",
+                        MakalelerAmakalesayisi: "@entity.MakalelerAmakalesayisi",
+                        MakalelerAyazarsayisi: "@entity.MakalelerAyazarsayisi",
+                        MakalelerAhatirlatici: "@entity.MakalelerAhatirlatici",
+                        MakalelerAsirasi: "@entity.MakalelerAsirasi",
+                        MakalelerAbasYazar: "@entity.MakalelerAbasYazar",
+                        MakalelerACount: "@entity.MakalelerACount",
 
-                MakalelerBdoktora: "@entity.MakalelerBdoktora",
-                MakalelerBmakalesayisi: "@entity.MakalelerBmakalesayisi",
-                MakalelerByazarsayisi: "@entity.MakalelerByazarsayisi",
-                MakalelerBhatirlatici: "@entity.MakalelerBhatirlatici",
-                MakalelerBsirasi: "@entity.MakalelerBsirasi",
-                MakalelerBbasYazar: "@entity.MakalelerBbasYazar",
-                MakalelerBCount: "@entity.MakalelerBCount",
+                        MakalelerBdoktora: "@entity.MakalelerBdoktora",
+                        MakalelerBmakalesayisi: "@entity.MakalelerBmakalesayisi",
+                        MakalelerByazarsayisi: "@entity.MakalelerByazarsayisi",
+                        MakalelerBhatirlatici: "@entity.MakalelerBhatirlatici",
+                        MakalelerBsirasi: "@entity.MakalelerBsirasi",
+                        MakalelerBbasYazar: "@entity.MakalelerBbasYazar",
+                        MakalelerBCount: "@entity.MakalelerBCount",
 
-                MakalelerCdoktora: "@entity.MakalelerCdoktora",
-                MakalelerCmakalesayisi: "@entity.MakalelerCmakalesayisi",
-                MakalelerCyazarsayisi: "@entity.MakalelerCyazarsayisi",
-                MakalelerChatirlatici: "@entity.MakalelerChatirlatici",
-                MakalelerCsirasi: "@entity.MakalelerCsirasi",
-                MakalelerCbasYazar: "@entity.MakalelerCbasYazar",
-                MakalelerCCount: "@entity.MakalelerCCount",
-
-
-                PatentAdoktora: "@entity.PatentAdoktora",
-                PatentAsayi: "@entity.PatentAsayi",
-                PatentAyazarsayisi: "@entity.PatentAyazarsayisi",
-                PatentAhatirlatici: "@entity.PatentAhatirlatici",
-                PatentACount: "@entity.PatentACount",
-              
+                        MakalelerCdoktora: "@entity.MakalelerCdoktora",
+                        MakalelerCmakalesayisi: "@entity.MakalelerCmakalesayisi",
+                        MakalelerCyazarsayisi: "@entity.MakalelerCyazarsayisi",
+                        MakalelerChatirlatici: "@entity.MakalelerChatirlatici",
+                        MakalelerCsirasi: "@entity.MakalelerCsirasi",
+                        MakalelerCbasYazar: "@entity.MakalelerCbasYazar",
+                        MakalelerCCount: "@entity.MakalelerCCount",
 
 
-                PatentBdoktora: "@entity.PatentBdoktora",
-                PatentBmakalekitapbolum: "@entity.PatentBmakalekitapbolum",
-                PatentByazarsayisi: "@entity.PatentByazarsayisi",
-                PatentBhatirlatici: "@entity.PatentBhatirlatici",
-                PatentBCount: "@entity.PatentBCount",
-           
-
-                PatentCdoktora: "@entity.PatentCdoktora",
-                PatentCsayi: "@entity.PatentCsayi",
-                PatentCyazarsayisi: "@entity.PatentCyazarsayisi",
-                PatentChatirlatici: "@entity.PatentChatirlatici",
-                PatentCCount: "@entity.PatentCCount",
-              
-
-                YayinAdoktora: "@entity.YayinAdoktora",
-                YayinAmakalesayisi: "@entity.YayinAkitap",
-                YayinAyazarsayisi: "@entity.YayinAyazarsayisi",
-                YayinAhatirlatici: "@entity.YayinAhatirlatici",
-                YayinACount: "@entity.YayinACount",
-
-                YayinBdoktora: "@entity.YayinBdoktora",
-                YayinBmakalesayisi: "@entity.YayinBmakalesayisi",
-                YayinBbasYazar: "@entity.YayinBbasYazar",
-                YayinBsirasi: "@entity.YayinBsirasi",
-                YayinByazarsayisi: "@entity.YayinByazarsayisi",
-                YayinBhatirlatici: "@entity.YayinBhatirlatici",
-                YayinBCount: "@entity.YayinBCount",
-
-                YayinCdoktora: "@entity.YayinCdoktora",
-                YayinCbildiri: "@entity.YayinCbildiri",
-                YayinCyazarsayisi: "@entity.YayinCyazarsayisi",
-                YayinChatirlatici: "@entity.YayinChatirlatici",
-                YayinCCount: "@entity.YayinCCount",
-
-                YayinDdoktora: "@entity.YayinDdoktora",
-                YayinDbildiri: "@entity.YayinDbildiri",
-                YayinDyazarsayisi: "@entity.YayinDyazarsayisi",
-                YayinDhatirlatici: "@entity.YayinDhatirlatici",
-                YayinDCount: "@entity.YayinDCount",
+                        PatentAdoktora: "@entity.PatentAdoktora",
+                        PatentAsayi: "@entity.PatentAsayi",
+                        PatentAyazarsayisi: "@entity.PatentAyazarsayisi",
+                        PatentAhatirlatici: "@entity.PatentAhatirlatici",
+                        PatentACount: "@entity.PatentACount",
 
 
-                KitapAdoktora: "@entity.KitapAdoktora",
-                KitapAkitap: "@entity.KitapAkitap",
-                KitapAyazarsayisi: "@entity.KitapAyazarsayisi",
-                KitapAhatirlatici: "@entity.KitapAhatirlatici",
-                KitapACount: "@entity.KitapACount",
 
-                KitapBdoktora: "@entity.KitapBdoktora",
-                KitapBbolumSayisi: "@entity.KitapBbolumSayisi",
-                KitapByazarsayisi: "@entity.KitapByazarsayisi",
-                KitapBhatirlatici: "@entity.KitapBhatirlatici",
-                KitapBCount: "@entity.KitapBCount",
-
-                KitapCdoktora: "@entity.KitapCdoktora",
-                KitapCkitap: "@entity.KitapCkitap",
-                KitapCyazarsayisi: "@entity.KitapCyazarsayisi",
-                KitapChatirlatici: "@entity.KitapChatirlatici",
-                KitapCCount: "@entity.KitapCCount",
-
-                KitapDdoktora: "@entity.KitapDdoktora",
-                KitapDbolumSayisi: "@entity.KitapDbolumSayisi",
-                KitapDyazarsayisi: "@entity.KitapDyazarsayisi",
-                KitapDhatirlatici: "@entity.KitapDhatirlatici",
-                KitapDCount: "@entity.KitapDCount",
+                        PatentBdoktora: "@entity.PatentBdoktora",
+                        PatentBmakalekitapbolum: "@entity.PatentBmakalekitapbolum",
+                        PatentByazarsayisi: "@entity.PatentByazarsayisi",
+                        PatentBhatirlatici: "@entity.PatentBhatirlatici",
+                        PatentBCount: "@entity.PatentBCount",
 
 
-                AtiflarAdoktora: "@entity.AtiflarAdoktora",
-                AtiflarAatif: "@entity.AtiflarAatif",
-                AtiflarAhatirlatici: "@entity.AtiflarAhatirlatici",
-                AtiflarACount: "@entity.AtiflarACount",
-
-                AtiflarBdoktora: "@entity.AtiflarBdoktora",
-                AtiflarBatif: "@entity.AtiflarBatif",
-                AtiflarBhatirlatici: "@entity.AtiflarBhatirlatici",
-                AtiflarBCount: "@entity.AtiflarBCount",
-
-                AtiflarCdoktora: "@entity.AtiflarCdoktora",
-                AtiflarCatif: "@entity.AtiflarCatif",
-                AtiflarChatirlatici: "@entity.AtiflarChatirlatici",
-                AtiflarCCount: "@entity.AtiflarCCount",
+                        PatentCdoktora: "@entity.PatentCdoktora",
+                        PatentCsayi: "@entity.PatentCsayi",
+                        PatentCyazarsayisi: "@entity.PatentCyazarsayisi",
+                        PatentChatirlatici: "@entity.PatentChatirlatici",
+                        PatentCCount: "@entity.PatentCCount",
 
 
-                DanismanlikAdoktora: "@entity.DanismanlikAdoktora",
-                DanismanlikAseviye: "@entity.DanismanlikAseviye",
-                DanismanlikAsayi: "@entity.DanismanlikAsayi",
-                DanismanlikAhatirlatici: "@entity.DanismanlikAhatirlatici",
-                DanismanlikACount: "@entity.DanismanlikACount",
+                        YayinAdoktora: "@entity.YayinAdoktora",
+                        YayinAmakalesayisi: "@entity.YayinAkitap",
+                        YayinAyazarsayisi: "@entity.YayinAyazarsayisi",
+                        YayinAhatirlatici: "@entity.YayinAhatirlatici",
+                        YayinACount: "@entity.YayinACount",
+
+                        YayinBdoktora: "@entity.YayinBdoktora",
+                        YayinBmakalesayisi: "@entity.YayinBmakalesayisi",
+                        YayinBbasYazar: "@entity.YayinBbasYazar",
+                        YayinBsirasi: "@entity.YayinBsirasi",
+                        YayinByazarsayisi: "@entity.YayinByazarsayisi",
+                        YayinBhatirlatici: "@entity.YayinBhatirlatici",
+                        YayinBCount: "@entity.YayinBCount",
+
+                        YayinCdoktora: "@entity.YayinCdoktora",
+                        YayinCbildiri: "@entity.YayinCbildiri",
+                        YayinCyazarsayisi: "@entity.YayinCyazarsayisi",
+                        YayinChatirlatici: "@entity.YayinChatirlatici",
+                        YayinCCount: "@entity.YayinCCount",
+
+                        YayinDdoktora: "@entity.YayinDdoktora",
+                        YayinDbildiri: "@entity.YayinDbildiri",
+                        YayinDyazarsayisi: "@entity.YayinDyazarsayisi",
+                        YayinDhatirlatici: "@entity.YayinDhatirlatici",
+                        YayinDCount: "@entity.YayinDCount",
 
 
-                DanismanlikBdoktora: "@entity.DanismanlikBdoktora",
-                DanismanlikBseviye: "@entity.DanismanlikBseviye",
-                DanismanlikBsayi: "@entity.DanismanlikBsayi",
-                DanismanlikBhatirlatici: "@entity.DanismanlikBhatirlatici",
-                DanismanlikBCount: "@entity.DanismanlikBCount",
+                        KitapAdoktora: "@entity.KitapAdoktora",
+                        KitapAkitap: "@entity.KitapAkitap",
+                        KitapAyazarsayisi: "@entity.KitapAyazarsayisi",
+                        KitapAhatirlatici: "@entity.KitapAhatirlatici",
+                        KitapACount: "@entity.KitapACount",
+
+                        KitapBdoktora: "@entity.KitapBdoktora",
+                        KitapBbolumSayisi: "@entity.KitapBbolumSayisi",
+                        KitapByazarsayisi: "@entity.KitapByazarsayisi",
+                        KitapBhatirlatici: "@entity.KitapBhatirlatici",
+                        KitapBCount: "@entity.KitapBCount",
+
+                        KitapCdoktora: "@entity.KitapCdoktora",
+                        KitapCkitap: "@entity.KitapCkitap",
+                        KitapCyazarsayisi: "@entity.KitapCyazarsayisi",
+                        KitapChatirlatici: "@entity.KitapChatirlatici",
+                        KitapCCount: "@entity.KitapCCount",
+
+                        KitapDdoktora: "@entity.KitapDdoktora",
+                        KitapDbolumSayisi: "@entity.KitapDbolumSayisi",
+                        KitapDyazarsayisi: "@entity.KitapDyazarsayisi",
+                        KitapDhatirlatici: "@entity.KitapDhatirlatici",
+                        KitapDCount: "@entity.KitapDCount",
 
 
-                ArastirmaAdoktora: "@entity.ArastirmaAdoktora",
-                ArastirmaAproje: "@entity.ArastirmaAproje",
-                ArastirmaAhatirlatici: "@entity.ArastirmaAhatirlatici",
-                ArastirmaACount: "@entity.ArastirmaACount",
+                        AtiflarAdoktora: "@entity.AtiflarAdoktora",
+                        AtiflarAatif: "@entity.AtiflarAatif",
+                        AtiflarAhatirlatici: "@entity.AtiflarAhatirlatici",
+                        AtiflarACount: "@entity.AtiflarACount",
 
-                ArastirmaBdoktora: "@entity.ArastirmaBdoktora",
-                ArastirmaBproje: "@entity.ArastirmaBproje",
-                ArastirmaBhatirlatici: "@entity.ArastirmaBhatirlatici",
-                ArastirmaBCount: "@entity.ArastirmaBCount",
+                        AtiflarBdoktora: "@entity.AtiflarBdoktora",
+                        AtiflarBatif: "@entity.AtiflarBatif",
+                        AtiflarBhatirlatici: "@entity.AtiflarBhatirlatici",
+                        AtiflarBCount: "@entity.AtiflarBCount",
 
-                ArastirmaCdoktora: "@entity.ArastirmaCdoktora",
-                ArastirmaCproje: "@entity.ArastirmaCproje",
-                ArastirmaChatirlatici: "@entity.ArastirmaChatirlatici",
-                ArastirmaCCount: "@entity.ArastirmaCCount",
-
-                ArastirmaDdoktora: "@entity.ArastirmaDdoktora",
-                ArastirmaDproje: "@entity.ArastirmaDproje",
-                ArastirmaDhatirlatici: "@entity.ArastirmaDhatirlatici",
-                ArastirmaDCount: "@entity.ArastirmaDCount",
+                        AtiflarCdoktora: "@entity.AtiflarCdoktora",
+                        AtiflarCatif: "@entity.AtiflarCatif",
+                        AtiflarChatirlatici: "@entity.AtiflarChatirlatici",
+                        AtiflarCCount: "@entity.AtiflarCCount",
 
 
-                ToplantiAdoktora: "@entity.ToplantiAdoktora",
-                ToplantiAsayi: "@entity.ToplantiAsayi",
-                ToplantiAyazarsayisi: "@entity.ToplantiAyazarsayisi",
-                ToplantiAhatirlatici: "@entity.ToplantiAhatirlatici",
-                ToplantiACount: "@entity.ToplantiACount",
+                        DanismanlikAdoktora: "@entity.DanismanlikAdoktora",
+                        DanismanlikAseviye: "@entity.DanismanlikAseviye",
+                        DanismanlikAsayi: "@entity.DanismanlikAsayi",
+                        DanismanlikAhatirlatici: "@entity.DanismanlikAhatirlatici",
+                        DanismanlikACount: "@entity.DanismanlikACount",
 
 
-                ToplantiBdoktora: "@entity.ToplantiBdoktora",
-                ToplantiBsayi: "@entity.ToplantiBsayi",
-                ToplantiByazarsayisi: "@entity.ToplantiByazarsayisi",
-                ToplantiBhatirlatici: "@entity.ToplantiBhatirlatici",
-                ToplantiBCount: "@entity.ToplantiBCount",
+                        DanismanlikBdoktora: "@entity.DanismanlikBdoktora",
+                        DanismanlikBseviye: "@entity.DanismanlikBseviye",
+                        DanismanlikBsayi: "@entity.DanismanlikBsayi",
+                        DanismanlikBhatirlatici: "@entity.DanismanlikBhatirlatici",
+                        DanismanlikBCount: "@entity.DanismanlikBCount",
 
 
-                EgitimAdoktora: "@entity.EgitimAdoktora",
-                EgitimAders: "@entity.EgitimAders",
-                EgitimAhatirlatici: "@entity.EgitimAhatirlatici",
-                EgitimACount: "@entity.EgitimACount",
+                        ArastirmaAdoktora: "@entity.ArastirmaAdoktora",
+                        ArastirmaAproje: "@entity.ArastirmaAproje",
+                        ArastirmaAhatirlatici: "@entity.ArastirmaAhatirlatici",
+                        ArastirmaACount: "@entity.ArastirmaACount",
 
-                EgitimBdoktora: "@entity.EgitimBdoktora",
-                EgitimBders: "@entity.EgitimBders",
-                EgitimBhatirlatici: "@entity.EgitimBhatirlatici",
-                EgitimBCount: "@entity.EgitimBCount",
-                Gorev2yil: "@entity.Gorev2yil"
+                        ArastirmaBdoktora: "@entity.ArastirmaBdoktora",
+                        ArastirmaBproje: "@entity.ArastirmaBproje",
+                        ArastirmaBhatirlatici: "@entity.ArastirmaBhatirlatici",
+                        ArastirmaBCount: "@entity.ArastirmaBCount",
+
+                        ArastirmaCdoktora: "@entity.ArastirmaCdoktora",
+                        ArastirmaCproje: "@entity.ArastirmaCproje",
+                        ArastirmaChatirlatici: "@entity.ArastirmaChatirlatici",
+                        ArastirmaCCount: "@entity.ArastirmaCCount",
+
+                        ArastirmaDdoktora: "@entity.ArastirmaDdoktora",
+                        ArastirmaDproje: "@entity.ArastirmaDproje",
+                        ArastirmaDhatirlatici: "@entity.ArastirmaDhatirlatici",
+                        ArastirmaDCount: "@entity.ArastirmaDCount",
 
 
-            };
-            localStorage.setItem('Mimarlik', JSON.stringify(jsEntity));
+                        ToplantiAdoktora: "@entity.ToplantiAdoktora",
+                        ToplantiAsayi: "@entity.ToplantiAsayi",
+                        ToplantiAyazarsayisi: "@entity.ToplantiAyazarsayisi",
+                        ToplantiAhatirlatici: "@entity.ToplantiAhatirlatici",
+                        ToplantiACount: "@entity.ToplantiACount",
+
+
+                        ToplantiBdoktora: "@entity.ToplantiBdoktora",
+                        ToplantiBsayi: "@entity.ToplantiBsayi",
+                        ToplantiByazarsayisi: "@entity.ToplantiByazarsayisi",
+                        ToplantiBhatirlatici: "@entity.ToplantiBhatirlatici",
+                        ToplantiBCount: "@entity.ToplantiBCount",
+
+
+                        EgitimAdoktora: "@entity.EgitimAdoktora",
+                        EgitimAders: "@entity.EgitimAders",
+                        EgitimAhatirlatici: "@entity.EgitimAhatirlatici",
+                        EgitimACount: "@entity.EgitimACount",
+
+                        EgitimBdoktora: "@entity.EgitimBdoktora",
+                        EgitimBders: "@entity.EgitimBders",
+                        EgitimBhatirlatici: "@entity.EgitimBhatirlatici",
+                        EgitimBCount: "@entity.EgitimBCount",
+                        Gorev2yil: "@entity.Gorev2yil"
+
+
+                    };
+                    localStorage.setItem('Mimarlik', JSON.stringify(jsEntity));
         </script>
         <script>
-            if (jsEntity != null) {
-                 MakalelerAdoldur('Mimarlik');
-                MakalelerBdoldur('Mimarlik');
-                MakalelerCdoldur('Mimarlik'); 
-                
-          
-                YayinAdoldur('Mimarlik');
-                YayinBdoldur2('Mimarlik');
-                YayinCdoldur2('Mimarlik');
-                YayinDdoldur2('Mimarlik');
-
-                PatentAdoldur('Mimarlik');
-            
-                // yenisi eklenecek
-                PatentBdoldur3('Mimarlik');
-                // yenisi eklenecek
-                PatentCdoldur3('Mimarlik');
+                    if (jsEntity != null) {
+                         MakalelerAdoldur('Mimarlik');
+                        MakalelerBdoldur('Mimarlik');
+                        MakalelerCdoldur('Mimarlik'); 
 
 
+                        YayinAdoldur('Mimarlik');
+                        YayinBdoldur2('Mimarlik');
+                        YayinCdoldur2('Mimarlik');
+                        YayinDdoldur2('Mimarlik');
+
+                        PatentAdoldur('Mimarlik');
+
+                        // yenisi eklenecek
+                        PatentBdoldur3('Mimarlik');
+                        // yenisi eklenecek
+                        PatentCdoldur3('Mimarlik');
 
 
-                KitapAdoldur('Mimarlik');
-                KitapBdoldur('Mimarlik');
-                KitapCdoldur('Mimarlik');
-                KitapDdoldur('Mimarlik');
-
-                AtiflarAdoldur('Mimarlik');
-                AtiflarBdoldur('Mimarlik');
-                AtiflarCdoldur('Mimarlik');
-                DanismanlikAdoldur('Mimarlik');
-                DanismanlikBdoldur('Mimarlik');
-                ArastirmaAdoldur('Mimarlik');
-                ArastirmaBdoldur('Mimarlik');
-                ArastirmaCdoldur('Mimarlik');
-                ArastirmaDdoldur('Mimarlik');
-                ToplantiAdoldur('Mimarlik');
-                ToplantiBdoldur('Mimarlik');
-                EgitimAdoldur('Mimarlik');
-                EgitimBdoldur('Mimarlik');
-                EgitimCdoldur('Mimarlik');
 
 
-            }
+                        KitapAdoldur('Mimarlik');
+                        KitapBdoldur('Mimarlik');
+                        KitapCdoldur('Mimarlik');
+                        KitapDdoldur('Mimarlik');
+
+                        AtiflarAdoldur('Mimarlik');
+                        AtiflarBdoldur('Mimarlik');
+                        AtiflarCdoldur('Mimarlik');
+                        DanismanlikAdoldur('Mimarlik');
+                        DanismanlikBdoldur('Mimarlik');
+                        ArastirmaAdoldur('Mimarlik');
+                        ArastirmaBdoldur('Mimarlik');
+                        ArastirmaCdoldur('Mimarlik');
+                        ArastirmaDdoldur('Mimarlik');
+                        ToplantiAdoldur('Mimarlik');
+                        ToplantiBdoldur('Mimarlik');
+                        EgitimAdoldur('Mimarlik');
+                        EgitimBdoldur('Mimarlik');
+                        EgitimCdoldur('Mimarlik');
+
+
+                    }
 
         </script>
     }

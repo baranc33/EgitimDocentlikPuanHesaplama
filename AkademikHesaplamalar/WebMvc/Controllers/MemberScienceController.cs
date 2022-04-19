@@ -125,6 +125,7 @@ namespace WebMvc.Controllers
 
             if (entity!=null)
             {
+                ViewBag.Id = entity.Id;
                 TempData["model"] = JsonSerializer.Serialize(entity);
                 ViewBag.OldData = true;
             }
@@ -151,8 +152,6 @@ namespace WebMvc.Controllers
             else
             {
                 FenEntity Newentity = FenConvert.FenModelToFenEntity(model).Adapt<FenEntity>();
-                Newentity.MyUserId = user.Id;
-                Newentity.Id=entity.Id;
                 await _fenEntityService.UpdateAsync(Newentity);
             }
 
@@ -177,6 +176,7 @@ namespace WebMvc.Controllers
 
             if (entity!=null)
             {
+                ViewBag.Id = entity.Id;
                 TempData["model"] = JsonSerializer.Serialize(entity);
                 ViewBag.OldData = true;
             }
@@ -202,8 +202,6 @@ namespace WebMvc.Controllers
             else
             {
                 FilolojiEntity Newentity = FilolojiConvert.FilolojiModelToFilolojiEntity(model).Adapt<FilolojiEntity>();
-                Newentity.MyUserId = user.Id;
-                Newentity.Id=entity.Id;
                 await _filolojiEntityService.UpdateAsync(Newentity);
             }
 
@@ -222,6 +220,7 @@ namespace WebMvc.Controllers
 
             if (entity!=null)
             {
+                ViewBag.Id = entity.Id;
                 TempData["model"] = JsonSerializer.Serialize(entity);
                 ViewBag.OldData = true;
             }
@@ -248,8 +247,6 @@ namespace WebMvc.Controllers
             else
             {
                 GuzelSanatlarEntity Newentity = GuzelSanatlarConvert.GuzelSanatlarModelToGuzelSanatlarEntity(model).Adapt<GuzelSanatlarEntity>();
-                Newentity.MyUserId = user.Id;
-                Newentity.Id=entity.Id;
                 await _guzelSanatlarEntityService.UpdateAsync(Newentity);
             }
             return RedirectToAction("Answer", "MemberScience", new { link = "GuzelSanatlar" });
@@ -267,6 +264,7 @@ namespace WebMvc.Controllers
 
             if (entity!=null)
             {
+                ViewBag.Id = entity.Id;
                 TempData["model"] = JsonSerializer.Serialize(entity);
                 ViewBag.OldData = true;
             }
@@ -294,8 +292,6 @@ namespace WebMvc.Controllers
             else
             {
                 HukukEntity Newentity = HukukConvert.HukukModelToHukukEntity(model).Adapt<HukukEntity>();
-                Newentity.MyUserId = user.Id;
-                Newentity.Id=entity.Id;
                 await _hukukEntityService.UpdateAsync(Newentity);
             }
             return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });

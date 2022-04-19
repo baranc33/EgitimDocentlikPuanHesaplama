@@ -42,6 +42,7 @@
 <form asp-controller="MemberScience" asp-action="Saglik" method="post">
     <a href="#SubmitButton" id="hesapla"> <i class="fa-regular fa-circle-down"></i> </a>
 
+    <input type="hidden" value="@ViewBag.Id" name="Id" />
 
     <input type="hidden" value="@ViewBag.MyUserId" name="MyUserId" />
     @* <section class="Egitim"> *@
