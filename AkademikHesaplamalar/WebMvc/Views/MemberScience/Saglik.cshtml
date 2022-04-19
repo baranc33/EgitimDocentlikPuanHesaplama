@@ -1,7 +1,10 @@
 ﻿
   @section Alt_Menu{
       <h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    Sağlık bilimleri doçentlik puan hesaplama </h1> <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
+    Sağlık bilimleri doçentlik puan hesaplama </h1> 
+    
+    
+   <partial name="~/Views/MemberScience/MemberPartial/MemberSelectbox.cshtml" />
  
    <div class="">
        <h4 class="Calculation_information">
@@ -31,12 +34,12 @@
           <meta name="description" content="Sağlık  bilimleri doçentlik puan hesaplama" />
 }
     <link href="~/css/hesap.css" rel="stylesheet">
-    <script src="~/js/Bolumler.js"></script>
+    <script src="~/js/MemberBolumler.js"></script>
     <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
 
 </head>
 
-<form asp-controller="Science" asp-action="Saglik" method="post">
+<form asp-controller="MemberScience" asp-action="Saglik" method="post">
     <a href="#SubmitButton" id="hesapla"> <i class="fa-regular fa-circle-down"></i> </a>
 
 

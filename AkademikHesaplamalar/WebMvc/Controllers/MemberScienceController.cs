@@ -13,7 +13,7 @@ using Mapster;
 
 namespace WebMvc.Controllers
 {
-    public class MemberScienceController : BaseController
+    public class MemberScienceController : Controller
     {
         private readonly IEgitimEntityService _egitimEntityService;
         private readonly IFenEntityService _fenEntityService;
@@ -37,10 +37,11 @@ namespace WebMvc.Controllers
         SporEntityService
         ZiraatEntityService
          */
-
-        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager, IEgitimEntityService egitimEntityService, IHukukEntityService hukukEntityService, IGuzelSanatlarEntityService guzelSanatlarEntityService, IFilolojiEntityService filolojiEntityService, IFenEntityService fenEntityService) : base(userManager, signInManager)
+        protected UserManager<MyUser> _userManager { get; }
+        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager, IEgitimEntityService egitimEntityService, IHukukEntityService hukukEntityService, IGuzelSanatlarEntityService guzelSanatlarEntityService, IFilolojiEntityService filolojiEntityService, IFenEntityService fenEntityService)
         {
-            _egitimEntityService=egitimEntityService;
+            _userManager= userManager;
+            _egitimEntityService =egitimEntityService;
             _hukukEntityService=hukukEntityService;
             _guzelSanatlarEntityService=guzelSanatlarEntityService;
             _filolojiEntityService=filolojiEntityService;
@@ -122,6 +123,8 @@ namespace WebMvc.Controllers
         {
             ViewBag.OldData = false;
             MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            ViewBag.MyUserId = user.Id;
+
             FenEntity entity = _fenEntityService.WhereSingle(x => x.MyUserId==user.Id);
 
             if (entity!=null)
@@ -137,24 +140,32 @@ namespace WebMvc.Controllers
         public async Task<IActionResult> Fen(FenDocentModel model)
         {
             TempData["model"] = JsonSerializer.Serialize(FenConvert.FenModelToFenEntity(model));
-            Messages message = model.Hesapla();
-            TempData["message"] = JsonSerializer.Serialize(message);
 
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
-            FenEntity entity = _fenEntityService.WhereSingle(x => x.MyUserId==user.Id);
+    
+
+
+            FenEntity entity = _fenEntityService.WhereSingle(x => x.MyUserId==model.MyUserId);
             if (entity == null)
             {
-                entity =new();
-                entity.MyUserId = user.Id;
-                await _fenEntityService.AddAsync(entity);
+
+                FenEntity  Newentity =JsonSerializer.Deserialize<FenEntity>(TempData["model"].ToString());
+                await _fenEntityService.AddAsync(Newentity);
             }
             else
             {
                 FenEntity Newentity = FenConvert.FenModelToFenEntity(model).Adapt<FenEntity>();
-                Newentity.MyUserId = user.Id;
+                Newentity.MyUserId = model.MyUserId;
                 Newentity.Id=entity.Id;
                 await _fenEntityService.UpdateAsync(Newentity);
             }
+
+
+
+
+            Messages message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+
+         
             return RedirectToAction("Answer", "MemberScience", new { link = "Fen" });
         }
 

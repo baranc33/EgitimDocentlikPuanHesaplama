@@ -54,7 +54,7 @@ namespace WebMvc.Controllers
         [HttpPost]
         public IActionResult Filoloji(FilolojiDocentModel model)
         {
-            TempData["model"] = JsonSerializer.Serialize(FilolojiConvert.EgitimModelToEgitimEntity(model));
+            TempData["model"] = JsonSerializer.Serialize(FilolojiConvert.FilolojiModelToFilolojiEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             return RedirectToAction("Answer", "Science", new { link = "Filoloji" });
@@ -72,7 +72,7 @@ namespace WebMvc.Controllers
         [HttpPost]
         public IActionResult Hukuk(HukukDocentModel model)
         {
-            TempData["model"] = JsonSerializer.Serialize(HukukConvert.EgitimModelToEgitimEntity(model));
+            TempData["model"] = JsonSerializer.Serialize(HukukConvert.HukukModelToHukukEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             return RedirectToAction("Answer", "Science", new { link = "Hukuk" });

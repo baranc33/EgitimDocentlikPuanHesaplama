@@ -12,6 +12,12 @@ namespace WebMvc.Helpers.ConvertToModel
 
             FenEntity entity = new();
             /***   M a k a l e l e r  ***/
+
+            if (model.MyUserId  != null && model.MyUserId.Length>5)
+            {
+                entity.MyUserId=model.MyUserId;
+            }
+
             if (model.MakalelerAdoktora.Count() > 1)
             {
                 for (int i = 1; i < model.MakalelerAdoktora.Count(); i++)
