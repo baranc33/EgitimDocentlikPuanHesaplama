@@ -5,7 +5,7 @@ namespace WebMvc.Helpers.ConvertToModel
 {
     public class HukukConvert
     {
-        static public HukukEntity EgitimModelToEgitimEntity(HukukDocentModel model)
+        static public HukukEntity HukukModelToHukukEntity(HukukDocentModel model)
         {
 
             HukukEntity entity = new();

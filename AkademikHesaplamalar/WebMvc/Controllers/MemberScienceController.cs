@@ -16,14 +16,18 @@ namespace WebMvc.Controllers
     public class MemberScienceController : BaseController
     {
         private readonly IEgitimEntityService _egitimEntityService;
+        private readonly IFenEntityService _fenEntityService;
+        private readonly IFilolojiEntityService _filolojiEntityService;
+        private readonly IGuzelSanatlarEntityService _guzelSanatlarEntityService;
+        private readonly IHukukEntityService _hukukEntityService;
 
 
         /*
          
-         FenEntityService
-        FilolojiEntityService
-        GuzelSanatlarEntityService
-        HukukEntityService
+         
+        
+        
+        
         ilahiyatEntityService
         MessageService
         MimarlikEntityService
@@ -34,9 +38,13 @@ namespace WebMvc.Controllers
         ZiraatEntityService
          */
 
-        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager, IEgitimEntityService egitimEntityService) : base(userManager, signInManager)
+        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager, IEgitimEntityService egitimEntityService, IHukukEntityService hukukEntityService, IGuzelSanatlarEntityService guzelSanatlarEntityService, IFilolojiEntityService filolojiEntityService, IFenEntityService fenEntityService) : base(userManager, signInManager)
         {
             _egitimEntityService=egitimEntityService;
+            _hukukEntityService=hukukEntityService;
+            _guzelSanatlarEntityService=guzelSanatlarEntityService;
+            _filolojiEntityService=filolojiEntityService;
+            _fenEntityService=fenEntityService;
         }
 
 
@@ -73,9 +81,7 @@ namespace WebMvc.Controllers
 
             if (entity!=null)
             {
-
                 TempData["model"] = JsonSerializer.Serialize(entity);
-
                 ViewBag.OldData = true;
             }
             return View();
@@ -112,42 +118,193 @@ namespace WebMvc.Controllers
 
         [Authorize]
         [HttpGet]
-        public IActionResult Filoloji()
+        public async Task<IActionResult> Fen()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            FenEntity entity = _fenEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity!=null)
+            {
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
             return View();
         }
 
         [Authorize]
         [HttpPost]
-        public IActionResult Filoloji(FilolojiDocentModel model)
+        public async Task<IActionResult> Fen(FenDocentModel model)
         {
-            TempData["model"] = JsonSerializer.Serialize(FilolojiConvert.EgitimModelToEgitimEntity(model));
+            TempData["model"] = JsonSerializer.Serialize(FenConvert.FenModelToFenEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
+
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            FenEntity entity = _fenEntityService.WhereSingle(x => x.MyUserId==user.Id);
+            if (entity == null)
+            {
+                entity =new();
+                entity.MyUserId = user.Id;
+                await _fenEntityService.AddAsync(entity);
+            }
+            else
+            {
+                FenEntity Newentity = FenConvert.FenModelToFenEntity(model).Adapt<FenEntity>();
+                Newentity.MyUserId = user.Id;
+                Newentity.Id=entity.Id;
+                await _fenEntityService.UpdateAsync(Newentity);
+            }
+            return RedirectToAction("Answer", "MemberScience", new { link = "Fen" });
+        }
+
+
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> Filoloji()
+        {
+            ViewBag.OldData = false;
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            FilolojiEntity entity = _filolojiEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity!=null)
+            {
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Filoloji(FilolojiDocentModel model)
+        {
+            TempData["model"] = JsonSerializer.Serialize(FilolojiConvert.FilolojiModelToFilolojiEntity(model));
+            Messages message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            FilolojiEntity entity = _filolojiEntityService.WhereSingle(x => x.MyUserId==user.Id);
+            if (entity == null)
+            {
+                entity =new();
+                entity.MyUserId = user.Id;
+                await _filolojiEntityService.AddAsync(entity);
+            }
+            else
+            {
+                FilolojiEntity Newentity = FilolojiConvert.FilolojiModelToFilolojiEntity(model).Adapt<FilolojiEntity>();
+                Newentity.MyUserId = user.Id;
+                Newentity.Id=entity.Id;
+                await _filolojiEntityService.UpdateAsync(Newentity);
+            }
+
+
             return RedirectToAction("Answer", "MemberScience", new { link = "Filoloji" });
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> GuzelSanatlar()
+        {
+            ViewBag.OldData = false;
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            GuzelSanatlarEntity entity = _guzelSanatlarEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity!=null)
+            {
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> GuzelSanatlar(GuzelSanatlarDocentModel model)
+        {
+            TempData["model"] = JsonSerializer.Serialize(GuzelSanatlarConvert.GuzelSanatlarModelToGuzelSanatlarEntity(model));
+            Messages message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+
+
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            GuzelSanatlarEntity entity = _guzelSanatlarEntityService.WhereSingle(x => x.MyUserId==user.Id);
+            if (entity == null)
+            {
+                entity =new();
+                entity.MyUserId = user.Id;
+                await _guzelSanatlarEntityService.AddAsync(entity);
+            }
+            else
+            {
+                GuzelSanatlarEntity Newentity = GuzelSanatlarConvert.GuzelSanatlarModelToGuzelSanatlarEntity(model).Adapt<GuzelSanatlarEntity>();
+                Newentity.MyUserId = user.Id;
+                Newentity.Id=entity.Id;
+                await _guzelSanatlarEntityService.UpdateAsync(Newentity);
+            }
+            return RedirectToAction("Answer", "MemberScience", new { link = "GuzelSanatlar" });
         }
 
 
         [Authorize]
         [HttpGet]
-        public IActionResult Hukuk()
+        public async Task<IActionResult> Hukuk()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            HukukEntity entity = _hukukEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity!=null)
+            {
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
             return View();
         }
 
         [Authorize]
         [HttpPost]
-        public IActionResult Hukuk(HukukDocentModel model)
+        public async Task<IActionResult> Hukuk(HukukDocentModel model)
         {
-            TempData["model"] = JsonSerializer.Serialize(HukukConvert.EgitimModelToEgitimEntity(model));
+            TempData["model"] = JsonSerializer.Serialize(HukukConvert.HukukModelToHukukEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
+
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            HukukEntity entity = _hukukEntityService.WhereSingle(x => x.MyUserId==user.Id);
+            if (entity == null)
+            {
+                entity =new();
+                entity.MyUserId = user.Id;
+                await _hukukEntityService.AddAsync(entity);
+            }
+            else
+            {
+                HukukEntity Newentity = HukukConvert.HukukModelToHukukEntity(model).Adapt<HukukEntity>();
+                Newentity.MyUserId = user.Id;
+                Newentity.Id=entity.Id;
+                await _hukukEntityService.UpdateAsync(Newentity);
+            }
             return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -239,27 +396,6 @@ namespace WebMvc.Controllers
 
 
 
-        [Authorize]
-        [HttpGet]
-        public IActionResult Fen()
-        {
-            ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
-            return View();
-        }
-
-        [Authorize]
-        [HttpPost]
-        public IActionResult Fen(FenDocentModel model)
-        {
-            TempData["model"] = JsonSerializer.Serialize(FenConvert.FenModelToFenEntity(model));
-            Messages message = model.Hesapla();
-            TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "MemberScience", new { link = "Fen" });
-        }
-
-
-
 
         [Authorize]
         [HttpGet]
@@ -328,24 +464,6 @@ namespace WebMvc.Controllers
 
 
 
-        [Authorize]
-        [HttpGet]
-        public IActionResult GuzelSanatlar()
-        {
-            ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
-            return View();
-        }
-
-        [Authorize]
-        [HttpPost]
-        public IActionResult GuzelSanatlar(GuzelSanatlarDocentModel model)
-        {
-            TempData["model"] = JsonSerializer.Serialize(GuzelSanatlarConvert.GuzelSanatlarModelToGuzelSanatlarEntity(model));
-            Messages message = model.Hesapla();
-            TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "MemberScience", new { link = "GuzelSanatlar" });
-        }
 
     }
 }

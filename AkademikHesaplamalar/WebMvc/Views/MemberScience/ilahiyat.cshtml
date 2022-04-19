@@ -1,5 +1,1311 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
+  @section Alt_Menu{
+    <h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    İlahiyat bilimleri doçentlik puan hesaplama </h1><partial name="~/Views/Science/Partial/Selectbox.cshtml" />
+  
+   <div class="">
+       <h4 class="Calculation_information">
+          İlahiyat temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki
+          çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan (90) puanının
+          doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde edilmiş
+          olması kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş olması
+          gerekir. Her çalışma Tablo 6' da sadece bir bölümde yazılarak puanlandırılır.
+       </h4>
+     <h5 class="Calculation_information2 col-md-8">
+        Tek yazarlı yayınlarda yazar tam puan alır. Çok yazarlı yayınlarda puan yazarlar arasında
+        eşit olarak bölünür.
+      </h5>
+   </div>
+  }
+
+   <head>
+       @section head{
+         <title>İlahiyat bilimleri</title>
+        <meta name="keywords" content="İlahiyat Doçentlik Hesaplama, İlahiyat Doçentlik Puan Hesaplama">
+        <meta name="author" content="İlahiyat Doçentlik Hesaplama">
+          <meta name="description" content="İlahiyat bilimleri doçentlik puan hesaplama" />
+}
+    <link href="~/css/hesap.css" rel="stylesheet">
+    <script src="~/js/Bolumler.js"></script>
+    <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
+
+</head> 
+ 
+ @* <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Filoloji" method="post">  *@
+ <form  asp-controller="Science" asp-action="ilahiyat" method="post"> 
+        <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
+
+
+    @* <section class="Egitim"> *@
+    <section >
+        <div class="Bir">
+            <h2>1. Uluslararası Makale</h2>
+            <h5>Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla </h5>
+            <h6></h6>
+            <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    A)   SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
+                        mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale  ~ 20 Puan
+                </label>
+                <button onclick="add('UluslarArasiAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('UluslarArasiAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="UluslarArasiAul" type="none">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="UluslarArasiAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UluslarArasiAmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UluslarArasiAyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="UluslarArasiAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    B) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet
+                                    veya kitap kritiği hariç olmak üzere yayımlanmış makale ~ 10 Puan
+                </label>
+                <button onclick="add('UluslarArasiBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('UluslarArasiBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="UluslarArasiBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="UluslarArasiBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UluslarArasiBmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UluslarArasiByazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="UluslarArasiBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    C) Bu maddenin a veya b bendi kapsamındaki yayınlarda alanında bilime
+                    katkı sağlayan kitap kritiği yapılmış makale ~ 5 Puan
+                </label>
+                <button onclick="add('UluslarArasiCul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('UluslarArasiCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="UluslarArasiCul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="UluslarArasiCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UluslarArasiCmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UluslarArasiCyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="UluslarArasiChatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+        </div>
+
+
+        <div class="iki">
+            <h2>2. Ulusal Makale </h2>
+            <h5>Başvurulan doçentlik bilim alanı ile ilgili ve adayın yaptığı lisansüstü tezlerden üretilmemiş olmak kaydıyla</h5>
+            <h6>
+                    Bu maddenin a veya b bendi kapsamında en az üç yayın yapmak zorunludur.Yabancı
+                    uyruklu adaylar ile yurtdışı doçentlik denkliği başvurusu yapan adaylar, ULAKBİM
+                    tarafından taranan ulusal hakemli dergilerde yayımlanmış makale koşulunu
+                    sağlayamamaları durumunda, bunun yerine aynı sayıdaki yayını birinci maddenin a veya
+                    b bentleri kapsamında sağlayacaklardır.
+            </h6>
+            <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">A)  ULAKBİM tarafından taranan ulusal hakemli dergilerde yayımlanmış makale ~ 10 Puan</label>
+                <button onclick="add('UlusalAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('UlusalAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="UlusalAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="UlusalAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UlusalAmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UlusalAyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="UlusalAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">B) a bendi dışındaki Ulusal hakemli dergilerde yayımlanmış makale ~ 5 Puan</label>
+                <button onclick="add('UlusalBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('UlusalBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="UlusalBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="UlusalBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UlusalBmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="UlusalByazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="UlusalBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+        </div>
+
+
+        <div class="Uc">
+            <h2>3. Lisansüstü Tezlerden Üretilmiş Yayın</h2>
+            <h5>Adayın hazırladığı lisansüstü tezleriyle ilgili olmak kaydıyla </h5>
+            <h6>Bu madde kapsamında en az 1 yayın zorunludur. Bu maddeden en fazla 10 puan alınabilir</h6>
+            <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">A) Uluslararası yayınevleri tarafından yayımlanmış kitap  ~ 10 Puan</label>
+                <button onclick="add('YayinAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('YayinAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="YayinAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="YayinAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Kitap Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinAkitap[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinAyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="YayinAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">B) Uluslararası yayınevleri tarafından yayımlanmış kitapta bölüm yazarlığ ~ 8 Puan</label>
+                <button onclick="add('YayinBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('YayinBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="YayinBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="YayinBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Kitap Bölüm Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinBbolumSayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinByazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="YayinBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">C) Ulusal yayınevleri tarafından yayımlanmış kitap  ~ 10 Puan</label>
+                <button onclick="add('YayinCul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('YayinCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="YayinCul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="YayinCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Kitap Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinCkitap[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinCyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="YayinChatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">D)  Ulusal yayınevleri tarafından yayımlanmış kitapta bölüm ~ 4 Puan</label>
+                <button onclick="add('YayinDul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('YayinDul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="YayinDul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="YayinDdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Kitap Bölüm Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinDbolumSayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinDyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="YayinDhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">E) SSCI, SCI, SCI-Expanded ve AHCI kapsamındaki dergilerde yayımlanmış makale ~ 8 Puan</label>
+                <button onclick="add('YayinEul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('YayinEul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="YayinEul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="YayinEdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinEmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinEyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="YayinEhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">F)  Uluslararası alan endekslerinde taranan dergilerde yayımlanmış makale ~ 6 Puan</label>
+                <button onclick="add('YayinFul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('YayinFul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="YayinFul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="YayinFdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinFmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinFyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="YayinFhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">G) ULAKBİM tarafından taranan dergilerde yayımlanmış makale  ~ 4 Puan</label>
+                <button onclick="add('YayinGul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('YayinGul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="YayinGul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="YayinGdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Makale Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinGmakalesayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="YayinGyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="YayinGhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+        </div>
+
+
+        <div class="Dort">
+            <h2>4. Kitap </h2>
+            <h5>
+                Adayın hazırladığı lisansüstü tezlerinden üretilmemiş ve başvurulan doçentlik bilim alanı ile ilgili olmak kaydıyla
+            </h5>
+            <h6> 
+                Bu madde kapsamında sadece ders kitabı niteliği dışındaki özgün bilimsel kitaplar
+                puanlanabilir; aynı kitaptaki bölümlerden sadece ikisi dikkate alınır. Alana özgü
+                ansiklopedi maddelerinin üç veya daha çok maddesi bir kitap bölümü kabul edilir
+            </h6>
+            <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">A) Uluslararası yayınevleri tarafından yayımlanmış kitap ~ 25 Puan</label>
+                <button onclick="add('KitapAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('KitapAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="KitapAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="KitapAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Kitap Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapAkitap[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapAyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="KitapAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">B) Uluslararası yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm yazarlığı ~ 10 Puan</label>
+                <button onclick="add('KitapBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('KitapBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="KitapBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="KitapBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-3">
+                            <label>Editörlük Veya Bölüm Yazarlığı</label>
+                            <input type="number" class="form-control" value="1" name="KitapBbolumSayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapByazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="KitapBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">C) Ulusal yayınevleri tarafından yayımlanmış kitap   ~ 25 Puan</label>
+                <button onclick="add('KitapCul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('KitapCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="KitapCul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="KitapCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Kitap Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapCkitap[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapCyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="KitapChatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">D)  Ulusal yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm yazarlığı ~ 10 Puan</label>
+                <button onclick="add('KitapDul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('KitapDul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="KitapDul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="KitapDdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-3">
+                            <label>Editörlük Veya Bölüm Yazarlığı</label>
+                            <input type="number" class="form-control" value="1" name="KitapDbolumSayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="KitapDyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="KitapDhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+        </div>
+
+
+        <div class="Bes">
+            <h2>5. Atıflar</h2>
+            <h5>  </h5>
+            <h6> Bu madde kapsamında en az 1 atıf alınması zorunludur.Bu madde kapsamında en fazla 20 puan alınabilir. </h6>
+            <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    A) SCI, SCI-Expanded, SSCI ve AHCI tarafından taranan dergilerde;
+                    Uluslararası yayınevleri tarafından yayımlanmış kitaplarda yayımlanan ve
+                    adayın yazar olarak yer almadığı yayınlardan her birinde, metin içindeki
+                    atıf sayısına bakılmaksızın adayın atıf yapılan her eseri için ~ 3 Puan
+                </label>
+                <button onclick="add('AtiflarAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('AtiflarAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="AtiflarAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="AtiflarAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Atıf Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="AtiflarAatif[]" min="0" required>
+                        </div>
+
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="AtiflarAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    B) SCI, SCI-Expanded, SSCI ve AHCI dışındaki endeksler tarafından taranan
+                    dergilerde; Uluslararası yayınevleri tarafından yayımlanmış kitaplarda
+                    bölüm yazarı olarak yayımlanan ve adayın yazar olarak yer almadığı
+                    yayınlardan her birinde, metin içindeki atıf sayısına bakılmaksızın adayın
+                    atıf yapılan her eseri için ~ 2 Puan
+                </label>
+                <button onclick="add('AtiflarBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('AtiflarBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="AtiflarBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="AtiflarBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Atıf Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="AtiflarBatif[]" min="0" required>
+                        </div>
+
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="AtiflarBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    C)  Ulusal hakemli dergilerde; Ulusal yayınevleri tarafından yayımlanmış
+                    kitaplarda yayımlanan ve adayın yazar olarak yer almadığı yayınlardan her
+                    birinde, metin içindeki atıf sayısına bakılmaksızın adayın atıf yapılan her eseri için ~ 1 Puan
+                </label>
+                <button onclick="add('AtiflarCul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('AtiflarCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="AtiflarCul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="AtiflarCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Atıf Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="AtiflarCatif[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="AtiflarChatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+        </div>
+
+        <div class="Alti">
+            <h2>6. Lisansüstü Tez Danışmanlığı</h2>
+            <h5>Adayın danışmanlığını yürüttüğü tamamlanan lisansüstü tezlerden</h5>
+            <h6>
+                Bu madde kapsamında en fazla 10 puan alınabilir. İkinci/eş danışman olması
+                durumunda asıl danışman a ve b bentleri için öngörülen puanların tamamını, ikinci danışman ise yarısını alır.
+            </h6>
+            <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">A)  Doktora tez danışmanlığı  ~ 4 Puan</label>
+                <button onclick="add('DanismanlikAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('DanismanlikAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="DanismanlikAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="DanismanlikAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="DanismanlikAseviye[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="0" selected>Danışmanlık Seviyesi</option>
+                                <option value="0">Asıl Danışman</option>
+                                <option value="1">Eş Danışman</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Danışmanlık Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="DanismanlikAsayi[]" min="0" required>
+                        </div>
+
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="DanismanlikAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">B) Yüksek lisans tez danışmanlığ ~ 2 Puan</label>
+                <button onclick="add('DanismanlikBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('DanismanlikBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="DanismanlikBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="DanismanlikBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="DanismanlikBseviye[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="0" selected>Danışmanlık Seviyesi</option>
+                                <option value="0">Asıl Danışman</option>
+                                <option value="1">Eş Danışman</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Danışmanlık Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="DanismanlikBsayi[]" min="0" required>
+                        </div>
+
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="DanismanlikBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+
+
+        </div>
+
+
+        <div class="Yedi">
+            <h2>7. Bilimsel Araştırma Projesi</h2>
+            <h5>  </h5>
+            <h6> Bu maddeden en fazla 20 puan alınabilir.  </h6>
+            <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    A) Devam eden veya başarı ile tamamlanmış AB Çerçeve Programı Bilimsel
+                    Araştırma Projesinde koordinatör / baş araştırmacı olmak ~ 15 Puan
+                </label>
+                <button onclick="add('ArastirmaAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ArastirmaAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ArastirmaAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="ArastirmaAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Proje Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ArastirmaAproje[]" min="0" required>
+                        </div>
+
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ArastirmaAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    B) Devam eden veya başarı ile tamamlanmış AB Çerçeve programı bilimsel
+                    araştırma projesinde ortak araştırmacı olmak  ~ 10 Puan
+                </label>
+                <button onclick="add('ArastirmaBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ArastirmaBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ArastirmaBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="ArastirmaBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Proje Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ArastirmaBproje[]" min="0" required>
+                        </div>
+
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ArastirmaBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    C)   Devam eden veya başarı ile tamamlanmış a ve b bentleri dışındaki
+                    uluslararası destekli bilimsel araştırma projelerinde (derleme ve rapor
+                    hazırlama çalışmaları hariç) görev almak ~ 6 Puan
+                </label>
+                <button onclick="add('ArastirmaCul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ArastirmaCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ArastirmaCul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="ArastirmaCdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Proje Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ArastirmaCproje[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ArastirmaChatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    D)   Üniversiteler dışındaki kamu kurumlarıyla yapılan başarıyla tamamlanan
+                    veya yürütülen bilimsel araştırma projelerinde görev almak  ~ 4 Puan
+                </label>
+                <button onclick="add('ArastirmaDul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ArastirmaDul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ArastirmaDul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="ArastirmaDdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Proje Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ArastirmaDproje[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ArastirmaDhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+
+        </div>
+
+
+        <div class="Sekiz">
+            <h2>8. Bilimsel Toplantı Faaliyeti </h2>
+            <h5> Başvurulan bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla</h5>
+            <h6> Bu madde kapsamında en az 5 puan almak zorunludur, en fazla 10 puan alınabilir. Aynı toplantıda sunulan en fazla bir bildiri puanlanır</h6>
+            <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">A)  Uluslararası bilimsel toplantılarda sunulan (poster hariç), tam metni veya özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış çalışmalar  ~ 3 Puan</label>
+                <button onclick="add('ToplantiAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ToplantiAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ToplantiAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="ToplantiAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Toplantı Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ToplantiAsayi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ToplantiAyazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ToplantiAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    B)  Ulusal bilimsel toplantılarda sunulan (poster hariç), tam metni veya
+                    özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış çalışmalar. ~ 2 Puan
+                </label>
+                <button onclick="add('ToplantiBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('ToplantiBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="ToplantiBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="ToplantiBdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Toplantı Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ToplantiBsayi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Yazar Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="ToplantiByazarsayisi[]" min="0" required>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="ToplantiBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+        </div>
+
+        <div class="Dokuz">
+            <h2>9. Eğitim-Öğretim Faaliyeti </h2>
+            <h5>  Doktora eğitimini tamamladıktan sonra açık, uzaktan veya yüz yüze ortamlarda verilmiş  ders </h5>
+            <h6>
+                Bu madde kapsamında en az 2 puan almak zorunludur, ancak en fazla 4 puan
+                alınabilir. Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en
+                az 2 yıl öğretim elemanı olarak görev yapanlar 2 puan almış sayılır
+            </h6>
+            <hr>
+
+            <div class="row mt-5">
+                <label class="col-md-8">A ) Bir dönem yüksek lisans veya doktora dersi ~ 3 Puan</label>
+                <button id="addButton1" onclick="add('EgitimAul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button id="removeButton1" onclick="remove('EgitimAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="EgitimAul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="EgitimAdoktora[]" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Ders Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="EgitimAders[]" min="0" required>
+                        </div>
+
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="EgitimAhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">B)  Bir dönem önlisans veya lisans dersi ~ 2 Puan</label>
+                <button id="addButton2" onclick="add('EgitimBul')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button id="removeButton2" onclick="remove('EgitimBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
+                <ul class="mt-3" id="EgitimBul" type="none">
+                    <li class="row d-none">
+                        <div class="mb-3 col-md-3 mt-4">
+                            <select name="EgitimBdoktora[]" class="form-select form-select-sm"
+                                    aria-label=".form-select-lg example">
+                                <option value="1" selected>Doktora Zamanı Seçiniz</option>
+                                <option value="0">Doktora Öncesi</option>
+                                <option value="1">Doktora Sonrası</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label>Ders Sayısı</label>
+                            <input type="number" class="form-control" value="1" name="EgitimBders[]" min="0" required>
+                        </div>
+
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="EgitimBhatirlatici[]" placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+
+                </ul>
+                <hr />
+            </div>
+
+            <div class="form-check m-4">
+                <center>   <strong>Bu Maddeyi işaretlediğinizde 9. Madde B bendi bilgileriniz silinecektir. </strong></center>
+                <input class="form-check-input" id="checkBox" onchange="cheked('#EgitimBul','#EgitimAul')" type="checkbox" name="Gorev2yil" value="true">
+                <p>
+                    Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en
+                    az 2 yıl öğretim elemanı olarak görev Yaptıysanız işaretleyin
+                </p>
+            </div>
+
+        </div>
+
+        <div class="container row">
+            <button type="reset" onclick="Reset()" class="btn btn-danger col-md-3 offset-3" id="SubmitButton"> Temizle</button>
+            <button type="submit" class="btn btn-primary col-md-3 offset-1" id="SubmitButton"> Hesapla</button>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+</form>
+
+
 @{
+  if (ViewBag.OldData == true)
+    {
+
+        ilahiyatEntity entity = JsonSerializer.Deserialize<ilahiyatEntity>(TempData["model"].ToString());
+     
+        
+          <script>
+
+            let jsEntity={
+                    UluslarArasiAdoktora :"@entity.UluslarArasiAdoktora",
+                    UluslarArasiAmakalesayisi :"@entity.UluslarArasiAmakalesayisi",
+                    UluslarArasiAyazarsayisi:"@entity.UluslarArasiAyazarsayisi",
+                    UluslarArasiAhatirlatici : "@entity.UluslarArasiAhatirlatici",
+                    UluslarArasiACount : "@entity.UluslarArasiACount",
+
+                    UluslarArasiBdoktora :"@entity.UluslarArasiBdoktora",
+                    UluslarArasiBmakalesayisi :"@entity.UluslarArasiBmakalesayisi",
+                    UluslarArasiByazarsayisi:"@entity.UluslarArasiByazarsayisi",
+                    UluslarArasiBhatirlatici : "@entity.UluslarArasiBhatirlatici",
+                    UluslarArasiBCount : "@entity.UluslarArasiBCount",
+
+                    UluslarArasiCdoktora :"@entity.UluslarArasiCdoktora",
+                    UluslarArasiCmakalesayisi :"@entity.UluslarArasiCmakalesayisi",
+                    UluslarArasiCyazarsayisi:"@entity.UluslarArasiCyazarsayisi",
+                    UluslarArasiChatirlatici : "@entity.UluslarArasiChatirlatici",
+                    UluslarArasiCCount : "@entity.UluslarArasiCCount",
+
+
+                    UlusalAdoktora :"@entity.UlusalAdoktora",
+                    UlusalAmakalesayisi :"@entity.UlusalAmakalesayisi",
+                    UlusalAyazarsayisi:"@entity.UlusalAyazarsayisi",
+                    UlusalAhatirlatici : "@entity.UlusalAhatirlatici",
+                    UlusalACount : "@entity.UlusalACount",
+   
+                    
+                    UlusalBdoktora :"@entity.UlusalBdoktora",
+                    UlusalBmakalesayisi :"@entity.UlusalBmakalesayisi",
+                    UlusalByazarsayisi:"@entity.UlusalByazarsayisi",
+                    UlusalBhatirlatici : "@entity.UlusalBhatirlatici",
+                    UlusalBCount : "@entity.UlusalBCount",
+
+          
+                    YayinAdoktora : "@entity.YayinAdoktora",
+                    YayinAkitap : "@entity.YayinAkitap",
+                    YayinAyazarsayisi : "@entity.YayinAyazarsayisi",
+                    YayinAhatirlatici : "@entity.YayinAhatirlatici",
+                    YayinACount : "@entity.YayinACount", 
+
+                    YayinBdoktora : "@entity.YayinBdoktora",
+                    YayinBbolumSayisi : "@entity.YayinBbolumSayisi",
+                    YayinByazarsayisi : "@entity.YayinByazarsayisi",
+                    YayinBhatirlatici : "@entity.YayinBhatirlatici",
+                    YayinBCount : "@entity.YayinBCount", 
+
+                    YayinCdoktora : "@entity.YayinCdoktora",
+                    YayinCkitap : "@entity.YayinCkitap",
+                    YayinCyazarsayisi : "@entity.YayinCyazarsayisi",
+                    YayinChatirlatici : "@entity.YayinChatirlatici",
+                    YayinCCount : "@entity.YayinCCount", 
+
+                    YayinDdoktora : "@entity.YayinDdoktora",
+                    YayinDbolumSayisi : "@entity.YayinDbolumSayisi",
+                    YayinDyazarsayisi: "@entity.YayinDyazarsayisi",
+                    YayinDhatirlatici : "@entity.YayinDhatirlatici",
+                    YayinDCount : "@entity.YayinDCount", 
+
+                    YayinEdoktora : "@entity.YayinEdoktora",
+                    YayinEmakalesayisi : "@entity.YayinEmakalesayisi",
+                    YayinEyazarsayisi: "@entity.YayinEyazarsayisi",
+                    YayinEhatirlatici : "@entity.YayinEhatirlatici",
+                    YayinECount : "@entity.YayinECount", 
+
+                    YayinFdoktora : "@entity.YayinFdoktora",
+                    YayinFmakalesayisi : "@entity.YayinFmakalesayisi",
+                    YayinFyazarsayisi: "@entity.YayinFyazarsayisi",
+                    YayinFhatirlatici : "@entity.YayinFhatirlatici",
+                    YayinFCount : "@entity.YayinFCount", 
+
+                    YayinGdoktora : "@entity.YayinGdoktora",
+                    YayinGmakalesayisi : "@entity.YayinGmakalesayisi",
+                    YayinGyazarsayisi: "@entity.YayinGyazarsayisi",
+                    YayinGhatirlatici : "@entity.YayinGhatirlatici",
+                    YayinGCount : "@entity.YayinGCount", 
+
+                 
+                    KitapAdoktora : "@entity.KitapAdoktora",
+                    KitapAkitap : "@entity.KitapAkitap",
+                    KitapAyazarsayisi: "@entity.KitapAyazarsayisi",
+                    KitapAhatirlatici: "@entity.KitapAhatirlatici",
+                    KitapACount : "@entity.KitapACount", 
+
+                    KitapBdoktora : "@entity.KitapBdoktora",
+                    KitapBbolumSayisi : "@entity.KitapBbolumSayisi",
+                    KitapByazarsayisi: "@entity.KitapByazarsayisi",
+                    KitapBhatirlatici : "@entity.KitapBhatirlatici",
+                    KitapBCount : "@entity.KitapBCount", 
+
+                    KitapCdoktora : "@entity.KitapCdoktora",
+                    KitapCkitap : "@entity.KitapCkitap",
+                    KitapCyazarsayisi: "@entity.KitapCyazarsayisi",
+                    KitapChatirlatici : "@entity.KitapChatirlatici",
+                    KitapCCount : "@entity.KitapCCount", 
+
+                    KitapDdoktora : "@entity.KitapDdoktora",
+                    KitapDbolumSayisi : "@entity.KitapDbolumSayisi",
+                    KitapDyazarsayisi: "@entity.KitapDyazarsayisi",
+                    KitapDhatirlatici : "@entity.KitapDhatirlatici",
+                    KitapDCount : "@entity.KitapDCount", 
+                
+
+                    AtiflarAdoktora : "@entity.AtiflarAdoktora",
+                    AtiflarAatif : "@entity.AtiflarAatif",
+                    AtiflarAhatirlatici : "@entity.AtiflarAhatirlatici",
+                    AtiflarACount : "@entity.AtiflarACount", 
+
+                    AtiflarBdoktora : "@entity.AtiflarBdoktora",
+                    AtiflarBatif : "@entity.AtiflarBatif",
+                    AtiflarBhatirlatici : "@entity.AtiflarBhatirlatici",
+                    AtiflarBCount : "@entity.AtiflarBCount", 
+
+                    AtiflarCdoktora : "@entity.AtiflarCdoktora",
+                    AtiflarCatif : "@entity.AtiflarCatif",
+                    AtiflarChatirlatici : "@entity.AtiflarChatirlatici",
+                    AtiflarCCount : "@entity.AtiflarCCount", 
+                
+                
+                    DanismanlikAdoktora : "@entity.DanismanlikAdoktora",
+                    DanismanlikAseviye : "@entity.DanismanlikAseviye",
+                    DanismanlikAsayi : "@entity.DanismanlikAsayi",
+                    DanismanlikAhatirlatici : "@entity.DanismanlikAhatirlatici",
+                    DanismanlikACount : "@entity.DanismanlikACount", 
+
+
+                    DanismanlikBdoktora : "@entity.DanismanlikBdoktora",
+                    DanismanlikBseviye : "@entity.DanismanlikBseviye",
+                    DanismanlikBsayi : "@entity.DanismanlikBsayi",
+                    DanismanlikBhatirlatici : "@entity.DanismanlikBhatirlatici",
+                    DanismanlikBCount : "@entity.DanismanlikBCount", 
+
+             
+                    ArastirmaAdoktora : "@entity.ArastirmaAdoktora",
+                    ArastirmaAproje : "@entity.ArastirmaAproje",
+                    ArastirmaAhatirlatici : "@entity.ArastirmaAhatirlatici",
+                    ArastirmaACount : "@entity.ArastirmaACount", 
+
+                    ArastirmaBdoktora : "@entity.ArastirmaBdoktora",
+                    ArastirmaBproje : "@entity.ArastirmaBproje",
+                    ArastirmaBhatirlatici : "@entity.ArastirmaBhatirlatici",
+                    ArastirmaBCount : "@entity.ArastirmaBCount", 
+
+                    ArastirmaCdoktora : "@entity.ArastirmaCdoktora",
+                    ArastirmaCproje : "@entity.ArastirmaCproje",
+                    ArastirmaChatirlatici : "@entity.ArastirmaChatirlatici",
+                    ArastirmaCCount : "@entity.ArastirmaCCount", 
+
+                    ArastirmaDdoktora : "@entity.ArastirmaDdoktora",
+                    ArastirmaDproje : "@entity.ArastirmaDproje",
+                    ArastirmaDhatirlatici : "@entity.ArastirmaDhatirlatici",
+                    ArastirmaDCount : "@entity.ArastirmaDCount", 
+                
+            
+                    ToplantiAdoktora : "@entity.ToplantiAdoktora",
+                    ToplantiAsayi : "@entity.ToplantiAsayi",
+                    ToplantiAyazarsayisi: "@entity.ToplantiAyazarsayisi",
+                    ToplantiAhatirlatici : "@entity.ToplantiAhatirlatici",
+                    ToplantiACount : "@entity.ToplantiACount", 
+
+
+                    ToplantiBdoktora : "@entity.ToplantiBdoktora",
+                    ToplantiBsayi : "@entity.ToplantiBsayi",
+                    ToplantiByazarsayisi: "@entity.ToplantiByazarsayisi",
+                    ToplantiBhatirlatici : "@entity.ToplantiBhatirlatici",
+                    ToplantiBCount : "@entity.ToplantiBCount", 
+                
+
+                    EgitimAdoktora : "@entity.EgitimAdoktora",
+                    EgitimAders : "@entity.EgitimAders",
+                    EgitimAhatirlatici : "@entity.EgitimAhatirlatici",
+                    EgitimACount : "@entity.EgitimACount", 
+
+                    EgitimBdoktora : "@entity.EgitimBdoktora",
+                    EgitimBders : "@entity.EgitimBders",
+                    EgitimBhatirlatici : "@entity.EgitimBhatirlatici",
+                    EgitimBCount : "@entity.EgitimBCount", 
+                    Gorev2yil : "@entity.Gorev2yil" 
+                
+
+            };
+            localStorage.setItem('ilahiyat',JSON.stringify(jsEntity));
+        </script> 
+         <script>
+             if(jsEntity!=null){
+                     UluslarArasiAdoldur('ilahiyat');
+                     UluslarArasiBdoldur('ilahiyat');
+                     UluslarArasiCdoldur('ilahiyat');
+                     UlusalAdoldur('ilahiyat');
+                     UlusalBdoldur('ilahiyat');
+                     YayinAdoldur('ilahiyat');
+                     YayinBdoldur('ilahiyat');
+                     YayinCdoldur('ilahiyat');
+                     YayinDdoldur('ilahiyat');
+                     YayinEdoldur('ilahiyat');
+                     YayinFdoldur('ilahiyat');
+                     YayinGdoldur('ilahiyat'); 
+                     KitapAdoldur('ilahiyat'); 
+                     KitapBdoldur('ilahiyat'); 
+                     KitapCdoldur('ilahiyat'); 
+                     KitapDdoldur('ilahiyat'); 
+                     AtiflarAdoldur('ilahiyat'); 
+                     AtiflarBdoldur('ilahiyat'); 
+                     AtiflarCdoldur('ilahiyat'); 
+                     DanismanlikAdoldur('ilahiyat'); 
+                     DanismanlikBdoldur('ilahiyat'); 
+                     ArastirmaAdoldur('ilahiyat'); 
+                     ArastirmaBdoldur('ilahiyat'); 
+                     ArastirmaCdoldur('ilahiyat'); 
+                     ArastirmaDdoldur('ilahiyat'); 
+                     ToplantiAdoldur('ilahiyat'); 
+                     ToplantiBdoldur('ilahiyat'); 
+                     EgitimAdoldur('ilahiyat'); 
+                     EgitimBdoldur('ilahiyat'); 
+                     EgitimCdoldur('ilahiyat'); 
+                  
+          
+             }
+            
+        </script> 
+    } 
 }

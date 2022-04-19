@@ -5,7 +5,7 @@ namespace WebMvc.Helpers.ConvertToModel
 {
     public class FilolojiConvert
     {
-        static public FilolojiEntity EgitimModelToEgitimEntity(FilolojiDocentModel model)
+        static public FilolojiEntity FilolojiModelToFilolojiEntity(FilolojiDocentModel model)
         {
 
             FilolojiEntity entity = new();
