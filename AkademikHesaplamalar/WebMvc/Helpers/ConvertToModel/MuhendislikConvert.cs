@@ -12,6 +12,7 @@ namespace WebMvc.Helpers.ConvertToModel
             if (model.MyUserId  != null && model.MyUserId.Length>5)
             {
                 entity.MyUserId=model.MyUserId;
+                entity.Id=model.Id;
             }
 
             /***   M a k a l e l e r  ***/

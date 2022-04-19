@@ -11,6 +11,7 @@ namespace WebMvc.Helpers.ConvertToModel
             if (model.MyUserId  != null && model.MyUserId.Length>5)
             {
                 entity.MyUserId=model.MyUserId;
+                entity.Id=model.Id;
             }
             /***  S İ N E M A  ***/
             if (model.SinemaIDoktora.Count() > 1)

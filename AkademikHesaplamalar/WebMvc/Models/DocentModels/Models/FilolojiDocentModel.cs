@@ -7,7 +7,7 @@ namespace WebMvc.Models.DocentModels.Models
     public class FilolojiDocentModel
     {
 
-        public int? Id { get; set; } = default!;
+        public int Id { get; set; } = default!;
         public string? MyUserId { get; set; } = default!;
         public MyUser? MyUser { get; set; } = default!;
 

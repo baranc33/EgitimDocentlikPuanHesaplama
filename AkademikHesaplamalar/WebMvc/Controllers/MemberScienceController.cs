@@ -13,7 +13,7 @@ using Mapster;
 
 namespace WebMvc.Controllers
 {
-    public class MemberScienceController : Controller
+    public class MemberScienceController : BaseController
     {
         private readonly IEgitimEntityService _egitimEntityService;
         private readonly IFenEntityService _fenEntityService;
@@ -37,10 +37,8 @@ namespace WebMvc.Controllers
         SporEntityService
         ZiraatEntityService
          */
-        protected UserManager<MyUser> _userManager { get; }
-        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager, IEgitimEntityService egitimEntityService, IHukukEntityService hukukEntityService, IGuzelSanatlarEntityService guzelSanatlarEntityService, IFilolojiEntityService filolojiEntityService, IFenEntityService fenEntityService)
+        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager, IEgitimEntityService egitimEntityService, IHukukEntityService hukukEntityService, IGuzelSanatlarEntityService guzelSanatlarEntityService, IFilolojiEntityService filolojiEntityService, IFenEntityService fenEntityService):base(userManager,signInManager,null)
         {
-            _userManager= userManager;
             _egitimEntityService =egitimEntityService;
             _hukukEntityService=hukukEntityService;
             _guzelSanatlarEntityService=guzelSanatlarEntityService;
@@ -77,19 +75,18 @@ namespace WebMvc.Controllers
         {
             ViewBag.OldData = false;
 
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            MyUser user = CurrentUser;
             ViewBag.MyUserId = user.Id;
             EgitimEntity entity = _egitimEntityService.WhereSingle(x => x.MyUserId==user.Id);
 
             if (entity!=null)
             {
+                ViewBag.Id = entity.Id;
                 TempData["model"] = JsonSerializer.Serialize(entity);
                 ViewBag.OldData = true;
             }
             return View();
 
-
-            ViewBag.OldData = false;
         }
 
         [Authorize]
@@ -99,8 +96,8 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(EgitimConvert.EgitimModelToEgitimEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
+            MyUser user = CurrentUser;
 
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
             EgitimEntity entity = _egitimEntityService.WhereSingle(x => x.MyUserId==user.Id);
             if (entity == null)
             {
@@ -110,12 +107,8 @@ namespace WebMvc.Controllers
             else
             {
                 EgitimEntity Newentity = EgitimConvert.EgitimModelToEgitimEntity(model).Adapt<EgitimEntity>();
-                Newentity.MyUserId = user.Id;
-                Newentity.Id=entity.Id;
                 await _egitimEntityService.UpdateAsync(Newentity);
             }
-
-
             return RedirectToAction("Answer", "MemberScience", new { link = "Egitim" });
         }
 
@@ -142,34 +135,33 @@ namespace WebMvc.Controllers
         [HttpPost]
         public async Task<IActionResult> Fen(FenDocentModel model)
         {
+
             TempData["model"] = JsonSerializer.Serialize(FenConvert.FenModelToFenEntity(model));
-
-
-
-
+            Messages message = model.Hesapla();
+            TempData["message"] = JsonSerializer.Serialize(message);
+            MyUser user = CurrentUser;
             FenEntity entity = _fenEntityService.WhereSingle(x => x.MyUserId==model.MyUserId);
+
+
             if (entity == null)
             {
-
-                FenEntity Newentity = JsonSerializer.Deserialize<FenEntity>(TempData["model"].ToString());
-                await _fenEntityService.AddAsync(Newentity);
+                entity = JsonSerializer.Deserialize<FenEntity>(TempData["model"].ToString());
+                await _fenEntityService.AddAsync(entity);
             }
             else
             {
                 FenEntity Newentity = FenConvert.FenModelToFenEntity(model).Adapt<FenEntity>();
-                Newentity.MyUserId = model.MyUserId;
+                Newentity.MyUserId = user.Id;
                 Newentity.Id=entity.Id;
                 await _fenEntityService.UpdateAsync(Newentity);
             }
 
 
 
-
-            Messages message = model.Hesapla();
-            TempData["message"] = JsonSerializer.Serialize(message);
-
-
             return RedirectToAction("Answer", "MemberScience", new { link = "Fen" });
+
+
+             
         }
 
 
@@ -195,16 +187,16 @@ namespace WebMvc.Controllers
         [HttpPost]
         public async Task<IActionResult> Filoloji(FilolojiDocentModel model)
         {
+
             TempData["model"] = JsonSerializer.Serialize(FilolojiConvert.FilolojiModelToFilolojiEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            MyUser user = CurrentUser;
             FilolojiEntity entity = _filolojiEntityService.WhereSingle(x => x.MyUserId==user.Id);
+             
             if (entity == null)
             {
-                entity =new();
-                entity.MyUserId = user.Id;
+                entity = JsonSerializer.Deserialize<FilolojiEntity>(TempData["model"].ToString());
                 await _filolojiEntityService.AddAsync(entity);
             }
             else
@@ -240,17 +232,17 @@ namespace WebMvc.Controllers
         [HttpPost]
         public async Task<IActionResult> GuzelSanatlar(GuzelSanatlarDocentModel model)
         {
+
             TempData["model"] = JsonSerializer.Serialize(GuzelSanatlarConvert.GuzelSanatlarModelToGuzelSanatlarEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-
-
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            MyUser user = CurrentUser;
             GuzelSanatlarEntity entity = _guzelSanatlarEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+
             if (entity == null)
             {
-                entity =new();
-                entity.MyUserId = user.Id;
+                entity = JsonSerializer.Deserialize<GuzelSanatlarEntity>(TempData["model"].ToString());
                 await _guzelSanatlarEntityService.AddAsync(entity);
             }
             else
@@ -285,16 +277,18 @@ namespace WebMvc.Controllers
         [HttpPost]
         public async Task<IActionResult> Hukuk(HukukDocentModel model)
         {
+
             TempData["model"] = JsonSerializer.Serialize(HukukConvert.HukukModelToHukukEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            MyUser user = CurrentUser;
             HukukEntity entity = _hukukEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+
+
             if (entity == null)
             {
-                entity =new();
-                entity.MyUserId = user.Id;
+                entity = JsonSerializer.Deserialize<HukukEntity>(TempData["model"].ToString());
                 await _hukukEntityService.AddAsync(entity);
             }
             else
