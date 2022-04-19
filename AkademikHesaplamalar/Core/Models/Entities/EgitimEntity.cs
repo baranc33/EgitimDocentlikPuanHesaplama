@@ -14,7 +14,7 @@ namespace Core.Models.Entities
                 [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiAdoktora { get; set; }
                 [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiAmakalesayisi { get; set; }
                 [MaxLength(20, ErrorMessage = "En Fazla 20 karakter olabilir")] public string? UluslarArasiAyazarsayisi { get; set; }
-                [MaxLength(100, ErrorMessage = "En Fazla 100 karakter olabilir")] public string UluslarArasiAhatirlatici { get; set; } = default!;
+                [MaxLength(100, ErrorMessage = "En Fazla 100 karakter olabilir")] public string? UluslarArasiAhatirlatici { get; set; } = default!;
                 public int UluslarArasiACount { get; set; } = 0;
 
 

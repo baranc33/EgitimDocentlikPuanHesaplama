@@ -1,8 +1,8 @@
-﻿
-@section Alt_Menu{
-    
+﻿@section Alt_Menu{
+
 <h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    Eğitim bilimleri doçentlik puan hesaplama </h1>
+    Eğitim bilimleri doçentlik puan hesaplama
+</h1>
 <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
 <div class="">
     <h4 class="Calculation_information">
@@ -20,20 +20,20 @@
   }
 
 
- <head>
+<head>
 
-     @section head{
-           <title>Eğitim bilimleri</title>
-        <meta name="keywords" content="Eğitim Doçentlik Hesaplama, Eğitim Doçentlik Puan Hesaplama">
-        <meta name="author" content="Eğitim Doçentlik Hesaplama">
-          <meta name="description" content="Eğitim bilimleri doçentlik puan hesaplama" />
-}
+    @section head{
+    <title>Eğitim bilimleri</title>
+    <meta name="keywords" content="Eğitim Doçentlik Hesaplama, Eğitim Doçentlik Puan Hesaplama">
+    <meta name="author" content="Eğitim Doçentlik Hesaplama">
+    <meta name="description" content="Eğitim bilimleri doçentlik puan hesaplama" />
+    }
     <link href="~/css/hesap.css" rel="stylesheet">
-   
-</head> 
- 
- <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Egitim" method="post"> 
-        <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
+
+</head>
+
+<form onsubmit="egitimSave()" asp-controller="Science" asp-action="Egitim" method="post">
+    <a href="#SubmitButton" id="hesapla"> <i class="fa-regular fa-circle-down"></i>   </a>
 
 
     <section class="Egitim">
@@ -1066,7 +1066,7 @@
         </div>
 
         <div class="container row">
-           <button type="reset" onclick="Reset()" class="btn btn-danger col-md-3 offset-3" id="SubmitButton"> Temizle</button>
+            <button type="reset" onclick="Reset()" class="btn btn-danger col-md-3 offset-3" id="SubmitButton"> Temizle</button>
             <button type="submit" class="btn btn-primary col-md-3 offset-1" id="SubmitButton"> Hesapla</button>
         </div>
 
@@ -1077,18 +1077,17 @@
         <br>
     </section>
 </form>
- <script src="~/js/Bolumler.js"></script>
-    <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
+<script src="~/js/Bolumler.js"></script>
+<script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
 
 @{
-  if (ViewBag.OldData == true)
+    if (ViewBag.OldData == true)
     {
 
         EgitimEntity entity = JsonSerializer.Deserialize<EgitimEntity>(TempData["model"].ToString());
-         Console.WriteLine(entity);
-        
-          <script>
-     
+
+        <script>
+
             let jsEntity={
 
                     UluslarArasiAdoktora :"@entity.UluslarArasiAdoktora",
@@ -1115,199 +1114,199 @@
                     UlusalAyazarsayisi:"@entity.UlusalAyazarsayisi",
                     UlusalAhatirlatici : "@entity.UlusalAhatirlatici",
                     UlusalACount : "@entity.UlusalACount",
-   
-                    
+
+
                     UlusalBdoktora :"@entity.UlusalBdoktora",
                     UlusalBmakalesayisi :"@entity.UlusalBmakalesayisi",
                     UlusalByazarsayisi:"@entity.UlusalByazarsayisi",
                     UlusalBhatirlatici : "@entity.UlusalBhatirlatici",
                     UlusalBCount : "@entity.UlusalBCount",
 
-          
+
                     YayinAdoktora : "@entity.YayinAdoktora",
                     YayinAkitap : "@entity.YayinAkitap",
                     YayinAyazarsayisi : "@entity.YayinAyazarsayisi",
                     YayinAhatirlatici : "@entity.YayinAhatirlatici",
-                    YayinACount : "@entity.YayinACount", 
+                    YayinACount : "@entity.YayinACount",
 
                     YayinBdoktora : "@entity.YayinBdoktora",
                     YayinBbolumSayisi : "@entity.YayinBbolumSayisi",
                     YayinByazarsayisi : "@entity.YayinByazarsayisi",
                     YayinBhatirlatici : "@entity.YayinBhatirlatici",
-                    YayinBCount : "@entity.YayinBCount", 
+                    YayinBCount : "@entity.YayinBCount",
 
                     YayinCdoktora : "@entity.YayinCdoktora",
                     YayinCkitap : "@entity.YayinCkitap",
                     YayinCyazarsayisi : "@entity.YayinCyazarsayisi",
                     YayinChatirlatici : "@entity.YayinChatirlatici",
-                    YayinCCount : "@entity.YayinCCount", 
+                    YayinCCount : "@entity.YayinCCount",
 
                     YayinDdoktora : "@entity.YayinDdoktora",
                     YayinDbolumSayisi : "@entity.YayinDbolumSayisi",
                     YayinDyazarsayisi: "@entity.YayinDyazarsayisi",
                     YayinDhatirlatici : "@entity.YayinDhatirlatici",
-                    YayinDCount : "@entity.YayinDCount", 
+                    YayinDCount : "@entity.YayinDCount",
 
                     YayinEdoktora : "@entity.YayinEdoktora",
                     YayinEmakalesayisi : "@entity.YayinEmakalesayisi",
                     YayinEyazarsayisi: "@entity.YayinEyazarsayisi",
                     YayinEhatirlatici : "@entity.YayinEhatirlatici",
-                    YayinECount : "@entity.YayinECount", 
+                    YayinECount : "@entity.YayinECount",
 
                     YayinFdoktora : "@entity.YayinFdoktora",
                     YayinFmakalesayisi : "@entity.YayinFmakalesayisi",
                     YayinFyazarsayisi: "@entity.YayinFyazarsayisi",
                     YayinFhatirlatici : "@entity.YayinFhatirlatici",
-                    YayinFCount : "@entity.YayinFCount", 
+                    YayinFCount : "@entity.YayinFCount",
 
                     YayinGdoktora : "@entity.YayinGdoktora",
                     YayinGmakalesayisi : "@entity.YayinGmakalesayisi",
                     YayinGyazarsayisi: "@entity.YayinGyazarsayisi",
                     YayinGhatirlatici : "@entity.YayinGhatirlatici",
-                    YayinGCount : "@entity.YayinGCount", 
+                    YayinGCount : "@entity.YayinGCount",
 
-                 
+
                     KitapAdoktora : "@entity.KitapAdoktora",
                     KitapAkitap : "@entity.KitapAkitap",
                     KitapAyazarsayisi: "@entity.KitapAyazarsayisi",
                     KitapAhatirlatici: "@entity.KitapAhatirlatici",
-                    KitapACount : "@entity.KitapACount", 
+                    KitapACount : "@entity.KitapACount",
 
                     KitapBdoktora : "@entity.KitapBdoktora",
                     KitapBbolumSayisi : "@entity.KitapBbolumSayisi",
                     KitapByazarsayisi: "@entity.KitapByazarsayisi",
                     KitapBhatirlatici : "@entity.KitapBhatirlatici",
-                    KitapBCount : "@entity.KitapBCount", 
+                    KitapBCount : "@entity.KitapBCount",
 
                     KitapCdoktora : "@entity.KitapCdoktora",
                     KitapCkitap : "@entity.KitapCkitap",
                     KitapCyazarsayisi: "@entity.KitapCyazarsayisi",
                     KitapChatirlatici : "@entity.KitapChatirlatici",
-                    KitapCCount : "@entity.KitapCCount", 
+                    KitapCCount : "@entity.KitapCCount",
 
                     KitapDdoktora : "@entity.KitapDdoktora",
                     KitapDbolumSayisi : "@entity.KitapDbolumSayisi",
                     KitapDyazarsayisi: "@entity.KitapDyazarsayisi",
                     KitapDhatirlatici : "@entity.KitapDhatirlatici",
-                    KitapDCount : "@entity.KitapDCount", 
-                
+                    KitapDCount : "@entity.KitapDCount",
+
 
                     AtiflarAdoktora : "@entity.AtiflarAdoktora",
                     AtiflarAatif : "@entity.AtiflarAatif",
                     AtiflarAhatirlatici : "@entity.AtiflarAhatirlatici",
-                    AtiflarACount : "@entity.AtiflarACount", 
+                    AtiflarACount : "@entity.AtiflarACount",
 
                     AtiflarBdoktora : "@entity.AtiflarBdoktora",
                     AtiflarBatif : "@entity.AtiflarBatif",
                     AtiflarBhatirlatici : "@entity.AtiflarBhatirlatici",
-                    AtiflarBCount : "@entity.AtiflarBCount", 
+                    AtiflarBCount : "@entity.AtiflarBCount",
 
                     AtiflarCdoktora : "@entity.AtiflarCdoktora",
                     AtiflarCatif : "@entity.AtiflarCatif",
                     AtiflarChatirlatici : "@entity.AtiflarChatirlatici",
-                    AtiflarCCount : "@entity.AtiflarCCount", 
-                
-                
+                    AtiflarCCount : "@entity.AtiflarCCount",
+
+
                     DanismanlikAdoktora : "@entity.DanismanlikAdoktora",
                     DanismanlikAseviye : "@entity.DanismanlikAseviye",
                     DanismanlikAsayi : "@entity.DanismanlikAsayi",
                     DanismanlikAhatirlatici : "@entity.DanismanlikAhatirlatici",
-                    DanismanlikACount : "@entity.DanismanlikACount", 
+                    DanismanlikACount : "@entity.DanismanlikACount",
 
 
                     DanismanlikBdoktora : "@entity.DanismanlikBdoktora",
                     DanismanlikBseviye : "@entity.DanismanlikBseviye",
                     DanismanlikBsayi : "@entity.DanismanlikBsayi",
                     DanismanlikBhatirlatici : "@entity.DanismanlikBhatirlatici",
-                    DanismanlikBCount : "@entity.DanismanlikBCount", 
+                    DanismanlikBCount : "@entity.DanismanlikBCount",
 
-             
+
                     ArastirmaAdoktora : "@entity.ArastirmaAdoktora",
                     ArastirmaAproje : "@entity.ArastirmaAproje",
                     ArastirmaAhatirlatici : "@entity.ArastirmaAhatirlatici",
-                    ArastirmaACount : "@entity.ArastirmaACount", 
+                    ArastirmaACount : "@entity.ArastirmaACount",
 
                     ArastirmaBdoktora : "@entity.ArastirmaBdoktora",
                     ArastirmaBproje : "@entity.ArastirmaBproje",
                     ArastirmaBhatirlatici : "@entity.ArastirmaBhatirlatici",
-                    ArastirmaBCount : "@entity.ArastirmaBCount", 
+                    ArastirmaBCount : "@entity.ArastirmaBCount",
 
                     ArastirmaCdoktora : "@entity.ArastirmaCdoktora",
                     ArastirmaCproje : "@entity.ArastirmaCproje",
                     ArastirmaChatirlatici : "@entity.ArastirmaChatirlatici",
-                    ArastirmaCCount : "@entity.ArastirmaCCount", 
+                    ArastirmaCCount : "@entity.ArastirmaCCount",
 
                     ArastirmaDdoktora : "@entity.ArastirmaDdoktora",
                     ArastirmaDproje : "@entity.ArastirmaDproje",
                     ArastirmaDhatirlatici : "@entity.ArastirmaDhatirlatici",
-                    ArastirmaDCount : "@entity.ArastirmaDCount", 
-                
-            
+                    ArastirmaDCount : "@entity.ArastirmaDCount",
+
+
                     ToplantiAdoktora : "@entity.ToplantiAdoktora",
                     ToplantiAsayi : "@entity.ToplantiAsayi",
                     ToplantiAyazarsayisi: "@entity.ToplantiAyazarsayisi",
                     ToplantiAhatirlatici : "@entity.ToplantiAhatirlatici",
-                    ToplantiACount : "@entity.ToplantiACount", 
+                    ToplantiACount : "@entity.ToplantiACount",
 
 
                     ToplantiBdoktora : "@entity.ToplantiBdoktora",
                     ToplantiBsayi : "@entity.ToplantiBsayi",
                     ToplantiByazarsayisi: "@entity.ToplantiByazarsayisi",
                     ToplantiBhatirlatici : "@entity.ToplantiBhatirlatici",
-                    ToplantiBCount : "@entity.ToplantiBCount", 
-                
+                    ToplantiBCount : "@entity.ToplantiBCount",
+
 
                     EgitimAdoktora : "@entity.EgitimAdoktora",
                     EgitimAders : "@entity.EgitimAders",
                     EgitimAhatirlatici : "@entity.EgitimAhatirlatici",
-                    EgitimACount : "@entity.EgitimACount", 
+                    EgitimACount : "@entity.EgitimACount",
 
                     EgitimBdoktora : "@entity.EgitimBdoktora",
                     EgitimBders : "@entity.EgitimBders",
                     EgitimBhatirlatici : "@entity.EgitimBhatirlatici",
-                    EgitimBCount : "@entity.EgitimBCount", 
-                    Gorev2yil : "@entity.Gorev2yil" 
-                
+                    EgitimBCount : "@entity.EgitimBCount",
+                    Gorev2yil : "@entity.Gorev2yil"
+
 
             };
             localStorage.setItem('Egitim',JSON.stringify(jsEntity));
-        </script> 
-         <script>
-             if(jsEntity!=null){
-                     UluslarArasiAdoldur('Egitim');
-                     UluslarArasiBdoldur('Egitim');
-                     UluslarArasiCdoldur('Egitim');
-                     UlusalAdoldur('Egitim');
-                     UlusalBdoldur('Egitim');
-                     YayinAdoldur('Egitim');
-                     YayinBdoldur('Egitim');
-                     YayinCdoldur('Egitim');
-                     YayinDdoldur('Egitim');
-                     YayinEdoldur('Egitim');
-                     YayinFdoldur('Egitim');
-                     YayinGdoldur('Egitim'); 
-                     KitapAdoldur('Egitim'); 
-                     KitapBdoldur('Egitim'); 
-                     KitapCdoldur('Egitim'); 
-                     KitapDdoldur('Egitim'); 
-                     AtiflarAdoldur('Egitim'); 
-                     AtiflarBdoldur('Egitim'); 
-                     AtiflarCdoldur('Egitim'); 
-                     DanismanlikAdoldur('Egitim'); 
-                     DanismanlikBdoldur('Egitim'); 
-                     ArastirmaAdoldur('Egitim'); 
-                     ArastirmaBdoldur('Egitim'); 
-                     ArastirmaCdoldur('Egitim'); 
-                     ArastirmaDdoldur('Egitim'); 
-                     ToplantiAdoldur('Egitim'); 
-                     ToplantiBdoldur('Egitim'); 
-                     EgitimAdoldur('Egitim'); 
-                     EgitimBdoldur('Egitim'); 
-                     EgitimCdoldur('Egitim'); 
-                  
-          
-             }
-            
-        </script> 
-    } 
+        </script>
+        <script>
+            if(jsEntity!=null){
+                    UluslarArasiAdoldur('Egitim');
+                    UluslarArasiBdoldur('Egitim');
+                    UluslarArasiCdoldur('Egitim');
+                    UlusalAdoldur('Egitim');
+                    UlusalBdoldur('Egitim');
+                    YayinAdoldur('Egitim');
+                    YayinBdoldur('Egitim');
+                    YayinCdoldur('Egitim');
+                    YayinDdoldur('Egitim');
+                    YayinEdoldur('Egitim');
+                    YayinFdoldur('Egitim');
+                    YayinGdoldur('Egitim');
+                    KitapAdoldur('Egitim');
+                    KitapBdoldur('Egitim');
+                    KitapCdoldur('Egitim');
+                    KitapDdoldur('Egitim');
+                    AtiflarAdoldur('Egitim');
+                    AtiflarBdoldur('Egitim');
+                    AtiflarCdoldur('Egitim');
+                    DanismanlikAdoldur('Egitim');
+                    DanismanlikBdoldur('Egitim');
+                    ArastirmaAdoldur('Egitim');
+                    ArastirmaBdoldur('Egitim');
+                    ArastirmaCdoldur('Egitim');
+                    ArastirmaDdoldur('Egitim');
+                    ToplantiAdoldur('Egitim');
+                    ToplantiBdoldur('Egitim');
+                    EgitimAdoldur('Egitim');
+                    EgitimBdoldur('Egitim');
+                    EgitimCdoldur('Egitim');
+
+
+            }
+
+        </script>
+    }
 }

@@ -7,14 +7,56 @@ using System.Text.Json;
 using WebMvc.Models.DocentModels;
 using WebMvc.Helpers.ConvertToModel;
 using Microsoft.AspNetCore.Authorization;
+using Core.Serviecs;
+using Core.Models.Entities;
+using Mapster;
 
 namespace WebMvc.Controllers
 {
     public class MemberScienceController : BaseController
     {
-        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager) : base(userManager, signInManager)
+        private readonly IEgitimEntityService _egitimEntityService;
+
+
+        /*
+         
+         FenEntityService
+        FilolojiEntityService
+        GuzelSanatlarEntityService
+        HukukEntityService
+        ilahiyatEntityService
+        MessageService
+        MimarlikEntityService
+        MuhendislikEntityService
+        SaglikEntityService
+        SosyalEntityService
+        SporEntityService
+        ZiraatEntityService
+         */
+
+        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager, IEgitimEntityService egitimEntityService) : base(userManager, signInManager)
         {
+            _egitimEntityService=egitimEntityService;
         }
+
+
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult Answer(string link)
+        {
+            ViewBag.link = link;
+            Messages? m = JsonSerializer.Deserialize<Messages>(TempData["message"]?.ToString());
+            TempData.Remove("message");
+            return View(m);
+        }
+
+
+
+
+
+
+
         [Authorize]
         public IActionResult Index()
         {
@@ -22,21 +64,49 @@ namespace WebMvc.Controllers
         }
         [Authorize]
         [HttpGet]
-        public IActionResult Egitim()
+        public async Task<IActionResult> Egitim()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            EgitimEntity entity = _egitimEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity!=null)
+            {
+
+                TempData["model"] = JsonSerializer.Serialize(entity);
+
+                ViewBag.OldData = true;
+            }
             return View();
         }
 
         [Authorize]
         [HttpPost]
-        public IActionResult Egitim(EgitimDocentModel model)
+        public async Task<IActionResult> Egitim(EgitimDocentModel model)
         {
             TempData["model"] = JsonSerializer.Serialize(EgitimConvert.EgitimModelToEgitimEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "Egitim" });
+
+            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            EgitimEntity entity = _egitimEntityService.WhereSingle(x => x.MyUserId==user.Id);
+            if (entity == null)
+            {
+                entity =new();
+                entity.MyUserId = user.Id;
+                await _egitimEntityService.AddAsync(entity);
+            }
+            else
+            {
+                EgitimEntity Newentity = EgitimConvert.EgitimModelToEgitimEntity(model).Adapt<EgitimEntity>();
+                Newentity.MyUserId = user.Id;
+                Newentity.Id=entity.Id;
+                await _egitimEntityService.UpdateAsync(Newentity);
+            }
+
+
+            return RedirectToAction("Answer", "MemberScience", new { link = "Egitim" });
         }
 
 
@@ -56,7 +126,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(FilolojiConvert.EgitimModelToEgitimEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "Filoloji" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Filoloji" });
         }
 
 
@@ -76,7 +146,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(HukukConvert.EgitimModelToEgitimEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "Hukuk" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
         }
 
 
@@ -97,7 +167,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(ilahiyatConvert.EgitimModelToEgitimEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "ilahiyat" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "ilahiyat" });
         }
 
 
@@ -117,7 +187,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(SosyalBeseriConvert.EgitimModelToEgitimEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "SosyalBeseri" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "SosyalBeseri" });
         }
 
 
@@ -139,7 +209,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(SporConvert.SporModelToSporEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "Spor" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Spor" });
         }
 
 
@@ -162,7 +232,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(MuhendislikConvert.MuhendislikModelToMuhendislikEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "Muhendis" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Muhendis" });
         }
 
 
@@ -185,7 +255,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(FenConvert.FenModelToFenEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "Fen" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Fen" });
         }
 
 
@@ -207,7 +277,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(ZiraatConvert.ZiraatModelToZiraatEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "Ziraat" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Ziraat" });
         }
 
 
@@ -230,7 +300,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(MimarlikConvert.MimarlikModelToMimarlikEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "Mimarlik" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Mimarlik" });
         }
 
 
@@ -253,7 +323,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(SaglikConvert.SaglikModelToSaglikEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "Saglik" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Saglik" });
         }
 
 
@@ -274,7 +344,7 @@ namespace WebMvc.Controllers
             TempData["model"] = JsonSerializer.Serialize(GuzelSanatlarConvert.GuzelSanatlarModelToGuzelSanatlarEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "Science", new { link = "GuzelSanatlar" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "GuzelSanatlar" });
         }
 
     }

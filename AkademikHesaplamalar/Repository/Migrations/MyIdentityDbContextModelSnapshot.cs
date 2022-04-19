@@ -84,7 +84,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AdminMember");
+                    b.ToTable("AdminMember", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.EgitimEntity", b =>
@@ -621,7 +621,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("EgitimEntities");
+                    b.ToTable("EgitimEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.FenEntity", b =>
@@ -1149,7 +1149,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("FenEntities");
+                    b.ToTable("FenEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.FilolojiEntity", b =>
@@ -1686,7 +1686,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("FilolojiEntities");
+                    b.ToTable("FilolojiEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.GuzelSanatlarEntity", b =>
@@ -1783,7 +1783,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("GuzelSanatlarEntities");
+                    b.ToTable("GuzelSanatlarEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.HukukEntity", b =>
@@ -2320,7 +2320,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("HukukEntities");
+                    b.ToTable("HukukEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.ilahiyatEntity", b =>
@@ -2857,7 +2857,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("IlahiyatEntities");
+                    b.ToTable("IlahiyatEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.MimarlikEntity", b =>
@@ -3396,7 +3396,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("MimarlikEntities");
+                    b.ToTable("MimarlikEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.MuhendislikEntity", b =>
@@ -3924,7 +3924,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("MuhendisEntities");
+                    b.ToTable("MuhendisEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.SaglikEntity", b =>
@@ -4479,7 +4479,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("SaglikEntities");
+                    b.ToTable("SaglikEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.SosyalEntity", b =>
@@ -5035,7 +5035,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("SosyalEntities");
+                    b.ToTable("SosyalEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.SporEntity", b =>
@@ -5636,7 +5636,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("SporEntities");
+                    b.ToTable("SporEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.Entities.ZiraatEntity", b =>
@@ -6164,7 +6164,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("MyUserId");
 
-                    b.ToTable("ZiraatEntities");
+                    b.ToTable("ZiraatEntities", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.MyContact", b =>
@@ -6202,7 +6202,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MyContacts");
+                    b.ToTable("MyContacts", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.MyMessage", b =>
@@ -6235,7 +6235,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Messages", (string)null);
                 });
 
             modelBuilder.Entity("Core.Models.MyRole", b =>
