@@ -1,7 +1,32 @@
-﻿<h1>
-    Bu Sayfa düzenlenecektir
-</h1>
+﻿@model RoleDto
 
+<div class="container" style="margin-bottom:200px;">
+
+    <h3>Üye şifre değiştirme</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-controller="UltraAdmin" asp-action="RoleUpdate">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <input type="hidden" asp-for="Id" class="form-control" />
+
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <input type="submit" value="Güncelle" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+</div>
 
 
 <script>
