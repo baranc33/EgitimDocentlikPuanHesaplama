@@ -344,7 +344,7 @@ namespace WebMvc.Controllers
                 ilahiyatEntity Newentity = ilahiyatConvert.ilahiyatModelToilahiyetEntity(model).Adapt<ilahiyatEntity>();
                 await _ilahiyatEntityService.UpdateAsync(Newentity);
             }
-            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "ilahiyat" });
         }
 
 
@@ -388,7 +388,7 @@ namespace WebMvc.Controllers
                 SosyalEntity Newentity = SosyalBeseriConvert.SosyalModelToSosyalEntity(model).Adapt<SosyalEntity>();
                 await _sosyalEntityService.UpdateAsync(Newentity);
             }
-            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "SosyalBeseri" });
         }
 
 
@@ -434,7 +434,7 @@ namespace WebMvc.Controllers
                 SporEntity Newentity = SporConvert.SporModelToSporEntity(model).Adapt<SporEntity>();
                 await _sporEntityService.UpdateAsync(Newentity);
             }
-            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Spor" });
         }
 
 
@@ -478,7 +478,7 @@ namespace WebMvc.Controllers
                 MuhendislikEntity Newentity = MuhendislikConvert.MuhendislikModelToMuhendislikEntity(model).Adapt<MuhendislikEntity>();
                 await _muhendislikEntityService.UpdateAsync(Newentity);
             }
-            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Muhendis" });
         }
 
 
@@ -523,7 +523,7 @@ namespace WebMvc.Controllers
                 ZiraatEntity Newentity = ZiraatConvert.ZiraatModelToZiraatEntity(model).Adapt<ZiraatEntity>();
                 await _ziraatEntityService.UpdateAsync(Newentity);
             }
-            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Ziraat" });
         }
 
 
@@ -567,7 +567,7 @@ namespace WebMvc.Controllers
                 MimarlikEntity Newentity = MimarlikConvert.MimarlikModelToMimarlikEntity(model).Adapt<MimarlikEntity>();
                 await _mimarlikEntityService.UpdateAsync(Newentity);
             }
-            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Mimarlik" });
         }
 
 
@@ -611,7 +611,7 @@ namespace WebMvc.Controllers
                 SaglikEntity Newentity = SaglikConvert.SaglikModelToSaglikEntity(model).Adapt<SaglikEntity>();
                 await _saglikEntityService.UpdateAsync(Newentity);
             }
-            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
+            return RedirectToAction("Answer", "MemberScience", new { link = "Saglik" });
         }
 
 
