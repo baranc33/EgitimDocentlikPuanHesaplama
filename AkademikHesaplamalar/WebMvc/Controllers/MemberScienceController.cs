@@ -22,28 +22,30 @@ namespace WebMvc.Controllers
         private readonly IHukukEntityService _hukukEntityService;
 
 
-        /*
-         
-         
-        
-        
-        
-        ilahiyatEntityService
-        MessageService
-        MimarlikEntityService
-        MuhendislikEntityService
-        SaglikEntityService
-        SosyalEntityService
-        SporEntityService
-        ZiraatEntityService
-         */
-        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager, IEgitimEntityService egitimEntityService, IHukukEntityService hukukEntityService, IGuzelSanatlarEntityService guzelSanatlarEntityService, IFilolojiEntityService filolojiEntityService, IFenEntityService fenEntityService):base(userManager,signInManager,null)
+
+
+        private readonly IIlahiyatEntityService _ilahiyatEntityService;
+        private readonly IMimarlikEntityService _mimarlikEntityService;
+        private readonly IMuhendislikEntityService _muhendislikEntityService;
+        private readonly ISaglikEntityService _saglikEntityService;
+        private readonly ISosyalEntityService _sosyalEntityService;
+        private readonly ISporEntityService _sporEntityService;
+        private readonly IZiraatEntityService _ziraatEntityService;
+
+        public MemberScienceController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager, IEgitimEntityService egitimEntityService, IHukukEntityService hukukEntityService, IGuzelSanatlarEntityService guzelSanatlarEntityService, IFilolojiEntityService filolojiEntityService, IFenEntityService fenEntityService, IIlahiyatEntityService ilahiyatEntityService, IMimarlikEntityService mimarlikEntityService, IMuhendislikEntityService muhendislikEntityService, ISaglikEntityService saglikEntityService, ISosyalEntityService sosyalEntityService, ISporEntityService sporEntityService, IZiraatEntityService ziraatEntityService) : base(userManager, signInManager, null)
         {
             _egitimEntityService =egitimEntityService;
             _hukukEntityService=hukukEntityService;
             _guzelSanatlarEntityService=guzelSanatlarEntityService;
             _filolojiEntityService=filolojiEntityService;
             _fenEntityService=fenEntityService;
+            _ilahiyatEntityService=ilahiyatEntityService;
+            _mimarlikEntityService=mimarlikEntityService;
+            _muhendislikEntityService=muhendislikEntityService;
+            _saglikEntityService=saglikEntityService;
+            _sosyalEntityService=sosyalEntityService;
+            _sporEntityService=sporEntityService;
+            _ziraatEntityService=ziraatEntityService;
         }
 
 
@@ -118,7 +120,7 @@ namespace WebMvc.Controllers
         public async Task<IActionResult> Fen()
         {
             ViewBag.OldData = false;
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+            MyUser user = CurrentUser;
             ViewBag.MyUserId = user.Id;
 
             FenEntity entity = _fenEntityService.WhereSingle(x => x.MyUserId==user.Id);
@@ -160,7 +162,7 @@ namespace WebMvc.Controllers
             return RedirectToAction("Answer", "MemberScience", new { link = "Fen" });
 
 
-             
+
         }
 
 
@@ -169,8 +171,10 @@ namespace WebMvc.Controllers
         [HttpGet]
         public async Task<IActionResult> Filoloji()
         {
+
             ViewBag.OldData = false;
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+
+            MyUser user = CurrentUser;
             ViewBag.MyUserId = user.Id;
             FilolojiEntity entity = _filolojiEntityService.WhereSingle(x => x.MyUserId==user.Id);
 
@@ -193,7 +197,7 @@ namespace WebMvc.Controllers
             TempData["message"] = JsonSerializer.Serialize(message);
             MyUser user = CurrentUser;
             FilolojiEntity entity = _filolojiEntityService.WhereSingle(x => x.MyUserId==user.Id);
-             
+
             if (entity == null)
             {
                 entity = JsonSerializer.Deserialize<FilolojiEntity>(TempData["model"].ToString());
@@ -214,7 +218,8 @@ namespace WebMvc.Controllers
         public async Task<IActionResult> GuzelSanatlar()
         {
             ViewBag.OldData = false;
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+
+            MyUser user = CurrentUser;
             ViewBag.MyUserId = user.Id;
             GuzelSanatlarEntity entity = _guzelSanatlarEntityService.WhereSingle(x => x.MyUserId==user.Id);
 
@@ -258,7 +263,8 @@ namespace WebMvc.Controllers
         public async Task<IActionResult> Hukuk()
         {
             ViewBag.OldData = false;
-            MyUser user = await _userManager.FindByNameAsync(User.Identity?.Name);
+
+            MyUser user = CurrentUser;
             ViewBag.MyUserId = user.Id;
             HukukEntity entity = _hukukEntityService.WhereSingle(x => x.MyUserId==user.Id);
 
@@ -320,7 +326,17 @@ namespace WebMvc.Controllers
         public IActionResult ilahiyat()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+
+            MyUser user = CurrentUser;
+            ViewBag.MyUserId = user.Id;
+            ilahiyatEntity entity = _ilahiyatEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity!=null)
+            {
+                ViewBag.Id = entity.Id;
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
             return View();
         }
 
@@ -340,7 +356,16 @@ namespace WebMvc.Controllers
         public IActionResult SosyalBeseri()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+            MyUser user = CurrentUser;
+            ViewBag.MyUserId = user.Id;
+            SosyalEntity entity = _sosyalEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity!=null)
+            {
+                ViewBag.Id = entity.Id;
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
             return View();
         }
 
@@ -362,7 +387,16 @@ namespace WebMvc.Controllers
         public IActionResult Spor()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+            MyUser user = CurrentUser;
+            ViewBag.MyUserId = user.Id;
+            SporEntity entity = _sporEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity!=null)
+            {
+                ViewBag.Id = entity.Id;
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
             return View();
         }
 
@@ -385,7 +419,15 @@ namespace WebMvc.Controllers
         public IActionResult Muhendis()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+            MyUser user = CurrentUser;
+            ViewBag.MyUserId = user.Id;
+            MuhendislikEntity entity = _muhendislikEntityService.WhereSingle(x => x.MyUserId==user.Id);
+            if (entity!=null)
+            {
+                ViewBag.Id = entity.Id;
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
             return View();
         }
 
@@ -409,7 +451,15 @@ namespace WebMvc.Controllers
         public IActionResult Ziraat()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+            MyUser user = CurrentUser;
+            ViewBag.MyUserId = user.Id;
+            ZiraatEntity entity = _ziraatEntityService.WhereSingle(x => x.MyUserId==user.Id);
+            if (entity!=null)
+            {
+                ViewBag.Id = entity.Id;
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
             return View();
         }
 
@@ -432,7 +482,15 @@ namespace WebMvc.Controllers
         public IActionResult Mimarlik()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+            MyUser user = CurrentUser;
+            ViewBag.MyUserId = user.Id;
+            MimarlikEntity entity = _mimarlikEntityService.WhereSingle(x => x.MyUserId==user.Id);
+            if (entity!=null)
+            {
+                ViewBag.Id = entity.Id;
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
             return View();
         }
 
@@ -455,7 +513,15 @@ namespace WebMvc.Controllers
         public IActionResult Saglik()
         {
             ViewBag.OldData = false;
-            if (TempData.ContainsKey("model")) ViewBag.OldData = true;
+            MyUser user = CurrentUser;
+            ViewBag.MyUserId = user.Id;
+            SaglikEntity entity = _saglikEntityService.WhereSingle(x => x.MyUserId==user.Id);
+            if (entity!=null)
+            {
+                ViewBag.Id = entity.Id;
+                TempData["model"] = JsonSerializer.Serialize(entity);
+                ViewBag.OldData = true;
+            }
             return View();
         }
 

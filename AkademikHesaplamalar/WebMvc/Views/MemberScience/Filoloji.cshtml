@@ -1,49 +1,49 @@
-﻿
-  @section Alt_Menu{
-     <h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    Filoloji bilimleri doçentlik puan hesaplama </h1>  
-   <partial name="~/Views/MemberScience/MemberPartial/MemberSelectbox.cshtml" />
- 
-   <div class="">
-       <h4 class="Calculation_information">
-            Filoloji temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki
-            çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan (90) puanının
-            doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde edilmiş olması
-            kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş olması gerekir. Her
-            çalışma Tablo 3' de sadece bir bölümde yazılarak puanlandırılır.
+﻿  @section Alt_Menu{
+<h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    Filoloji bilimleri doçentlik puan hesaplama
+</h1>
+<partial name="~/Views/MemberScience/MemberPartial/MemberSelectbox.cshtml" />
 
-       </h4>
-     <h5 class="Calculation_information2 col-md-8">
+<div class="">
+    <h4 class="Calculation_information">
+        Filoloji temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki
+        çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan (90) puanının
+        doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde edilmiş olması
+        kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş olması gerekir. Her
+        çalışma Tablo 3' de sadece bir bölümde yazılarak puanlandırılır.
+
+    </h4>
+    <h5 class="Calculation_information2 col-md-8">
         Tek yazarlı yayınlarda yazar tam puan alır. Çok yazarlı yayınlarda puan yazarlar arasında
         eşit olarak bölünür.
-       </h5>
-   </div>
+    </h5>
+</div>
   }
 
 
- <head>
+<head>
 
-     @section head{
-            <title>Filoloji bilimleri</title>
-        <meta name="keywords" content="Filoloji Doçentlik Hesaplama, Filoloji Doçentlik Puan Hesaplama">
-        <meta name="author" content="Filoloji Doçentlik Hesaplama">
-          <meta name="description" content="Filoloji bilimleri doçentlik puan hesaplama" />
-}
+    @section head{
+    <title>Filoloji bilimleri</title>
+    <meta name="keywords" content="Filoloji Doçentlik Hesaplama, Filoloji Doçentlik Puan Hesaplama">
+    <meta name="author" content="Filoloji Doçentlik Hesaplama">
+    <meta name="description" content="Filoloji bilimleri doçentlik puan hesaplama" />
+    }
     <link href="~/css/hesap.css" rel="stylesheet">
     <script src="~/js/MemberBolumler.js"></script>
     <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
 
-</head> 
- 
+</head>
+
  @* <form onsubmit="egitimSave()" asp-controller="MemberScience" asp-action="Filoloji" method="post">  *@
- <form  asp-controller="MemberScience" asp-action="Filoloji" method="post"> 
-        <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
+<form asp-controller="MemberScience" asp-action="Filoloji" method="post">
+    <a href="#SubmitButton" id="hesapla"> <i class="fa-regular fa-circle-down"></i>   </a>
     <input type="hidden" value="@ViewBag.MyUserId" name="MyUserId" />
     <input type="hidden" value="@ViewBag.Id" name="Id" />
 
 
     @* <section class="Egitim"> *@
-    <section >
+    <section>
         <div class="Bir">
             <h2>1. Uluslararası Makale</h2>
             <h5>Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla </h5>
@@ -53,7 +53,7 @@
             <div class="row mt-5">
                 <label class="col-md-8">
                     A)  SSCI, SCI, SCI- Expanded ve AHCI kapsamındaki dergilerde editöre
-                        mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale  ~ 20 Puan
+                    mektup, özet veya kitap kritiği hariç olmak üzere yayımlanmış makale  ~ 20 Puan
                 </label>
                 <button onclick="add('UluslarArasiAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UluslarArasiAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
@@ -87,7 +87,7 @@
             <div class="row mt-5">
                 <label class="col-md-8">
                     B) Uluslararası alan endekslerinde taranan dergilerde editöre mektup, özet
-                            veya kitap kritiği hariç olmak üzere yayımlanmış makale  ~ 10 Puan
+                    veya kitap kritiği hariç olmak üzere yayımlanmış makale  ~ 10 Puan
                 </label>
                 <button onclick="add('UluslarArasiBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UluslarArasiBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
@@ -121,7 +121,7 @@
             <div class="row mt-5">
                 <label class="col-md-8">
                     C)  Bu maddenin a veya b bendi kapsamındaki yayınlarda ilgili alanda bilime
-                        katkı sağlayan kitap kritiği yapılmış makale ~ 5 Puan
+                    katkı sağlayan kitap kritiği yapılmış makale ~ 5 Puan
                 </label>
                 <button onclick="add('UluslarArasiCul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UluslarArasiCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
@@ -159,11 +159,11 @@
             <h2>2. Ulusal Makale </h2>
             <h5>Başvurulan doçentlik bilim alanı ile ilgili ve adayın yaptığı lisansüstü tezlerden üretilmemiş olmak kaydıyla</h5>
             <h6>
-                            Bu madde kapsamında en az ikisi a bendinden olmak üzere en az 4 yayın yapmak
+                Bu madde kapsamında en az ikisi a bendinden olmak üzere en az 4 yayın yapmak
                 zorunludur.Yabancı uyruklu adaylar ile yurtdışı doçentlik denkliği başvurusu yapan
                 adaylar,ULAKBİM tarafından taranan ulusal hakemli dergilerde yayımlanmış makale
                 koşulunu sağlayamamaları durumunda, bunun yerine aynı sayıdaki yayını 1. maddenin a
-                veya b bentleri kapsamında sağlayacaklardır. 
+                veya b bentleri kapsamında sağlayacaklardır.
             </h6>
             <hr>
 
@@ -1089,13 +1089,13 @@
 
 
 @{
-  if (ViewBag.OldData == true)
+    if (ViewBag.OldData == true)
     {
 
         FilolojiEntity entity = JsonSerializer.Deserialize<FilolojiEntity>(TempData["model"].ToString());
-     
-        
-          <script>
+
+
+        <script>
 
             let jsEntity={
                     UluslarArasiAdoktora :"@entity.UluslarArasiAdoktora",
@@ -1122,199 +1122,199 @@
                     UlusalAyazarsayisi:"@entity.UlusalAyazarsayisi",
                     UlusalAhatirlatici : "@entity.UlusalAhatirlatici",
                     UlusalACount : "@entity.UlusalACount",
-   
-                    
+
+
                     UlusalBdoktora :"@entity.UlusalBdoktora",
                     UlusalBmakalesayisi :"@entity.UlusalBmakalesayisi",
                     UlusalByazarsayisi:"@entity.UlusalByazarsayisi",
                     UlusalBhatirlatici : "@entity.UlusalBhatirlatici",
                     UlusalBCount : "@entity.UlusalBCount",
 
-          
+
                     YayinAdoktora : "@entity.YayinAdoktora",
                     YayinAkitap : "@entity.YayinAkitap",
                     YayinAyazarsayisi : "@entity.YayinAyazarsayisi",
                     YayinAhatirlatici : "@entity.YayinAhatirlatici",
-                    YayinACount : "@entity.YayinACount", 
+                    YayinACount : "@entity.YayinACount",
 
                     YayinBdoktora : "@entity.YayinBdoktora",
                     YayinBbolumSayisi : "@entity.YayinBbolumSayisi",
                     YayinByazarsayisi : "@entity.YayinByazarsayisi",
                     YayinBhatirlatici : "@entity.YayinBhatirlatici",
-                    YayinBCount : "@entity.YayinBCount", 
+                    YayinBCount : "@entity.YayinBCount",
 
                     YayinCdoktora : "@entity.YayinCdoktora",
                     YayinCkitap : "@entity.YayinCkitap",
                     YayinCyazarsayisi : "@entity.YayinCyazarsayisi",
                     YayinChatirlatici : "@entity.YayinChatirlatici",
-                    YayinCCount : "@entity.YayinCCount", 
+                    YayinCCount : "@entity.YayinCCount",
 
                     YayinDdoktora : "@entity.YayinDdoktora",
                     YayinDbolumSayisi : "@entity.YayinDbolumSayisi",
                     YayinDyazarsayisi: "@entity.YayinDyazarsayisi",
                     YayinDhatirlatici : "@entity.YayinDhatirlatici",
-                    YayinDCount : "@entity.YayinDCount", 
+                    YayinDCount : "@entity.YayinDCount",
 
                     YayinEdoktora : "@entity.YayinEdoktora",
                     YayinEmakalesayisi : "@entity.YayinEmakalesayisi",
                     YayinEyazarsayisi: "@entity.YayinEyazarsayisi",
                     YayinEhatirlatici : "@entity.YayinEhatirlatici",
-                    YayinECount : "@entity.YayinECount", 
+                    YayinECount : "@entity.YayinECount",
 
                     YayinFdoktora : "@entity.YayinFdoktora",
                     YayinFmakalesayisi : "@entity.YayinFmakalesayisi",
                     YayinFyazarsayisi: "@entity.YayinFyazarsayisi",
                     YayinFhatirlatici : "@entity.YayinFhatirlatici",
-                    YayinFCount : "@entity.YayinFCount", 
+                    YayinFCount : "@entity.YayinFCount",
 
                     YayinGdoktora : "@entity.YayinGdoktora",
                     YayinGmakalesayisi : "@entity.YayinGmakalesayisi",
                     YayinGyazarsayisi: "@entity.YayinGyazarsayisi",
                     YayinGhatirlatici : "@entity.YayinGhatirlatici",
-                    YayinGCount : "@entity.YayinGCount", 
+                    YayinGCount : "@entity.YayinGCount",
 
-                 
+
                     KitapAdoktora : "@entity.KitapAdoktora",
                     KitapAkitap : "@entity.KitapAkitap",
                     KitapAyazarsayisi: "@entity.KitapAyazarsayisi",
                     KitapAhatirlatici: "@entity.KitapAhatirlatici",
-                    KitapACount : "@entity.KitapACount", 
+                    KitapACount : "@entity.KitapACount",
 
                     KitapBdoktora : "@entity.KitapBdoktora",
                     KitapBbolumSayisi : "@entity.KitapBbolumSayisi",
                     KitapByazarsayisi: "@entity.KitapByazarsayisi",
                     KitapBhatirlatici : "@entity.KitapBhatirlatici",
-                    KitapBCount : "@entity.KitapBCount", 
+                    KitapBCount : "@entity.KitapBCount",
 
                     KitapCdoktora : "@entity.KitapCdoktora",
                     KitapCkitap : "@entity.KitapCkitap",
                     KitapCyazarsayisi: "@entity.KitapCyazarsayisi",
                     KitapChatirlatici : "@entity.KitapChatirlatici",
-                    KitapCCount : "@entity.KitapCCount", 
+                    KitapCCount : "@entity.KitapCCount",
 
                     KitapDdoktora : "@entity.KitapDdoktora",
                     KitapDbolumSayisi : "@entity.KitapDbolumSayisi",
                     KitapDyazarsayisi: "@entity.KitapDyazarsayisi",
                     KitapDhatirlatici : "@entity.KitapDhatirlatici",
-                    KitapDCount : "@entity.KitapDCount", 
-                
+                    KitapDCount : "@entity.KitapDCount",
+
 
                     AtiflarAdoktora : "@entity.AtiflarAdoktora",
                     AtiflarAatif : "@entity.AtiflarAatif",
                     AtiflarAhatirlatici : "@entity.AtiflarAhatirlatici",
-                    AtiflarACount : "@entity.AtiflarACount", 
+                    AtiflarACount : "@entity.AtiflarACount",
 
                     AtiflarBdoktora : "@entity.AtiflarBdoktora",
                     AtiflarBatif : "@entity.AtiflarBatif",
                     AtiflarBhatirlatici : "@entity.AtiflarBhatirlatici",
-                    AtiflarBCount : "@entity.AtiflarBCount", 
+                    AtiflarBCount : "@entity.AtiflarBCount",
 
                     AtiflarCdoktora : "@entity.AtiflarCdoktora",
                     AtiflarCatif : "@entity.AtiflarCatif",
                     AtiflarChatirlatici : "@entity.AtiflarChatirlatici",
-                    AtiflarCCount : "@entity.AtiflarCCount", 
-                
-                
+                    AtiflarCCount : "@entity.AtiflarCCount",
+
+
                     DanismanlikAdoktora : "@entity.DanismanlikAdoktora",
                     DanismanlikAseviye : "@entity.DanismanlikAseviye",
                     DanismanlikAsayi : "@entity.DanismanlikAsayi",
                     DanismanlikAhatirlatici : "@entity.DanismanlikAhatirlatici",
-                    DanismanlikACount : "@entity.DanismanlikACount", 
+                    DanismanlikACount : "@entity.DanismanlikACount",
 
 
                     DanismanlikBdoktora : "@entity.DanismanlikBdoktora",
                     DanismanlikBseviye : "@entity.DanismanlikBseviye",
                     DanismanlikBsayi : "@entity.DanismanlikBsayi",
                     DanismanlikBhatirlatici : "@entity.DanismanlikBhatirlatici",
-                    DanismanlikBCount : "@entity.DanismanlikBCount", 
+                    DanismanlikBCount : "@entity.DanismanlikBCount",
 
-             
+
                     ArastirmaAdoktora : "@entity.ArastirmaAdoktora",
                     ArastirmaAproje : "@entity.ArastirmaAproje",
                     ArastirmaAhatirlatici : "@entity.ArastirmaAhatirlatici",
-                    ArastirmaACount : "@entity.ArastirmaACount", 
+                    ArastirmaACount : "@entity.ArastirmaACount",
 
                     ArastirmaBdoktora : "@entity.ArastirmaBdoktora",
                     ArastirmaBproje : "@entity.ArastirmaBproje",
                     ArastirmaBhatirlatici : "@entity.ArastirmaBhatirlatici",
-                    ArastirmaBCount : "@entity.ArastirmaBCount", 
+                    ArastirmaBCount : "@entity.ArastirmaBCount",
 
                     ArastirmaCdoktora : "@entity.ArastirmaCdoktora",
                     ArastirmaCproje : "@entity.ArastirmaCproje",
                     ArastirmaChatirlatici : "@entity.ArastirmaChatirlatici",
-                    ArastirmaCCount : "@entity.ArastirmaCCount", 
+                    ArastirmaCCount : "@entity.ArastirmaCCount",
 
                     ArastirmaDdoktora : "@entity.ArastirmaDdoktora",
                     ArastirmaDproje : "@entity.ArastirmaDproje",
                     ArastirmaDhatirlatici : "@entity.ArastirmaDhatirlatici",
-                    ArastirmaDCount : "@entity.ArastirmaDCount", 
-                
-            
+                    ArastirmaDCount : "@entity.ArastirmaDCount",
+
+
                     ToplantiAdoktora : "@entity.ToplantiAdoktora",
                     ToplantiAsayi : "@entity.ToplantiAsayi",
                     ToplantiAyazarsayisi: "@entity.ToplantiAyazarsayisi",
                     ToplantiAhatirlatici : "@entity.ToplantiAhatirlatici",
-                    ToplantiACount : "@entity.ToplantiACount", 
+                    ToplantiACount : "@entity.ToplantiACount",
 
 
                     ToplantiBdoktora : "@entity.ToplantiBdoktora",
                     ToplantiBsayi : "@entity.ToplantiBsayi",
                     ToplantiByazarsayisi: "@entity.ToplantiByazarsayisi",
                     ToplantiBhatirlatici : "@entity.ToplantiBhatirlatici",
-                    ToplantiBCount : "@entity.ToplantiBCount", 
-                
+                    ToplantiBCount : "@entity.ToplantiBCount",
+
 
                     EgitimAdoktora : "@entity.EgitimAdoktora",
                     EgitimAders : "@entity.EgitimAders",
                     EgitimAhatirlatici : "@entity.EgitimAhatirlatici",
-                    EgitimACount : "@entity.EgitimACount", 
+                    EgitimACount : "@entity.EgitimACount",
 
                     EgitimBdoktora : "@entity.EgitimBdoktora",
                     EgitimBders : "@entity.EgitimBders",
                     EgitimBhatirlatici : "@entity.EgitimBhatirlatici",
-                    EgitimBCount : "@entity.EgitimBCount", 
-                    Gorev2yil : "@entity.Gorev2yil" 
-                
+                    EgitimBCount : "@entity.EgitimBCount",
+                    Gorev2yil : "@entity.Gorev2yil"
+
 
             };
             localStorage.setItem('Filoloji',JSON.stringify(jsEntity));
-        </script> 
-         <script>
-             if(jsEntity!=null){
-                     UluslarArasiAdoldur('Filoloji');
-                     UluslarArasiBdoldur('Filoloji');
-                     UluslarArasiCdoldur('Filoloji');
-                     UlusalAdoldur('Filoloji');
-                     UlusalBdoldur('Filoloji');
-                     YayinAdoldur('Filoloji');
-                     YayinBdoldur('Filoloji');
-                     YayinCdoldur('Filoloji');
-                     YayinDdoldur('Filoloji');
-                     YayinEdoldur('Filoloji');
-                     YayinFdoldur('Filoloji');
-                     YayinGdoldur('Filoloji'); 
-                     KitapAdoldur('Filoloji'); 
-                     KitapBdoldur('Filoloji'); 
-                     KitapCdoldur('Filoloji'); 
-                     KitapDdoldur('Filoloji'); 
-                     AtiflarAdoldur('Filoloji'); 
-                     AtiflarBdoldur('Filoloji'); 
-                     AtiflarCdoldur('Filoloji'); 
-                     DanismanlikAdoldur('Filoloji'); 
-                     DanismanlikBdoldur('Filoloji'); 
-                     ArastirmaAdoldur('Filoloji'); 
-                     ArastirmaBdoldur('Filoloji'); 
-                     ArastirmaCdoldur('Filoloji'); 
-                     ArastirmaDdoldur('Filoloji'); 
-                     ToplantiAdoldur('Filoloji'); 
-                     ToplantiBdoldur('Filoloji'); 
-                     EgitimAdoldur('Filoloji'); 
-                     EgitimBdoldur('Filoloji'); 
-                     EgitimCdoldur('Filoloji'); 
-                  
-          
-             }
-            
-        </script> 
-    } 
+        </script>
+        <script>
+            if(jsEntity!=null){
+                    UluslarArasiAdoldur('Filoloji');
+                    UluslarArasiBdoldur('Filoloji');
+                    UluslarArasiCdoldur('Filoloji');
+                    UlusalAdoldur('Filoloji');
+                    UlusalBdoldur('Filoloji');
+                    YayinAdoldur('Filoloji');
+                    YayinBdoldur('Filoloji');
+                    YayinCdoldur('Filoloji');
+                    YayinDdoldur('Filoloji');
+                    YayinEdoldur('Filoloji');
+                    YayinFdoldur('Filoloji');
+                    YayinGdoldur('Filoloji');
+                    KitapAdoldur('Filoloji');
+                    KitapBdoldur('Filoloji');
+                    KitapCdoldur('Filoloji');
+                    KitapDdoldur('Filoloji');
+                    AtiflarAdoldur('Filoloji');
+                    AtiflarBdoldur('Filoloji');
+                    AtiflarCdoldur('Filoloji');
+                    DanismanlikAdoldur('Filoloji');
+                    DanismanlikBdoldur('Filoloji');
+                    ArastirmaAdoldur('Filoloji');
+                    ArastirmaBdoldur('Filoloji');
+                    ArastirmaCdoldur('Filoloji');
+                    ArastirmaDdoldur('Filoloji');
+                    ToplantiAdoldur('Filoloji');
+                    ToplantiBdoldur('Filoloji');
+                    EgitimAdoldur('Filoloji');
+                    EgitimBdoldur('Filoloji');
+                    EgitimCdoldur('Filoloji');
+
+
+            }
+
+        </script>
+    }
 }

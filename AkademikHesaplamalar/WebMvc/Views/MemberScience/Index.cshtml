@@ -1,48 +1,50 @@
-﻿
-  @section Alt_Menu{
-    
-    <h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-   Doçentlik puan hesaplama </h1>
-   <partial name="~/Views/MemberScience/MemberPartial/MemberSelectbox.cshtml" />
-       
-   <div class="">
-       <h4 class="Calculation_information"> Siteyi kullanabilmek için Web sitesi ayarlarınızdan Java Script kullanımına açık olduğundan emin olunuz
-       </h4>
-       <br>
-     <h5 class="Calculation_information2 col-md-8">
-           Java Script Nasıl Aktif Edilir ? => 
-           <a class="text-warning" href="#capa"> Videolu Anlatım için tıklayınız. </a>
+﻿  @section Alt_Menu{
 
-       </h5>
-   </div>
+<h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    Doçentlik puan hesaplama
+</h1>
+<partial name="~/Views/MemberScience/MemberPartial/MemberSelectbox.cshtml" />
+
+<div class="">
+    <h4 class="Calculation_information">
+        Siteyi kullanabilmek için Web sitesi ayarlarınızdan Java Script kullanımına açık olduğundan emin olunuz
+    </h4>
+    <br>
+    <h5 class="Calculation_information2 col-md-8">
+        Java Script Nasıl Aktif Edilir ? =>
+        <a class="text-warning" href="#capa"> Videolu Anlatım için tıklayınız. </a>
+
+    </h5>
+</div>
   }
 
 <head>
- 
-<style>
-  #videoDiv{
-    border-style: solid;
-    @* border-width: 10px; *@
-    border-width: 20px;
-    border-radius: 10px;
-    border-color:gray;
-    @* background-color: red ; *@
-    margin-bottom:100px;
-    max-width:80%;
-  }
-  video {
-  max-width: 100%;
-  height: auto;
-}
-</style>
+
+    <style>
+        #videoDiv {
+            border-style: solid;
+            @* border-width: 10px; *@ border-width: 20px;
+            border-radius: 10px;
+            border-color: gray;
+            @* background-color: red ; *@ margin-bottom:100px;
+            max-width: 80%;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 
-<center><h1 id="capa">Java Script Nasıl Aktif Edilir ?</h1>
-  <div id="videoDiv" class="" >
-    <video  controls="controls"> 
+<center>
+    <h1 id="capa">Java Script Nasıl Aktif Edilir ?</h1>
+    <div id="videoDiv" class="">
+        <video controls="controls">
 
-  <source src="~/Video/JavaScriptMerve.mp4" type="video/mp4">
- </video>
- @* <iframe width="560" height="315" src="https://www.youtube.com/embed/jnNlE0ZTqEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> *@
-  </div></center>
+            <source src="~/Video/JavaScriptMerve.mp4" type="video/mp4">
+        </video>
+        @* <iframe width="560" height="315" src="https://www.youtube.com/embed/jnNlE0ZTqEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> *@
+    </div>
+</center>

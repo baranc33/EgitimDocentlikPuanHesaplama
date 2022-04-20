@@ -4,49 +4,45 @@
 <head>
 
     @section head{
-           <title>Doçentlik Puan Sonucu</title>
-        <meta name="keywords" content="Doçentlik Puan Hesaplama , Doçentlik Puan HesaplamaLAR">
-        <meta name="author" content="Doçentlik Puan Hesaplama ">
-        <meta name="description"
-              content="Doçentlik Puan Hesaplamalar, Doçentlik Puan Hesaplama " />
-}
+    <title>Doçentlik Puan Sonucu</title>
+    <meta name="keywords" content="Doçentlik Puan Hesaplama , Doçentlik Puan HesaplamaLAR">
+    <meta name="author" content="Doçentlik Puan Hesaplama ">
+    <meta name="description"
+          content="Doçentlik Puan Hesaplamalar, Doçentlik Puan Hesaplama " />
+    }
 
 
-          <meta name="description" content="doçentlik puan hesaplama" />
+    <meta name="description" content="doçentlik puan hesaplama" />
     <link href="~/css/hesap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-          <style>
-              .geridon:hover{
-                    color: white;
-              }
+    <style>
+        .geridon:hover {
+            color: white;
+        }
 
-          </style>
+    </style>
 </head>
 <div style="text-align: left; color:black;" class="container" id="ErrorMessage">
-    
-    @*<form asp-controller="Science" asp-action="Answer"  method="get">*@
-        @*<input type="hidden" value="@ViewBag.link" name="link"/>*@
-    <a asp-controller="MemberScience" asp-action="@ViewBag.link" onclick="disableButton()" id="backButton" class="btn btn-outline-primary  geridon"> <i class="fa-solid fa-rotate-left"></i> Bilgileri Düzenlemek için Geri Dön</a> 
-    @*<button onclick="disableButton()" id="backButton" class="btn btn-outline-secondary offset-8 geridon" style="text-align:right;font-size:20px"> <i class="fa-solid fa-rotate-left"></i> Bilgileri Düzenlemek için Geri Dön</button> *@
-    @*</form>*@
-    
+
+    <a asp-controller="MemberScience" asp-action="@ViewBag.link" onclick="disableButton()" id="backButton" class="btn btn-outline-primary  geridon"> <i class="fa-solid fa-rotate-left"></i> Bilgileri Düzenlemek için Geri Dön</a>
+
     @{
-        if (Model.Error==true )
+        if (Model.Error==true)
         {
-            
+
 
             <h1 style="text-align: center; margin-top:100px;color: rgb(230, 166, 47);"> Sağlanmayan Kriterler</h1>
             <center>
                 <hr style="width: 500px;" />
             </center>
 
-                if (Model.AsgariMessage != null)
-                {
-                    <p><i style="color:  rgb(230, 166, 47);" class="fa-solid fa-star"></i> @Model.AsgariMessage   / <span class="text-danger">  Doktara Sonra  Net Puanınız : @Model.NetToplamDoktoraSonrasi.ToString("0.##") </span> </p>
-                    <hr style="margin-left:20px;width:500px" />
-                }
+            if (Model.AsgariMessage != null)
+            {
+                <p><i style="color:  rgb(230, 166, 47);" class="fa-solid fa-star"></i> @Model.AsgariMessage   / <span class="text-danger">  Doktara Sonra  Net Puanınız : @Model.NetToplamDoktoraSonrasi.ToString("0.##") </span> </p>
+                <hr style="margin-left:20px;width:500px" />
+            }
             foreach (var val in Model.Bolumler)
             {
                 if (val.Error == true)
@@ -75,30 +71,32 @@
 
     @{
         for (int i = 0; i < Model.Colum; i++)
-        {string bgcolor="";
-        string color="";
-        if( Model.Bolumler[i].Error==true){
-            bgcolor="red";
-            color="white";
-        } 
+        {
+            string bgcolor = "";
+            string color = "";
+            if (Model.Bolumler[i].Error==true)
+            {
+                bgcolor="red";
+                color="white";
+            }
 
 
             <tr style="background-color: @bgcolor;color: @color;">
-                <td  >
-                 <p>
+                <td>
+                    <p>
                         @Model.Bolumler[i].BolumAdi
-                 </p>
+                    </p>
                 </td>
                 <td>
                     <p>
-                   @Model.Bolumler[i].HamDoktoraOncesi.ToString("0.##")
-                   </p>
+                        @Model.Bolumler[i].HamDoktoraOncesi.ToString("0.##")
+                    </p>
                 </td>
                 <td>
                     @Model.Bolumler[i].HamDoktoraSonrasi.ToString("0.##")
                 </td>
                 <td>
-                   @Model.Bolumler[i].NetPuan.ToString("0.##")
+                    @Model.Bolumler[i].NetPuan.ToString("0.##")
                 </td>
             </tr>
         }
@@ -121,10 +119,10 @@
 
 
 <script>
-    function disableButton(){
-        console.log('Disable');
-        let buttonn=document.getElementById("backButton").style.visibility = "hidden";
- // document.getElementById("backButton").disabled = true;
- //location.href = `/Science/${@ViewBag.link}`;
-    }
+       function disableButton(){
+           console.log('Disable');
+           let buttonn=document.getElementById("backButton").style.visibility = "hidden";
+    // document.getElementById("backButton").disabled = true;
+    //location.href = `/Science/${@ViewBag.link}`;
+       }
 </script>
