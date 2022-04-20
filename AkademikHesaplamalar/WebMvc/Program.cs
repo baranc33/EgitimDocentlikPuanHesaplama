@@ -104,18 +104,18 @@ app.UseXMLSitemap(builder.Environment.ContentRootPath);
 
 
 app.MapControllerRoute("MemberDocent", "Docentlik-Puan-Hesaplamalar", new { controller = "MemberScience", action = "Index" });
-app.MapControllerRoute("MemberEgitim", "Eðitim-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Egitim" });
-app.MapControllerRoute("MemberFen", "Fen-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Fen" });
-app.MapControllerRoute("MemberFiloloji", "Filoloji-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Filoloji" });
-app.MapControllerRoute("MemberGuzelsanatlar", "Guzelsanat-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "GuzelSanatlar" });
-app.MapControllerRoute("MemberHukuk", "Hukuk-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Hukuk" });
-app.MapControllerRoute("Memberilahiyat", "ilahiyat-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "ilahiyat" });
-app.MapControllerRoute("MemberMimarlik", "Mimarlýk-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Mimarlik" });
-app.MapControllerRoute("MemberMuhendis", "Mühendis-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Muhendis" });
-app.MapControllerRoute("MemberSaglik", "Saðlýk-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Saglik" });
-app.MapControllerRoute("MemberSosyalBeseri", "SosyalBeseri-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "SosyalBeseri" });
-app.MapControllerRoute("MemberZiraat", "Ziraat-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Ziraat" });
-app.MapControllerRoute("MemberSpor", "Spor-Doçentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Spor" });
+app.MapControllerRoute("MemberEgitim", "Egitim-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Egitim" });
+app.MapControllerRoute("MemberFen", "Fen-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Fen" });
+app.MapControllerRoute("MemberFiloloji", "Filoloji-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Filoloji" });
+app.MapControllerRoute("MemberGuzelsanatlar", "Guzelsanat-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "GuzelSanatlar" });
+app.MapControllerRoute("MemberHukuk", "Hukuk-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Hukuk" });
+app.MapControllerRoute("Memberilahiyat", "ilahiyat-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "ilahiyat" });
+app.MapControllerRoute("MemberMimarlik", "Mimarlýk-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Mimarlik" });
+app.MapControllerRoute("MemberMuhendis", "Mühendis-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Muhendis" });
+app.MapControllerRoute("MemberSaglik", "Saðlýk-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Saglik" });
+app.MapControllerRoute("MemberSosyalBeseri", "SosyalBeseri-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "SosyalBeseri" });
+app.MapControllerRoute("MemberZiraat", "Ziraat-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Ziraat" });
+app.MapControllerRoute("MemberSpor", "Spor-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Spor" });
 app.MapControllerRoute("MemberAkademik", "Akademik-hesaplamalar", new { controller = "MemberHome", action = "Index" });
 
 
@@ -128,18 +128,18 @@ app.MapControllerRoute("kayit", "Kayýt", new { controller = "Home", action = "Si
 
 
 app.MapControllerRoute("Docent", "Docentlik-Bilimleri-Puan-Hesaplama", new { controller = "Science", action = "Index" });
-app.MapControllerRoute("Egitim", "Eðitim-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Egitim" });
-app.MapControllerRoute("Fen", "Fen-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Fen" });
-app.MapControllerRoute("Filoloji", "Filoloji-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Filoloji" });
-app.MapControllerRoute("Guzelsanatlar", "Guzelsanat-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "GuzelSanatlar" });
-app.MapControllerRoute("Hukuk", "Hukuk-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Hukuk" });
-app.MapControllerRoute("ilahiyat", "ilahiyat-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "ilahiyat" });
-app.MapControllerRoute("Mimarlik", "Mimarlýk-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Mimarlik" });
-app.MapControllerRoute("Muhendis", "Mühendis-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Muhendis" });
-app.MapControllerRoute("Saglik", "Saðlýk-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Saglik" });
-app.MapControllerRoute("SosyalBeseri", "SosyalBeseri-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "SosyalBeseri" });
-app.MapControllerRoute("Ziraat", "Ziraat-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Ziraat" });
-app.MapControllerRoute("Spor", "Spor-Bilimleri-Doçentlik-Puan-Hesaplama", new { controller = "Science", action = "Spor" });
+app.MapControllerRoute("Egitim", "Egitim-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Egitim" });
+app.MapControllerRoute("Fen", "Fen-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Fen" });
+app.MapControllerRoute("Filoloji", "Filoloji-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Filoloji" });
+app.MapControllerRoute("Guzelsanatlar", "Guzelsanat-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "GuzelSanatlar" });
+app.MapControllerRoute("Hukuk", "Hukuk-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Hukuk" });
+app.MapControllerRoute("ilahiyat", "ilahiyat-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "ilahiyat" });
+app.MapControllerRoute("Mimarlik", "Mimarlik-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Mimarlik" });
+app.MapControllerRoute("Muhendis", "Muhendis-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Muhendis" });
+app.MapControllerRoute("Saglik", "Saglik-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Saglik" });
+app.MapControllerRoute("SosyalBeseri", "SosyalBeseri-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "SosyalBeseri" });
+app.MapControllerRoute("Ziraat", "Ziraat-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Ziraat" });
+app.MapControllerRoute("Spor", "Spor-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Spor" });
 app.MapControllerRoute("Akademik", "Akademik-hesaplama", new { controller = "Home", action = "Index" });
 
 

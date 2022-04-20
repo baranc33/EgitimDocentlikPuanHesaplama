@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="AspNetCore.SEOHelper" Version="1.0.1" />
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
     <PackageReference Include="Mapster" Version="7.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="6.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.4" />

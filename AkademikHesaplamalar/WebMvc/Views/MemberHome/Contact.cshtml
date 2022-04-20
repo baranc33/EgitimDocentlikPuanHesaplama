@@ -7,7 +7,7 @@
         <div class="col-lg-12 text-center text-lg-start">
             <h1 class="text-white mb-4 animated zoomIn">Geri Bildirim İçin Bizimle İletişime Geçiniz . . .</h1>
             <p class="text-white pb-3 animated zoomIn">
-                Şikayet , Öneri ve Fikirleriniz   bizim için değerldir.
+                Şikayet , Öneri ve Fikirleriniz bizim için değerldir.
             </p>
         </div>
         <div class="col-lg-6 text-center text-lg-start">
@@ -15,14 +15,13 @@
         </div>
     </div>
 </div>
-  }
+}
 
 @section head{
 <title>Hakkımızda</title>
 <meta name="keywords" content="Hakan Baran Çakır, Mersin üniversitesi">
 <meta name="author" content="Hakan Baran Çakır">
-<meta name="description"
-      content="Akademik Hesaplamalar iletişim, Akademik hesapla iletişim" />
+<meta name="description" content="Akademik Hesaplamalar iletişim, Akademik hesapla iletişim" />
 }
 
 
@@ -34,10 +33,7 @@
     <meta name="description" content="akademik hesaplama" />
 
     <style>
-        .Baslik {
-            font-family: 'Lobster Two', cursive;
-            font-weight: 700;
-        }
+     
 
         .btn {
             font-weight: 500;
@@ -45,10 +41,10 @@
             transition: .5s;
         }
 
-            .btn.btn-primary,
-            .btn.btn-secondary {
-                color: #FFFFFF;
-            }
+        .btn.btn-primary,
+        .btn.btn-secondary {
+            color: #FFFFFF;
+        }
 
         #alertDiv {
             width: 30%;
@@ -90,28 +86,32 @@
         <!-- Contact Start -->
         <div class="container-xxl py-5">
             <div class="container">
-                <div class="text-center wow fadeInUp " data-wow-delay="0.1s">
+                <div class="text-center   " data-wow-delay="0.1s">
                     <h1 class="mb-3 Baslik ">İletişim Formu</h1>
-                    <h5 class="mb-5 Baslik"><span class="text-warning text-uppercase">Görüşleriniz </span> bizim için değerlidir.</h5>
+                    <h5 class="mb-5 Baslik"><span class="text-warning text-uppercase">Görüşleriniz </span> bizim için
+                        değerlidir.</h5>
                 </div>
                 <div class="row g-4">
                     <!--Tepeler-->
                     <div class="col-12">
                         <div class="row gy-4">
                             <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                                <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                                    style="width: 75px; height: 75px;">
                                     <i class="fa fa-map-marker-alt fa-2x text-warning"></i>
                                 </div>
                                 <h6>@Model.Adres</h6>
                             </div>
                             <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                                <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                                    style="width: 75px; height: 75px;">
                                     <i class="fa fa-envelope-open fa-2x text-warning"></i>
                                 </div>
                                 <h6>@Model.MailAdres &#64;@Model.MailExtension</h6>
                             </div>
                             <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                                <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                                    style="width: 75px; height: 75px;">
                                     <i class="fa fa-phone-alt fa-2x text-warning"></i>
                                 </div>
                                 <h6>@Model.PhoneNumber </h6>
@@ -119,10 +119,11 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="col-md-6  " data-wow-delay="0.1s">
                         <p>
 
-                            <iframe src="@Model.AdresHtml" width="550" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="@Model.AdresHtml" width="550" height="380" style="border:0;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                         </p>
                     </div>
@@ -133,30 +134,36 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" name="FullName" class="form-control" id="name" placeholder="Adınız">
+                                            <input type="text" name="FullName" class="form-control" id="name"
+                                                placeholder="Adınız">
                                             <label>Adınız</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" name="MailAdres" class="form-control" id="email" placeholder="Mail Adresiniz">
+                                            <input type="email" name="MailAdres" class="form-control" id="email"
+                                                placeholder="Mail Adresiniz">
                                             <label for="email">Mail Adresiniz</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" name="Title" class="form-control" id="subject" placeholder="Subject">
+                                            <input type="text" name="Title" class="form-control" id="subject"
+                                                placeholder="Subject">
                                             <label for="subject">Konu Başlığı</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea name="Description" class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                            <textarea name="Description" class="form-control"
+                                                placeholder="Leave a message here" id="message"
+                                                style="height: 150px"></textarea>
                                             <label for="message">Mesajınız</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-warning text-white w-100 py-3" type="submit">Mesaj Gönder</button>
+                                        <button class="btn btn-warning text-white w-100 py-3" type="submit">Mesaj
+                                            Gönder</button>
                                     </div>
                                 </div>
                             </form>
@@ -173,13 +180,13 @@
     </div>
 
 
-<script>
-         const MyActive = () => {
+    <script>
+        const MyActive = () => {
             let link = document.querySelector('#contact');
             link.classList.add("active");
         }
         MyActive();
-</script>
+    </script>
 </body>
 
 </html>
