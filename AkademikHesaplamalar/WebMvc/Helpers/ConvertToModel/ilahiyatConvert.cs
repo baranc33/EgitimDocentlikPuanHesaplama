@@ -5,7 +5,7 @@ namespace WebMvc.Helpers.ConvertToModel
 {
     public class ilahiyatConvert
     {
-        static public ilahiyatEntity EgitimModelToEgitimEntity(ilahiyatDocentModel model)
+        static public ilahiyatEntity ilahiyatModelToilahiyetEntity(ilahiyatDocentModel model)
         {
 
             ilahiyatEntity entity = new();

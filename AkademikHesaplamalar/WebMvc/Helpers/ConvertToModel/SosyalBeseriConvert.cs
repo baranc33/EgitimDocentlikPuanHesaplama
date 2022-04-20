@@ -5,7 +5,7 @@ namespace WebMvc.Helpers.ConvertToModel
 {
     public class SosyalBeseriConvert
     {
-        static public SosyalEntity EgitimModelToEgitimEntity(SosyalBeseriDocentModel model)
+        static public SosyalEntity SosyalModelToSosyalEntity(SosyalBeseriDocentModel model)
         {
 
             SosyalEntity entity = new();

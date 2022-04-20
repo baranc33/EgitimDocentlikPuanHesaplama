@@ -305,22 +305,6 @@ namespace WebMvc.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         [Authorize]
         [HttpGet]
         public IActionResult ilahiyat()
@@ -342,12 +326,25 @@ namespace WebMvc.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult ilahiyat(ilahiyatDocentModel model)
+        public async Task<IActionResult> ilahiyat(ilahiyatDocentModel model)
         {
-            TempData["model"] = JsonSerializer.Serialize(ilahiyatConvert.EgitimModelToEgitimEntity(model));
+            TempData["model"] = JsonSerializer.Serialize(ilahiyatConvert.ilahiyatModelToilahiyetEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "MemberScience", new { link = "ilahiyat" });
+            MyUser user = CurrentUser;
+            ilahiyatEntity entity = _ilahiyatEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity == null)
+            {
+                entity = JsonSerializer.Deserialize<ilahiyatEntity>(TempData["model"].ToString());
+                await _ilahiyatEntityService.AddAsync(entity);
+            }
+            else
+            {
+                ilahiyatEntity Newentity = ilahiyatConvert.ilahiyatModelToilahiyetEntity(model).Adapt<ilahiyatEntity>();
+                await _ilahiyatEntityService.UpdateAsync(Newentity);
+            }
+            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
         }
 
 
@@ -371,12 +368,27 @@ namespace WebMvc.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult SosyalBeseri(SosyalBeseriDocentModel model)
+        public async Task<IActionResult> SosyalBeseri(SosyalBeseriDocentModel model)
         {
-            TempData["model"] = JsonSerializer.Serialize(SosyalBeseriConvert.EgitimModelToEgitimEntity(model));
+            TempData["model"] = JsonSerializer.Serialize(SosyalBeseriConvert.SosyalModelToSosyalEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "MemberScience", new { link = "SosyalBeseri" });
+            MyUser user = CurrentUser;
+            SosyalEntity entity = _sosyalEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+
+
+            if (entity == null)
+            {
+                entity = JsonSerializer.Deserialize<SosyalEntity>(TempData["model"].ToString());
+                await _sosyalEntityService.AddAsync(entity);
+            }
+            else
+            {
+                SosyalEntity Newentity = SosyalBeseriConvert.SosyalModelToSosyalEntity(model).Adapt<SosyalEntity>();
+                await _sosyalEntityService.UpdateAsync(Newentity);
+            }
+            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
         }
 
 
@@ -402,12 +414,27 @@ namespace WebMvc.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Spor(SporDocentModel model)
+        public async Task<IActionResult> Spor(SporDocentModel model)
         {
             TempData["model"] = JsonSerializer.Serialize(SporConvert.SporModelToSporEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "MemberScience", new { link = "Spor" });
+            MyUser user = CurrentUser;
+            SporEntity entity = _sporEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+
+
+            if (entity == null)
+            {
+                entity = JsonSerializer.Deserialize<SporEntity>(TempData["model"].ToString());
+                await _sporEntityService.AddAsync(entity);
+            }
+            else
+            {
+                SporEntity Newentity = SporConvert.SporModelToSporEntity(model).Adapt<SporEntity>();
+                await _sporEntityService.UpdateAsync(Newentity);
+            }
+            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
         }
 
 
@@ -433,12 +460,25 @@ namespace WebMvc.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Muhendis(MuhendislikDocentModel model)
+        public async Task<IActionResult> Muhendis(MuhendislikDocentModel model)
         {
             TempData["model"] = JsonSerializer.Serialize(MuhendislikConvert.MuhendislikModelToMuhendislikEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "MemberScience", new { link = "Muhendis" });
+            MyUser user = CurrentUser;
+            MuhendislikEntity entity = _muhendislikEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity == null)
+            {
+                entity = JsonSerializer.Deserialize<MuhendislikEntity>(TempData["model"].ToString());
+                await _muhendislikEntityService.AddAsync(entity);
+            }
+            else
+            {
+                MuhendislikEntity Newentity = MuhendislikConvert.MuhendislikModelToMuhendislikEntity(model).Adapt<MuhendislikEntity>();
+                await _muhendislikEntityService.UpdateAsync(Newentity);
+            }
+            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
         }
 
 
@@ -465,12 +505,25 @@ namespace WebMvc.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Ziraat(ZiraatDocentModel model)
+        public async Task<IActionResult> Ziraat(ZiraatDocentModel model)
         {
             TempData["model"] = JsonSerializer.Serialize(ZiraatConvert.ZiraatModelToZiraatEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "MemberScience", new { link = "Ziraat" });
+            MyUser user = CurrentUser;
+            ZiraatEntity entity = _ziraatEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity == null)
+            {
+                entity = JsonSerializer.Deserialize<ZiraatEntity>(TempData["model"].ToString());
+                await _ziraatEntityService.AddAsync(entity);
+            }
+            else
+            {
+                ZiraatEntity Newentity = ZiraatConvert.ZiraatModelToZiraatEntity(model).Adapt<ZiraatEntity>();
+                await _ziraatEntityService.UpdateAsync(Newentity);
+            }
+            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
         }
 
 
@@ -496,12 +549,25 @@ namespace WebMvc.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Mimarlik(MimarlikDocentModel model)
+        public async Task<IActionResult> Mimarlik(MimarlikDocentModel model)
         {
             TempData["model"] = JsonSerializer.Serialize(MimarlikConvert.MimarlikModelToMimarlikEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "MemberScience", new { link = "Mimarlik" });
+            MyUser user = CurrentUser;
+            MimarlikEntity entity = _mimarlikEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity == null)
+            {
+                entity = JsonSerializer.Deserialize<MimarlikEntity>(TempData["model"].ToString());
+                await _mimarlikEntityService.AddAsync(entity);
+            }
+            else
+            {
+                MimarlikEntity Newentity = MimarlikConvert.MimarlikModelToMimarlikEntity(model).Adapt<MimarlikEntity>();
+                await _mimarlikEntityService.UpdateAsync(Newentity);
+            }
+            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
         }
 
 
@@ -527,12 +593,25 @@ namespace WebMvc.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Saglik(SaglikDocentModel model)
+        public async Task<IActionResult> Saglik(SaglikDocentModel model)
         {
             TempData["model"] = JsonSerializer.Serialize(SaglikConvert.SaglikModelToSaglikEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
-            return RedirectToAction("Answer", "MemberScience", new { link = "Saglik" });
+            MyUser user = CurrentUser;
+            SaglikEntity entity = _saglikEntityService.WhereSingle(x => x.MyUserId==user.Id);
+
+            if (entity == null)
+            {
+                entity = JsonSerializer.Deserialize<SaglikEntity>(TempData["model"].ToString());
+                await _saglikEntityService.AddAsync(entity);
+            }
+            else
+            {
+                SaglikEntity Newentity = SaglikConvert.SaglikModelToSaglikEntity(model).Adapt<SaglikEntity>();
+                await _saglikEntityService.UpdateAsync(Newentity);
+            }
+            return RedirectToAction("Answer", "MemberScience", new { link = "Hukuk" });
         }
 
 

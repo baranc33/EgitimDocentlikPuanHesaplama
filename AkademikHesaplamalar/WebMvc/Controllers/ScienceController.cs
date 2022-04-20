@@ -91,7 +91,7 @@ namespace WebMvc.Controllers
         [HttpPost]
         public IActionResult ilahiyat(ilahiyatDocentModel model)
         {
-            TempData["model"] = JsonSerializer.Serialize(ilahiyatConvert.EgitimModelToEgitimEntity(model));
+            TempData["model"] = JsonSerializer.Serialize(ilahiyatConvert.ilahiyatModelToilahiyetEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             return RedirectToAction("Answer", "Science", new { link = "ilahiyat" });
@@ -109,7 +109,7 @@ namespace WebMvc.Controllers
         [HttpPost]
         public IActionResult SosyalBeseri(SosyalBeseriDocentModel model)
         {
-            TempData["model"] = JsonSerializer.Serialize(SosyalBeseriConvert.EgitimModelToEgitimEntity(model));
+            TempData["model"] = JsonSerializer.Serialize(SosyalBeseriConvert.SosyalModelToSosyalEntity(model));
             Messages message = model.Hesapla();
             TempData["message"] = JsonSerializer.Serialize(message);
             return RedirectToAction("Answer", "Science", new { link = "SosyalBeseri" });
