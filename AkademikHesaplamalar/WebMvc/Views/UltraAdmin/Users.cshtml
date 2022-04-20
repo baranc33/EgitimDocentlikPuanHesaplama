@@ -10,7 +10,8 @@
             <form asp-controller="UltraAdmin" asp-action="users" method="get">
 
                 <div class="offset-4 input-group">
-                    <pre style="font-weight: bold;margin-top:7px;font-size:17px">Mail veya Kullanıcı Adı ile Arama yapılabilir  :   </pre>
+                    <pre
+                        style="font-weight: bold;margin-top:7px;font-size:17px">Mail veya Kullanıcı Adı ile Arama yapılabilir  :   </pre>
                     <div class="form-outline">
                         <input type="search" name="search" id="form1" class="form-control" />
                     </div>
@@ -54,10 +55,19 @@
                 </td>
                 <td>
                     <a class="btn btn-success" asp-controller="UltraAdmin" asp-action="ResetUserPassword"
-               asp-route-id="@item.Id">şifre yenileme</a>
+                asp-route-id="@item.Id">şifre yenileme</a>
                 </td>
             </tr>
         }
 
     }
 </table>
+
+
+<script>
+    const myFunction = () => {
+        let link = document.querySelector('#Member');
+        link.classList.add("active");
+    }
+    myFunction();
+</script>

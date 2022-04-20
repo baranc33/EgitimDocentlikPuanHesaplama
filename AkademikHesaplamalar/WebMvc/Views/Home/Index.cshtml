@@ -1,12 +1,12 @@
-﻿  @section head{
+﻿@section head{
 <title>Akademik Hesaplama</title>
 <meta name="keywords" content="Doçentlik, Doçentlik Hesaplama, Akademik , Akademik hesaplama">
 <meta name="author" content="Akademik Hesaplamalar">
 <meta name="description"
-      content="Akademik Hesaplamalar ,doçentlik puan hesaplama  , teşfik hesaplama işlemleri yapabiliyoruz" />
+    content="Akademik Hesaplamalar ,doçentlik puan hesaplama  , teşfik hesaplama işlemleri yapabiliyoruz" />
 
 
-  }
+}
 
 
 @section Alt_Menu{
@@ -17,20 +17,24 @@
             <p class="text-white pb-3 animated zoomIn">
                 Bu site
                 <a style="color: yellow;"
-                   href="https://www.uak.gov.tr/Sayfalar/docentlik/basvuru-sartlari/2022/2022-mart-donemi-docentlik-basvuru-sartlari.aspx" target="_blank">www.uak.gov.tr</a> sitesi baz alarak 2022 yılı Mart dönemi güncel değerlendirmelere göre  hazırlanmıştır.
+                    href="https://www.uak.gov.tr/Sayfalar/docentlik/basvuru-sartlari/2022/2022-mart-donemi-docentlik-basvuru-sartlari.aspx"
+                    target="_blank">www.uak.gov.tr</a> sitesi baz alarak 2022 yılı Mart dönemi güncel değerlendirmelere
+                göre hazırlanmıştır.
             </p>
-            <a asp-action="Index" asp-controller="Science" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla >></a>
+            <a asp-action="Index" asp-controller="Science"
+                class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla
+                >></a>
         </div>
         <div class="col-lg-5 text-center text-lg-start offset-1">
             <h1 class="text-white  animated zoomIn">Akademik Teşvik Hesaplama </h1>
             <p class="text-white pb-3 animated zoomIn"> </p>
             <a asp-action="Index" asp-controller="Tesvik"
-               class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla>></a>
+                class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla>></a>
 
         </div>
     </div>
 </div>
-  }
+}
 
 
 
@@ -38,30 +42,37 @@
 <body onload="myFunction()">
 
 
-    <h3>Doçentlik Ve Teşfik hesaplamarınızı sitemizden rahatlıkla yapabilirsiniz eğer kişisel talepleriniz olursa iletişim kısmından bizimle iletişime geçinizi
-        
-    </h3>
-    <h3>kendi iletişim bilgilerini tam girmeyi unutmayın sizinle iletişime geçip isteğinizi daha hızlı hayata geçirebilirz.</h3>
+    <div class="container" style="margin-bottom: 200px;">
+        <h1 class="center text-primary">
+            Merhabalar Akademik Hesaplamalar Sitemize Hoş Geldin.
+        </h1>
+        <h3 class="text-primary">Sitemizde Aşşağıdaki Hesaplamaları yapabilirsiniz</h3>
+        <br>
+        <h5  class=" text-secondary">1-) Doçentlik Puan Hesaplama</h5>
+        <br>
+        <h5  class="text-secondary">2-) Akademik Teşfik Puan Hesaplama</h5>
+        <br>
+        <p class="text-info">
+            <b>
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+                Farklı Taleplerinizi bize iletişim Kısmından Belirtebilirsiniz
+                <br>
+                iletişim Bilgilerinizi eksiksiz girerseniz
+                Sizinle iletişime geçip eklenme sürecini birlikte hızlıca geliştirebiliriz.
+            </b>
+        </p>
+        <a style="color: red;text-decoration:none;" asp-controller="Home" asp-action="contact">İletişim Sayfası Git
+            >></a>
+
+
+    </div>
+
 
 
     <script>
         const myFunction = () => {
             let link = document.querySelector('#home');
-             link.classList.add("active");
+            link.classList.add("active");
         }
     </script>
 

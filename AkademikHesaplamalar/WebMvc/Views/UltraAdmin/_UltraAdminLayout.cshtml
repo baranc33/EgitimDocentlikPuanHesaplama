@@ -8,7 +8,7 @@
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" /> 
         <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link href="~/css/styleMember.css" rel="stylesheet">
+        <link href="~/css/styleAdmin.css" rel="stylesheet">
           <link rel="shortcut icon" href="~/img/mersin-universitesi-logo.png" type="image/x-icon">
           <meta name="description" content="akademik puan hesaplamalar" />
           <meta name="viewport" content="widh=device-width,initial-scale=1,maximum-scale=1">
@@ -25,10 +25,10 @@
                 </button> 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0" style="margin-right: 100px;">
-                        <a asp-controller="UltraAdmin" asp-action="Users" class="nav-item nav-link" id="home">Üyeler </a>
-                        <a asp-controller="UltraAdmin" asp-action="roles" class="nav-item nav-link" id="about">Roller</a>
-                        <a asp-controller="UltraAdmin" asp-action="AdminMember" class="nav-item nav-link" id="contact">Admin üyeler</a>
-                        <a asp-controller="UltraAdmin" asp-action="Contact" class="nav-item nav-link" id="contact">İletişim Bilgileri</a>
+                        <a asp-controller="UltraAdmin" asp-action="Users" class="nav-item nav-link" id="Member">Üyeler </a>
+                        <a asp-controller="UltraAdmin" asp-action="roles" class="nav-item nav-link" id="Role">Roller</a>
+                        <a asp-controller="UltraAdmin" asp-action="AdminMember" class="nav-item nav-link" id="AdminMember">Admin üyeler</a>
+                        <a asp-controller="UltraAdmin" asp-action="Contact" class="nav-item nav-link" id="AdminContact">İletişim Bilgileri</a>
                         <a asp-controller="Admin" asp-action="Index" class="nav-item nav-link" >Admin Panel</a>
                     </div>
 

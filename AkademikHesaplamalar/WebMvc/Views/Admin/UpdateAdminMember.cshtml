@@ -1,32 +1,33 @@
-﻿
-@model AdminMember
-<head>
-<style>
-#icerikUpdate{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
+﻿@model AdminMember
 
-#icerikUpdateImage{
-        background-repeat: round;
-        border-radius: 100vh;
-        width: 40vh;
-        height: 40vh;
-        border-color: #000000;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 4%;
-        border-style: solid;
-        border-width: 1vh;
-        margin-bottom: 2em;
-}
-#UpdateAdminAlert{
-width: 50%;
-margin-left: auto;
-margin-right: auto;
-}
-</style>
+<head>
+    <style>
+        #icerikUpdate {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #icerikUpdateImage {
+            background-repeat: round;
+            border-radius: 100vh;
+            width: 40vh;
+            height: 40vh;
+            border-color: #000000;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 4%;
+            border-style: solid;
+            border-width: 1vh;
+            margin-bottom: 2em;
+        }
+
+        #UpdateAdminAlert {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
 </head>
 
@@ -42,12 +43,12 @@ margin-right: auto;
 
     </div>
     <div class="col-md-12">
-        <form  asp-controller="Admin" asp-action="UpdateAdminMember" method="post" enctype="multipart/form-data">
+        <form asp-controller="Admin" asp-action="UpdateAdminMember" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <input type="hidden" asp-for="MyUserId" class="form-control" />
             <input type="hidden" asp-for="IdRow" class="form-control" />
-         
+
             <input type="hidden" asp-for="Id" />
 
             <div class="form-group">
@@ -89,18 +90,18 @@ margin-right: auto;
 
 
             <div class="form-group">
-                <label class="control-label"> Mail Adresi  &#64; karakteri sonrası </label>
+                <label class="control-label"> Mail Adresi &#64; karakteri sonrası </label>
                 <input asp-for="MailAdres" class="form-control" placeholder="" />
                 <span asp-validation-for="MailAdres" class="text-danger"></span>
             </div>
- 
+
             <div class="form-group">
-                <label class="control-label">Mail uzantısı  &#64; karakteri sonrası</label>
+                <label class="control-label">Mail uzantısı &#64; karakteri sonrası</label>
                 <input asp-for="MailExtension" class="form-control" placeholder="" />
                 <span asp-validation-for="MailExtension" class="text-danger"></span>
             </div>
-                   <div class="form-group">
-                <label class="control-label"> Resim Yükleyiniz  </label>
+            <div class="form-group">
+                <label class="control-label"> Resim Yükleyiniz </label>
                 <input asp-for="Image" class="form-control" placeholder="" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
@@ -116,3 +117,12 @@ margin-right: auto;
         </form>
     </div>
 </div>
+
+
+<script>
+    const myFunction = () => {
+        let link = document.querySelector('#Profil');
+        link.classList.add("active");
+    }
+    myFunction();
+</script>

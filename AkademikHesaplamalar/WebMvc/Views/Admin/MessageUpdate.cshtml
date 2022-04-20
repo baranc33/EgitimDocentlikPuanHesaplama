@@ -2,15 +2,15 @@
 
 <head>
     <style>
-        #MessageDivision{
+        #MessageDivision {
             margin-bottom: 200px;
             margin-left: auto;
             margin-right: auto;
         }
-       i{
-          color: gray;
-      }
 
+        i {
+            color: gray;
+        }
     </style>
 </head>
 
@@ -18,19 +18,28 @@
 
 <div class="container row" id="MessageDivision">
 
-<h3 class="col-md-6">Gönderen Ad : <i> @Model.FullName</i> </h3>
-<h3 class="col-md-6 mb-5">Gönderen Mail : <i>  @Model.MailAdres </i> </h3>
-<h4 class="text-center">Başlık  : <i style="margin-left:20px;">  @Model.Title </i> </h4>
-<h5>Mesaj :</h5>
-<br>
-<p>
-    @Model.Description
-</p>
+    <h3 class="col-md-6">Gönderen Ad : <i> @Model.FullName</i> </h3>
+    <h3 class="col-md-6 mb-5">Gönderen Mail : <i> @Model.MailAdres </i> </h3>
+    <h4 class="text-center">Başlık : <i style="margin-left:20px;"> @Model.Title </i> </h4>
+    <h5>Mesaj :</h5>
+    <br>
+    <p>
+        @Model.Description
+    </p>
 
-<br><br><br>
+    <br><br><br>
 
-   <a class="btn btn-danger" asp-controller="Admin" asp-action="MessageDelete"
-               asp-route-id="@Model.Id">Sil</a>
+    <a class="btn btn-danger" asp-controller="Admin" asp-action="MessageDelete" asp-route-id="@Model.Id">Sil</a>
 </div>
 
-    
+
+
+
+
+<script>
+    const myFunction = () => {
+        let link = document.querySelector('#Message');
+        link.classList.add("active");
+    }
+    myFunction();
+</script>

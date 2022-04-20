@@ -1,5 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
+
+@section Alt_Menu{
+<div class="container my-5  px-lg-5">
+    <div class="row g-5 ">
+        <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="text-white mb-4 animated zoomIn">Doçentlik Puan Hesaplama </h1>
+            <p class="text-white pb-3 animated zoomIn">
+                Bu site
+                <a style="color: yellow;"
+                   href="https://www.uak.gov.tr/Sayfalar/docentlik/basvuru-sartlari/2022/2022-mart-donemi-docentlik-basvuru-sartlari.aspx" target="_blank">www.uak.gov.tr</a> sitesi baz alarak 2022 yılı Mart dönemi güncel değerlendirmelere göre  hazırlanmıştır.
+            </p>
+            <a asp-action="Index" asp-controller="MemberScience" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla >></a>
+        </div>
+        <div class="col-lg-5 text-center text-lg-start offset-1">
+            <h1 class="text-white  animated zoomIn">Akademik Teşvik Hesaplama </h1>
+            <p class="text-white pb-3 animated zoomIn"> </p>
+            <a asp-action="Index" asp-controller="MemberTesvik"
+               class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla>></a>
+
+        </div>
+    </div>
+</div>
+  }
+<div class="container" style="margin-bottom: 200px;">
+    <h1 class="center text-info">
+        Merhabalar Akademik Hesaplamalar Sitemize Hoş Geldin.
+    </h1>
+    <h3 class="center text-info">Sitemizde Aşşağıdaki Hesaplamaları yapabilirsiniz</h3>
+    <br>
+    <h5>1-) Doçentlik Puan Hesaplama</h5>
+    <br>
+    <h5>2-) Akademik Teşfik Puan Hesaplama</h5>
+    <br>
+    <p class=" text-secondary">Farklı Taleplerinizi bize iletişim Kısmından Belirtebilirsiniz
+        <br>
+        iletişim Bilgilerinizi eksiksiz girerseniz
+        Sizinle iletişime geçip eklenme sürecini birlikte hızlıca geliştirebiliriz.
+    </p>
+    <a class="text-info" style="text-decoration:none;" asp-controller="MemberHome" asp-action="contact">İletişim Sayfası Git >></a>
+
+
+</div>
+
+
+<script>
+         const MyActive = () => {
+            let link = document.querySelector('#home');
+            link.classList.add("active");
+        }
+        MyActive();
+</script>

@@ -74,6 +74,7 @@ namespace WebMvc.Controllers
         }
 
 
+ 
         [Authorize(Roles = "UltraAdmin")]
         [HttpGet]
         public async Task<IActionResult> AdminMember()
@@ -183,10 +184,13 @@ namespace WebMvc.Controllers
             return RedirectToAction("Roles");
         }
 
+
+
+        // role Güncelleme
         [Authorize(Roles = "UltraAdmin")]
-        public IActionResult RoleUpdate(string id)
+        public IActionResult RoleUpdate(string Id)
         {
-            MyRole role = _roleManager.FindByIdAsync(id).Result;
+            MyRole role = _roleManager.FindByIdAsync(Id).Result;
 
             if (role != null)
             {
@@ -196,9 +200,6 @@ namespace WebMvc.Controllers
             return RedirectToAction("Roles");
         }
 
-
-
-        // role atama
         [Authorize(Roles = "UltraAdmin")]
         [HttpPost]
         public IActionResult RoleUpdate(RoleDto roleViewModel)
@@ -220,6 +221,10 @@ namespace WebMvc.Controllers
 
             return View(roleViewModel);
         }
+
+
+
+
 
         // role atama
         [Authorize(Roles = "UltraAdmin")]

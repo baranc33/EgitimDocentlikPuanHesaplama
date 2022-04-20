@@ -10,7 +10,8 @@
             <form asp-controller="Admin" asp-action="Message" method="get">
 
                 <div class="offset-4 input-group">
-                    <pre style="font-weight: bold;margin-top:7px;font-size:17px">Mail veya Kullanıcı Adı ile Arama yapılabilir  :   </pre>
+                    <pre
+                        style="font-weight: bold;margin-top:7px;font-size:17px">Mail veya Kullanıcı Adı ile Arama yapılabilir  :   </pre>
                     <div class="form-outline">
                         <input type="search" name="search" id="form1" class="form-control" />
                     </div>
@@ -50,15 +51,23 @@
                 <td>@item.Description</td>
                 <td>
                     <a class="btn btn-success" asp-controller="Admin" asp-action="MessageUpdate" asp-route-id="@item.Id">
-                     İncele 
+                        İncele
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-danger" asp-controller="Admin" asp-action="MessageDelete"
-               asp-route-id="@item.Id">Sil</a>
+                    <a class="btn btn-danger" asp-controller="Admin" asp-action="MessageDelete" asp-route-id="@item.Id">Sil</a>
                 </td>
             </tr>
         }
 
     }
 </table>
+
+
+<script>
+    const myFunction = () => {
+        let link = document.querySelector('#Message');
+        link.classList.add("active");
+    }
+    myFunction();
+</script>

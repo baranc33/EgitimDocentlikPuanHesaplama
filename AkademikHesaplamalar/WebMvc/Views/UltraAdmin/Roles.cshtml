@@ -24,8 +24,8 @@
                         <button class="btn btn-success" type="submit">sil</button>
                     </form>
                 </td>
-                <td><a class="btn btn-info text-white" asp-controller="UltraAdmin" asp-action="RoleUpdate"
-                    asp-route-id="@item.Id">Güncelle</a></td>
+                <td><a id="Roleupdate" class="btn btn-info text-white" asp-controller="UltraAdmin" 
+                    asp-action="RoleUpdate" asp-route-id="@item.Id">Güncelle</a></td>
             </tr>
 
         }
@@ -35,3 +35,10 @@
 
 
 </div>
+<script>
+    const myFunction = () => {
+        let link = document.querySelector('#Role');
+        link.classList.add("active");
+    }
+    myFunction();
+</script>
