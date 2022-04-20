@@ -1,6 +1,4 @@
-﻿
-
-@section Alt_Menu{
+﻿@section Alt_Menu{
 <div class="container my-5  px-lg-5">
     <div class="row g-5 ">
         <div class="col-lg-6 text-center text-lg-start">
@@ -8,9 +6,15 @@
             <p class="text-white pb-3 animated zoomIn">
                 Bu site
                 <a style="color: yellow;"
-                   href="https://www.uak.gov.tr/Sayfalar/docentlik/basvuru-sartlari/2022/2022-mart-donemi-docentlik-basvuru-sartlari.aspx" target="_blank">www.uak.gov.tr</a> sitesi baz alarak 2022 yılı Mart dönemi güncel değerlendirmelere göre  hazırlanmıştır.
+                   href="https://www.uak.gov.tr/Sayfalar/docentlik/basvuru-sartlari/2022/2022-mart-donemi-docentlik-basvuru-sartlari.aspx"
+                   target="_blank">www.uak.gov.tr</a> sitesi baz alarak 2022 yılı Mart dönemi güncel değerlendirmelere
+                göre hazırlanmıştır.
             </p>
-            <a asp-action="Index" asp-controller="MemberScience" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Hesaplamaya Başla >></a>
+            <a asp-action="Index" asp-controller="MemberScience"
+               class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+                Hesaplamaya Başla
+                >>
+            </a>
         </div>
         <div class="col-lg-5 text-center text-lg-start offset-1">
             <h1 class="text-white  animated zoomIn">Akademik Teşvik Hesaplama </h1>
@@ -21,7 +25,7 @@
         </div>
     </div>
 </div>
-  }
+}
 <div class="container" style="margin-bottom: 200px;">
     <h1 class="center text-info">
         Merhabalar Akademik Hesaplamalar Sitemize Hoş Geldin.
@@ -32,21 +36,25 @@
     <br>
     <h5>2-) Akademik Teşfik Puan Hesaplama</h5>
     <br>
-    <p class=" text-secondary">Farklı Taleplerinizi bize iletişim Kısmından Belirtebilirsiniz
+    <p class=" text-secondary">
+        Farklı Taleplerinizi bize iletişim Kısmından Belirtebilirsiniz
         <br>
         iletişim Bilgilerinizi eksiksiz girerseniz
         Sizinle iletişime geçip eklenme sürecini birlikte hızlıca geliştirebiliriz.
     </p>
-    <a class="text-info" style="text-decoration:none;" asp-controller="MemberHome" asp-action="contact">İletişim Sayfası Git >></a>
+    <a class="text-info" style="text-decoration:none;" asp-controller="MemberHome" asp-action="contact">
+        İletişim Sayfası
+        Git >>
+    </a>
 
+    <script>
+        const MyMemberActive = () => {
+            let link = document.querySelector('#home');
+            link.classList.add("active");
+        }
+        MyMemberActive();
+    </script>
 
 </div>
 
 
-<script>
-         const MyActive = () => {
-            let link = document.querySelector('#home');
-            link.classList.add("active");
-        }
-        MyActive();
-</script>
