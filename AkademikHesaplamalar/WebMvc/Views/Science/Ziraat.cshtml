@@ -1,43 +1,43 @@
-﻿
-  @section Alt_Menu{
-     <h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    Ziraat bilimleri doçentlik puan hesaplama </h1>  
-    <div class="col-md-6">
+﻿  @section Alt_Menu{
+<h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    Ziraat bilimleri doçentlik puan hesaplama
+</h1>
+<div class="col-md-6">
     <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
 </div>
 <div class="col-md-6 ">
-    <a asp-action="Index" asp-controller="Science" class="DocentlikPuanHesaplama display-6 text-white" style="text-decoration:none" > Doçentlik puan hesaplama </a>
+    <a asp-action="Index" asp-controller="Science" class="DocentlikPuanHesaplama display-6 text-white" style="text-decoration:none"> Doçentlik puan hesaplama </a>
 </div>
-   <div class="">
-       <h4 class="Calculation_information">
-Ziraat Orman ve Su Ürünleri temel alanında başvurulan doçentlik bilim alanı ile ilgili
-aşağıdaki çalışmalara verilen birim puanlar esas alınarak, adayın en az 100 puan karşılığı
-bilimsel etkinlikte bulunmuş olması ve en az 90 puan karşılığı çalışmanın doktora
-unvanının alınmasından sonra gerçekleştirilmiş olması gerekir. Her çalışma, Tablo 12’de
-sadece bir bölümde yazılarak puanlandırılır.
-       </h4>
-     <h5 class="Calculation_information2 col-md-8">
-Tek yazarlı makalelerde yazar tam puan alır. İki yazarlı makalelerde başlıca yazar tam
-puanın 0.8'ini, ikinci yazar 0.5'ini alır. Üç ve daha fazla yazarlı makalelerde ise, başlıca
-yazar toplam puanın yarısını alır, diğer yazarlar ise diğer yarısını eşit paylaşır. Başlıca
-yazarın belirtilmediği iki veya daha fazla yazarlı makalelerde toplam puan yazarlar
-arasında eşit olarak bölünür. Diğer yayınlarda (bildiri,kitap) ise toplam puan yazarlar
-arasında eşit olarak bölünür.
-       </h5>
-   </div>
+<div class="">
+    <h4 class="Calculation_information">
+        Ziraat Orman ve Su Ürünleri temel alanında başvurulan doçentlik bilim alanı ile ilgili
+        aşağıdaki çalışmalara verilen birim puanlar esas alınarak, adayın en az 100 puan karşılığı
+        bilimsel etkinlikte bulunmuş olması ve en az 90 puan karşılığı çalışmanın doktora
+        unvanının alınmasından sonra gerçekleştirilmiş olması gerekir. Her çalışma, Tablo 12’de
+        sadece bir bölümde yazılarak puanlandırılır.
+    </h4>
+    <h5 class="Calculation_information2 col-md-8">
+        Tek yazarlı makalelerde yazar tam puan alır. İki yazarlı makalelerde başlıca yazar tam
+        puanın 0.8'ini, ikinci yazar 0.5'ini alır. Üç ve daha fazla yazarlı makalelerde ise, başlıca
+        yazar toplam puanın yarısını alır, diğer yazarlar ise diğer yarısını eşit paylaşır. Başlıca
+        yazarın belirtilmediği iki veya daha fazla yazarlı makalelerde toplam puan yazarlar
+        arasında eşit olarak bölünür. Diğer yayınlarda (bildiri,kitap) ise toplam puan yazarlar
+        arasında eşit olarak bölünür.
+    </h5>
+</div>
   }
 
 
-  
+
 <head>
     @section head{
-        <title>Ziraat Orman ve Su Ürünleri bilimleri</title>
-        <meta name="keywords" content="Ziraat Doçentlik Hesaplama, Ziraat Doçentlik Puan Hesaplama">
-        <meta name="author" content="Ziraat Doçentlik Hesaplama">
-          <meta name="description" content="Ziraat Orman ve Su Ürünleri bilimleri doçentlik puan hesaplama" />
-}
+    <title>Ziraat Orman ve Su Ürünleri bilimleri</title>
+    <meta name="keywords" content="Ziraat Doçentlik Hesaplama, Ziraat Doçentlik Puan Hesaplama">
+    <meta name="author" content="Ziraat Doçentlik Hesaplama">
+    <meta name="description" content="Ziraat Orman ve Su Ürünleri bilimleri doçentlik puan hesaplama" />
+    }
     <link href="~/css/hesap.min.css" rel="stylesheet">
-   
+
     <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
 </head>
 
@@ -46,12 +46,17 @@ arasında eşit olarak bölünür.
     <section>
         <div class="Bir">
             <h2>1. Makaleler</h2>
-            <h5>Başvurulan bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş
-              olmak kaydıyla adayın yaptığı (editöre mektup, özet, derleme, teknik not ve kitap kritiği
-              hariç) tam araştırma makaleleri  </h5>
-            <h6> Bu maddenin a bendi kapsamında en az bir makalede başlıca yazar olmak kaydıyla en
-                az 40 puan almak zorunludur </h6>
-            <h6>Bu maddenin c bendi kapsamında en az 8 puan almak zorunludur.Yabancı uyruklu
+            <h5>
+                Başvurulan bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş
+                olmak kaydıyla adayın yaptığı (editöre mektup, özet, derleme, teknik not ve kitap kritiği
+                hariç) tam araştırma makaleleri
+            </h5>
+            <h6>
+                Bu maddenin a bendi kapsamında en az bir makalede başlıca yazar olmak kaydıyla en
+                az 40 puan almak zorunludur
+            </h6>
+            <h6>
+                Bu maddenin c bendi kapsamında en az 8 puan almak zorunludur.Yabancı uyruklu
                 adaylar ile yurtdışı doçentlik denkliği başvurusu yapan adaylar, ULAKBİM tarafından
                 taranan ulusal hakemli dergilerde yayımlanmış makale koşulunu sağlayamamaları
                 durumunda, bunun yerine aynı puanı a bendi kapsamında ilave olarak sağlayacaklardır.
@@ -64,21 +69,22 @@ arasında eşit olarak bölünür.
                 </label>
                 <button onclick="add('MakalelerAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('MakalelerAul')" type="button" class="btn btn-danger col-md-1 ms-4">
-                    -</button>
+                    -
+                </button>
                 <ul class="mt-3" id="MakalelerAul" type="none">
                     <li class="row d-none ">
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="MakalelerAdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1">Doktora Sonrası</option>
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
-                            <select  name="MakalelerAbasYazar[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                            <select name="MakalelerAbasYazar[]" class="form-select form-select-sm mb-3"
+                                    aria-label=".form-select-lg example">
                                 <option value="False">Başlıca Yazar Yok</option>
                                 <option value="True">Başlıca Yazar Var</option>
                             </select>
@@ -90,18 +96,18 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
                             <input type="number" class="form-control" value="1" name="MakalelerAmakalesayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="MakalelerAyazarsayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
 
                         <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="MakalelerAhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -114,21 +120,22 @@ arasında eşit olarak bölünür.
                 </label>
                 <button onclick="add('MakalelerBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('MakalelerBul')" type="button" class="btn btn-danger col-md-1 ms-4">
-                    -</button>
+                    -
+                </button>
                 <ul class="mt-3" id="MakalelerBul" type="none">
                     <li class="row d-none ">
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="MakalelerBdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1">Doktora Sonrası</option>
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
-                            <select  name="MakalelerBbasYazar[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                            <select name="MakalelerBbasYazar[]" class="form-select form-select-sm mb-3"
+                                    aria-label=".form-select-lg example">
                                 <option value="False">Başlıca Yazar Yok</option>
                                 <option value="True">Başlıca Yazar Var</option>
                             </select>
@@ -140,18 +147,18 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
                             <input type="number" class="form-control" value="1" name="MakalelerBmakalesayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="MakalelerByazarsayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
 
                         <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="MakalelerBhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -164,21 +171,22 @@ arasında eşit olarak bölünür.
                 </label>
                 <button onclick="add('MakalelerCul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('MakalelerCul')" type="button" class="btn btn-danger col-md-1 ms-4">
-                    -</button>
+                    -
+                </button>
                 <ul class="mt-3" id="MakalelerCul" type="none">
                     <li class="row d-none ">
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="MakalelerCdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1">Doktora Sonrası</option>
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
-                            <select  name="MakalelerCbasYazar[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                            <select name="MakalelerCbasYazar[]" class="form-select form-select-sm mb-3"
+                                    aria-label=".form-select-lg example">
                                 <option value="False">Başlıca Yazar Yok</option>
                                 <option value="True">Başlıca Yazar Var</option>
                             </select>
@@ -190,18 +198,18 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
                             <input type="number" class="form-control" value="1" name="MakalelerCmakalesayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="MakalelerCyazarsayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
 
                         <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="MakalelerChatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -227,15 +235,15 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="YayinAdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1">Doktora Sonrası</option>
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
-                            <select  name="YayinAbasYazar[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                            <select name="YayinAbasYazar[]" class="form-select form-select-sm mb-3"
+                                    aria-label=".form-select-lg example">
                                 <option value="False">Başlıca Yazar Yok</option>
                                 <option value="True">Başlıca Yazar Var</option>
                             </select>
@@ -247,18 +255,18 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
                             <input type="number" class="form-control" value="1" name="YayinAmakalesayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="YayinAyazarsayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
 
                         <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="YayinAhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -275,15 +283,15 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="YayinBdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1">Doktora Sonrası</option>
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-2 mt-4">
                             <label class="SelectLabel">Başlıca Yazar Seçiniz</label>
-                            <select  name="YayinBbasYazar[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                            <select name="YayinBbasYazar[]" class="form-select form-select-sm mb-3"
+                                    aria-label=".form-select-lg example">
                                 <option value="False">Başlıca Yazar Yok</option>
                                 <option value="True">Başlıca Yazar Var</option>
                             </select>
@@ -295,18 +303,18 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Makale Sayısı</label>
                             <input type="number" class="form-control" value="1" name="YayinBmakalesayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="YayinByazarsayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
 
                         <div class="mb-3 col-md-3">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="YayinBhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -322,7 +330,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="YayinCdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -335,19 +343,19 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="YayinCyazarsayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="YayinChatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
                 </ul>
                 <hr />
             </div>
- 
+
 
             <div class="row mt-5">
                 <label class="col-md-8">D) Ulusal sempozyumda/kongrede sunulmuş ve tam metni basılmış alanında bilime katkı sağlayan sözlü bildiri  ~ 3 Puan</label>
@@ -357,7 +365,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="YayinDdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -370,19 +378,19 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="YayinDyazarsayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="YayinDhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
                 </ul>
                 <hr />
             </div>
- 
+
 
         </div>
 
@@ -390,10 +398,10 @@ arasında eşit olarak bölünür.
         <div class="Uc">
             <h2>. Kitap </h2>
             <h5>
-               Adayın hazırladığı lisansüstü tezlerinden üretilmemiş ve başvurulan doçentlik bilim alanı ile ilgili olmak kaydıyla
+                Adayın hazırladığı lisansüstü tezlerinden üretilmemiş ve başvurulan doçentlik bilim alanı ile ilgili olmak kaydıyla
             </h5>
             <h6>
-                Bu madde kapsamında aynı kitaptaki bölümlerden en fazla ikisi dikkate alınır.  en fazla 20 puan alınabilir. 
+                Bu madde kapsamında aynı kitaptaki bölümlerden en fazla ikisi dikkate alınır.  en fazla 20 puan alınabilir.
             </h6>
             <hr>
 
@@ -405,7 +413,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="KitapAdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -418,12 +426,12 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="KitapAyazarsayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="KitapAhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -432,15 +440,17 @@ arasında eşit olarak bölünür.
             </div>
 
             <div class="row mt-5">
-                <label class="col-md-8">B) Uluslararası yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm
-                    yazarlığı ~ 10 Puan</label>
+                <label class="col-md-8">
+                    B) Uluslararası yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm
+                    yazarlığı ~ 10 Puan
+                </label>
                 <button onclick="add('KitapBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('KitapBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="KitapBul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="KitapBdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -449,17 +459,17 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-3">
                             <label>Editörlük Veya Bölüm Yazarlığı</label>
                             <input type="number" class="form-control" value="1" name="KitapBbolumSayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="KitapByazarsayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-4">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="KitapBhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -476,7 +486,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="KitapCdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -489,12 +499,12 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="KitapCyazarsayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="KitapChatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -504,15 +514,17 @@ arasında eşit olarak bölünür.
 
 
             <div class="row mt-5">
-                <label class="col-md-8">D) Ulusal yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm
-                    yazarlığı ~ 8 Puan</label>
+                <label class="col-md-8">
+                    D) Ulusal yayınevleri tarafından yayımlanmış kitap editörlüğü veya bölüm
+                    yazarlığı ~ 8 Puan
+                </label>
                 <button onclick="add('KitapDul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('KitapDul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="KitapDul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="KitapDdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -521,17 +533,17 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-3">
                             <label>Editörlük Veya Bölüm Yazarlığı</label>
                             <input type="number" class="form-control" value="1" name="KitapDbolumSayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="KitapDyazarsayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-4">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="KitapDhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -541,7 +553,7 @@ arasında eşit olarak bölünür.
 
         </div>
 
-   
+
         <div class="Dort">
             <h2>4. Patent </h2>
             <h5>Başvurulan doçentlik bilim alanı ile ilgili olmak kaydıyla alınan </h5>
@@ -549,8 +561,10 @@ arasında eşit olarak bölünür.
             <hr>
 
             <div class="row mt-5">
-                <label class="col-md-8">A)  Uluslararası patent  ~ 20
-                    Puan</label>
+                <label class="col-md-8">
+                    A)  Uluslararası patent  ~ 20
+                    Puan
+                </label>
                 <button onclick="add('PatentAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('PatentAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="PatentAul" type="none">
@@ -558,27 +572,27 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-3 mt-4">
                             <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="PatentAdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1">Doktora Sonrası</option>
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
-               
+
                         <div class="mb-3 col-md-2">
                             <label>Patent Sayısı</label>
                             <input type="number" class="form-control" value="1" name="PatentAsayi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="PatentAyazarsayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
 
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="PatentAhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -586,8 +600,10 @@ arasında eşit olarak bölünür.
             </div>
 
             <div class="row mt-5">
-                <label class="col-md-8">B) Ulusal patent ~ 10
-                    Puan</label>
+                <label class="col-md-8">
+                    B) Ulusal patent ~ 10
+                    Puan
+                </label>
                 <button onclick="add('PatentBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('PatentBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="PatentBul" type="none">
@@ -595,27 +611,27 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-3 mt-4">
                             <label class="SelectLabel">Doktora Zamanı Seçiniz</label>
                             <select name="PatentBdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1">Doktora Sonrası</option>
                                 <option value="0">Doktora Öncesi</option>
                             </select>
                         </div>
-                  
+
                         <div class="mb-3 col-md-2">
                             <label>Patent Sayısı</label>
                             <input type="number" class="form-control" value="1" name="PatentBsayi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="PatentByazarsayisi[]"
-                                min="0" required>
+                                   min="0" required>
                         </div>
 
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="PatentBhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -631,16 +647,17 @@ arasında eşit olarak bölünür.
         <div class="Bes">
             <h2>5. Atıflar</h2>
             <h5> </h5>
-            <h6> Bu madde kapsamında en az 4 puan alınması zorunludur.Bu madde kapsamında en fazla 20 puan alınabilir.
+            <h6>
+                Bu madde kapsamında en az 4 puan alınması zorunludur.Bu madde kapsamında en fazla 20 puan alınabilir.
             </h6>
             <hr>
 
             <div class="row mt-5">
                 <label class="col-md-8">
                     A) SCI, SCI-Expanded, SSCI ve AHCI tarafından taranan dergilerde;
-                        Uluslararası yayınevleri tarafından yayımlanmış kitaplarda yayımlanan ve
-                        adayın yazar olarak yer almadığı yayınlardan her birinde, metin içindeki
-                        atıf sayısına bakılmaksızın adayın atıf yapılan her eseri için ~ 3
+                    Uluslararası yayınevleri tarafından yayımlanmış kitaplarda yayımlanan ve
+                    adayın yazar olarak yer almadığı yayınlardan her birinde, metin içindeki
+                    atıf sayısına bakılmaksızın adayın atıf yapılan her eseri için ~ 3
                 </label>
                 <button onclick="add('AtiflarAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('AtiflarAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
@@ -648,7 +665,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="AtiflarAdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -662,7 +679,7 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="AtiflarAhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -673,10 +690,10 @@ arasında eşit olarak bölünür.
             <div class="row mt-5">
                 <label class="col-md-8">
                     B)   SCI, SCI-Expanded, SSCI ve AHCI dışındaki endeksler tarafından taranan
-                        dergilerde; Uluslararası yayınevleri tarafından yayımlanmış kitaplarda
-                        bölüm yazarı olarak yayımlanan ve adayın yazar olarak yer almadığı
-                        yayınlardan her birinde, metin içindeki atıf sayısına bakılmaksızın adayın
-                        atıf yapılan her eseri için ~ 2 Puan
+                    dergilerde; Uluslararası yayınevleri tarafından yayımlanmış kitaplarda
+                    bölüm yazarı olarak yayımlanan ve adayın yazar olarak yer almadığı
+                    yayınlardan her birinde, metin içindeki atıf sayısına bakılmaksızın adayın
+                    atıf yapılan her eseri için ~ 2 Puan
                 </label>
                 <button onclick="add('AtiflarBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('AtiflarBul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
@@ -684,7 +701,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="AtiflarBdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -698,7 +715,7 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="AtiflarBhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -709,9 +726,9 @@ arasında eşit olarak bölünür.
             <div class="row mt-5">
                 <label class="col-md-8">
                     C) Ulusal hakemli dergilerde; Ulusal yayınevleri tarafından yayımlanmış
-                        kitaplarda yayımlanan ve adayın yazar olarak yer almadığı yayınlardan her
-                        birinde, metin içindeki atıf sayısına bakılmaksızın adayın atıf yapılan her
-                        eseri için ~ 1 Puan
+                    kitaplarda yayımlanan ve adayın yazar olarak yer almadığı yayınlardan her
+                    birinde, metin içindeki atıf sayısına bakılmaksızın adayın atıf yapılan her
+                    eseri için ~ 1 Puan
                 </label>
                 <button onclick="add('AtiflarCul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('AtiflarCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
@@ -719,7 +736,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="AtiflarCdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -732,7 +749,7 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="AtiflarChatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -756,18 +773,19 @@ arasında eşit olarak bölünür.
                 <label class="col-md-8">A) Doktora tez danışmanlığı ~ 4 Puan</label>
                 <button onclick="add('DanismanlikAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('DanismanlikAul')" type="button" class="btn btn-danger col-md-1 ms-4">
-                    -</button>
+                    -
+                </button>
                 <ul class="mt-3" id="DanismanlikAul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="DanismanlikAdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1">Doktora Sonrası</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="DanismanlikAseviye[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="0" selected>Danışmanlık Seviyesi</option>
                                 <option value="0">Asıl Danışman</option>
                                 <option value="1">Eş Danışman</option>
@@ -776,13 +794,13 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Danışmanlık Sayısı</label>
                             <input type="number" class="form-control" value="1" name="DanismanlikAsayi[]" min="0"
-                                required>
+                                   required>
                         </div>
 
                         <div class="mb-3 col-md-4">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="DanismanlikAhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -794,18 +812,19 @@ arasında eşit olarak bölünür.
                 <label class="col-md-8">B) Yüksek lisans tez danışmanlığ ~ 2 Puan</label>
                 <button onclick="add('DanismanlikBul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('DanismanlikBul')" type="button" class="btn btn-danger col-md-1 ms-4">
-                    -</button>
+                    -
+                </button>
                 <ul class="mt-3" id="DanismanlikBul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="DanismanlikBdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1">Doktora Sonrası</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="DanismanlikBseviye[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="0" selected>Danışmanlık Seviyesi</option>
                                 <option value="0">Asıl Danışman</option>
                                 <option value="1">Eş Danışman</option>
@@ -814,13 +833,13 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Danışmanlık Sayısı</label>
                             <input type="number" class="form-control" value="1" name="DanismanlikBsayi[]" min="0"
-                                required>
+                                   required>
                         </div>
 
                         <div class="mb-3 col-md-4">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="DanismanlikBhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -850,7 +869,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ArastirmaAdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -859,13 +878,13 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Proje Sayısı</label>
                             <input type="number" class="form-control" value="1" name="ArastirmaAproje[]" min="0"
-                                required>
+                                   required>
                         </div>
 
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="ArastirmaAhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -884,7 +903,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ArastirmaBdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -893,13 +912,13 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Proje Sayısı</label>
                             <input type="number" class="form-control" value="1" name="ArastirmaBproje[]" min="0"
-                                required>
+                                   required>
                         </div>
 
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="ArastirmaBhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -919,7 +938,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ArastirmaCdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -928,12 +947,12 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Proje Sayısı</label>
                             <input type="number" class="form-control" value="1" name="ArastirmaCproje[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="ArastirmaChatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -951,7 +970,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ArastirmaDdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -960,12 +979,12 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Proje Sayısı</label>
                             <input type="number" class="form-control" value="1" name="ArastirmaDproje[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="ArastirmaDhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -979,22 +998,27 @@ arasında eşit olarak bölünür.
 
         <div class="Sekiz">
             <h2>8. Bilimsel Toplantı Faaliyeti </h2>
-            <h5> Başvurulan bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla
+            <h5>
+                Başvurulan bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla
             </h5>
-            <h6> Bu madde kapsamında en az 5 puan almak zorunludur, en fazla 10 puan alınabilir. Aynı toplantıda sunulan
-                en fazla bir bildiri puanlanır</h6>
+            <h6>
+                Bu madde kapsamında en az 5 puan almak zorunludur, en fazla 10 puan alınabilir. Aynı toplantıda sunulan
+                en fazla bir bildiri puanlanır
+            </h6>
             <hr>
 
             <div class="row mt-5">
-                <label class="col-md-8">A) Uluslararası bilimsel toplantılarda sunulan (poster hariç), tam metni veya
-                    özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış çalışmalar ~ 3 Puan</label>
+                <label class="col-md-8">
+                    A) Uluslararası bilimsel toplantılarda sunulan (poster hariç), tam metni veya
+                    özeti matbu veya elektronik olarak bildiri kitapçığında yayımlanmış çalışmalar ~ 3 Puan
+                </label>
                 <button onclick="add('ToplantiAul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('ToplantiAul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
                 <ul class="mt-3" id="ToplantiAul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ToplantiAdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -1007,12 +1031,12 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="ToplantiAyazarsayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="ToplantiAhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -1031,7 +1055,7 @@ arasında eşit olarak bölünür.
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="ToplantiBdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -1044,12 +1068,12 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-2">
                             <label>Yazar Sayısı</label>
                             <input type="number" class="form-control" value="1" name="ToplantiByazarsayisi[]" min="0"
-                                required>
+                                   required>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="ToplantiBhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -1071,15 +1095,18 @@ arasında eşit olarak bölünür.
 
             <div class="row mt-5">
                 <label class="col-md-8">A ) Bir dönem yüksek lisans veya doktora dersi ~ 3 Puan</label>
-                <button id="addButton1" onclick="add('EgitimAul')" type="button" class="btn btn-primary col-md-1">+
+                <button id="addButton1" onclick="add('EgitimAul')" type="button" class="btn btn-primary col-md-1">
+                    +
                 </button>
                 <button id="removeButton1" onclick="remove('EgitimAul')" type="button"
-                    class="btn btn-danger col-md-1 ms-4"> -</button>
+                        class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
                 <ul class="mt-3" id="EgitimAul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="EgitimAdoktora[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -1093,7 +1120,7 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="EgitimAhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -1104,15 +1131,18 @@ arasında eşit olarak bölünür.
 
             <div class="row mt-5">
                 <label class="col-md-8">B) Bir dönem önlisans veya lisans dersi ~ 2 Puan</label>
-                <button id="addButton2" onclick="add('EgitimBul')" type="button" class="btn btn-primary col-md-1">+
+                <button id="addButton2" onclick="add('EgitimBul')" type="button" class="btn btn-primary col-md-1">
+                    +
                 </button>
                 <button id="removeButton2" onclick="remove('EgitimBul')" type="button"
-                    class="btn btn-danger col-md-1 ms-4"> -</button>
+                        class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
                 <ul class="mt-3" id="EgitimBul" type="none">
                     <li class="row d-none">
                         <div class="mb-3 col-md-3 mt-4">
                             <select name="EgitimBdoktora[]" class="form-select form-select-sm"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="1" selected>Doktora Zamanı Seçiniz</option>
                                 <option value="0">Doktora Öncesi</option>
                                 <option value="1">Doktora Sonrası</option>
@@ -1126,7 +1156,7 @@ arasında eşit olarak bölünür.
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="EgitimBhatirlatici[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
 
@@ -1135,10 +1165,11 @@ arasında eşit olarak bölünür.
             </div>
 
             <div class="form-check m-4">
-                <center> <strong>Bu Maddeyi işaretlediğinizde 9. Madde B bendi bilgileriniz silinecektir. </strong>
+                <center>
+                    <strong>Bu Maddeyi işaretlediğinizde 9. Madde B bendi bilgileriniz silinecektir. </strong>
                 </center>
                 <input class="form-check-input" id="checkBox" onchange="cheked('#EgitimBul','#EgitimAul')"
-                    type="checkbox" name="Gorev2yil" value="true">
+                       type="checkbox" name="Gorev2yil" value="true">
                 <p>
                     Yurtiçi veya YÖK tarafından tanınan yurtdışı yükseköğretim kurumlarında en
                     az 2 yıl öğretim elemanı olarak görev Yaptıysanız işaretleyin
@@ -1149,7 +1180,8 @@ arasında eşit olarak bölünür.
 
         <div class="container row">
             <button type="reset" onclick="Reset()" class="btn btn-danger col-md-3 offset-3" id="SubmitButton">
-                Temizle</button>
+                Temizle
+            </button>
             <button type="submit" class="btn btn-primary col-md-3 offset-1" id="SubmitButton"> Hesapla</button>
         </div>
 
@@ -1202,7 +1234,7 @@ arasında eşit olarak bölünür.
                 PatentAyazarsayisi: "@entity.PatentAyazarsayisi",
                 PatentAhatirlatici: "@entity.PatentAhatirlatici",
                 PatentACount: "@entity.PatentACount",
-              
+
 
 
                 PatentBdoktora: "@entity.PatentBdoktora",
@@ -1210,7 +1242,7 @@ arasında eşit olarak bölünür.
                 PatentByazarsayisi: "@entity.PatentByazarsayisi",
                 PatentBhatirlatici: "@entity.PatentBhatirlatici",
                 PatentBCount: "@entity.PatentBCount",
-           
+
 
 
                 YayinAdoktora: "@entity.YayinAdoktora",
@@ -1351,9 +1383,9 @@ arasında eşit olarak bölünür.
             if (jsEntity != null) {
                  MakalelerAdoldur('Ziraat');
                 MakalelerBdoldur('Ziraat');
-                MakalelerCdoldur('Ziraat'); 
-                
-          
+                MakalelerCdoldur('Ziraat');
+
+
                 YayinAdoldur2('Ziraat');
                 YayinBdoldur2('Ziraat');
                 YayinCdoldur2('Ziraat');

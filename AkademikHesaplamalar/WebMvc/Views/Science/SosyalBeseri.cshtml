@@ -1,52 +1,52 @@
-﻿
-  @section Alt_Menu{
-      <h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    Sosyal beşeri bilimleri doçentlik puan hesaplama </h1> 
-    
-    <div class="col-md-6">
+﻿  @section Alt_Menu{
+<h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+    Sosyal beşeri bilimleri doçentlik puan hesaplama
+</h1>
+
+<div class="col-md-6">
     <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
 </div>
 <div class="col-md-6 ">
-    <a asp-action="Index" asp-controller="Science" class="DocentlikPuanHesaplama display-6 text-white" style="text-decoration:none" > Doçentlik puan hesaplama </a>
+    <a asp-action="Index" asp-controller="Science" class="DocentlikPuanHesaplama display-6 text-white" style="text-decoration:none"> Doçentlik puan hesaplama </a>
 </div>
-   
-   <div class="">
-       <h4 class="Calculation_information">
-            Sosyal, beşeri ve idari bilimler temel alanında başvurulan doçentlik bilim alanı ile ilgili
-            olarak aşağıdaki çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan
-            (90) puanının doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde
-            edilmiş olması kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş olması
-            gerekir. Her çalışma Tablo 11' de sadece bir bölümde yazılarak puanlandırılır.
 
-       </h4>
-     <h5 class="Calculation_information2 col-md-8">
-          Tek yazarlı yayınlarda (makale, kitap, bildiri) yazar tam puan alır. Çok yazarlı yayınlarda
-          puan yazarlar arasında eşit olarak bölünür.
-       </h5>
-   </div>
+<div class="">
+    <h4 class="Calculation_information">
+        Sosyal, beşeri ve idari bilimler temel alanında başvurulan doçentlik bilim alanı ile ilgili
+        olarak aşağıdaki çalışmalara verilen birim puanlar esas alınmak suretiyle; en az doksan
+        (90) puanının doktora unvanının alınmasından sonra gerçekleştirilen çalışmalardan elde
+        edilmiş olması kaydıyla, asgari yüz (100) puan karşılığı bilimsel etkinlikte bulunmuş olması
+        gerekir. Her çalışma Tablo 11' de sadece bir bölümde yazılarak puanlandırılır.
+
+    </h4>
+    <h5 class="Calculation_information2 col-md-8">
+        Tek yazarlı yayınlarda (makale, kitap, bildiri) yazar tam puan alır. Çok yazarlı yayınlarda
+        puan yazarlar arasında eşit olarak bölünür.
+    </h5>
+</div>
   }
 
 
-  <head>
-      @section head{
-          <title>Sosyal, Beşeri ve İdari bilimleri</title>
-        <meta name="keywords" content="Sosyal, Beşeri ve İdari bilimleri Doçentlik Hesaplama, Sosyal, Beşeri ve İdari bilimleri Doçentlik Puan Hesaplama">
-        <meta name="author" content="Sosyal, Beşeri ve İdari bilimleri Doçentlik Hesaplama">
-          <meta name="description" content="Sosyal, Beşeri ve İdari bilimleri doçentlik puan hesaplama" />
-}
+<head>
+    @section head{
+    <title>Sosyal, Beşeri ve İdari bilimleri</title>
+    <meta name="keywords" content="Sosyal, Beşeri ve İdari bilimleri Doçentlik Hesaplama, Sosyal, Beşeri ve İdari bilimleri Doçentlik Puan Hesaplama">
+    <meta name="author" content="Sosyal, Beşeri ve İdari bilimleri Doçentlik Hesaplama">
+    <meta name="description" content="Sosyal, Beşeri ve İdari bilimleri doçentlik puan hesaplama" />
+    }
     <link href="~/css/hesap.min.css" rel="stylesheet">
-   
+
     <script src="https://kit.fontawesome.com/7a99baf54e.js" crossorigin="anonymous"></script>
 
-</head> 
- 
+</head>
+
  @* <form onsubmit="egitimSave()" asp-controller="Science" asp-action="Filoloji" method="post">  *@
- <form  asp-controller="Science" asp-action="SosyalBeseri" method="post"> 
-        <a href="#SubmitButton" id="hesapla"  > <i class="fa-regular fa-circle-down"></i>   </a>
+<form asp-controller="Science" asp-action="SosyalBeseri" method="post">
+    <a href="#SubmitButton" id="hesapla"> <i class="fa-regular fa-circle-down"></i>   </a>
 
 
     @* <section class="Egitim"> *@
-    <section >
+    <section>
         <div class="Bir">
             <h2>1. Uluslararası Makale</h2>
             <h5>Başvurulan doçentlik bilim alanı ile ilgili ve adayın hazırladığı lisansüstü tezlerden üretilmemiş olmak kaydıyla </h5>
@@ -124,7 +124,7 @@
             <div class="row mt-5">
                 <label class="col-md-8">
                     C)  Bu maddenin a veya b bendi kapsamındaki yayınlarda ilgili alanda bilime
-                        katkı sağlayan kitap kritiği yapılmış makale ~ 5 Puan
+                    katkı sağlayan kitap kritiği yapılmış makale ~ 5 Puan
                 </label>
                 <button onclick="add('UluslarArasiCul')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('UluslarArasiCul')" type="button" class="btn btn-danger col-md-1 ms-4"> -</button>
@@ -196,11 +196,11 @@
             <h2>2. Ulusal Makale </h2>
             <h5>Başvurulan doçentlik bilim alanı ile ilgili ve adayın yaptığı lisansüstü tezlerden üretilmemiş olmak kaydıyla</h5>
             <h6>
-                    İkisi bu maddenin a bendi kapsamında olmak üzere en az üç yayın yapmak zorunludur.
-                    Yabancı uyruklu adaylar ile yurtdışı doçentlik denkliği başvurusu yapan adaylar, ULAKBİM
-                    tarafından taranan ulusal hakemli dergilerde yayımlanmış makale koşulunu
-                    sağlayamamaları durumunda, bunun yerine aynı sayıdaki yayını 1. maddenin a veya b
-                    bentleri kapsamında sağlayacaklardır
+                İkisi bu maddenin a bendi kapsamında olmak üzere en az üç yayın yapmak zorunludur.
+                Yabancı uyruklu adaylar ile yurtdışı doçentlik denkliği başvurusu yapan adaylar, ULAKBİM
+                tarafından taranan ulusal hakemli dergilerde yayımlanmış makale koşulunu
+                sağlayamamaları durumunda, bunun yerine aynı sayıdaki yayını 1. maddenin a veya b
+                bentleri kapsamında sağlayacaklardır
             </h6>
             <hr>
 
@@ -1125,13 +1125,13 @@
 
 
 @{
-  if (ViewBag.OldData == true)
+    if (ViewBag.OldData == true)
     {
 
         SosyalEntity entity = JsonSerializer.Deserialize<SosyalEntity>(TempData["model"].ToString());
-     
-        
-          <script>
+
+
+        <script>
 
             let jsEntity={
                     UluslarArasiAdoktora :"@entity.UluslarArasiAdoktora",
@@ -1166,200 +1166,200 @@
                     UlusalAyazarsayisi:"@entity.UlusalAyazarsayisi",
                     UlusalAhatirlatici : "@entity.UlusalAhatirlatici",
                     UlusalACount : "@entity.UlusalACount",
-   
-                    
+
+
                     UlusalBdoktora :"@entity.UlusalBdoktora",
                     UlusalBmakalesayisi :"@entity.UlusalBmakalesayisi",
                     UlusalByazarsayisi:"@entity.UlusalByazarsayisi",
                     UlusalBhatirlatici : "@entity.UlusalBhatirlatici",
                     UlusalBCount : "@entity.UlusalBCount",
 
-          
+
                     YayinAdoktora : "@entity.YayinAdoktora",
                     YayinAkitap : "@entity.YayinAkitap",
                     YayinAyazarsayisi : "@entity.YayinAyazarsayisi",
                     YayinAhatirlatici : "@entity.YayinAhatirlatici",
-                    YayinACount : "@entity.YayinACount", 
+                    YayinACount : "@entity.YayinACount",
 
                     YayinBdoktora : "@entity.YayinBdoktora",
                     YayinBbolumSayisi : "@entity.YayinBbolumSayisi",
                     YayinByazarsayisi : "@entity.YayinByazarsayisi",
                     YayinBhatirlatici : "@entity.YayinBhatirlatici",
-                    YayinBCount : "@entity.YayinBCount", 
+                    YayinBCount : "@entity.YayinBCount",
 
                     YayinCdoktora : "@entity.YayinCdoktora",
                     YayinCkitap : "@entity.YayinCkitap",
                     YayinCyazarsayisi : "@entity.YayinCyazarsayisi",
                     YayinChatirlatici : "@entity.YayinChatirlatici",
-                    YayinCCount : "@entity.YayinCCount", 
+                    YayinCCount : "@entity.YayinCCount",
 
                     YayinDdoktora : "@entity.YayinDdoktora",
                     YayinDbolumSayisi : "@entity.YayinDbolumSayisi",
                     YayinDyazarsayisi: "@entity.YayinDyazarsayisi",
                     YayinDhatirlatici : "@entity.YayinDhatirlatici",
-                    YayinDCount : "@entity.YayinDCount", 
+                    YayinDCount : "@entity.YayinDCount",
 
                     YayinEdoktora : "@entity.YayinEdoktora",
                     YayinEmakalesayisi : "@entity.YayinEmakalesayisi",
                     YayinEyazarsayisi: "@entity.YayinEyazarsayisi",
                     YayinEhatirlatici : "@entity.YayinEhatirlatici",
-                    YayinECount : "@entity.YayinECount", 
+                    YayinECount : "@entity.YayinECount",
 
                     YayinFdoktora : "@entity.YayinFdoktora",
                     YayinFmakalesayisi : "@entity.YayinFmakalesayisi",
                     YayinFyazarsayisi: "@entity.YayinFyazarsayisi",
                     YayinFhatirlatici : "@entity.YayinFhatirlatici",
-                    YayinFCount : "@entity.YayinFCount", 
+                    YayinFCount : "@entity.YayinFCount",
 
                     YayinGdoktora : "@entity.YayinGdoktora",
                     YayinGmakalesayisi : "@entity.YayinGmakalesayisi",
                     YayinGyazarsayisi: "@entity.YayinGyazarsayisi",
                     YayinGhatirlatici : "@entity.YayinGhatirlatici",
-                    YayinGCount : "@entity.YayinGCount", 
+                    YayinGCount : "@entity.YayinGCount",
 
-                 
+
                     KitapAdoktora : "@entity.KitapAdoktora",
                     KitapAkitap : "@entity.KitapAkitap",
                     KitapAyazarsayisi: "@entity.KitapAyazarsayisi",
                     KitapAhatirlatici: "@entity.KitapAhatirlatici",
-                    KitapACount : "@entity.KitapACount", 
+                    KitapACount : "@entity.KitapACount",
 
                     KitapBdoktora : "@entity.KitapBdoktora",
                     KitapBbolumSayisi : "@entity.KitapBbolumSayisi",
                     KitapByazarsayisi: "@entity.KitapByazarsayisi",
                     KitapBhatirlatici : "@entity.KitapBhatirlatici",
-                    KitapBCount : "@entity.KitapBCount", 
+                    KitapBCount : "@entity.KitapBCount",
 
                     KitapCdoktora : "@entity.KitapCdoktora",
                     KitapCkitap : "@entity.KitapCkitap",
                     KitapCyazarsayisi: "@entity.KitapCyazarsayisi",
                     KitapChatirlatici : "@entity.KitapChatirlatici",
-                    KitapCCount : "@entity.KitapCCount", 
+                    KitapCCount : "@entity.KitapCCount",
 
                     KitapDdoktora : "@entity.KitapDdoktora",
                     KitapDbolumSayisi : "@entity.KitapDbolumSayisi",
                     KitapDyazarsayisi: "@entity.KitapDyazarsayisi",
                     KitapDhatirlatici : "@entity.KitapDhatirlatici",
-                    KitapDCount : "@entity.KitapDCount", 
-                
+                    KitapDCount : "@entity.KitapDCount",
+
 
                     AtiflarAdoktora : "@entity.AtiflarAdoktora",
                     AtiflarAatif : "@entity.AtiflarAatif",
                     AtiflarAhatirlatici : "@entity.AtiflarAhatirlatici",
-                    AtiflarACount : "@entity.AtiflarACount", 
+                    AtiflarACount : "@entity.AtiflarACount",
 
                     AtiflarBdoktora : "@entity.AtiflarBdoktora",
                     AtiflarBatif : "@entity.AtiflarBatif",
                     AtiflarBhatirlatici : "@entity.AtiflarBhatirlatici",
-                    AtiflarBCount : "@entity.AtiflarBCount", 
+                    AtiflarBCount : "@entity.AtiflarBCount",
 
                     AtiflarCdoktora : "@entity.AtiflarCdoktora",
                     AtiflarCatif : "@entity.AtiflarCatif",
                     AtiflarChatirlatici : "@entity.AtiflarChatirlatici",
-                    AtiflarCCount : "@entity.AtiflarCCount", 
-                
-                
+                    AtiflarCCount : "@entity.AtiflarCCount",
+
+
                     DanismanlikAdoktora : "@entity.DanismanlikAdoktora",
                     DanismanlikAseviye : "@entity.DanismanlikAseviye",
                     DanismanlikAsayi : "@entity.DanismanlikAsayi",
                     DanismanlikAhatirlatici : "@entity.DanismanlikAhatirlatici",
-                    DanismanlikACount : "@entity.DanismanlikACount", 
+                    DanismanlikACount : "@entity.DanismanlikACount",
 
 
                     DanismanlikBdoktora : "@entity.DanismanlikBdoktora",
                     DanismanlikBseviye : "@entity.DanismanlikBseviye",
                     DanismanlikBsayi : "@entity.DanismanlikBsayi",
                     DanismanlikBhatirlatici : "@entity.DanismanlikBhatirlatici",
-                    DanismanlikBCount : "@entity.DanismanlikBCount", 
+                    DanismanlikBCount : "@entity.DanismanlikBCount",
 
-             
+
                     ArastirmaAdoktora : "@entity.ArastirmaAdoktora",
                     ArastirmaAproje : "@entity.ArastirmaAproje",
                     ArastirmaAhatirlatici : "@entity.ArastirmaAhatirlatici",
-                    ArastirmaACount : "@entity.ArastirmaACount", 
+                    ArastirmaACount : "@entity.ArastirmaACount",
 
                     ArastirmaBdoktora : "@entity.ArastirmaBdoktora",
                     ArastirmaBproje : "@entity.ArastirmaBproje",
                     ArastirmaBhatirlatici : "@entity.ArastirmaBhatirlatici",
-                    ArastirmaBCount : "@entity.ArastirmaBCount", 
+                    ArastirmaBCount : "@entity.ArastirmaBCount",
 
                     ArastirmaCdoktora : "@entity.ArastirmaCdoktora",
                     ArastirmaCproje : "@entity.ArastirmaCproje",
                     ArastirmaChatirlatici : "@entity.ArastirmaChatirlatici",
-                    ArastirmaCCount : "@entity.ArastirmaCCount", 
+                    ArastirmaCCount : "@entity.ArastirmaCCount",
 
                     ArastirmaDdoktora : "@entity.ArastirmaDdoktora",
                     ArastirmaDproje : "@entity.ArastirmaDproje",
                     ArastirmaDhatirlatici : "@entity.ArastirmaDhatirlatici",
-                    ArastirmaDCount : "@entity.ArastirmaDCount", 
-                
-            
+                    ArastirmaDCount : "@entity.ArastirmaDCount",
+
+
                     ToplantiAdoktora : "@entity.ToplantiAdoktora",
                     ToplantiAsayi : "@entity.ToplantiAsayi",
                     ToplantiAyazarsayisi: "@entity.ToplantiAyazarsayisi",
                     ToplantiAhatirlatici : "@entity.ToplantiAhatirlatici",
-                    ToplantiACount : "@entity.ToplantiACount", 
+                    ToplantiACount : "@entity.ToplantiACount",
 
 
                     ToplantiBdoktora : "@entity.ToplantiBdoktora",
                     ToplantiBsayi : "@entity.ToplantiBsayi",
                     ToplantiByazarsayisi: "@entity.ToplantiByazarsayisi",
                     ToplantiBhatirlatici : "@entity.ToplantiBhatirlatici",
-                    ToplantiBCount : "@entity.ToplantiBCount", 
-                
+                    ToplantiBCount : "@entity.ToplantiBCount",
+
 
                     EgitimAdoktora : "@entity.EgitimAdoktora",
                     EgitimAders : "@entity.EgitimAders",
                     EgitimAhatirlatici : "@entity.EgitimAhatirlatici",
-                    EgitimACount : "@entity.EgitimACount", 
+                    EgitimACount : "@entity.EgitimACount",
 
                     EgitimBdoktora : "@entity.EgitimBdoktora",
                     EgitimBders : "@entity.EgitimBders",
                     EgitimBhatirlatici : "@entity.EgitimBhatirlatici",
-                    EgitimBCount : "@entity.EgitimBCount", 
-                    Gorev2yil : "@entity.Gorev2yil" 
-                
+                    EgitimBCount : "@entity.EgitimBCount",
+                    Gorev2yil : "@entity.Gorev2yil"
+
 
             };
             localStorage.setItem('Sosyal',JSON.stringify(jsEntity));
-        </script> 
-         <script>
-             if(jsEntity!=null){
-                     UluslarArasiAdoldur('Sosyal');
-                     UluslarArasiBdoldur('Sosyal');
-                     UluslarArasiCdoldur('Sosyal');
-                     UluslarArasiDdoldur('Sosyal');
-                     UlusalAdoldur('Sosyal');
-                     UlusalBdoldur('Sosyal');
-                     YayinAdoldur('Sosyal');
-                     YayinBdoldur('Sosyal');
-                     YayinCdoldur('Sosyal');
-                     YayinDdoldur('Sosyal');
-                     YayinEdoldur('Sosyal');
-                     YayinFdoldur('Sosyal');
-                     YayinGdoldur('Sosyal'); 
-                     KitapAdoldur('Sosyal'); 
-                     KitapBdoldur('Sosyal'); 
-                     KitapCdoldur('Sosyal'); 
-                     KitapDdoldur('Sosyal'); 
-                     AtiflarAdoldur('Sosyal'); 
-                     AtiflarBdoldur('Sosyal'); 
-                     AtiflarCdoldur('Sosyal'); 
-                     DanismanlikAdoldur('Sosyal'); 
-                     DanismanlikBdoldur('Sosyal'); 
-                     ArastirmaAdoldur('Sosyal'); 
-                     ArastirmaBdoldur('Sosyal'); 
-                     ArastirmaCdoldur('Sosyal'); 
-                     ArastirmaDdoldur('Sosyal'); 
-                     ToplantiAdoldur('Sosyal'); 
-                     ToplantiBdoldur('Sosyal'); 
-                     EgitimAdoldur('Sosyal'); 
-                     EgitimBdoldur('Sosyal'); 
-                     EgitimCdoldur('Sosyal'); 
-                  
-          
-             }
-            
-        </script> 
-    } 
+        </script>
+        <script>
+            if(jsEntity!=null){
+                    UluslarArasiAdoldur('Sosyal');
+                    UluslarArasiBdoldur('Sosyal');
+                    UluslarArasiCdoldur('Sosyal');
+                    UluslarArasiDdoldur('Sosyal');
+                    UlusalAdoldur('Sosyal');
+                    UlusalBdoldur('Sosyal');
+                    YayinAdoldur('Sosyal');
+                    YayinBdoldur('Sosyal');
+                    YayinCdoldur('Sosyal');
+                    YayinDdoldur('Sosyal');
+                    YayinEdoldur('Sosyal');
+                    YayinFdoldur('Sosyal');
+                    YayinGdoldur('Sosyal');
+                    KitapAdoldur('Sosyal');
+                    KitapBdoldur('Sosyal');
+                    KitapCdoldur('Sosyal');
+                    KitapDdoldur('Sosyal');
+                    AtiflarAdoldur('Sosyal');
+                    AtiflarBdoldur('Sosyal');
+                    AtiflarCdoldur('Sosyal');
+                    DanismanlikAdoldur('Sosyal');
+                    DanismanlikBdoldur('Sosyal');
+                    ArastirmaAdoldur('Sosyal');
+                    ArastirmaBdoldur('Sosyal');
+                    ArastirmaCdoldur('Sosyal');
+                    ArastirmaDdoldur('Sosyal');
+                    ToplantiAdoldur('Sosyal');
+                    ToplantiBdoldur('Sosyal');
+                    EgitimAdoldur('Sosyal');
+                    EgitimBdoldur('Sosyal');
+                    EgitimCdoldur('Sosyal');
+
+
+            }
+
+        </script>
+    }
 }

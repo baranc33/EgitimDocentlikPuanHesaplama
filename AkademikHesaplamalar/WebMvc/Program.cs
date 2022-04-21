@@ -118,7 +118,7 @@ app.MapControllerRoute("MemberSosyalBeseri", "SosyalBeseri-Docentlik-Puan-Hesapl
 app.MapControllerRoute("MemberZiraat", "Ziraat-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Ziraat" });
 app.MapControllerRoute("MemberSpor", "Spor-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Spor" });
 app.MapControllerRoute("MemberAkademik", "Akademik-hesaplamalar", new { controller = "MemberHome", action = "Index" });
-app.MapControllerRoute("Memberiletisim", "iletisim", new { controller = "MemberHome", action = "Contact" });
+app.MapControllerRoute("Memberiletisim", "Memberiletisim", new { controller = "MemberHome", action = "Contact" });
 
 
 
