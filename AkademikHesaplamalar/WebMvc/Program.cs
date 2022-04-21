@@ -103,7 +103,8 @@ app.UseAuthorization();// derste hoca bunu yazmiyor ama yazmayýnca hata veriyor
 app.UseXMLSitemap(builder.Environment.ContentRootPath);
 
 
-app.MapControllerRoute("MemberDocent", "Docentlik-Puan-Hesaplamalar", new { controller = "MemberScience", action = "Index" });
+app.MapControllerRoute("Membertesvik", "Akademik-Tesvik-Hesaplamalar", new { controller = "MemberScience", action = "TesvikHesaplama" });
+app.MapControllerRoute("MemberDocent", "Docentlik-Bilimleri-Puan-Hesaplamalar", new { controller = "MemberScience", action = "Index" });
 app.MapControllerRoute("MemberEgitim", "Egitim-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Egitim" });
 app.MapControllerRoute("MemberFen", "Fen-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Fen" });
 app.MapControllerRoute("MemberFiloloji", "Filoloji-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Filoloji" });
@@ -128,7 +129,8 @@ app.MapControllerRoute("Giris", "Giriþ", new { controller = "Home", action = "Lo
 app.MapControllerRoute("kayit", "Kayit", new { controller = "Home", action = "SignUp" });
 
 
-app.MapControllerRoute("Docent", "Docentlik-Bilimleri-Puan-Hesaplama", new { controller = "Science", action = "Index" });
+app.MapControllerRoute("Tesvik", "Akademik-Tesvik-Hesaplama", new { controller = "Tesvik", action = "TesvikHesaplama" });
+app.MapControllerRoute("Docent", "Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Index" });
 app.MapControllerRoute("Egitim", "Egitim-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Egitim" });
 app.MapControllerRoute("Fen", "Fen-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Fen" });
 app.MapControllerRoute("Filoloji", "Filoloji-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Filoloji" });
