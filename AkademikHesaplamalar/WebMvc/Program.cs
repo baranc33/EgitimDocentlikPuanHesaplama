@@ -125,10 +125,11 @@ app.MapControllerRoute("Memberiletisim", "iletisim", new { controller = "MemberH
 
 app.MapControllerRoute("hakkimizda", "Hakkimizda", new { controller = "Home", action = "About" });
 app.MapControllerRoute("iletisim", "iletisim", new { controller = "Home", action = "Contact" });
-app.MapControllerRoute("Giris", "Giriþ", new { controller = "Home", action = "Login" });
+app.MapControllerRoute("Giris", "Giris", new { controller = "Home", action = "Login" });
 app.MapControllerRoute("kayit", "Kayit", new { controller = "Home", action = "SignUp" });
 
 
+app.MapControllerRoute("TesvikMadde", "Tesvik-Hesaplama", new { controller = "Tesvik", action = "Index" });
 app.MapControllerRoute("Tesvik", "Akademik-Tesvik-Hesaplama", new { controller = "Tesvik", action = "TesvikHesaplama" });
 app.MapControllerRoute("Docent", "Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Index" });
 app.MapControllerRoute("Egitim", "Egitim-Bilimleri-Docentlik-Puan-Hesaplama", new { controller = "Science", action = "Egitim" });
