@@ -1,48 +1,128 @@
-﻿  @section Alt_Menu{
+﻿@section Alt_Menu{
 
-<h1 class="col-md-12 text-white display-3 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-     Tesvik Hesaplama 
+<h1 class="col-md-12 text-white display-3 text-center"
+  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+  Tesvik Hesaplama
 </h1>
-<h2 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-     Maddelerin
+<h2 class="col-md-12 text-white display-6 text-center"
+  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+  Maddelerin
 </h2>
 <div class="">
-    <h4 class="Calculation_information">
-        Bu sayfa Tasarım Aşamasında Tasarımın hızlandırmasını istiyorsanız iletişim kısmından bize bildiriniz
-    </h4>
-    <br>
-    <h5 class="Calculation_information2 col-md-8">
-    </h5>
+  <h4 class="Calculation_information">
+    Bu sayfa Tasarım Aşamasında Tasarımın hızlandırmasını istiyorsanız iletişim kısmından bize bildiriniz
+  </h4>
+  <br>
+  <h5 class="Calculation_information2 col-md-8">
+  </h5>
 </div>
-  }
-  <head>
-    <link href="~/css/tesvikmadde.css" rel="stylesheet">
+}
 
-  </head>
+<head>
+  <link href="~/css/tesvikmadde.css" rel="stylesheet">
+
+</head>
 
 <section class="container " style="margin-bottom: 200px;">
 
-<h2 class="text-center display-5 text-primary mb-5"> AKADEMİK TEŞVİK ÖDENEĞİ YÖNETMELİĞİ</h2>
-<div class="Madde1">
-  <h3 class="text-primary"><b>Amaç ve kapsam</b></h3>
-  <h5><b>Madde 1 -)</b> <span>Bu Yönetmeliğin amacı</span></h5>
-  <p class="text-secondary Maddetext" >
-   Yükseköğretim kurumları kadrolarında bulunan öğretim elemanlarına yapılacak  
-  akademik teşvik ödeneğinin uygulanmasına yönelik olarak, bilim alanlarının özellikleri ve 
-  öğretim elemanlarının unvanlarına göre akademik teşvik puanlarının hesaplanmasında esas alınacak 
-  faaliyetlerin  özellikleri ve puan karşılıkları, akademik teşvik toplam puanının %30’unu geçmemek
-  üzere her bir akademik faaliyet türünün toplam puanın hesaplanmasındaki ağırlıkları, akademik teşvik puanının hesaplanmasına 
-  ve bu hesaplamaları yapacak komisyonun oluşumu ile diğer hususları belirlemektir.
-  </p>
-</div>
-<div class="Madde2">
-  <h3 class="text-primary"><b>  Dayanak</b></h3>
-  <h5><b>Madde 2 -)</b> <span>Bu Yönetmelik</span></h5>
-  <p class="text-secondary Maddetext" >
-  11/10/1983 tarihli ve 2914 sayılı Yükseköğretim Personel Kanununun ek 4 üncü maddesine dayanılarak hazırlanmıştır.
-  </p>
-</div>
+  <h2 class="text-center display-5 text-primary mb-5"> AKADEMİK TEŞVİK ÖDENEĞİ YÖNETMELİĞİ</h2>
+  <div class="Madde1">
+    <h3 class="text-primary"><b>Amaç ve kapsam</b></h3>
+    <h5><b>Madde 1 -)</b> <span>Bu Yönetmeliğin amacı</span></h5>
+    <p class="text-secondary Maddetext">
+      Yükseköğretim kurumları kadrolarında bulunan öğretim elemanlarına yapılacak
+      akademik teşvik ödeneğinin uygulanmasına yönelik olarak, bilim alanlarının özellikleri ve
+      öğretim elemanlarının unvanlarına göre akademik teşvik puanlarının hesaplanmasında esas alınacak
+      faaliyetlerin özellikleri ve puan karşılıkları, akademik teşvik toplam puanının %30’unu geçmemek
+      üzere her bir akademik faaliyet türünün toplam puanın hesaplanmasındaki ağırlıkları, akademik teşvik puanının
+      hesaplanmasına
+      ve bu hesaplamaları yapacak komisyonun oluşumu ile diğer hususları belirlemektir.
+    </p>
+  </div>
+  <div class="Madde2">
+    <h3 class="text-primary"><b> Dayanak</b></h3>
+    <h5><b>Madde 2 -)</b> <span>Bu Yönetmelik</span></h5>
+    <p class="text-secondary Maddetext">
+      11/10/1983 tarihli ve 2914 sayılı Yükseköğretim Personel Kanununun ek 4 üncü maddesine dayanılarak hazırlanmıştır.
+    </p>
+  </div>
 
+  <div class="Madde3">
+    <h3 class="text-primary"><b> Tanımlar ve kısaltmalar</b></h3>
+    <h5><b>Madde 3 -)</b> <span>Bu Yönetmeliğin uygulanmasında</span></h5>
+    <p class="text-secondary Maddetext">
+      11/10/1983 tarihli ve 2914 sayılı Yükseköğretim Personel Kanununun ek 4 üncü maddesine dayanılarak hazırlanmıştır.
+    </p>
+    <div>
+    <a onclick="Maddeler()" id="Maddelerbtn" class="btn btn-primary mb-5" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Maddeleri Göster
+      </a>
+      <ol type="A" class="collapse" id="collapseExample">
+        <li>
+          <p>AHCI: Sanat ve Beşeri Bilimler Endeksi (Art and Humanities Index)’ni,</p>
+        </li>
+        <li>
+          <p>Alan endeksleri: Üniversitelerarası Kurul Başkanlığı tarafından hazırlanıp Yükseköğretim Kurulunca
+            onaylanan
+            doçentlik başvurusu için kabul edilen endeksleri</p>
+        </li>
+        <li>
+          <p>Atıf: Bir esere başka bir eserde alıntı yapılmasını</p>
+        </li>
+        <li>
+          <p>En yüksek Devlet memuru brüt aylığı: (9.500) [aylık gösterge rakamı (1.500) + ek gösterge rakamı (8.000)]
+            gösterge rakamının, memur aylık katsayısı ile çarpımı sonucu bulunan tutarı</p>
+        </li>
+        <li>
+          <p>
+            Faaliyet: Her bir takvim yılı için bir önceki yıl, bilim, teknoloji ve sanata katkı sağlayıcı nitelikte
+            yurtiçinde veya yurtdışında sonuçlandırılan proje, araştırma, yayın, tasarım, sergi, patent ile
+            çalışmalarına
+            yapılan atıfları, bilim kurulu bulunan uluslararası düzeydeki toplantılarda sunulan tebliğleri ve alınan
+            akademik ödülleri
+          </p>
+        </li>
+        <li>
+          <p> Komisyon: Akademik teşvik düzenleme, denetleme ve itiraz komisyonunu</p>
+        </li>
+        <li>
+          <p>
+            Ödül: Başvuru sahibinin, kendi alanı ile ilgili yapmış olduğu mesleki, bilimsel veya sanatsal faaliyetler
+            dolayısıyla almış olduğu ödülleri
+          </p>
+        </li>
+
+        <li>
+          <p></p>
+        </li>
+        <li>
+          <p></p>
+        </li>
+        <li>
+          <p></p>
+          </li>
+        <li>
+          <p></p>
+        </li>
+        <li>
+          <p>
+
+          </p>
+        </li>
+        <li>
+          <p>
+
+          </p>
+        </li>
+        <li>
+          <p>
+
+          </p>
+        </li>
+      </ol>
+    </div>
+
+  </div>
 
 
 
@@ -50,9 +130,20 @@
 </section>
 
 <script>
-       const MyActive = () => {
-        let link = document.querySelector('#science');
-        link.classList.add("active");
-      }
-    MyActive();
+  const Maddeler=()=>{
+  let a= document.getElementById('Maddelerbtn').innerHTML;
+  let b= a.includes("Göster");
+  if(b)
+  {
+    document.getElementById('Maddelerbtn').innerHTML="Maddeleri Gizle";
+  }
+  else{
+    document.getElementById('Maddelerbtn').innerHTML="Maddeleri Göster";
+  }
+  }
+  const MyActive = () => {
+    let link = document.querySelector('#science');
+    link.classList.add("active");
+  }
+  MyActive();
 </script>
