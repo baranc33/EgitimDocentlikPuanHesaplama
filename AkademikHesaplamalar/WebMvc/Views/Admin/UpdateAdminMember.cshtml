@@ -34,9 +34,9 @@
 <h2 class="text-center">Admin Bilgi Güncelleme Sayfası</h2>
 @if (ViewBag.success == true)
 {
-    <div class="alert alert-info text-center" id="UpdateAdminAlert">
-        <span>Bilgileriniz güncellenmiştir.</span>
-    </div>
+        <div class="alert alert-info text-center" id="UpdateAdminAlert">
+            <span>Bilgileriniz güncellenmiştir.</span>
+        </div>
 }
 <div class="row" id="icerikUpdate">
     <div id="icerikUpdateImage" style="background-image: url(/img/@Model.Image);">
@@ -100,10 +100,10 @@
                 <input asp-for="MailExtension" class="form-control" placeholder="" />
                 <span asp-validation-for="MailExtension" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label class="control-label"> Resim Yükleyiniz </label>
-                <input asp-for="Image" class="form-control" placeholder="" />
-                <span asp-validation-for="Image" class="text-danger"></span>
+                      <div class="form-group">
+                <label class="control-label"> Kişisel Web Siteniz</label>
+                <input asp-for="WebSiteUrl" class="form-control" placeholder="" />
+                <span asp-validation-for="WebSiteUrl" class="text-danger"></span>
             </div>
 
             <div class="form-group">

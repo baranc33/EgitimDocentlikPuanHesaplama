@@ -10,7 +10,7 @@ using Mapster;
 namespace WebMvc.Controllers
 {
 
- 
+
     public class MemberHomeController : BaseController
     {
         private readonly IMyContactService _myContactService;
@@ -38,11 +38,7 @@ namespace WebMvc.Controllers
 
 
 
-
-
-
-
-
+        [Authorize]
         public IActionResult About()
         {
             IQueryable<AdminMember> admin = _adminMemberService.Where(x => x.Id>=0).OrderBy(c => c.IdRow);
@@ -50,6 +46,7 @@ namespace WebMvc.Controllers
         }
 
 
+        [Authorize]
         public async Task<IActionResult> Contact()
         {
             IEnumerable<MyContact> list = await _myContactService.GetAllAsync();
@@ -57,6 +54,7 @@ namespace WebMvc.Controllers
         }
 
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Contact(MyMessageDto entity)
         {

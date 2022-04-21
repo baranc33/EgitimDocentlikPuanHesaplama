@@ -127,6 +127,7 @@ app.MapControllerRoute("hakkimizda", "Hakkimizda", new { controller = "Home", ac
 app.MapControllerRoute("iletisim", "iletisim", new { controller = "Home", action = "Contact" });
 app.MapControllerRoute("Giris", "Giris", new { controller = "Home", action = "Login" });
 app.MapControllerRoute("kayit", "Kayit", new { controller = "Home", action = "SignUp" });
+app.MapControllerRoute("sifreyenile", "sifre-yenile", new { controller = "Home", action = "ResetPassword" });
 
 
 app.MapControllerRoute("TesvikMadde", "Tesvik-Hesaplama", new { controller = "Tesvik", action = "Index" });
