@@ -1,8 +1,13 @@
 ﻿
   @section Alt_Menu{
     <h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    İlahiyat bilimleri doçentlik puan hesaplama </h1><partial name="~/Views/Science/Partial/Selectbox.cshtml" />
-  
+    İlahiyat bilimleri doçentlik puan hesaplama </h1>
+<div class="col-md-6">
+    <partial name="~/Views/Science/Partial/Selectbox.cshtml" />
+</div>
+<div class="col-md-6 ">
+    <a asp-action="Index" asp-controller="Science" class="DocentlikPuanHesaplama display-6 text-white" style="text-decoration:none" > Doçentlik puan hesaplama </a>
+</div>
    <div class="">
        <h4 class="Calculation_information">
           İlahiyat temel alanında başvurulan doçentlik bilim alanı ile ilgili olarak aşağıdaki
