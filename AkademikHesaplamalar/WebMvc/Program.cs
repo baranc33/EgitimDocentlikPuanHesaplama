@@ -117,14 +117,15 @@ app.MapControllerRoute("MemberSosyalBeseri", "SosyalBeseri-Docentlik-Puan-Hesapl
 app.MapControllerRoute("MemberZiraat", "Ziraat-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Ziraat" });
 app.MapControllerRoute("MemberSpor", "Spor-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Spor" });
 app.MapControllerRoute("MemberAkademik", "Akademik-hesaplamalar", new { controller = "MemberHome", action = "Index" });
+app.MapControllerRoute("Memberiletisim", "iletisim", new { controller = "MemberHome", action = "Contact" });
 
 
 
 
-app.MapControllerRoute("hakkimizda", "Hakkýmýzda", new { controller = "Home", action = "About" });
-app.MapControllerRoute("iletisim", "iletiþim", new { controller = "Home", action = "Contact" });
+app.MapControllerRoute("hakkimizda", "Hakkimizda", new { controller = "Home", action = "About" });
+app.MapControllerRoute("iletisim", "iletisim", new { controller = "Home", action = "Contact" });
 app.MapControllerRoute("Giris", "Giriþ", new { controller = "Home", action = "Login" });
-app.MapControllerRoute("kayit", "Kayýt", new { controller = "Home", action = "SignUp" });
+app.MapControllerRoute("kayit", "Kayit", new { controller = "Home", action = "SignUp" });
 
 
 app.MapControllerRoute("Docent", "Docentlik-Bilimleri-Puan-Hesaplama", new { controller = "Science", action = "Index" });
