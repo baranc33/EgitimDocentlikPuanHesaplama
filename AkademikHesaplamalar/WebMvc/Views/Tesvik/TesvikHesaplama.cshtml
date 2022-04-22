@@ -1,13 +1,13 @@
-﻿ @section head{
+﻿@section head{
 <title>Teşvik Hesaplama</title>
 <meta name="keywords" content="teşvik hesaplama,akademik teşvik hesaplama, akademik teşvik ödeneği, ">
 <meta name="author" content="Akademik Teşvik">
-<meta name="description"
-      content="Akademik Hesaplamalar ,Akademik Teşvik hesaplama  , teşvik hesaplama işlemleri" />
+<meta name="description" content="Akademik Hesaplamalar ,Akademik Teşvik hesaplama  , teşvik hesaplama işlemleri" />
 }
- @section Alt_Menu{
+@section Alt_Menu{
 
-<h1 class="col-md-12 text-white display-6 text-center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+<h1 class="col-md-12 text-white display-6 text-center"
+    style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
     Akademik Tesvik Hesaplama
 </h1>
 
@@ -20,22 +20,111 @@
         <p class="text-white pb-3 animated zoomIn">
             Bu site
             <a style="color: yellow;"
-               href=" https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=21&MevzuatNo=201811834&MevzuatTertip=5"
-               target="_blank">www.mevzuat.gov.tr</a> sitesi baz alarak 2022 yılında hazırlanmıştır
+                href=" https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=21&MevzuatNo=201811834&MevzuatTertip=5"
+                target="_blank">www.mevzuat.gov.tr</a> sitesi baz alarak 2022 yılında hazırlanmıştır
         </p>
         <a asp-action="Index" asp-controller="Tesvik"
-           class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
-            Maddeleri incele   >>
+            class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+            Maddeleri incele >>
         </a>
     </div>
 </div>
-  }
+}
+<section>
+
+    <form asp-controller="Tesvik" asp-action="TesvikHesaplama" method="post" class="container">
+
+        <div class="row">
+            <p class="text-center">Akademik teşvik ödemesi, en yüksek Devlet memuru brüt aylık tutarının
+                akademik teşvik puanının yüze bölünmesiyle bulunacak oranın uygulanması suretiyle hesaplanır.
+                En yüksek Devlet memuru brüt aylığı: (9.500) [aylık gösterge rakamı (1.500) + ek gösterge rakamı
+                (8.000)]
+            </p>
+            <p> </p>
+            <b>
+                [Tutar = en yüksek Devlet memuru brüt aylığı x akademik kadro unvanlarına göre
+                belirlenmiş olan oran x (akademik teşvik puanı/100)]
+            </b>
+            <div class="mb-3 col-md-5 mt-4">
+                <label class="SelectLabel">Alanınızı Seçiniz</label>
+                <select onchange="alanHesapla()" id="alan" name="alan" class="form-select form-select-sm mb-3"
+                    aria-label=".form-select-lg example">
+                    <option value="1">A1 Alanları: Eğitim Bilimleri, Fen Bilimleri ve Matematik, Mühendislik, Sağlık
+                        Bilimleri, Ziraat, Orman ve Su Ürünleri</option>
+                    <option value="2">A2 Alanları: Filoloji, Hukuk, İlahiyat, Sosyal, Beşeri ve İdari Bilimler, Spor
+                        Bilimleri</option>
+                    <option value="3">A3 Alanı: Mimarlık, Planlama ve Tasarım </option>
+                    <option value="4"> A4 Alanı: Güzel Sanatlar</option>
+                </select>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4 mt-3 mt-4">
+                <label class="SelectLabel">Ünvanınızı Seçiniz</label>
+                <select name="unvan" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                    <option value="100">Profesör % 100</option>
+                    <option value="90">Doçent % 90</option>
+                    <option value="80">Doktor öğretim üyesi % 80</option>
+                    <option value="70">Araştırma veya Öğretim Görevlisi % 70</option>
+                </select>
+            </div>
+        </div>
+        <div class="Bir container">
+            <h2>1. Proje (20 puan) </h2>
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                 1-) TÜBİTAK 1001, 1003, 1004, 1007, 1505, 2244,  3501, SAYEM, COST, Uluslararası İkili İşbirliği Programları
+                </label>
+                <button onclick="add('Proje1')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Proje1')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Proje1" type="none">
+                    <li class="row d-none ">
+                        <label class="SelectLabel">Ünvanınızı Seçiniz</label>
+                        <select name="Proje1" class="form-select form-select-sm mb-3"
+                            aria-label=".form-select-lg example">
+                            <option value="100">Profesör % 100</option>
+                            <option value="90">Doçent % 90</option>
+                            <option value="80">Doktor öğretim üyesi % 80</option>
+                            <option value="70">Araştırma veya Öğretim Görevlisi % 70</option>
+                        </select>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+
+        </div>
+
+
+    </form>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>
-       const MyActive = () => {
+    function alanHesapla() {
+        let select = document.querySelector('#alan');
+        var strUser = select.options[select.selectedIndex].value;
+        console.log(strUser);
+    }
+
+    const MyActive = () => {
         let link = document.querySelector('#science');
         link.classList.add("active");
-      }
+    }
     MyActive();
 </script>
