@@ -11,6 +11,7 @@
     Akademik Tesvik Hesaplama
 </h1>
 
+
 <div class="">
     <h4 class="Calculation_information">
         Bu sayfa Tasarım Aşamasında Tasarımın hızlandırmasını istiyorsanız iletişim kısmından bize bildiriniz
@@ -20,11 +21,11 @@
         <p class="text-white pb-3 animated zoomIn">
             Bu site
             <a style="color: yellow;"
-                href=" https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=21&MevzuatNo=201811834&MevzuatTertip=5"
-                target="_blank">www.mevzuat.gov.tr</a> sitesi baz alarak 2022 yılında hazırlanmıştır
+               href=" https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=21&MevzuatNo=201811834&MevzuatTertip=5"
+               target="_blank">www.mevzuat.gov.tr</a> sitesi baz alarak 2022 yılında hazırlanmıştır
         </p>
         <a asp-action="Index" asp-controller="Tesvik"
-            class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+           class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
             Maddeleri incele >>
         </a>
     </div>
@@ -40,7 +41,8 @@
     <form asp-controller="Tesvik" asp-action="TesvikHesaplama" method="post" class="container">
 
         <div class="row">
-            <p class="text-center">Akademik teşvik ödemesi, en yüksek Devlet memuru brüt aylık tutarının
+            <p class="text-center">
+                Akademik teşvik ödemesi, en yüksek Devlet memuru brüt aylık tutarının
                 akademik teşvik puanının yüze bölünmesiyle bulunacak oranın uygulanması suretiyle hesaplanır.
                 En yüksek Devlet memuru brüt aylığı: (9.500) [aylık gösterge rakamı (1.500) + ek gösterge rakamı
                 (8.000)]
@@ -53,11 +55,15 @@
             <div class="mb-3 col-md-5 mt-4">
                 <label class="SelectLabel">Alanınızı Seçiniz</label>
                 <select onchange="alanHesapla()" id="alan" name="alan" class="form-select form-select-sm mb-3"
-                    aria-label=".form-select-lg example">
-                    <option value="1">A1 Alanları: Eğitim Bilimleri, Fen Bilimleri ve Matematik, Mühendislik, Sağlık
-                        Bilimleri, Ziraat, Orman ve Su Ürünleri</option>
-                    <option value="2">A2 Alanları: Filoloji, Hukuk, İlahiyat, Sosyal, Beşeri ve İdari Bilimler, Spor
-                        Bilimleri</option>
+                        aria-label=".form-select-lg example">
+                    <option value="1">
+                        A1 Alanları: Eğitim Bilimleri, Fen Bilimleri ve Matematik, Mühendislik, Sağlık
+                        Bilimleri, Ziraat, Orman ve Su Ürünleri
+                    </option>
+                    <option value="2">
+                        A2 Alanları: Filoloji, Hukuk, İlahiyat, Sosyal, Beşeri ve İdari Bilimler, Spor
+                        Bilimleri
+                    </option>
                     <option value="3">A3 Alanı: Mimarlık, Planlama ve Tasarım </option>
                     <option value="4"> A4 Alanı: Güzel Sanatlar</option>
                 </select>
@@ -91,7 +97,7 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje1[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
@@ -100,7 +106,7 @@
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="Proje1[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -120,7 +126,7 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje2[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
@@ -128,7 +134,7 @@
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="Proje2[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -150,7 +156,7 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje3[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
@@ -158,7 +164,7 @@
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="Proje3[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -180,7 +186,7 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje4[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
@@ -188,7 +194,7 @@
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="Proje4[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -209,7 +215,7 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje5[]" class="form-select form-select-sm mb-3"
-                                aria-label=".form-select-lg example">
+                                    aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
@@ -217,7 +223,7 @@
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
                             <input type="text" class="form-control" name="Proje5[]"
-                                placeholder="Kendinize Not Tutabilirsiniz">
+                                   placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>

@@ -21,6 +21,10 @@
     </h4>
     <br>
     <h5 class="Calculation_information2 col-md-8">
+        <a asp-action="TesvikHesaplama" asp-controller="Tesvik"
+           class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+            Akademik Teşvik Hesaplama>>
+        </a>
     </h5>
 </div>
 }
@@ -65,7 +69,7 @@
         </p>
         <div>
             <a onclick="Maddeler('Madde3btn')" id="Madde3btn" class="btn btn-primary mb-5" data-toggle="collapse"
-                href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+               href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
                 Maddeleri Göster
             </a>
             <ol type="A" class="collapse" id="collapseExample3">
@@ -260,7 +264,7 @@
         </p>
         <div>
             <a onclick="Maddeler('Madde4btn')" id="Madde4btn" class="btn btn-primary mb-5" data-toggle="collapse"
-                href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+               href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
                 Maddeleri Göster
             </a>
             <ol type="1" class="collapse" id="collapseExample4">
@@ -315,7 +319,7 @@
         </p>
         <div>
             <a onclick="Maddeler('Madde5btn')" id="Madde5btn" class="btn btn-primary mb-5" data-toggle="collapse"
-                href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
+               href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
                 Maddeleri Göster
             </a>
             <ol type="1" class="collapse" id="collapseExample5">
@@ -385,7 +389,7 @@
         </p>
         <div>
             <a onclick="Maddeler('Madde6btn')" id="Madde6btn" class="btn btn-primary mb-5" data-toggle="collapse"
-                href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6">
+               href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6">
                 Maddeleri Göster
             </a>
             <ol type="1" class="collapse" id="collapseExample6">
@@ -522,7 +526,7 @@
         </p>
         <div>
             <a onclick="Maddeler('Madde7btn')" id="Madde7btn" class="btn btn-primary mb-5" data-toggle="collapse"
-                href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample7">
+               href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample7">
                 Maddeleri Göster
             </a>
             <ol type="1" class="collapse" id="collapseExample7">
@@ -741,7 +745,7 @@
         </p>
         <div>
             <a onclick="Maddeler('Madde10btn')" id="Madde10btn" class="btn btn-primary mb-5" data-toggle="collapse"
-                href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample10">
+               href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample10">
                 Maddeleri Göster
             </a>
             <ol type="1" class="collapse" id="collapseExample10">
@@ -1119,8 +1123,10 @@
     <br> <br> <br> <br> <br>
     <table id="customers">
         <tr>
-            <th colspan="7" class="text-center">Tablo 4
-                Faaliyet Hesaplama Tablosu</th>
+            <th colspan="7" class="text-center">
+                Tablo 4
+                Faaliyet Hesaplama Tablosu
+            </th>
         <tr>
             <th colspan="3" class="text-center">Bilgiler</th>
             <th colspan="4" class="text-center">% Yüzedesel Oranlar </th>
@@ -1138,10 +1144,12 @@
 
         <tr>
             <td rowspan="5" class="display-5">1</td>
-            <td rowspan="5" class="tdfaliyet text-center"><b>Proje</b>
+            <td rowspan="5" class="tdfaliyet text-center">
+                <b>Proje</b>
                 <p>(20 puan)</p>
             </td>
-            <td>TÜBİTAK 1001, 1003, 1004, 1007, 1505, 2244, 3501, SAYEM, COST, Uluslararası İkili İşbirliği Programları
+            <td>
+                TÜBİTAK 1001, 1003, 1004, 1007, 1505, 2244, 3501, SAYEM, COST, Uluslararası İkili İşbirliği Programları
             </td>
             <td>r x 80</td>
             <td>r x 80</td>
@@ -1163,16 +1171,20 @@
             <td>r x 100</td>
         </tr>
         <tr>
-            <td>Diğer uluslararası özel veya resmi kurum ve kuruluşlar tarafından desteklenmiş ve destek süresi dokuz
-                aydan az olmayan Ar-Ge niteliğini haiz proje</td>
+            <td>
+                Diğer uluslararası özel veya resmi kurum ve kuruluşlar tarafından desteklenmiş ve destek süresi dokuz
+                aydan az olmayan Ar-Ge niteliğini haiz proje
+            </td>
             <td>r x 40</td>
             <td>r x 40</td>
             <td>r x 40</td>
             <td>r x 40</td>
         </tr>
         <tr>
-            <td>Diğer ulusal kamu veya özel kurum ve kuruluşlar tarafından desteklenmiş ve destek süresi dokuz aydan az
-                olmayan Ar-Ge niteliğini haiz proje</td>
+            <td>
+                Diğer ulusal kamu veya özel kurum ve kuruluşlar tarafından desteklenmiş ve destek süresi dokuz aydan az
+                olmayan Ar-Ge niteliğini haiz proje
+            </td>
             <td>r x 20</td>
             <td>r x 20</td>
             <td>r x 20</td>
@@ -1215,17 +1227,21 @@
             <td>k x p x 80</td>
         </tr>
         <tr>
-            <td>SCI, SCI-Expanded, SSCI ve AHCI kapsamındaki dergilerde yayımlanmış derleme makale, (müstakil
+            <td>
+                SCI, SCI-Expanded, SSCI ve AHCI kapsamındaki dergilerde yayımlanmış derleme makale, (müstakil
                 yayımlanmış olma şartıyla editöre mektup, yorum vaka takdimi, teknik not, araştırma notu ve kitap
-                eleştirisi)</td>
+                eleştirisi)
+            </td>
             <td>k x p x 30</td>
             <td>k x p x 40</td>
             <td>k x p x 30</td>
             <td>k x p x 40</td>
         </tr>
         <tr>
-            <td>Alan endeksleri (ÜAK tarafından tanımlanan alanlar için) kapsamındaki dergilerde yayımlanmış araştırma
-                makalesi</td>
+            <td>
+                Alan endeksleri (ÜAK tarafından tanımlanan alanlar için) kapsamındaki dergilerde yayımlanmış araştırma
+                makalesi
+            </td>
             <td>k x 20</td>
             <td>k x 25</td>
             <td>k x 20</td>
@@ -1288,25 +1304,31 @@
             <td>k x 60</td>
         </tr>
         <tr>
-            <td>Tanınmış uluslararası yayınevleri tarafından yayımlanmış özgün bilimsel kitaplarda bölüm yazarlığı (Aynı
-                kitapta en çok iki bölüm değerlendirmeye alınır.)</td>
+            <td>
+                Tanınmış uluslararası yayınevleri tarafından yayımlanmış özgün bilimsel kitaplarda bölüm yazarlığı (Aynı
+                kitapta en çok iki bölüm değerlendirmeye alınır.)
+            </td>
             <td>k x 25</td>
             <td>k x 25</td>
             <td>k x 25</td>
             <td>k x 25</td>
         </tr>
         <tr>
-            <td>(Danıştay Sekizinci Dairesinin 21/12/2021 tarihli ve E.:2021/6094 sayılı kararı ile yürütmesi durdurulan
-                ibare; Tanınmış ulusal yayınevleri tarafından yayımlanmış) özgün bilimsel kitap</td>
+            <td>
+                (Danıştay Sekizinci Dairesinin 21/12/2021 tarihli ve E.:2021/6094 sayılı kararı ile yürütmesi durdurulan
+                ibare; Tanınmış ulusal yayınevleri tarafından yayımlanmış) özgün bilimsel kitap
+            </td>
             <td>k x 50</td>
             <td>k x 50</td>
             <td>k x 50</td>
             <td>k x 50</td>
         </tr>
         <tr>
-            <td>(Danıştay Sekizinci Dairesinin 21/12/2021 tarihli ve E.:2021/6094 sayılı kararı ile yürütmesi durdurulan
+            <td>
+                (Danıştay Sekizinci Dairesinin 21/12/2021 tarihli ve E.:2021/6094 sayılı kararı ile yürütmesi durdurulan
                 ibare; Tanınmış ulusal yayınevleri tarafından yayımlanmış) özgün bilimsel kitaplarda bölüm yazarlığı
-                (Aynı kitapta en çok iki bölüm değerlendirmeye alınır.)</td>
+                (Aynı kitapta en çok iki bölüm değerlendirmeye alınır.)
+            </td>
             <td>k x 15</td>
             <td>k x 15</td>
             <td>k x 15</td>
@@ -1341,8 +1363,10 @@
                 <p><b>TASARIM</b></p>
                 <p>(15 puan)</p>
             </td>
-            <td>Endüstriyel, çevresel (bina, peyzaj ve iç mekan) veya grafiksel tasarım; sahne, moda (kumaş, aksesuar
-                veya giysi tasarımı) veya çalgı tasarımı</td>
+            <td>
+                Endüstriyel, çevresel (bina, peyzaj ve iç mekan) veya grafiksel tasarım; sahne, moda (kumaş, aksesuar
+                veya giysi tasarımı) veya çalgı tasarımı
+            </td>
             <td>15</td>
             <td>15</td>
             <td>15</td>
@@ -1371,16 +1395,20 @@
             <td>15</td>
         </tr>
         <tr>
-            <td>Özgün yurt dışı grup/karma/toplu etkinlik (sergi, bienal, trienal, gösteri, dinleti, festival ve
-                gösterim)</td>
+            <td>
+                Özgün yurt dışı grup/karma/toplu etkinlik (sergi, bienal, trienal, gösteri, dinleti, festival ve
+                gösterim)
+            </td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
             <td>15</td>
         </tr>
         <tr>
-            <td>Özgün yurt içi grup/karma/toplu etkinlik (sergi, bienal, trienal, gösteri, dinleti, festival ve
-                gösterim)</td>
+            <td>
+                Özgün yurt içi grup/karma/toplu etkinlik (sergi, bienal, trienal, gösteri, dinleti, festival ve
+                gösterim)
+            </td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -1458,15 +1486,18 @@
             <td>8</td>
         </tr>
         <tr>
-            <td>(Danıştay Sekizinci Dairesinin 21/12/2021 tarihli ve E.:2021/6094 sayılı kararı ile yürütmesi durdurulan
-                ibare; Tanınmış ulusal yayınevleri tarafından yayımlanmış) özgün bilimsel kitapta atıf </td>
+            <td>
+                (Danıştay Sekizinci Dairesinin 21/12/2021 tarihli ve E.:2021/6094 sayılı kararı ile yürütmesi durdurulan
+                ibare; Tanınmış ulusal yayınevleri tarafından yayımlanmış) özgün bilimsel kitapta atıf
+            </td>
             <td>2</td>
             <td>4</td>
             <td>2</td>
             <td>4</td>
         </tr>
         <tr>
-            <td>Güzel sanatlardaki eserlerin uluslararası kaynak veya yayın organlarında yer alması veya gösterime ya da
+            <td>
+                Güzel sanatlardaki eserlerin uluslararası kaynak veya yayın organlarında yer alması veya gösterime ya da
                 dinletime girmesi
             </td>
             <td>-</td>
@@ -1475,7 +1506,8 @@
             <td>8</td>
         </tr>
         <tr>
-            <td>Güzel sanatlardaki eserlerin ulusal kaynak veya yayın organlarında yer alması veya gösterime ya da
+            <td>
+                Güzel sanatlardaki eserlerin ulusal kaynak veya yayın organlarında yer alması veya gösterime ya da
                 dinletime girmesi
             </td>
             <td>-</td>
@@ -1491,8 +1523,10 @@
                 <p><b>TEBLİĞ</b></p>
                 <p>(20 puan)</p>
             </td>
-            <td>EHakemli uluslararası bilimsel konferansta, sempozyumda veya kongrede sözlü olarak sunulan ve bunların
-                kitabında yayımlanan tam bildiri</td>
+            <td>
+                EHakemli uluslararası bilimsel konferansta, sempozyumda veya kongrede sözlü olarak sunulan ve bunların
+                kitabında yayımlanan tam bildiri
+            </td>
             <td>k x 15</td>
             <td>k x 15</td>
             <td>k x 15</td>
@@ -1534,13 +1568,19 @@
         </tr>
         <tr>
             <td rowspan="5" class="tdfaliyet text-center">
-                <p><b>(Çalışma/proje/ yayın teşvik/ teşekkür-başarı belgesi ve plaketi/burs/onur belgesi/hizmet belgesi
-                        hariç)</b></p>
+                <p>
+                    <b>
+                        (Çalışma/proje/ yayın teşvik/ teşekkür-başarı belgesi ve plaketi/burs/onur belgesi/hizmet belgesi
+                        hariç)
+                    </b>
+                </p>
             </td>
-            <td>Yurt dışı kurum veya kuruluşlardan alınan bilim ödülü (sürekli olarak verilen, daha önce en az beş kez
+            <td>
+                Yurt dışı kurum veya kuruluşlardan alınan bilim ödülü (sürekli olarak verilen, daha önce en az beş kez
                 verilmiş, ilgili kurum veya kuruluşun internet sayfasından duyurulan ve akademik ağırlıklı bir
                 değerlendirme jürisi veya seçici kurulu olan) (Aynı çalışma veya eser nedeniyle alınan farklı ödüller
-                için en fazla bir defa puanlama yapılır.)</td>
+                için en fazla bir defa puanlama yapılır.)
+            </td>
             <td>40</td>
             <td>40</td>
             <td>40</td>
@@ -1548,10 +1588,12 @@
         </tr>
 
         <tr>
-            <td>Yurt içi kurum veya kuruluşlardan alınan bilim ödülü (sürekli olarak verilen, daha önce en az beş kez
+            <td>
+                Yurt içi kurum veya kuruluşlardan alınan bilim ödülü (sürekli olarak verilen, daha önce en az beş kez
                 verilmiş, ilgili kurum veya kuruluşun internet sayfasından duyurulan ve akademik ağırlıklı bir
                 değerlendirme jürisi veya seçici kurulu olan) (Aynı çalışma veya eser nedeniyle alınan farklı ödüller
-                için en fazla bir defa puanlama yapılır.)</td>
+                için en fazla bir defa puanlama yapılır.)
+            </td>
             <td>20</td>
             <td>20</td>
             <td>20</td>
