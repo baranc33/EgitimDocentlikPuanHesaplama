@@ -30,6 +30,11 @@
     </div>
 </div>
 }
+
+<head>
+    <link href="~/css/tesvikmadde.css" rel="stylesheet">
+
+</head>
 <section>
 
     <form asp-controller="Tesvik" asp-action="TesvikHesaplama" method="post" class="container">
@@ -74,7 +79,8 @@
 
             <div class="row mt-5">
                 <label class="col-md-8">
-                 1-) TÜBİTAK 1001, 1003, 1004, 1007, 1505, 2244,  3501, SAYEM, COST, Uluslararası İkili İşbirliği Programları
+                    1-) TÜBİTAK 1001, 1003, 1004, 1007, 1505, 2244, 3501, SAYEM, COST, Uluslararası İkili İşbirliği
+                    Programları
                 </label>
                 <button onclick="add('Proje1')" type="button" class="btn btn-primary col-md-1">+ </button>
                 <button onclick="remove('Proje1')" type="button" class="btn btn-danger col-md-1 ms-4">
@@ -82,18 +88,145 @@
                 </button>
                 <ul class="mt-3" id="Proje1" type="none">
                     <li class="row d-none ">
-                        <label class="SelectLabel">Ünvanınızı Seçiniz</label>
-                        <select name="Proje1" class="form-select form-select-sm mb-3"
-                            aria-label=".form-select-lg example">
-                            <option value="100">Profesör % 100</option>
-                            <option value="90">Doçent % 90</option>
-                            <option value="80">Doktor öğretim üyesi % 80</option>
-                            <option value="70">Araştırma veya Öğretim Görevlisi % 70</option>
-                        </select>
+                        <div class="col-md-4">
+                            <label class="SelectLabel">Rolünüzü Seçiniz</label>
+                            <select name="Proje1[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="0">Yürütücü</option>
+                                <option value="1">Araştırmacı yada Bursiyer</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Proje1[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
                     </li>
                 </ul>
                 <hr />
             </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    2-) TÜBİTAK 1005, 3001
+                </label>
+                <button onclick="add('Proje2')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Proje2')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Proje2" type="none">
+                    <li class="row d-none ">
+                        <div class="col-md-4">
+                            <label class="SelectLabel">Rolünüzü Seçiniz</label>
+                            <select name="Proje2[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="0">Yürütücü</option>
+                                <option value="1">Araştırmacı yada Bursiyer</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Proje2[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    3-) H2020 projesi
+                </label>
+                <button onclick="add('Proje3')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Proje3')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Proje3" type="none">
+                    <li class="row d-none ">
+                        <div class="col-md-4">
+                            <label class="SelectLabel">Rolünüzü Seçiniz</label>
+                            <select name="Proje3[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="0">Yürütücü</option>
+                                <option value="1">Araştırmacı yada Bursiyer</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Proje3[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    4-) Diğer uluslararası özel veya resmi kurum ve kuruluşlar tarafından desteklenmiş ve destek süresi
+                    dokuz aydan az olmayan Ar-Ge niteliğini haiz proje
+                </label>
+                <button onclick="add('Proje4')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Proje4')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Proje4" type="none">
+                    <li class="row d-none ">
+                        <div class="col-md-4">
+                            <label class="SelectLabel">Rolünüzü Seçiniz</label>
+                            <select name="Proje4[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="0">Yürütücü</option>
+                                <option value="1">Araştırmacı yada Bursiyer</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Proje4[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    5-) Diğer ulusal kamu veya özel kurum ve kuruluşlar tarafından desteklenmiş ve destek süresi dokuz
+                    aydan az olmayan Ar-Ge niteliğini haiz proje
+                </label>
+                <button onclick="add('Proje5')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Proje5')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Proje5" type="none">
+                    <li class="row d-none ">
+                        <div class="col-md-4">
+                            <label class="SelectLabel">Rolünüzü Seçiniz</label>
+                            <select name="Proje5[]" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="0">Yürütücü</option>
+                                <option value="1">Araştırmacı yada Bursiyer</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Proje5[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+
+
+
 
 
         </div>
@@ -105,6 +238,24 @@
 
 
 
+<script>
+    function add(ulid) {
+        let ul = document.getElementById(ulid);
+        let Liicerik = ul.firstElementChild.innerHTML;
+        let li = document.createElement('li');
+        li.classList.add("row");
+        li.innerHTML = Liicerik;
+        ul.append(li);
+    }
+
+    function remove(id) {
+        let ul = document.getElementById(id);
+        let ulChildCount = ul.childElementCount;
+        if (ulChildCount > 1) {
+            ul.removeChild(ul.lastElementChild);
+        }
+    }
+</script>
 
 
 
