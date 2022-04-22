@@ -21,11 +21,11 @@
         <p class="text-white pb-3 animated zoomIn">
             Bu site
             <a style="color: yellow;"
-               href=" https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=21&MevzuatNo=201811834&MevzuatTertip=5"
-               target="_blank">www.mevzuat.gov.tr</a> sitesi baz alarak 2022 yılında hazırlanmıştır
+                href=" https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=21&MevzuatNo=201811834&MevzuatTertip=5"
+                target="_blank">www.mevzuat.gov.tr</a> sitesi baz alarak 2022 yılında hazırlanmıştır
         </p>
         <a asp-action="Index" asp-controller="Tesvik"
-           class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
+            class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">
             Maddeleri incele >>
         </a>
     </div>
@@ -55,7 +55,7 @@
             <div class="mb-3 col-md-5 mt-4">
                 <label class="SelectLabel">Alanınızı Seçiniz</label>
                 <select onchange="alanHesapla()" id="alan" name="alan" class="form-select form-select-sm mb-3"
-                        aria-label=".form-select-lg example">
+                    aria-label=".form-select-lg example">
                     <option value="1">
                         A1 Alanları: Eğitim Bilimleri, Fen Bilimleri ve Matematik, Mühendislik, Sağlık
                         Bilimleri, Ziraat, Orman ve Su Ürünleri
@@ -81,8 +81,6 @@
         </div>
         <div class="Bir container">
             <h2>1. Proje (20 puan) </h2>
-
-
             <div class="row mt-5">
                 <label class="col-md-8">
                     1-) TÜBİTAK 1001, 1003, 1004, 1007, 1505, 2244, 3501, SAYEM, COST, Uluslararası İkili İşbirliği
@@ -97,7 +95,7 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje1[]" class="form-select form-select-sm mb-3"
-                                    aria-label=".form-select-lg example">
+                                aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
@@ -105,8 +103,8 @@
 
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
-                            <input type="text" class="form-control" name="Proje1[]"
-                                   placeholder="Kendinize Not Tutabilirsiniz">
+                            <input type="text" class="form-control" name="Proje1Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -126,15 +124,15 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje2[]" class="form-select form-select-sm mb-3"
-                                    aria-label=".form-select-lg example">
+                                aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
-                            <input type="text" class="form-control" name="Proje2[]"
-                                   placeholder="Kendinize Not Tutabilirsiniz">
+                            <input type="text" class="form-control" name="Proje2Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -156,15 +154,15 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje3[]" class="form-select form-select-sm mb-3"
-                                    aria-label=".form-select-lg example">
+                                aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
-                            <input type="text" class="form-control" name="Proje3[]"
-                                   placeholder="Kendinize Not Tutabilirsiniz">
+                            <input type="text" class="form-control" name="Proje3Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -186,15 +184,15 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje4[]" class="form-select form-select-sm mb-3"
-                                    aria-label=".form-select-lg example">
+                                aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
-                            <input type="text" class="form-control" name="Proje4[]"
-                                   placeholder="Kendinize Not Tutabilirsiniz">
+                            <input type="text" class="form-control" name="Proje4Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -215,15 +213,15 @@
                         <div class="col-md-4">
                             <label class="SelectLabel">Rolünüzü Seçiniz</label>
                             <select name="Proje5[]" class="form-select form-select-sm mb-3"
-                                    aria-label=".form-select-lg example">
+                                aria-label=".form-select-lg example">
                                 <option value="0">Yürütücü</option>
                                 <option value="1">Araştırmacı yada Bursiyer</option>
                             </select>
                         </div>
                         <div class="mb-3 col-md-5">
                             <label>Hatırlatıcı İsim</label>
-                            <input type="text" class="form-control" name="Proje5[]"
-                                   placeholder="Kendinize Not Tutabilirsiniz">
+                            <input type="text" class="form-control" name="Proje5Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
                         </div>
                     </li>
                 </ul>
@@ -236,8 +234,226 @@
 
 
         </div>
+        <div class="iki container">
+            <h2>2. ARAŞTIRMA (15 puan) </h2>
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    1-) Yurt dışı araştırma
+                </label>
+                <button onclick="add('Arastirma1')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Arastirma1')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Arastirma1" type="none">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-4">
+                            <label>Araştırma Süresi</label>
+                            <input type="number" class="form-control" name="Arastirma1Sure[]" placeholder="1" min="1"
+                                value="1">
+                        </div>
+
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Arastirma1Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    2-) Yurt içi araştırma
+                </label>
+                <button onclick="add('Arastirma2')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Arastirma2')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Arastirma2" type="none">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-4">
+                            <label>Araştırma Süresi</label>
+                            <input type="number" class="form-control" name="Arastirma2Sure[]" placeholder="1" min="1"
+                                value="1">
+                        </div>
+
+                        <div class="mb-3 col-md-5">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Arastirma2Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+        </div>
 
 
+
+        <div class="uc container">
+            <h2>3. YAYIN (30 puan) </h2>
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    1-) SCI, SCI-Expanded, SSCI ve AHCI kapsamındaki dergilerde yayımlanmış araştırma makalesi
+                </label>
+                <button onclick="add('Yayin1')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Yayin1')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Yayin1" type="none">
+                    <li class="row d-none ">
+                        <div class="col-md-4 mt-1">
+                            <label class="SelectLabel">Dergi ISI Web of Science Çeyreklik Grubu</label>
+                            <select name="Yayin1Grup" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="1">Quartile 1</option>
+                                <option value="2">Quartile 2</option>
+                                <option value="3">Quartile 3</option>
+                                <option value="4">Quartile 4</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label>Kişi Sayısı</label>
+                            <input type="number" class="form-control" name="Yayin1KisiSayisi[]" placeholder="1" min="1"
+                                value="1">
+                        </div>
+
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Yayin1Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    2-) SCI, SCI-Expanded, SSCI ve AHCI kapsamındaki dergilerde yayımlanmış derleme makale, (müstakil yayımlanmış olma şartıyla editöre mektup, yorum vaka takdimi, teknik not, araştırma notu ve kitap eleştirisi)
+                </label>
+                <button onclick="add('Yayin2')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Yayin2')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Yayin2" type="none">
+                    <li class="row d-none ">
+                        <div class="col-md-4 mt-1">
+                            <label class="SelectLabel">Dergi ISI Web of Science Çeyreklik Grubu</label>
+                            <select name="Yayin2Grup" class="form-select form-select-sm mb-3"
+                                aria-label=".form-select-lg example">
+                                <option value="1">Quartile 1</option>
+                                <option value="2">Quartile 2</option>
+                                <option value="3">Quartile 3</option>
+                                <option value="4">Quartile 4</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label>Kişi Sayısı</label>
+                            <input type="number" class="form-control" name="Yayin2KisiSayisi[]" placeholder="1" min="1"
+                                value="1">
+                        </div>
+
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Yayin2Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    3-) Alan endeksleri (ÜAK tarafından tanımlanan alanlar için) kapsamındaki dergilerde yayımlanmış araştırma makalesi
+                </label>
+                <button onclick="add('Yayin3')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Yayin3')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Yayin3" type="none">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-4">
+                            <label>Kişi Sayısı</label>
+                            <input type="number" class="form-control" name="Yayin3KisiSayisi[]" placeholder="1" min="1"
+                                value="1">
+                        </div>
+
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Yayin3Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    4-) Diğer uluslararası hakemli dergilerde yayımlanmış araştırma makalesi
+                </label>
+                <button onclick="add('Yayin4')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Yayin4')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Yayin4" type="none">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-4">
+                            <label>Kişi Sayısı</label>
+                            <input type="number" class="form-control" name="Yayin4KisiSayisi[]" placeholder="1" min="1"
+                                value="1">
+                        </div>
+
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Yayin4Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+
+
+
+            <div class="row mt-5">
+                <label class="col-md-8">
+                    5-)  ULAKBİM TR Dizin tarafından taranan ulusal hakemli dergilerde yayımlanmış araştırma makalesi
+                </label>
+                <button onclick="add('Yayin5')" type="button" class="btn btn-primary col-md-1">+ </button>
+                <button onclick="remove('Yayin5')" type="button" class="btn btn-danger col-md-1 ms-4">
+                    -
+                </button>
+                <ul class="mt-3" id="Yayin5" type="none">
+                    <li class="row d-none ">
+                        <div class="mb-3 col-md-4">
+                            <label>Kişi Sayısı</label>
+                            <input type="number" class="form-control" name="Yayin5KisiSayisi[]" placeholder="1" min="1"
+                                value="1">
+                        </div>
+
+                        <div class="mb-3 col-md-4">
+                            <label>Hatırlatıcı İsim</label>
+                            <input type="text" class="form-control" name="Yayin5Hatirlatici[]"
+                                placeholder="Kendinize Not Tutabilirsiniz">
+                        </div>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+
+
+
+
+        </div>
     </form>
 
 </section>
