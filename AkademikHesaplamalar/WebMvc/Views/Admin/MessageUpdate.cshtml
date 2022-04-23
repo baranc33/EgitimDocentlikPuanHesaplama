@@ -27,7 +27,11 @@
         @Model.Description
     </p>
 
-    <br><br><br>
+       <br><br>
+    <h6>Yollama Tarihi : <i > @Model.AddTime </i> </h6>
+    <h6>User ID : <i > @Model.UserId </i> </h6>
+    
+    <br><br>
 
     <a class="btn btn-danger" asp-controller="Admin" asp-action="MessageDelete" asp-route-id="@Model.Id">Sil</a>
 </div>

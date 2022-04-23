@@ -21,5 +21,7 @@ namespace Core.Models
         public string Title { get; set; } = "";
         [MaxLength(1000, ErrorMessage = "En Fazla 1000 karakter olabilir")]
         public string Description { get; set; } = "";
+        public DateTime? AddTime{ get; set; }
+        public string? UserId{ get; set; }
     }
 }

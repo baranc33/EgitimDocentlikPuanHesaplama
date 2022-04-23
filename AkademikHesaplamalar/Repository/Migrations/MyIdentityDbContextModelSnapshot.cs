@@ -53,6 +53,10 @@ namespace Repository.Migrations
                     b.Property<int>("IdRow")
                         .HasColumnType("int");
 
+                    b.Property<string>("Image")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
                     b.Property<string>("Instegram")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -78,13 +82,9 @@ namespace Repository.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("İmage")
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("AdminMember", (string)null);
+                    b.ToTable("AdminMember");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.EgitimEntity", b =>
@@ -348,7 +348,7 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("MyUserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ToplantiACount")
                         .HasColumnType("int");
@@ -434,7 +434,6 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("UluslarArasiAhatirlatici")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -619,9 +618,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("EgitimEntities", (string)null);
+                    b.ToTable("EgitimEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.FenEntity", b =>
@@ -967,7 +964,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PatentACount")
                         .HasColumnType("int");
@@ -1147,9 +1144,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("FenEntities", (string)null);
+                    b.ToTable("FenEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.FilolojiEntity", b =>
@@ -1414,7 +1409,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ToplantiACount")
                         .HasColumnType("int");
@@ -1684,9 +1679,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("FilolojiEntities", (string)null);
+                    b.ToTable("FilolojiEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.GuzelSanatlarEntity", b =>
@@ -1698,7 +1691,7 @@ namespace Repository.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"), 1L, 1);
 
                     b.Property<string>("MyUserId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SinemaICount")
                         .HasColumnType("int");
@@ -1781,9 +1774,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("GuzelSanatlarEntities", (string)null);
+                    b.ToTable("GuzelSanatlarEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.HukukEntity", b =>
@@ -2048,7 +2039,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ToplantiACount")
                         .HasColumnType("int");
@@ -2318,9 +2309,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("HukukEntities", (string)null);
+                    b.ToTable("HukukEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.ilahiyatEntity", b =>
@@ -2585,7 +2574,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ToplantiACount")
                         .HasColumnType("int");
@@ -2855,9 +2844,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("IlahiyatEntities", (string)null);
+                    b.ToTable("IlahiyatEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.MimarlikEntity", b =>
@@ -3203,7 +3190,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PatentACount")
                         .HasColumnType("int");
@@ -3394,9 +3381,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("MimarlikEntities", (string)null);
+                    b.ToTable("MimarlikEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.MuhendislikEntity", b =>
@@ -3742,7 +3727,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PatentACount")
                         .HasColumnType("int");
@@ -3922,9 +3907,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("MuhendisEntities", (string)null);
+                    b.ToTable("MuhendisEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.SaglikEntity", b =>
@@ -4189,7 +4172,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PatentACount")
                         .HasColumnType("int");
@@ -4477,9 +4460,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("SaglikEntities", (string)null);
+                    b.ToTable("SaglikEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.SosyalEntity", b =>
@@ -4744,7 +4725,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ToplantiACount")
                         .HasColumnType("int");
@@ -5033,9 +5014,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("SosyalEntities", (string)null);
+                    b.ToTable("SosyalEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.SporEntity", b =>
@@ -5300,7 +5279,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ToplantiACount")
                         .HasColumnType("int");
@@ -5634,9 +5613,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("SporEntities", (string)null);
+                    b.ToTable("SporEntities");
                 });
 
             modelBuilder.Entity("Core.Models.Entities.ZiraatEntity", b =>
@@ -5982,7 +5959,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("MyUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PatentACount")
                         .HasColumnType("int");
@@ -6162,9 +6139,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MyUserId");
-
-                    b.ToTable("ZiraatEntities", (string)null);
+                    b.ToTable("ZiraatEntities");
                 });
 
             modelBuilder.Entity("Core.Models.MyContact", b =>
@@ -6202,7 +6177,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MyContacts", (string)null);
+                    b.ToTable("MyContacts");
                 });
 
             modelBuilder.Entity("Core.Models.MyMessage", b =>
@@ -6212,6 +6187,9 @@ namespace Repository.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("AddTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -6233,9 +6211,12 @@ namespace Repository.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Messages", (string)null);
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("Core.Models.MyRole", b =>
@@ -6443,134 +6424,6 @@ namespace Repository.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.EgitimEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId");
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.FenEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.FilolojiEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.GuzelSanatlarEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId");
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.HukukEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.ilahiyatEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.MimarlikEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.MuhendislikEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.SaglikEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.SosyalEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.SporEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
-                });
-
-            modelBuilder.Entity("Core.Models.Entities.ZiraatEntity", b =>
-                {
-                    b.HasOne("Core.Models.MyUser", "MyUser")
-                        .WithMany()
-                        .HasForeignKey("MyUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("MyUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

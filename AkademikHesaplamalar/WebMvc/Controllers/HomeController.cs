@@ -201,6 +201,7 @@ namespace WebMvc.Controllers
 
             if (ModelState.IsValid)
             {
+                entity.AddTime = DateTime.Now;
                 await _myMessageService.AddAsync(entity.Adapt<MyMessage>());
                 ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
             }

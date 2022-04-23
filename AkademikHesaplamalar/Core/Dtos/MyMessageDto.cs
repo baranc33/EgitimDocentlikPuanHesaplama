@@ -25,5 +25,8 @@ namespace Core.Dtos
         [MaxLength(1000, ErrorMessage = "En Fazla 1000 karakter olabilir")]
         [MinLength(5, ErrorMessage = "Mesajınızı Giriniz")]
         public string Description { get; set; } = "";
+        public DateTime? AddTime{ get; set; } 
+        public string? UserId{ get; set; } 
+        
     }
 }

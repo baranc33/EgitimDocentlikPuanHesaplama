@@ -62,6 +62,9 @@ namespace WebMvc.Controllers
 
             if (ModelState.IsValid)
             {
+                MyUser user = CurrentUser;
+                entity.UserId= user.Id;
+                entity.AddTime = DateTime.Now;
                 await _myMessageService.AddAsync(entity.Adapt<MyMessage>());
                 ViewBag.Message="Mesajınız Tarafımıza iletilmiştir Teşekkürler";
             }
