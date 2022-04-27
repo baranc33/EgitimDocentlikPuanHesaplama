@@ -103,6 +103,10 @@ app.UseAuthorization();// derste hoca bunu yazmiyor ama yazmayýnca hata veriyor
 app.UseXMLSitemap(builder.Environment.ContentRootPath);
 
 
+app.MapControllerRoute("Found404", "Doçentlik-puan-Hesaplama", new { controller = "home", action = "Page404" });
+
+
+
 app.MapControllerRoute("Membertesvik", "Akademik-Tesvik-Hesaplamalar", new { controller = "MemberScience", action = "TesvikHesaplama" });
 app.MapControllerRoute("MemberDocent", "Docentlik-Bilimleri-Puan-Hesaplamalar", new { controller = "MemberScience", action = "Index" });
 app.MapControllerRoute("MemberEgitim", "Egitim-Docentlik-Puan-Hesaplama", new { controller = "MemberScience", action = "Egitim" });
