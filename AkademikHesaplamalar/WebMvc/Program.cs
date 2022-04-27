@@ -87,8 +87,8 @@ builder.Services.AddMvc();
 
 var app = builder.Build();
 app.UseDeveloperExceptionPage();// developer hata mesajlarý
-app.UseStatusCodePages();// özellikle bir view dönmiyen sayfalarda hata içeriði yazar
-
+//app.UseStatusCodePages();// özellikle bir view dönmiyen sayfalarda hata içeriði yazar
+app.UseStatusCodePagesWithReExecute("/Home/Page404","?code={0}");
 
 //now handle other requests (default, static files, mvc actions, ...)
 app.UseStaticFiles();

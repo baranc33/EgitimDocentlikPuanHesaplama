@@ -220,5 +220,11 @@ namespace WebMvc.Controllers
             return View();
         }
 
+        public IActionResult Page404()
+        {
+            Response.StatusCode=404;
+            return View();
+        }
+
     }
 }

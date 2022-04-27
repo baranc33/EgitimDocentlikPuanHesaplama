@@ -44,6 +44,7 @@ margin-right: auto;
     <div class="col-md-12">
         <form  asp-controller="UltraAdmin" asp-action="UpdateAdminMember" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Image" class="form-control" />
 
             <input type="hidden" asp-for="MyUserId" class="form-control" />
          
